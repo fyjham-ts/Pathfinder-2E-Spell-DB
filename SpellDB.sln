@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "SpellDB", "SpellDB\SpellDB.jsproj", "{D0BE8145-E227-4492-865E-489232DC5457}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Android = Debug|Android
+		Debug|iOS = Debug|iOS
+		Debug|Windows-ARM = Debug|Windows-ARM
+		Debug|Windows-x64 = Debug|Windows-x64
+		Debug|Windows-x86 = Debug|Windows-x86
+		Release|Android = Release|Android
+		Release|iOS = Release|iOS
+		Release|Windows-ARM = Release|Windows-ARM
+		Release|Windows-x64 = Release|Windows-x64
+		Release|Windows-x86 = Release|Windows-x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|Android.ActiveCfg = Debug|Android
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|Android.Build.0 = Debug|Android
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|Android.Deploy.0 = Debug|Android
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|iOS.ActiveCfg = Debug|iOS
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|iOS.Build.0 = Debug|iOS
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|iOS.Deploy.0 = Debug|iOS
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|Windows-ARM.ActiveCfg = Debug|Windows-ARM
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|Windows-ARM.Build.0 = Debug|Windows-ARM
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|Windows-ARM.Deploy.0 = Debug|Windows-ARM
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|Windows-x64.ActiveCfg = Debug|Windows-x64
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|Windows-x64.Build.0 = Debug|Windows-x64
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|Windows-x64.Deploy.0 = Debug|Windows-x64
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|Windows-x86.ActiveCfg = Debug|Windows-x86
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|Windows-x86.Build.0 = Debug|Windows-x86
+		{D0BE8145-E227-4492-865E-489232DC5457}.Debug|Windows-x86.Deploy.0 = Debug|Windows-x86
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|Android.ActiveCfg = Release|Android
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|Android.Build.0 = Release|Android
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|Android.Deploy.0 = Release|Android
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|iOS.ActiveCfg = Release|iOS
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|iOS.Build.0 = Release|iOS
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|iOS.Deploy.0 = Release|iOS
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|Windows-ARM.ActiveCfg = Release|Windows-ARM
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|Windows-ARM.Build.0 = Release|Windows-ARM
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|Windows-ARM.Deploy.0 = Release|Windows-ARM
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|Windows-x64.ActiveCfg = Release|Windows-x64
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|Windows-x64.Build.0 = Release|Windows-x64
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|Windows-x64.Deploy.0 = Release|Windows-x64
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|Windows-x86.ActiveCfg = Release|Windows-x86
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|Windows-x86.Build.0 = Release|Windows-x86
+		{D0BE8145-E227-4492-865E-489232DC5457}.Release|Windows-x86.Deploy.0 = Release|Windows-x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {938FE967-C7EF-4E33-B304-C5F44370E025}
+	EndGlobalSection
+EndGlobal

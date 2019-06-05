@@ -1,0 +1,35 @@
+{
+  "name": "SpellDB",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "immutability-helper": "^2.7.1",
+    "react-checkbox-group": "^4.0.1",
+    "react-markdown": "^4.0.8",
+    "bootstrap-css-only": "^4.3.1",
+    "@fortawesome/fontawesome-free": "^5.2.0"
+  },
+  "-vs-binding": {
+    "BeforeBuild": [
+      "build:js",
+      "build:css"
+    ]
+  },
+  "scripts": {
+    "watchBabel": "node node_modules/babel-cli/bin/babel.js --presets es2015,react --watch src/scripts --out-dir src/scripts-built",
+    "build:js": "node buildScripts/browserify_glob.js 'src/scripts-built/**/*.js' > www/scripts/bundle.js",
+    "build:css": "node-sass --include-path src/css src/css/ -o www/css",
+    "copyDependencies": "node buildScripts/copyDependencies.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "browserify": "latest",
+    "glob": "latest",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.19.1"
+  }
+}
