@@ -101,7 +101,7 @@
     <splash src="res/screens/windows/SplashScreen.scale-240.png" width="1152" height="1920" />
     <splash src="res/screens/windows/SplashScreenPhone.scale-240.png" width="1152" height="1920" />
   </platform>
-  <preference name="Orientation" value="landscape" />
+  <preference name="Orientation" value="default" />
   <preference name="Fullscreen" value="True" />
   <plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
   <preference name="KeepRunning" value="False" />
