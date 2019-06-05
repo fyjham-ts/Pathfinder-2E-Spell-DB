@@ -30576,7 +30576,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var links = [{ "name": "Spells", "page": "spells" }, { "name": "Bookmarks", "page": "bookmarks" }];
+var links = [{ "name": "Spells", "page": "spells" }, { "name": "Bookmark Manager", "page": "bookmarks" }];
 
 var NavItem = function (_React$PureComponent) {
     _inherits(NavItem, _React$PureComponent);
@@ -30657,7 +30657,7 @@ var Navigation = function (_React$PureComponent2) {
                 _react2.default.createElement(
                     "a",
                     { className: "navbar-brand", href: "#" },
-                    "Navbar"
+                    "Spell DB"
                 ),
                 _react2.default.createElement(
                     "button",
