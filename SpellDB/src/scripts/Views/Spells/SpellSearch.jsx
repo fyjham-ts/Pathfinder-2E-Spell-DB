@@ -20,13 +20,12 @@ export default class SpellSearch extends React.Component {
         this.props.onCriteriaChange(name, value);
     }
     render() {
-        var powerOption = null;
-        var showPowerOptions = (this.props.powerType && this.props.powerOptions[this.props.powerType] && this.props.powerOptions[this.props.powerType].length > 1);
+        var spellOption = null;
+        var showSpellOptions = (this.props.spellType && this.props.spellTypes.find(t => t.name == this.props.spellType).options.length > 1);
 
         var levelRows = [
-            Array.from({ length: 4 }, (v, i) => i),
-            Array.from({ length: 4 }, (v, i) => i + 4),
-            Array.from({ length: 3 }, (v, i) => i + 8).concat('x')
+            Array.from({ length: 6 }, (v, i) => i),
+            Array.from({ length: 5 }, (v, i) => i + 6).concat('x')
         ];
 
         return (
@@ -45,27 +44,27 @@ export default class SpellSearch extends React.Component {
                 </CheckboxGroup>
                 <div className="col-md criteria">
                     <div className="form-row">
-                        <label htmlFor="spellName" className="col-form-label form-label d-none d-sm-block">Spell Name</label>
+                        <label htmlFor="spellName" className="col-form-label form-label">Search</label>
                         <div className="col">
                             <input className="form-control" id="spellName" name="spellName" type="text" value={this.props.spellName} onChange={this.handleCriteriaChange} />
                         </div>
                     </div>
                     <div className="form-row">
-                        <label htmlFor="powerType" className="col-form-label form-label d-none d-sm-block">Spell Type</label>
+                        <label htmlFor="spellType" className="col-form-label form-label">Type</label>
                         <div className="col">
-                            <select className="form-control" id="powerType" name="powerType" value={this.props.powerType} onChange={this.handleCriteriaChange}>
+                            <select className="form-control" id="spellType" name="spellType" value={this.props.spellType} onChange={this.handleCriteriaChange}>
                                 <option value="">All</option>
-                                {this.props.powerTypes.map((p) => { return <option key={p} value={p}>{p}</option> })}
+                                {this.props.spellTypes.map((p) => { return <option key={p.name} value={p.name}>{p.name}</option> })}
                             </select>
                         </div>
                     </div>
-                    {showPowerOptions ?
+                    {showSpellOptions ?
                         <div className="form-row">
-                            <label htmlFor="powerOption" className="col-form-label form-label d-none d-sm-block">Subtype</label>
+                            <label htmlFor="spellOption" className="col-form-label form-label">Subtype</label>
                             <div className="col">
-                                <select className="form-control" id="powerOption" name="powerOption" value={this.props.powerOption} onChange={this.handleCriteriaChange}>
+                                <select className="form-control" id="spellOption" name="spellOption" value={this.props.spellOption} onChange={this.handleCriteriaChange}>
                                     <option value="">All</option>
-                                    {this.props.powerOptions[this.props.powerType].map((p) => { return <option key={p} value={p}>{p}</option> })}
+                                    {this.props.spellTypes.find(t => t.name == this.props.spellType).options.map((p) => { return <option key={p.value} value={p.value}>{p.name}</option> })}
                                 </select>
                             </div>
                         </div>
@@ -73,14 +72,14 @@ export default class SpellSearch extends React.Component {
                 </div>
                 <div className="col-md sort">
                     <div className="form-row">
-                        <label htmlFor="sortBy" className="col-form-label form-label d-none d-sm-block">Sort By</label>
+                        <label htmlFor="sortBy" className="col-form-label form-label">Sort By</label>
                         <div className="col">
                             <select className="form-control" id="sortBy" name="sortBy" value={this.props.sortBy} onChange={this.handleCriteriaChange}>
                                 {this.props.sortOptions.map((p) => { return <option key={p} value={p}>{p}</option> })}
                             </select>
                         </div>
                     </div>
-                    <div className="form-row">
+                    <div className="form-row d-none d-sm-block">
                         <label htmlFor="displayMode" className="col-form-label form-label d-none d-sm-block">Display As</label>
                         <div className="col">
                             <select className="form-control" id="displayMode" name="displayMode" value={this.props.displayMode} onChange={this.handleCriteriaChange}>

@@ -2,7 +2,9 @@
 
 const links = [
     { "name": "Spells", "page": "spells" },
-    { "name": "Bookmark Manager", "page": "bookmarks" }
+    { "name": "Bookmark Manager", "page": "bookmarks" },
+    { "name": "Quick References", "page": "quickref"},
+    { "name": "About", "page": "about"}
 ];
 
 class NavItem extends React.PureComponent {

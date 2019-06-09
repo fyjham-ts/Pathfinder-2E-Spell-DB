@@ -6,19 +6,16 @@ import SpellDetail from './SpellDetail.js';
 import update from 'immutability-helper';
 import { loadSpellData } from '../../SpellLoader.js';
 
-let { spells, powerTypes, powerOptions } = loadSpellData();
+let { spells, spellTypes } = loadSpellData();
 
-for (var type in powerOptions) powerOptions[type].sort();
-powerTypes.push("Bookmark Lists");
-powerOptions["Bookmark Lists"] = [];
-powerTypes.sort();
+spellTypes.sort((lhs, rhs) => lhs.name < rhs.name ? -1 : (lhs.name > rhs.name ? 1 : 0));
 
 var defaultMaxRows = 50;
 var getDefaultCriteria = () => {
     return {
         'spellName': '',
-        'powerType': '',
-        'powerOption': '',
+        'spellType': '',
+        'spellOption': '',
         'sortBy': 'Level',
         'displayMode': 'Details',
         'levels': []
@@ -29,8 +26,7 @@ export default class SpellList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            powerTypes: powerTypes,
-            powerOptions: powerOptions,
+            spellTypes: spellTypes,
             spells: spells,
             maxRows: defaultMaxRows,
             criteria: getDefaultCriteria(),
@@ -38,6 +34,9 @@ export default class SpellList extends React.Component {
             bookmarkLists: this.props.bookmarkManager.getBookmarkLists(),
             activeBookmarkList: this.props.bookmarkManager.getActiveBookmarkList()
         };
+        this.state.spellTypes.forEach(st => {
+            if (st.matchBy == "bookmark") st.options = this.state.bookmarkLists.map(l => ({ "name": l.name, "value": l.id }));
+        });
         this.criteriaReset = this.criteriaReset.bind(this);
         this.criteriaChange = this.criteriaChange.bind(this);
         this.criteriaSort = this.criteriaSort.bind(this);
@@ -47,15 +46,29 @@ export default class SpellList extends React.Component {
         this.isBookmarked = this.isBookmarked.bind(this);
         this.bookmarkSpell = this.bookmarkSpell.bind(this);
 
-        this.props.bookmarkManager.on(this.props.bookmarkManager.events.dataUpdate, (ev, args) => {
-            this.setState({
-                "bookmarkLists": args
-            });
+        this.bookmarkListUpdate = this.bookmarkListUpdate.bind(this);
+        this.activeBookmarkListUpdate = this.activeBookmarkListUpdate.bind(this);
+
+        this.props.bookmarkManager.on(this.props.bookmarkManager.events.dataUpdate, this.bookmarkListUpdate);
+        this.props.bookmarkManager.on(this.props.bookmarkManager.events.activeListUpdate, this.activeBookmarkListUpdate);
+        this.componentWillUnmount = (function () {
+            this.props.bookmarkManager.off(this.props.bookmarkManager.events.dataUpdate, this.bookmarkListUpdate);
+            this.props.bookmarkManager.off(this.props.bookmarkManager.events.activeListUpdate, this.activeBookmarkListUpdate);
+        }).bind(this);
+    }
+    bookmarkListUpdate(ev, args) {
+        var types = JSON.parse(json.stringify(this.state.spellTypes));
+        types.forEach(st => {
+            if (st.matchBy == "bookmark") st.options = this.state.bookmarkLists.map(l => ({ "name": l.name, "value": l.id }));
         });
-        this.props.bookmarkManager.on(this.props.bookmarkManager.events.activeListUpdate, (ev, args) => {
-            this.setState({
-                "activeBookmarkList": args
-            });
+        this.setState({
+            "bookmarkLists": args,
+            "spellTypes": types
+        });
+    }
+    activeBookmarkListUpdate(ev, args) {
+        this.setState({
+            "activeBookmarkList": args
         });
     }
     isBookmarked(spell) {
@@ -71,22 +84,15 @@ export default class SpellList extends React.Component {
         if (this.state.criteria.spellName) {
             if (spell.name.toLowerCase().indexOf(this.state.criteria.spellName.toLowerCase()) === -1) return false;
         }
-        if (this.state.criteria.powerType) {
-            
-            switch (this.state.criteria.powerType) {
-                case "None": // Special "None" option - this is used when reviewing if a spell isn't classified.
-                    if (spell.type.toLowerCase() === "spell" || spell.powers.length > 0) return false;
-                    break;
-                case "Bookmark Lists": // Special "Bookmarked" option - this is for ones you've bookmarked for quick reference
-                    var list = this.state.bookmarkLists.find(l => l.name === this.state.criteria.powerOption);
+        if (this.state.criteria.spellType && this.state.criteria.spellOption) {
+            var spellType = this.state.spellTypes.find(t => t.name == this.state.criteria.spellType);
+            switch (spellType.matchBy) {
+                case "bookmark":
+                    var list = this.state.bookmarkLists.find(l => l.id === this.state.criteria.spellOption);
                     if (list && !list.spells[spell.name]) return false;
                     break;
-                default:
-                    if (spell.powers.filter((p) => {
-                        return (p.powerType === this.state.criteria.powerType) &&
-                            (!this.state.criteria.powerOption || p.powerOption === this.state.criteria.powerOption);
-                    }).length === 0) return false;
-                    break;
+                case "array":
+                    return spell[spellType.match] && spell[spellType.match].indexOf(this.state.criteria.spellOption) != -1;
             }
         }
         if (this.state.criteria.levels.length > 0 && this.state.criteria.levels.indexOf(spell.level) === -1) return false;
@@ -106,13 +112,14 @@ export default class SpellList extends React.Component {
         });
     }
     criteriaChange(name, value) {
-        if (name === "powerType") {
-            var powerOption = "";
-            if (value === "Bookmark Lists") powerOption = this.state.activeBookmarkList.name;
+        if (name === "spellType") {
+            var spellOption = "";
+            var spellType = this.state.spellTypes.find(t => t.name == value);
+            if (spellType && spellType.matchBy == "bookmark") spellOption = this.state.activeBookmarkList.name;
             this.setState({
                 criteria: update(this.state.criteria, {
                     [name]: { $set: value },
-                    powerOption: { $set: powerOption }  
+                    spellOption: { $set: spellOption }  
                 }),
                 maxRows: defaultMaxRows
             });
@@ -164,12 +171,11 @@ export default class SpellList extends React.Component {
                 <div className="row">
                     <div className="col-sm">
                         <SpellSearch
-                            powerTypes={this.state.powerTypes}
-                            powerOptions={this.state.powerOptions}
+                            spellTypes={this.state.spellTypes}
                             sortOptions={["Name", "Level"]}
                             displayModes={["List", "Details"]}
-                            powerType={this.state.criteria.powerType}
-                            powerOption={this.state.criteria.powerOption}
+                            spellType={this.state.criteria.spellType}
+                            spellOption={this.state.criteria.spellOption}
                             spellName={this.state.criteria.spellName}
                             sortBy={this.state.criteria.sortBy}
                             levels={this.state.criteria.levels}

@@ -14,6 +14,18 @@ var _SpellList = require('./Spells/SpellList.js');
 
 var _SpellList2 = _interopRequireDefault(_SpellList);
 
+var _BookmarkList = require('./Bookmarks/BookmarkList.js');
+
+var _BookmarkList2 = _interopRequireDefault(_BookmarkList);
+
+var _QuickRefIndex = require('./QuickRef/QuickRefIndex.js');
+
+var _QuickRefIndex2 = _interopRequireDefault(_QuickRefIndex);
+
+var _About = require('./About/About.js');
+
+var _About2 = _interopRequireDefault(_About);
+
 var _Navigation = require('./Navigation.js');
 
 var _Navigation2 = _interopRequireDefault(_Navigation);
@@ -61,6 +73,12 @@ var BasePage = function (_React$PureComponent) {
             switch (this.state.activePage) {
                 case "spells":
                     pageContent = _react2.default.createElement(_SpellList2.default, { bookmarkManager: bookmarkMgr });break;
+                case "bookmarks":
+                    pageContent = _react2.default.createElement(_BookmarkList2.default, { bookmarkManager: bookmarkMgr });break;
+                case "quickref":
+                    pageContent = _react2.default.createElement(_QuickRefIndex2.default, null);break;
+                case "about":
+                    pageContent = _react2.default.createElement(_About2.default, null);break;
                 default:
                     pageContent = _react2.default.createElement(
                         'div',

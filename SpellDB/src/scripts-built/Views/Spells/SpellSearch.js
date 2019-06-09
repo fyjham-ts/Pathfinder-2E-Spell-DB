@@ -50,15 +50,17 @@ var SpellSearch = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            var powerOption = null;
-            var showPowerOptions = this.props.powerType && this.props.powerOptions[this.props.powerType] && this.props.powerOptions[this.props.powerType].length > 1;
+            var _this2 = this;
 
-            var levelRows = [Array.from({ length: 4 }, function (v, i) {
+            var spellOption = null;
+            var showSpellOptions = this.props.spellType && this.props.spellTypes.find(function (t) {
+                return t.name == _this2.props.spellType;
+            }).options.length > 1;
+
+            var levelRows = [Array.from({ length: 6 }, function (v, i) {
                 return i;
-            }), Array.from({ length: 4 }, function (v, i) {
-                return i + 4;
-            }), Array.from({ length: 3 }, function (v, i) {
-                return i + 8;
+            }), Array.from({ length: 5 }, function (v, i) {
+                return i + 6;
             }).concat('x')];
 
             return _react2.default.createElement(
@@ -94,8 +96,8 @@ var SpellSearch = function (_React$Component) {
                         { className: 'form-row' },
                         _react2.default.createElement(
                             'label',
-                            { htmlFor: 'spellName', className: 'col-form-label form-label d-none d-sm-block' },
-                            'Spell Name'
+                            { htmlFor: 'spellName', className: 'col-form-label form-label' },
+                            'Search'
                         ),
                         _react2.default.createElement(
                             'div',
@@ -108,36 +110,36 @@ var SpellSearch = function (_React$Component) {
                         { className: 'form-row' },
                         _react2.default.createElement(
                             'label',
-                            { htmlFor: 'powerType', className: 'col-form-label form-label d-none d-sm-block' },
-                            'Spell Type'
+                            { htmlFor: 'spellType', className: 'col-form-label form-label' },
+                            'Type'
                         ),
                         _react2.default.createElement(
                             'div',
                             { className: 'col' },
                             _react2.default.createElement(
                                 'select',
-                                { className: 'form-control', id: 'powerType', name: 'powerType', value: this.props.powerType, onChange: this.handleCriteriaChange },
+                                { className: 'form-control', id: 'spellType', name: 'spellType', value: this.props.spellType, onChange: this.handleCriteriaChange },
                                 _react2.default.createElement(
                                     'option',
                                     { value: '' },
                                     'All'
                                 ),
-                                this.props.powerTypes.map(function (p) {
+                                this.props.spellTypes.map(function (p) {
                                     return _react2.default.createElement(
                                         'option',
-                                        { key: p, value: p },
-                                        p
+                                        { key: p.name, value: p.name },
+                                        p.name
                                     );
                                 })
                             )
                         )
                     ),
-                    showPowerOptions ? _react2.default.createElement(
+                    showSpellOptions ? _react2.default.createElement(
                         'div',
                         { className: 'form-row' },
                         _react2.default.createElement(
                             'label',
-                            { htmlFor: 'powerOption', className: 'col-form-label form-label d-none d-sm-block' },
+                            { htmlFor: 'spellOption', className: 'col-form-label form-label' },
                             'Subtype'
                         ),
                         _react2.default.createElement(
@@ -145,17 +147,19 @@ var SpellSearch = function (_React$Component) {
                             { className: 'col' },
                             _react2.default.createElement(
                                 'select',
-                                { className: 'form-control', id: 'powerOption', name: 'powerOption', value: this.props.powerOption, onChange: this.handleCriteriaChange },
+                                { className: 'form-control', id: 'spellOption', name: 'spellOption', value: this.props.spellOption, onChange: this.handleCriteriaChange },
                                 _react2.default.createElement(
                                     'option',
                                     { value: '' },
                                     'All'
                                 ),
-                                this.props.powerOptions[this.props.powerType].map(function (p) {
+                                this.props.spellTypes.find(function (t) {
+                                    return t.name == _this2.props.spellType;
+                                }).options.map(function (p) {
                                     return _react2.default.createElement(
                                         'option',
-                                        { key: p, value: p },
-                                        p
+                                        { key: p.value, value: p.value },
+                                        p.name
                                     );
                                 })
                             )
@@ -170,7 +174,7 @@ var SpellSearch = function (_React$Component) {
                         { className: 'form-row' },
                         _react2.default.createElement(
                             'label',
-                            { htmlFor: 'sortBy', className: 'col-form-label form-label d-none d-sm-block' },
+                            { htmlFor: 'sortBy', className: 'col-form-label form-label' },
                             'Sort By'
                         ),
                         _react2.default.createElement(
@@ -191,7 +195,7 @@ var SpellSearch = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'form-row' },
+                        { className: 'form-row d-none d-sm-block' },
                         _react2.default.createElement(
                             'label',
                             { htmlFor: 'displayMode', className: 'col-form-label form-label d-none d-sm-block' },

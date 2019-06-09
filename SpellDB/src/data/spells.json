@@ -10,7 +10,6 @@
     "type": "spell",
     "level": 1,
     "rarity": 1,
-    //"casting": [ "aS", "aV" ],
     //"area": "15-foot aura",
     //"duration": "1 round",
     "description": {

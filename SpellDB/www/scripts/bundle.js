@@ -30345,6 +30345,200 @@ function extend() {
 },{}],289:[function(require,module,exports){
 module.exports=[
   {
+    "name": "Conditions",
+    "icon": "fa fa-allergies",
+    "render": "list",
+    "list": [
+      {
+        "name": "Accelerated",
+        "description": "One type of movement Speed is increased by a given distance per action. All types increase if the movement type is unspecified."
+      },
+      {
+        "name": "Asleep",
+        "description": "Can�t act. Gain the Blinded and Flat-footed conditions. Take a -4 conditional penalty to Armor Class (AC) and Perception. Critically fail all Reflex saves. Can�t remained seated or standing. Drop any held or wielded items unless an effect says otherwise. Awaken if you take damage, or an ally nudges or shakes you. If a loud noise is around you, you can attempt a Perception check as a free action at the start of your turn with a -4 circumstance penalty - unless magic explicitly prevents you such an attempt. On success, you awaken."
+      },
+      {
+        "name": "Blinded",
+        "description": "Treat all terrain as difficult. All other creatures and objects are Unseen to you unless you succeed at a Seek action to sense them. Automatically fail or critically fail (whichever is worse) Perception checks that fully depend on sight. If vision is your only precise sense, take a �4 conditional penalty to Perception checks. You�re immune to visual effects. Blinded overrides dazzled."
+      },
+      {
+        "name": "Bolstered",
+        "description": "You�ve been the subject of a spell or ability that can�t affect a creature more than once a day. Hence you�re immune to that same spell or ability from the same source for 24 hours, unless otherwise specified."
+      },
+      {
+        "name": "Broken",
+        "description": "The object can�t be used for its normal function or grant bonuses. It can still impose any item penalties or limitations as normal (if any). Broken armor is an exception insofar as it still grants item bonuses but also has a conditional penalty to AC: -1 for light armor, -2 for medium, or -3 for heavy."
+      },
+      {
+        "name": "Concealed",
+        "description": "Difficult to see but not invisible. A creature you�re concealed from must succeed at a DC 5 flat check when making an attack against you or targeting you with a spell or effect. On failure, the attack, spell, or effect has no effect."
+      },
+      {
+        "name": "Confused",
+        "description": "You can�t use reactions nor Delay or Ready an action. On each of your turns, you must use your actions to attack the creature that attacked you most recently. A GM may allow you to take actions needed to attempt this attack, such as drawing a weapon or moving. If no creature attacked you since your last turn, roll 1d4. On 1, attack nearest creature. On 2, attack yourself once (hitting automatically for normal damage) and end your turn. On 3, babble gibberish. On 4, act normally."
+      },
+      {
+        "name": "Dazzled",
+        "description": "If vision is your only precise sense, all creatures and objects have the Concealed condition."
+      },
+      {
+        "name": "Deafened",
+        "description": "You automatically fail or critically fail (whichever is worse) Perception checks based on sound. You take a -2 conditional penalty to Perception checks for initiative and those that involve sound but also rely on other senses. You must succeed at a DC 5 flat check to do any action with sound involved; on failure, the action is lost. You�re immune to auditory (hearing-based) effects."
+      },
+      {
+        "name": "Drained",
+        "description": "You take a conditional penalty equal to the value of this condition on any Fortitude saves and Constitution-based checks. Lose Hit Points equal to your level multiplied by this conditions� value. Your maximum Hit Points drop by the same total. This condition�s value drops by 1 and your maximum Hit Points rise by 1 for each day you regain Hit Points by resting."
+      },
+      {
+        "name": "Encumbered",
+        "description": "Decrease every type of movement Speed by 10 feet (to no lower than 5 feet). Raise armor check penalty by 2 or take a -2 armor check penalty if unarmored."
+      },
+      {
+        "name": "Enervated",
+        "description": "Take a conditional penalty equal to this conditions� value on checks that include a proficiency modifier. This penalty cannot exceed your level. Treat your level as if lowered by this conditions� value when determining which spells you can cast or abilities you can use. You can attempt a Fortitude save daily to drop this condition�s value by 1 (or 2 on critical success). A day of downtime training can drop this condition�s value by 1 automatically."
+      },
+      {
+        "name": "Enfeebled",
+        "description": "Take a conditional penalty equal to this conditions� value on attack and damage rolls as well as Strength-based checks."
+      },
+      {
+        "name": "Entangled",
+        "description": "Gain the Hampered 10 condition. You must succeed at a DC 5 flat check to not lose any attempt at a manipulate action, activity, free action, or reaction."
+      },
+      {
+        "name": "Fascinated",
+        "description": "Take a -2 conditional penalty to Perception and skill checks. You can�t concentrate except on the subject of your fascination. This condition ends at hostile acts toward you or allies."
+      },
+      {
+        "name": "Fatigued",
+        "description": "Gain the Hampered 5 condition. You take a -1 conditional penalty to AC and saves. Each action increases the penalty by 1 until the start of your next turn."
+      },
+      {
+        "name": "Flat-footed",
+        "description": "Take a -2 circumstance penalty to AC. (Flanking applies this condition.)"
+      },
+      {
+        "name": "Fleeing",
+        "description": "Spend all actions to flee this condition�s seeming source. You can�t Delay or Ready."
+      },
+      {
+        "name": "Frightened",
+        "description": "Take a conditional penalty equal to this conditions� value on checks and saves. Unless specified, this condition�s value drops by 1 at the end of each of your turns."
+      },
+      {
+        "name": "Grabbed",
+        "description": "Gain the Flat-footed and Immobile conditions. You must succeed at a DC 5 flat check to not lose any attempt at a manipulate action, activity, free action, or reaction."
+      },
+      {
+        "name": "Hampered",
+        "description": "Decrease any specified type of movement Speed by this conditions� value in feet (to no lower than 5 feet). If no type is specified, this affects all movement types."
+      },
+      {
+        "name": "Immobile",
+        "description": "You can�t use any action, activity, free action, or reaction with a move trait. If an outside force would move you, it must succeed at a check against the DC of the effect rooting you or the defense (usually Fortitude) of the creature rooting you."
+      },
+      {
+        "name": "Paralyzed",
+        "description": "Gain the Flat-footed condition. You can�t act except to Recall Knowledge or mentally."
+      },
+      {
+        "name": "Persisten",
+        "description": "Damage: At turn�s end, take this condition�s value in damage. After that, you can attempt a DC 20 flat check to remove the persistent damage. You can take persistent damage from multiple sources, so long as they are of different damage types. See p. 323."
+      },
+      {
+        "name": "Petrified",
+        "description": "You can�t act. Gain the Blinded and Deafened conditions. You become an object with double your normal Bulk (usually 16 if Medium size or 8 if Small). Gain AC 9, TAC 5, Hardness 8. You can take �1 plus your Constitution modifier in damage in Dents before breaking. See p. 323."
+      },
+      {
+        "name": "Prone",
+        "description": "Take a -2 circumstance bonus penalty to attack rolls. Gain a +1 circumstance bonus to AC vs. ranged attacks. Flat-footed to melee attacks."
+      },
+      {
+        "name": "Quick",
+        "description": "Gain 1 extra action at the start of your turn each round. Source may specify action types."
+      },
+      {
+        "name": "Restrained",
+        "description": "Gain Immobile and Flat-footed conditions. You can�t do anything with attack or manipulate traits except for Break Grapple or Escape. Restrained overrides the Grabbed condition."
+      },
+      {
+        "name": "Sensed",
+        "description": "You become Sensed when a creature to whom you�re Unseen figures out what space you�re in. The creature is flat-footed to you but can target you with a Strike or other action that targets individuals, though it must succeed at a DC 11 flat check or it fails to affect you."
+      },
+      {
+        "name": "Sick",
+        "description": "Take a conditional penalty equal to this conditions� value on all your checks. You can�t willingly ingest anything, even potions. Spending an action retching grants a Fortitude save vs the DC of the source of your sickness. Drop this conditions� value by 1 (success) or 2 (critical success)."
+      },
+      {
+        "name": "Slowed",
+        "description": "Reduce the number of actions on your turn by the value of this condition. You can�t Ready an action. When you get this condition, you don�t have fewer actions until your next turn."
+      },
+      {
+        "name": "Sluggish",
+        "description": "Take a conditional penalty equal to this conditions� value to AC, attack rolls, Dexterity-based checks, and Reflex saves."
+      },
+      {
+        "name": "Stunned",
+        "description": "Your body is unresponsive. You can�t act."
+      },
+      {
+        "name": "Stupefied",
+        "description": "Take a conditional penalty equal to this conditions� value on spell rolls, spell DC, and mental checks (Intelligence, Wisdom, and Charisma). Any spell you cast is disrupted unless you succeed at a spell roll against the DC of this conditions� source."
+      },
+      {
+        "name": "Unseen",
+        "description": "When unseen by a creature, it can�t see you at all, has no idea what space you occupy, is flat-footed to you, and can�t target you with attacks or targeted spells and effects, though area effects can affect you. A creature can use the Seek action to try to find you. On success, you�re Sensed."
+      }
+
+    ]
+  },
+  {
+    "name": "Moster Abilities",
+    "icon": "fab fa-optin-monster",
+    "render": "list",
+    "list": []
+  },
+  {
+    "name": "Weapon Traits",
+    "icon": "fas fa-utensils",
+    "render": "list",
+    "list": []
+  }
+]
+},{}],290:[function(require,module,exports){
+module.exports=[
+  {
+    "name": "Traditions",
+    "matchBy": "array",
+    "match": "traditions",
+    "options": [
+      {
+        "name": "Arcane",
+        "value": "arcane"
+      },
+      {
+        "name": "Divine",
+        "value": "divine"
+      },
+      {
+        "name": "Occult",
+        "value": "occult"
+      },
+      {
+        "name": "Primal",
+        "value": "primal"
+      }
+    ]
+  },
+  {
+    "name": "Bookmarks",
+    "matchBy": "bookmark",
+    "options": []
+  }
+]
+},{}],291:[function(require,module,exports){
+module.exports=[
+  {
     "name": "Shocking Grasp",
     "traits": [ "attack", "electricity", "evocation" ],
     "traditions": [ "arcane", "primal" ],
@@ -30355,7 +30549,6 @@ module.exports=[
     "type": "spell",
     "level": 1,
     "rarity": 1,
-    //"casting": [ "aS", "aV" ],
     //"area": "15-foot aura",
     //"duration": "1 round",
     "description": {
@@ -30363,7 +30556,7 @@ module.exports=[
     }
   }
 ]
-},{}],290:[function(require,module,exports){
+},{}],292:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30378,6 +30571,14 @@ var spells = require("./../data/spells.json");
 var bookmarkKey = "SpellDB_bookmarkLists";
 var bookmarkActiveKey = "SpellDB_activeList";
 
+function uuidv4() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = Math.random() * 16 | 0,
+            v = c == 'x' ? r : r & 0x3 | 0x8;
+        return v.toString(16);
+    });
+};
+
 var BookmarkManager = function () {
     function BookmarkManager() {
         _classCallCheck(this, BookmarkManager);
@@ -30386,8 +30587,14 @@ var BookmarkManager = function () {
             "dataUpdate": "spelllists-dataupdate",
             "activeListUpdate": "spelllists-activelistupdate"
         };
-        this.bookmarkLists = window.localStorage.getItem(bookmarkKey);
+        this.bookmarkLists = null;
+        try {
+            this.bookmarkLists = JSON.parse(window.localStorage.getItem(bookmarkKey));
+        } catch (ex) {
+            this.bookmarkLists = null;
+        }
         if (!this.bookmarkLists || !Array.isArray(this.bookmarkLists)) this.bookmarkLists = [{
+            "id": uuidv4(),
             "name": "Default",
             "spells": {},
             "spellCount": 0
@@ -30403,6 +30610,12 @@ var BookmarkManager = function () {
             if (!triggers[event]) triggers[event] = [];
             triggers[event].push(callback);
         };
+        this.off = function (event, callback) {
+            if (!triggers[event]) return;
+            for (var i = 0; i < triggers[event].length; i++) {
+                if (triggers[event][i] === callback) triggers[event].splice(i, 1);
+            }
+        };
         this.emit = function (event, args) {
             if (triggers[event]) triggers[event].forEach(function (e) {
                 return e(event, args);
@@ -30410,7 +30623,7 @@ var BookmarkManager = function () {
         };
 
         this.saveLists = function () {
-            window.localStorage.setItem(bookmarkKey, this.bookmarkLists);
+            window.localStorage.setItem(bookmarkKey, JSON.stringify(this.bookmarkLists));
             this.emit(this.events.dataUpdate, this.getBookmarkLists());
         }.bind(this);
 
@@ -30422,11 +30635,57 @@ var BookmarkManager = function () {
 
     _createClass(BookmarkManager, [{
         key: "setActiveList",
-        value: function setActiveList(idx) {
-            if (idx >= 0 && idx < this.bookmarkLists.length) {
+        value: function setActiveList(id) {
+            var idx = this.getIndexFromId(id);
+            if (idx != -1) {
                 this.activeList = idx;
                 this.saveActiveList();
             }
+        }
+    }, {
+        key: "newList",
+        value: function newList() {
+            this.bookmarkLists.push({
+                "id": uuidv4(),
+                "name": "",
+                "spells": {},
+                "spellCount": 0
+            });
+            this.saveLists();
+        }
+    }, {
+        key: "updateListName",
+        value: function updateListName(id, name) {
+            var idx = this.getIndexFromId(id);
+            if (idx != -1) {
+                this.bookmarkLists[idx].name = name;
+            }
+            this.saveLists();
+        }
+    }, {
+        key: "deleteList",
+        value: function deleteList(id) {
+            if (this.bookmarkLists.length > 1) {
+                var idx = this.getIndexFromId(id);
+                if (idx != -1) {
+                    this.bookmarkLists.splice(idx, 1);
+                    if (this.activeList == idx) {
+                        this.activeList--;
+                        this.saveActiveList();
+                    }
+                    this.saveLists();
+                }
+            }
+        }
+    }, {
+        key: "getIndexFromId",
+        value: function getIndexFromId(id) {
+            for (var i = 0; i < this.bookmarkLists.length; i++) {
+                if (this.bookmarkLists[i].id == id) {
+                    return i;
+                }
+            }
+            return -1;
         }
     }, {
         key: "toggleSpell",
@@ -30459,7 +30718,18 @@ var BookmarkManager = function () {
 
 exports.default = BookmarkManager;
 ;
-},{"./../data/spells.json":289}],291:[function(require,module,exports){
+},{"./../data/spells.json":291}],293:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.loadRefData = loadRefData;
+var quickrefs = require("./../data/quickRef.json");
+function loadRefData() {
+    return quickrefs;
+};
+},{"./../data/quickRef.json":289}],294:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30467,10 +30737,144 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.loadSpellData = loadSpellData;
 var spells = require("./../data/spells.json");
+var spellTypes = require("./../data/spellTypes.json");
 function loadSpellData() {
-    return { spells: spells, powerTypes: [], powerOptions: [] };
+
+    return { spells: spells, spellTypes: spellTypes };
 };
-},{"./../data/spells.json":289}],292:[function(require,module,exports){
+},{"./../data/spellTypes.json":290,"./../data/spells.json":291}],295:[function(require,module,exports){
+arguments[4][294][0].apply(exports,arguments)
+},{"./../data/spellTypes.json":290,"./../data/spells.json":291,"dup":294}],296:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var About = function (_React$Component) {
+    _inherits(About, _React$Component);
+
+    function About(props) {
+        _classCallCheck(this, About);
+
+        var _this = _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this, props));
+
+        _this.state = {
+            "oglExpanded": false
+        };
+        return _this;
+    }
+
+    _createClass(About, [{
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "about" },
+                _react2.default.createElement(
+                    "h2",
+                    null,
+                    "About"
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "This was created to help people quickly look up info for their 2E games - if you have some fun with it that's great! I wrote a similar one for playtest, this time I ported to mobile."
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "The full code is available on GitHub - ",
+                    _react2.default.createElement(
+                        "a",
+                        { target: "_blank", href: "https://github.com/fyjham-ts/Pathfinder-2E-Spell-DB" },
+                        "https://github.com/fyjham-ts/Pathfinder-2E-Spell-DB"
+                    ),
+                    " - I'd love to hear your input. If you hit any bugs or want to request a feature, raise a GitHub issue!"
+                ),
+                _react2.default.createElement(
+                    "h2",
+                    null,
+                    "Credits"
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "Written by Tim Schneider."
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "OGL & Community Use content from Paizo HEAVILY used. No claim being made here."
+                ),
+                _react2.default.createElement(
+                    "h2",
+                    null,
+                    "License Stuff"
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "I'm a programmer not a lawyer, below comes the things I think I have to say to keep the legal people happy. Content from Paizo is licensed under OGL or Community Use as appropriate. My code is all available under MIT license."
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "If anyone at paizo believes I've messed up let me know. I've done this all in good faith, and will take down at a simple request (Whether I've breached any license or not - I'm happy to honour any request from Paizo for how to use their content)."
+                ),
+                _react2.default.createElement(
+                    "h3",
+                    null,
+                    "OGL"
+                ),
+                _react2.default.createElement(
+                    "pre",
+                    null,
+                    "There'll totally be an OGL here once I have the playtest book in PDF form for copy-pasta."
+                ),
+                _react2.default.createElement(
+                    "h3",
+                    null,
+                    "MIT License"
+                ),
+                _react2.default.createElement(
+                    "pre",
+                    null,
+                    "Copyright (c) 2019 Tim Schneider Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+                ),
+                _react2.default.createElement(
+                    "h3",
+                    null,
+                    "Community Use"
+                ),
+                _react2.default.createElement(
+                    "i",
+                    null,
+                    "This application uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This application is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com"
+                )
+            );
+        }
+    }]);
+
+    return About;
+}(_react2.default.Component);
+
+exports.default = About;
+},{"react":219}],297:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -30486,6 +30890,18 @@ var _react2 = _interopRequireDefault(_react);
 var _SpellList = require('./Spells/SpellList.js');
 
 var _SpellList2 = _interopRequireDefault(_SpellList);
+
+var _BookmarkList = require('./Bookmarks/BookmarkList.js');
+
+var _BookmarkList2 = _interopRequireDefault(_BookmarkList);
+
+var _QuickRefIndex = require('./QuickRef/QuickRefIndex.js');
+
+var _QuickRefIndex2 = _interopRequireDefault(_QuickRefIndex);
+
+var _About = require('./About/About.js');
+
+var _About2 = _interopRequireDefault(_About);
 
 var _Navigation = require('./Navigation.js');
 
@@ -30534,6 +30950,12 @@ var BasePage = function (_React$PureComponent) {
             switch (this.state.activePage) {
                 case "spells":
                     pageContent = _react2.default.createElement(_SpellList2.default, { bookmarkManager: bookmarkMgr });break;
+                case "bookmarks":
+                    pageContent = _react2.default.createElement(_BookmarkList2.default, { bookmarkManager: bookmarkMgr });break;
+                case "quickref":
+                    pageContent = _react2.default.createElement(_QuickRefIndex2.default, null);break;
+                case "about":
+                    pageContent = _react2.default.createElement(_About2.default, null);break;
                 default:
                     pageContent = _react2.default.createElement(
                         'div',
@@ -30555,7 +30977,183 @@ var BasePage = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = BasePage;
-},{"./../BookmarkManager.js":290,"./Navigation.js":293,"./Spells/SpellList.js":295,"react":219}],293:[function(require,module,exports){
+},{"./../BookmarkManager.js":292,"./About/About.js":296,"./Bookmarks/BookmarkList.js":298,"./Navigation.js":302,"./QuickRef/QuickRefIndex.js":303,"./Spells/SpellList.js":308,"react":219}],298:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _immutabilityHelper = require('immutability-helper');
+
+var _immutabilityHelper2 = _interopRequireDefault(_immutabilityHelper);
+
+var _BookmarkListRow = require('./BookmarkListRow.js');
+
+var _BookmarkListRow2 = _interopRequireDefault(_BookmarkListRow);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var BookmarkList = function (_React$Component) {
+    _inherits(BookmarkList, _React$Component);
+
+    function BookmarkList(props) {
+        _classCallCheck(this, BookmarkList);
+
+        var _this = _possibleConstructorReturn(this, (BookmarkList.__proto__ || Object.getPrototypeOf(BookmarkList)).call(this, props));
+
+        _this.state = {
+            'lists': _this.props.bookmarkManager.getBookmarkLists(),
+            'editList': _this.props.bookmarkManager.getActiveBookmarkList().id
+        };
+        _this.onToggleEdit = _this.onToggleEdit.bind(_this);
+        _this.onNameChange = _this.onNameChange.bind(_this);
+        _this.onDeleteList = _this.onDeleteList.bind(_this);
+        _this.onSaveList = _this.onSaveList.bind(_this);
+        _this.onLoadList = _this.onLoadList.bind(_this);
+        _this.onAddList = _this.onAddList.bind(_this);
+
+        _this.bookmarkListUpdate = _this.bookmarkListUpdate.bind(_this);
+        _this.activeBookmarkListUpdate = _this.activeBookmarkListUpdate.bind(_this);
+
+        _this.props.bookmarkManager.on(_this.props.bookmarkManager.events.dataUpdate, _this.bookmarkListUpdate);
+        _this.props.bookmarkManager.on(_this.props.bookmarkManager.events.activeListUpdate, _this.activeBookmarkListUpdate);
+        _this.componentWillUnmount = function () {
+            this.props.bookmarkManager.off(this.props.bookmarkManager.events.dataUpdate, this.bookmarkListUpdate);
+            this.props.bookmarkManager.off(this.props.bookmarkManager.events.activeListUpdate, this.activeBookmarkListUpdate);
+        }.bind(_this);
+        return _this;
+    }
+
+    _createClass(BookmarkList, [{
+        key: 'bookmarkListUpdate',
+        value: function bookmarkListUpdate(ev, args) {
+            this.setState({ 'lists': args });
+        }
+    }, {
+        key: 'activeBookmarkListUpdate',
+        value: function activeBookmarkListUpdate(ev, args) {
+            this.setState({ 'editList': args.id });
+        }
+    }, {
+        key: 'onToggleEdit',
+        value: function onToggleEdit(list) {
+            if (this.state.editList != list.id) {
+                this.props.bookmarkManager.setActiveList(list.id);
+            }
+        }
+    }, {
+        key: 'onSaveList',
+        value: function onSaveList(list) {
+            // TODO
+        }
+    }, {
+        key: 'onLoadList',
+        value: function onLoadList(list) {
+            //TODO
+        }
+    }, {
+        key: 'onDeleteList',
+        value: function onDeleteList(list) {
+            this.props.bookmarkManager.deleteList(list.id);
+        }
+    }, {
+        key: 'onAddList',
+        value: function onAddList() {
+            this.props.bookmarkManager.newList();
+        }
+    }, {
+        key: 'onNameChange',
+        value: function onNameChange(list, value) {
+            this.props.bookmarkManager.updateListName(list.id, value);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                { className: 'spellListConfig' },
+                _react2.default.createElement(
+                    'table',
+                    { className: 'table spellListTable' },
+                    _react2.default.createElement(
+                        'thead',
+                        null,
+                        _react2.default.createElement(
+                            'tr',
+                            null,
+                            _react2.default.createElement(
+                                'th',
+                                null,
+                                'List Name'
+                            ),
+                            _react2.default.createElement(
+                                'th',
+                                null,
+                                'Spells'
+                            ),
+                            _react2.default.createElement(
+                                'th',
+                                null,
+                                'Editing'
+                            ),
+                            _react2.default.createElement(
+                                'th',
+                                null,
+                                '\xA0'
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'tbody',
+                        null,
+                        this.state.lists.map(function (l) {
+                            return _react2.default.createElement(_BookmarkListRow2.default, {
+                                key: l.id,
+                                SpellList: l,
+                                canDelete: _this2.state.lists.length > 1,
+                                isEditList: l.id == _this2.state.editList,
+                                onNameChange: _this2.onNameChange,
+                                onDeleteList: _this2.onDeleteList,
+                                onSaveList: _this2.onSaveList,
+                                onToggleEdit: _this2.onToggleEdit });
+                        })
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'global-actions' },
+                    _react2.default.createElement(
+                        'button',
+                        { className: 'btn btn-success', onClick: this.onAddList },
+                        _react2.default.createElement('i', { className: 'fas fa-plus' }),
+                        '\xA0\xA0Create New List'
+                    )
+                )
+            );
+        }
+    }]);
+
+    return BookmarkList;
+}(_react2.default.Component);
+
+exports.default = BookmarkList;
+;
+},{"./BookmarkListRow.js":299,"immutability-helper":30,"react":219}],299:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -30576,7 +31174,294 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var links = [{ "name": "Spells", "page": "spells" }, { "name": "Bookmark Manager", "page": "bookmarks" }];
+var BookmarkListRow = function (_React$Component) {
+    _inherits(BookmarkListRow, _React$Component);
+
+    function BookmarkListRow(props) {
+        _classCallCheck(this, BookmarkListRow);
+
+        var _this = _possibleConstructorReturn(this, (BookmarkListRow.__proto__ || Object.getPrototypeOf(BookmarkListRow)).call(this, props));
+
+        _this.nameChanged = _this.nameChanged.bind(_this);
+        _this.saveList = _this.saveList.bind(_this);
+        _this.deleteList = _this.deleteList.bind(_this);
+        _this.toggleEdit = _this.toggleEdit.bind(_this);
+        return _this;
+    }
+
+    _createClass(BookmarkListRow, [{
+        key: "toggleEdit",
+        value: function toggleEdit() {
+            this.props.onToggleEdit(this.props.SpellList);
+        }
+    }, {
+        key: "saveList",
+        value: function saveList() {
+            this.props.onSaveList(this.props.SpellList);
+        }
+    }, {
+        key: "deleteList",
+        value: function deleteList() {
+            this.props.onDeleteList(this.props.SpellList);
+        }
+    }, {
+        key: "nameChanged",
+        value: function nameChanged(event) {
+            this.props.onNameChange(this.props.SpellList, event.target.value);
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "tr",
+                { className: "spellListRow" },
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    _react2.default.createElement("input", { className: "form-control", type: "text", name: "name", value: this.props.SpellList.name, onChange: this.nameChanged })
+                ),
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    this.props.SpellList.spellCount
+                ),
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    _react2.default.createElement(
+                        "a",
+                        { className: "btn" + (this.props.isEditList ? " editList" : ""), onClick: this.toggleEdit },
+                        this.props.isEditList ? _react2.default.createElement("i", { className: "fas fa-check-circle" }) : _react2.default.createElement("i", { className: "far fa-circle" })
+                    )
+                ),
+                _react2.default.createElement(
+                    "td",
+                    { className: "actions" },
+                    this.props.canDelete && !this.props.isEditList && _react2.default.createElement(
+                        "a",
+                        { className: "btn btn-outline-danger", onClick: this.deleteList },
+                        _react2.default.createElement("i", { className: "fas fa-trash-alt" })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return BookmarkListRow;
+}(_react2.default.Component);
+
+exports.default = BookmarkListRow;
+;
+},{"react":219}],300:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _immutabilityHelper = require('immutability-helper');
+
+var _immutabilityHelper2 = _interopRequireDefault(_immutabilityHelper);
+
+var _BookmarkListRow = require('./BookmarkListRow');
+
+var _BookmarkListRow2 = _interopRequireDefault(_BookmarkListRow);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var BookmarkList = function (_React$Component) {
+    _inherits(BookmarkList, _React$Component);
+
+    function BookmarkList(props) {
+        _classCallCheck(this, BookmarkList);
+
+        var _this = _possibleConstructorReturn(this, (BookmarkList.__proto__ || Object.getPrototypeOf(BookmarkList)).call(this, props));
+
+        _this.state = {
+            'lists': [],
+            'editList': null
+        };
+        _this.onToggleEdit = _this.onToggleEdit.bind(_this);
+        _this.onNameChange = _this.onNameChange.bind(_this);
+        _this.onDeleteList = _this.onDeleteList.bind(_this);
+        _this.onSaveList = _this.onSaveList.bind(_this);
+        _this.onLoadList = _this.onLoadList.bind(_this);
+        _this.onAddList = _this.onAddList.bind(_this);
+        _this.bindIpcEvents();
+        return _this;
+    }
+
+    _createClass(BookmarkList, [{
+        key: 'onToggleEdit',
+        value: function onToggleEdit(list) {
+            if (this.state.editList != list.id) ipcRenderer.send("spelllists-seteditlist", list.id);
+        }
+    }, {
+        key: 'onSaveList',
+        value: function onSaveList(list) {
+            remote.dialog.showSaveDialog({
+                "defaultPath": list.name + ".json",
+                "filters": [{ "name": "SpellDB Files", "extensions": ["json"] }]
+            }, function (fileName) {
+                if (fileName) ipcRenderer.send("spelllists-savespelllist", list.id, fileName);
+            });
+        }
+    }, {
+        key: 'onLoadList',
+        value: function onLoadList(list) {
+            remote.dialog.showOpenDialog({
+                "filters": [{ "name": "SpellDB files", "extensions": ["json"] }]
+            }, function (fileName) {
+                if (fileName && fileName[0]) ipcRenderer.send("spelllists-loadspelllist", fileName[0]);
+            });
+        }
+    }, {
+        key: 'onDeleteList',
+        value: function onDeleteList(list) {
+            ipcRenderer.send("spelllists-deletespelllist", list.id);
+        }
+    }, {
+        key: 'onAddList',
+        value: function onAddList() {
+            ipcRenderer.send("spelllists-newlist");
+        }
+    }, {
+        key: 'onNameChange',
+        value: function onNameChange(list, value) {
+            ipcRenderer.send("spelllists-updatelistname", list.id, value);
+        }
+    }, {
+        key: 'bindIpcEvents',
+        value: function bindIpcEvents() {
+            var _this2 = this;
+
+            ipcRenderer.on("background-error", function (ev, msg) {
+                alert(msg);
+            });
+            ipcRenderer.on('spelllists-dataupdate', function (ev, lists) {
+                _this2.setState({ 'lists': lists });
+            });
+            ipcRenderer.on('spelllists-editlistupdate', function (ev, id) {
+                _this2.setState({ 'editList': id });
+            });
+            ipcRenderer.send("spelllists-load");
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            return _react2.default.createElement(
+                'div',
+                { className: 'spellListConfig' },
+                _react2.default.createElement(
+                    'table',
+                    { className: 'table spellListTable' },
+                    _react2.default.createElement(
+                        'thead',
+                        null,
+                        _react2.default.createElement(
+                            'tr',
+                            null,
+                            _react2.default.createElement(
+                                'th',
+                                null,
+                                'List Name'
+                            ),
+                            _react2.default.createElement(
+                                'th',
+                                null,
+                                'Spells'
+                            ),
+                            _react2.default.createElement(
+                                'th',
+                                null,
+                                'Editing'
+                            ),
+                            _react2.default.createElement(
+                                'th',
+                                null,
+                                '\xA0'
+                            )
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'tbody',
+                        null,
+                        this.state.lists.map(function (l) {
+                            return _react2.default.createElement(_BookmarkListRow2.default, {
+                                key: l.id,
+                                SpellList: l,
+                                canDelete: _this3.state.lists.length > 1,
+                                isEditList: l.id == _this3.state.editList,
+                                onNameChange: _this3.onNameChange,
+                                onDeleteList: _this3.onDeleteList,
+                                onSaveList: _this3.onSaveList,
+                                onToggleEdit: _this3.onToggleEdit });
+                        })
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'global-actions' },
+                    _react2.default.createElement(
+                        'button',
+                        { className: 'btn btn-success', onClick: this.onAddList },
+                        _react2.default.createElement('i', { className: 'fas fa-plus' }),
+                        '\xA0\xA0Create New List'
+                    ),
+                    _react2.default.createElement(
+                        'button',
+                        { className: 'btn btn-secondary', onClick: this.onLoadList },
+                        _react2.default.createElement('i', { className: 'fas fa-file-upload' }),
+                        '\xA0\xA0Load From File'
+                    )
+                )
+            );
+        }
+    }]);
+
+    return BookmarkList;
+}(_react2.default.Component);
+
+exports.default = BookmarkList;
+;
+},{"./BookmarkListRow":299,"immutability-helper":30,"react":219}],301:[function(require,module,exports){
+"use strict";
+},{}],302:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var links = [{ "name": "Spells", "page": "spells" }, { "name": "Bookmark Manager", "page": "bookmarks" }, { "name": "Quick References", "page": "quickref" }, { "name": "About", "page": "about" }];
 
 var NavItem = function (_React$PureComponent) {
     _inherits(NavItem, _React$PureComponent);
@@ -30683,7 +31568,327 @@ var Navigation = function (_React$PureComponent2) {
 }(_react2.default.PureComponent);
 
 exports.default = Navigation;
-},{"react":219}],294:[function(require,module,exports){
+},{"react":219}],303:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _QuickRefList = require('./QuickRefList.js');
+
+var _QuickRefList2 = _interopRequireDefault(_QuickRefList);
+
+var _QuickRefTile = require('./QuickRefTile.js');
+
+var _QuickRefTile2 = _interopRequireDefault(_QuickRefTile);
+
+var _RefLoader = require('../../RefLoader.js');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var references = (0, _RefLoader.loadRefData)();
+
+var QuickRefIndex = function (_React$PureComponent) {
+    _inherits(QuickRefIndex, _React$PureComponent);
+
+    function QuickRefIndex(props) {
+        _classCallCheck(this, QuickRefIndex);
+
+        var _this = _possibleConstructorReturn(this, (QuickRefIndex.__proto__ || Object.getPrototypeOf(QuickRefIndex)).call(this, props));
+
+        _this.state = {
+            "activeRef": null
+        };
+        _this.backToListing = _this.backToListing.bind(_this);
+        _this.setActiveRef = _this.setActiveRef.bind(_this);
+        return _this;
+    }
+
+    _createClass(QuickRefIndex, [{
+        key: 'backToListing',
+        value: function backToListing() {
+            this.setActiveRef(null);
+        }
+    }, {
+        key: 'setActiveRef',
+        value: function setActiveRef(ref) {
+            this.setState({ "activeRef": ref });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            if (this.state.activeRef == null) {
+                return _react2.default.createElement(
+                    'div',
+                    { className: 'quickRefGrid' },
+                    references.map(function (r) {
+                        return _react2.default.createElement(_QuickRefTile2.default, { key: r.name, QuickReference: r, onSelect: _this2.setActiveRef });
+                    })
+                );
+            } else {
+                var listContent = null;
+                switch (this.state.activeRef.render) {
+                    case "list":
+                    default:
+                        listContent = _react2.default.createElement(_QuickRefList2.default, { list: this.state.activeRef.list });
+                        break;
+                }
+                return _react2.default.createElement(
+                    'div',
+                    { className: 'quickRefContent' },
+                    _react2.default.createElement(
+                        'h2',
+                        null,
+                        _react2.default.createElement('i', { className: this.state.activeRef.icon }),
+                        ' ',
+                        this.state.activeRef.name
+                    ),
+                    _react2.default.createElement(
+                        'a',
+                        { className: 'back', onClick: this.backToListing },
+                        _react2.default.createElement('i', { className: 'fa fa-chevron-left' }),
+                        ' Back to listing'
+                    ),
+                    _react2.default.createElement(
+                        'div',
+                        null,
+                        listContent
+                    )
+                );
+            }
+        }
+    }]);
+
+    return QuickRefIndex;
+}(_react2.default.PureComponent);
+
+exports.default = QuickRefIndex;
+},{"../../RefLoader.js":293,"./QuickRefList.js":304,"./QuickRefTile.js":305,"react":219}],304:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactMarkdown = require('react-markdown');
+
+var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var QuickRefList = function (_React$PureComponent) {
+    _inherits(QuickRefList, _React$PureComponent);
+
+    function QuickRefList(props) {
+        _classCallCheck(this, QuickRefList);
+
+        var _this = _possibleConstructorReturn(this, (QuickRefList.__proto__ || Object.getPrototypeOf(QuickRefList)).call(this, props));
+
+        _this.state = {
+            expanded: {}
+        };
+        _this.toggleExpand = _this.toggleExpand.bind(_this);
+        return _this;
+    }
+
+    _createClass(QuickRefList, [{
+        key: 'toggleExpand',
+        value: function toggleExpand(name) {
+            var expanded = Object.assign({}, this.state.expanded);
+            expanded[name] = !expanded[name];
+            this.setState({ expanded: expanded });
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                { className: 'quickRefList accordion' },
+                this.props.list.map(function (c) {
+                    return _react2.default.createElement(
+                        'div',
+                        { key: c.name, className: 'card' },
+                        _react2.default.createElement(
+                            'div',
+                            { className: 'card-header', onClick: function onClick() {
+                                    return _this2.toggleExpand(c.name);
+                                } },
+                            c.icon && _react2.default.createElement(
+                                'span',
+                                { className: c.icon },
+                                c.iconText
+                            ),
+                            c.name
+                        ),
+                        _this2.state.expanded[c.name] && _react2.default.createElement(
+                            'div',
+                            { className: 'card-body' },
+                            _react2.default.createElement(_reactMarkdown2.default, { source: c.description })
+                        )
+                    );
+                })
+            );
+        }
+    }]);
+
+    return QuickRefList;
+}(_react2.default.PureComponent);
+
+exports.default = QuickRefList;
+},{"react":219,"react-markdown":189}],305:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var QuickRefTile = function (_React$PureComponent) {
+    _inherits(QuickRefTile, _React$PureComponent);
+
+    function QuickRefTile(props) {
+        _classCallCheck(this, QuickRefTile);
+
+        var _this = _possibleConstructorReturn(this, (QuickRefTile.__proto__ || Object.getPrototypeOf(QuickRefTile)).call(this, props));
+
+        _this.onSelect = _this.onSelect.bind(_this);
+        return _this;
+    }
+
+    _createClass(QuickRefTile, [{
+        key: "onSelect",
+        value: function onSelect() {
+            this.props.onSelect(this.props.QuickReference);
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "tile", onClick: this.onSelect },
+                _react2.default.createElement(
+                    "div",
+                    { className: "icon" },
+                    _react2.default.createElement("i", { className: this.props.QuickReference.icon })
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "label" },
+                    this.props.QuickReference.name
+                )
+            );
+        }
+    }]);
+
+    return QuickRefTile;
+}(_react2.default.PureComponent);
+
+exports.default = QuickRefTile;
+},{"react":219}],306:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var QuickReferenceTile = function (_React$PureComponent) {
+    _inherits(QuickReferenceTile, _React$PureComponent);
+
+    function QuickReferenceTile(props) {
+        _classCallCheck(this, QuickReferenceTile);
+
+        var _this = _possibleConstructorReturn(this, (QuickReferenceTile.__proto__ || Object.getPrototypeOf(QuickReferenceTile)).call(this, props));
+
+        _this.onSelect = _this.onSelect.bind(_this);
+        return _this;
+    }
+
+    _createClass(QuickReferenceTile, [{
+        key: "onSelect",
+        value: function onSelect() {
+            this.props.onSelect(this.props.QuickReference);
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "div",
+                { className: "tile", onClick: this.onSelect },
+                _react2.default.createElement(
+                    "div",
+                    { className: "icon" },
+                    _react2.default.createElement("i", { className: this.props.QuickReference.icon })
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "label" },
+                    this.props.QuickReference.label
+                )
+            );
+        }
+    }]);
+
+    return QuickReferenceTile;
+}(_react2.default.PureComponent);
+
+exports.default = QuickReferenceTile;
+},{"react":219}],307:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -30880,7 +32085,7 @@ var SpellDetail = function (_React$PureComponent) {
 
 exports.default = SpellDetail;
 ;
-},{"react":219,"react-markdown":189}],295:[function(require,module,exports){
+},{"react":219,"react-markdown":189}],308:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -30925,21 +32130,18 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var _loadSpellData = (0, _SpellLoader.loadSpellData)(),
     spells = _loadSpellData.spells,
-    powerTypes = _loadSpellData.powerTypes,
-    powerOptions = _loadSpellData.powerOptions;
+    spellTypes = _loadSpellData.spellTypes;
 
-for (var type in powerOptions) {
-    powerOptions[type].sort();
-}powerTypes.push("Bookmark Lists");
-powerOptions["Bookmark Lists"] = [];
-powerTypes.sort();
+spellTypes.sort(function (lhs, rhs) {
+    return lhs.name < rhs.name ? -1 : lhs.name > rhs.name ? 1 : 0;
+});
 
 var defaultMaxRows = 50;
 var getDefaultCriteria = function getDefaultCriteria() {
     return {
         'spellName': '',
-        'powerType': '',
-        'powerOption': '',
+        'spellType': '',
+        'spellOption': '',
         'sortBy': 'Level',
         'displayMode': 'Details',
         'levels': []
@@ -30955,8 +32157,7 @@ var SpellList = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (SpellList.__proto__ || Object.getPrototypeOf(SpellList)).call(this, props));
 
         _this.state = {
-            powerTypes: powerTypes,
-            powerOptions: powerOptions,
+            spellTypes: spellTypes,
             spells: spells,
             maxRows: defaultMaxRows,
             criteria: getDefaultCriteria(),
@@ -30964,6 +32165,11 @@ var SpellList = function (_React$Component) {
             bookmarkLists: _this.props.bookmarkManager.getBookmarkLists(),
             activeBookmarkList: _this.props.bookmarkManager.getActiveBookmarkList()
         };
+        _this.state.spellTypes.forEach(function (st) {
+            if (st.matchBy == "bookmark") st.options = _this.state.bookmarkLists.map(function (l) {
+                return { "name": l.name, "value": l.id };
+            });
+        });
         _this.criteriaReset = _this.criteriaReset.bind(_this);
         _this.criteriaChange = _this.criteriaChange.bind(_this);
         _this.criteriaSort = _this.criteriaSort.bind(_this);
@@ -30973,20 +32179,42 @@ var SpellList = function (_React$Component) {
         _this.isBookmarked = _this.isBookmarked.bind(_this);
         _this.bookmarkSpell = _this.bookmarkSpell.bind(_this);
 
-        _this.props.bookmarkManager.on(_this.props.bookmarkManager.events.dataUpdate, function (ev, args) {
-            _this.setState({
-                "bookmarkLists": args
-            });
-        });
-        _this.props.bookmarkManager.on(_this.props.bookmarkManager.events.activeListUpdate, function (ev, args) {
-            _this.setState({
-                "activeBookmarkList": args
-            });
-        });
+        _this.bookmarkListUpdate = _this.bookmarkListUpdate.bind(_this);
+        _this.activeBookmarkListUpdate = _this.activeBookmarkListUpdate.bind(_this);
+
+        _this.props.bookmarkManager.on(_this.props.bookmarkManager.events.dataUpdate, _this.bookmarkListUpdate);
+        _this.props.bookmarkManager.on(_this.props.bookmarkManager.events.activeListUpdate, _this.activeBookmarkListUpdate);
+        _this.componentWillUnmount = function () {
+            this.props.bookmarkManager.off(this.props.bookmarkManager.events.dataUpdate, this.bookmarkListUpdate);
+            this.props.bookmarkManager.off(this.props.bookmarkManager.events.activeListUpdate, this.activeBookmarkListUpdate);
+        }.bind(_this);
         return _this;
     }
 
     _createClass(SpellList, [{
+        key: 'bookmarkListUpdate',
+        value: function bookmarkListUpdate(ev, args) {
+            var _this2 = this;
+
+            var types = JSON.parse(json.stringify(this.state.spellTypes));
+            types.forEach(function (st) {
+                if (st.matchBy == "bookmark") st.options = _this2.state.bookmarkLists.map(function (l) {
+                    return { "name": l.name, "value": l.id };
+                });
+            });
+            this.setState({
+                "bookmarkLists": args,
+                "spellTypes": types
+            });
+        }
+    }, {
+        key: 'activeBookmarkListUpdate',
+        value: function activeBookmarkListUpdate(ev, args) {
+            this.setState({
+                "activeBookmarkList": args
+            });
+        }
+    }, {
         key: 'isBookmarked',
         value: function isBookmarked(spell) {
             return !!(this.state.activeBookmarkList && this.state.activeBookmarkList.spells[spell.name]);
@@ -31006,30 +32234,24 @@ var SpellList = function (_React$Component) {
     }, {
         key: 'meetsCriteria',
         value: function meetsCriteria(spell) {
-            var _this2 = this;
+            var _this3 = this;
 
             if (this.state.criteria.spellName) {
                 if (spell.name.toLowerCase().indexOf(this.state.criteria.spellName.toLowerCase()) === -1) return false;
             }
-            if (this.state.criteria.powerType) {
-
-                switch (this.state.criteria.powerType) {
-                    case "None":
-                        // Special "None" option - this is used when reviewing if a spell isn't classified.
-                        if (spell.type.toLowerCase() === "spell" || spell.powers.length > 0) return false;
-                        break;
-                    case "Bookmark Lists":
-                        // Special "Bookmarked" option - this is for ones you've bookmarked for quick reference
+            if (this.state.criteria.spellType && this.state.criteria.spellOption) {
+                var spellType = this.state.spellTypes.find(function (t) {
+                    return t.name == _this3.state.criteria.spellType;
+                });
+                switch (spellType.matchBy) {
+                    case "bookmark":
                         var list = this.state.bookmarkLists.find(function (l) {
-                            return l.name === _this2.state.criteria.powerOption;
+                            return l.id === _this3.state.criteria.spellOption;
                         });
                         if (list && !list.spells[spell.name]) return false;
                         break;
-                    default:
-                        if (spell.powers.filter(function (p) {
-                            return p.powerType === _this2.state.criteria.powerType && (!_this2.state.criteria.powerOption || p.powerOption === _this2.state.criteria.powerOption);
-                        }).length === 0) return false;
-                        break;
+                    case "array":
+                        return spell[spellType.match] && spell[spellType.match].indexOf(this.state.criteria.spellOption) != -1;
                 }
             }
             if (this.state.criteria.levels.length > 0 && this.state.criteria.levels.indexOf(spell.level) === -1) return false;
@@ -31055,13 +32277,16 @@ var SpellList = function (_React$Component) {
     }, {
         key: 'criteriaChange',
         value: function criteriaChange(name, value) {
-            if (name === "powerType") {
+            if (name === "spellType") {
                 var _update;
 
-                var powerOption = "";
-                if (value === "Bookmark Lists") powerOption = this.state.activeBookmarkList.name;
+                var spellOption = "";
+                var spellType = this.state.spellTypes.find(function (t) {
+                    return t.name == value;
+                });
+                if (spellType && spellType.matchBy == "bookmark") spellOption = this.state.activeBookmarkList.name;
                 this.setState({
-                    criteria: (0, _immutabilityHelper2.default)(this.state.criteria, (_update = {}, _defineProperty(_update, name, { $set: value }), _defineProperty(_update, 'powerOption', { $set: powerOption }), _update)),
+                    criteria: (0, _immutabilityHelper2.default)(this.state.criteria, (_update = {}, _defineProperty(_update, name, { $set: value }), _defineProperty(_update, 'spellOption', { $set: spellOption }), _update)),
                     maxRows: defaultMaxRows
                 });
             } else {
@@ -31089,7 +32314,7 @@ var SpellList = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            var _this3 = this;
+            var _this4 = this;
 
             var visibleSpells = this.state.spells.filter(this.meetsCriteria).sort(this.criteriaSort);
             var truncated = false;
@@ -31120,12 +32345,11 @@ var SpellList = function (_React$Component) {
                         'div',
                         { className: 'col-sm' },
                         _react2.default.createElement(_SpellSearch2.default, {
-                            powerTypes: this.state.powerTypes,
-                            powerOptions: this.state.powerOptions,
+                            spellTypes: this.state.spellTypes,
                             sortOptions: ["Name", "Level"],
                             displayModes: ["List", "Details"],
-                            powerType: this.state.criteria.powerType,
-                            powerOption: this.state.criteria.powerOption,
+                            spellType: this.state.criteria.spellType,
+                            spellOption: this.state.criteria.spellOption,
                             spellName: this.state.criteria.spellName,
                             sortBy: this.state.criteria.sortBy,
                             levels: this.state.criteria.levels,
@@ -31146,16 +32370,16 @@ var SpellList = function (_React$Component) {
                             'ul',
                             { className: 'list-group' },
                             visibleSpells.map(function (s) {
-                                if (_this3.state.criteria.displayMode == "Details") return _react2.default.createElement(_SpellDetail2.default, {
+                                if (_this4.state.criteria.displayMode == "Details") return _react2.default.createElement(_SpellDetail2.default, {
                                     key: s.name,
                                     spell: s,
-                                    bookmarked: _this3.isBookmarked(s),
-                                    onBookmark: _this3.bookmarkSpell
+                                    bookmarked: _this4.isBookmarked(s),
+                                    onBookmark: _this4.bookmarkSpell
                                 });else return _react2.default.createElement(_SpellListItem2.default, {
                                     key: s.name,
                                     spell: s,
                                     selected: s == selectedSpell,
-                                    onSelect: _this3.selectSpell
+                                    onSelect: _this4.selectSpell
                                 });
                             }),
                             truncated ? _react2.default.createElement(
@@ -31180,7 +32404,7 @@ var SpellList = function (_React$Component) {
 
 exports.default = SpellList;
 ;
-},{"../../SpellLoader.js":291,"./SpellDetail.js":294,"./SpellListItem.js":296,"./SpellSearch.js":297,"immutability-helper":30,"react":219}],296:[function(require,module,exports){
+},{"../../SpellLoader.js":295,"./SpellDetail.js":307,"./SpellListItem.js":309,"./SpellSearch.js":310,"immutability-helper":30,"react":219}],309:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31250,7 +32474,7 @@ var SpellListItem = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = SpellListItem;
-},{"react":219}],297:[function(require,module,exports){
+},{"react":219}],310:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31303,15 +32527,17 @@ var SpellSearch = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            var powerOption = null;
-            var showPowerOptions = this.props.powerType && this.props.powerOptions[this.props.powerType] && this.props.powerOptions[this.props.powerType].length > 1;
+            var _this2 = this;
 
-            var levelRows = [Array.from({ length: 4 }, function (v, i) {
+            var spellOption = null;
+            var showSpellOptions = this.props.spellType && this.props.spellTypes.find(function (t) {
+                return t.name == _this2.props.spellType;
+            }).options.length > 1;
+
+            var levelRows = [Array.from({ length: 6 }, function (v, i) {
                 return i;
-            }), Array.from({ length: 4 }, function (v, i) {
-                return i + 4;
-            }), Array.from({ length: 3 }, function (v, i) {
-                return i + 8;
+            }), Array.from({ length: 5 }, function (v, i) {
+                return i + 6;
             }).concat('x')];
 
             return _react2.default.createElement(
@@ -31347,8 +32573,8 @@ var SpellSearch = function (_React$Component) {
                         { className: 'form-row' },
                         _react2.default.createElement(
                             'label',
-                            { htmlFor: 'spellName', className: 'col-form-label form-label d-none d-sm-block' },
-                            'Spell Name'
+                            { htmlFor: 'spellName', className: 'col-form-label form-label' },
+                            'Search'
                         ),
                         _react2.default.createElement(
                             'div',
@@ -31361,36 +32587,36 @@ var SpellSearch = function (_React$Component) {
                         { className: 'form-row' },
                         _react2.default.createElement(
                             'label',
-                            { htmlFor: 'powerType', className: 'col-form-label form-label d-none d-sm-block' },
-                            'Spell Type'
+                            { htmlFor: 'spellType', className: 'col-form-label form-label' },
+                            'Type'
                         ),
                         _react2.default.createElement(
                             'div',
                             { className: 'col' },
                             _react2.default.createElement(
                                 'select',
-                                { className: 'form-control', id: 'powerType', name: 'powerType', value: this.props.powerType, onChange: this.handleCriteriaChange },
+                                { className: 'form-control', id: 'spellType', name: 'spellType', value: this.props.spellType, onChange: this.handleCriteriaChange },
                                 _react2.default.createElement(
                                     'option',
                                     { value: '' },
                                     'All'
                                 ),
-                                this.props.powerTypes.map(function (p) {
+                                this.props.spellTypes.map(function (p) {
                                     return _react2.default.createElement(
                                         'option',
-                                        { key: p, value: p },
-                                        p
+                                        { key: p.name, value: p.name },
+                                        p.name
                                     );
                                 })
                             )
                         )
                     ),
-                    showPowerOptions ? _react2.default.createElement(
+                    showSpellOptions ? _react2.default.createElement(
                         'div',
                         { className: 'form-row' },
                         _react2.default.createElement(
                             'label',
-                            { htmlFor: 'powerOption', className: 'col-form-label form-label d-none d-sm-block' },
+                            { htmlFor: 'spellOption', className: 'col-form-label form-label' },
                             'Subtype'
                         ),
                         _react2.default.createElement(
@@ -31398,17 +32624,19 @@ var SpellSearch = function (_React$Component) {
                             { className: 'col' },
                             _react2.default.createElement(
                                 'select',
-                                { className: 'form-control', id: 'powerOption', name: 'powerOption', value: this.props.powerOption, onChange: this.handleCriteriaChange },
+                                { className: 'form-control', id: 'spellOption', name: 'spellOption', value: this.props.spellOption, onChange: this.handleCriteriaChange },
                                 _react2.default.createElement(
                                     'option',
                                     { value: '' },
                                     'All'
                                 ),
-                                this.props.powerOptions[this.props.powerType].map(function (p) {
+                                this.props.spellTypes.find(function (t) {
+                                    return t.name == _this2.props.spellType;
+                                }).options.map(function (p) {
                                     return _react2.default.createElement(
                                         'option',
-                                        { key: p, value: p },
-                                        p
+                                        { key: p.value, value: p.value },
+                                        p.name
                                     );
                                 })
                             )
@@ -31423,7 +32651,7 @@ var SpellSearch = function (_React$Component) {
                         { className: 'form-row' },
                         _react2.default.createElement(
                             'label',
-                            { htmlFor: 'sortBy', className: 'col-form-label form-label d-none d-sm-block' },
+                            { htmlFor: 'sortBy', className: 'col-form-label form-label' },
                             'Sort By'
                         ),
                         _react2.default.createElement(
@@ -31444,7 +32672,7 @@ var SpellSearch = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'form-row' },
+                        { className: 'form-row d-none d-sm-block' },
                         _react2.default.createElement(
                             'label',
                             { htmlFor: 'displayMode', className: 'col-form-label form-label d-none d-sm-block' },
@@ -31476,7 +32704,7 @@ var SpellSearch = function (_React$Component) {
 
 exports.default = SpellSearch;
 ;
-},{"react":219,"react-checkbox-group":54}],298:[function(require,module,exports){
+},{"react":219,"react-checkbox-group":54}],311:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -31494,4 +32722,4 @@ var _BasePage2 = _interopRequireDefault(_BasePage);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(_BasePage2.default, null), document.getElementById('app'));
-},{"./Views/BasePage.js":292,"react":219,"react-dom":55}]},{},[290,298,291,292,293,294,295,296,297]);
+},{"./Views/BasePage.js":297,"react":219,"react-dom":55}]},{},[292,311,293,294,295,296,297,298,299,300,301,302,306,303,304,305,307,308,309,310]);

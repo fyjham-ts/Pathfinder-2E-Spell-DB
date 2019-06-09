@@ -42,21 +42,18 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var _loadSpellData = (0, _SpellLoader.loadSpellData)(),
     spells = _loadSpellData.spells,
-    powerTypes = _loadSpellData.powerTypes,
-    powerOptions = _loadSpellData.powerOptions;
+    spellTypes = _loadSpellData.spellTypes;
 
-for (var type in powerOptions) {
-    powerOptions[type].sort();
-}powerTypes.push("Bookmark Lists");
-powerOptions["Bookmark Lists"] = [];
-powerTypes.sort();
+spellTypes.sort(function (lhs, rhs) {
+    return lhs.name < rhs.name ? -1 : lhs.name > rhs.name ? 1 : 0;
+});
 
 var defaultMaxRows = 50;
 var getDefaultCriteria = function getDefaultCriteria() {
     return {
         'spellName': '',
-        'powerType': '',
-        'powerOption': '',
+        'spellType': '',
+        'spellOption': '',
         'sortBy': 'Level',
         'displayMode': 'Details',
         'levels': []
@@ -72,8 +69,7 @@ var SpellList = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (SpellList.__proto__ || Object.getPrototypeOf(SpellList)).call(this, props));
 
         _this.state = {
-            powerTypes: powerTypes,
-            powerOptions: powerOptions,
+            spellTypes: spellTypes,
             spells: spells,
             maxRows: defaultMaxRows,
             criteria: getDefaultCriteria(),
@@ -81,6 +77,11 @@ var SpellList = function (_React$Component) {
             bookmarkLists: _this.props.bookmarkManager.getBookmarkLists(),
             activeBookmarkList: _this.props.bookmarkManager.getActiveBookmarkList()
         };
+        _this.state.spellTypes.forEach(function (st) {
+            if (st.matchBy == "bookmark") st.options = _this.state.bookmarkLists.map(function (l) {
+                return { "name": l.name, "value": l.id };
+            });
+        });
         _this.criteriaReset = _this.criteriaReset.bind(_this);
         _this.criteriaChange = _this.criteriaChange.bind(_this);
         _this.criteriaSort = _this.criteriaSort.bind(_this);
@@ -90,20 +91,42 @@ var SpellList = function (_React$Component) {
         _this.isBookmarked = _this.isBookmarked.bind(_this);
         _this.bookmarkSpell = _this.bookmarkSpell.bind(_this);
 
-        _this.props.bookmarkManager.on(_this.props.bookmarkManager.events.dataUpdate, function (ev, args) {
-            _this.setState({
-                "bookmarkLists": args
-            });
-        });
-        _this.props.bookmarkManager.on(_this.props.bookmarkManager.events.activeListUpdate, function (ev, args) {
-            _this.setState({
-                "activeBookmarkList": args
-            });
-        });
+        _this.bookmarkListUpdate = _this.bookmarkListUpdate.bind(_this);
+        _this.activeBookmarkListUpdate = _this.activeBookmarkListUpdate.bind(_this);
+
+        _this.props.bookmarkManager.on(_this.props.bookmarkManager.events.dataUpdate, _this.bookmarkListUpdate);
+        _this.props.bookmarkManager.on(_this.props.bookmarkManager.events.activeListUpdate, _this.activeBookmarkListUpdate);
+        _this.componentWillUnmount = function () {
+            this.props.bookmarkManager.off(this.props.bookmarkManager.events.dataUpdate, this.bookmarkListUpdate);
+            this.props.bookmarkManager.off(this.props.bookmarkManager.events.activeListUpdate, this.activeBookmarkListUpdate);
+        }.bind(_this);
         return _this;
     }
 
     _createClass(SpellList, [{
+        key: 'bookmarkListUpdate',
+        value: function bookmarkListUpdate(ev, args) {
+            var _this2 = this;
+
+            var types = JSON.parse(json.stringify(this.state.spellTypes));
+            types.forEach(function (st) {
+                if (st.matchBy == "bookmark") st.options = _this2.state.bookmarkLists.map(function (l) {
+                    return { "name": l.name, "value": l.id };
+                });
+            });
+            this.setState({
+                "bookmarkLists": args,
+                "spellTypes": types
+            });
+        }
+    }, {
+        key: 'activeBookmarkListUpdate',
+        value: function activeBookmarkListUpdate(ev, args) {
+            this.setState({
+                "activeBookmarkList": args
+            });
+        }
+    }, {
         key: 'isBookmarked',
         value: function isBookmarked(spell) {
             return !!(this.state.activeBookmarkList && this.state.activeBookmarkList.spells[spell.name]);
@@ -123,30 +146,24 @@ var SpellList = function (_React$Component) {
     }, {
         key: 'meetsCriteria',
         value: function meetsCriteria(spell) {
-            var _this2 = this;
+            var _this3 = this;
 
             if (this.state.criteria.spellName) {
                 if (spell.name.toLowerCase().indexOf(this.state.criteria.spellName.toLowerCase()) === -1) return false;
             }
-            if (this.state.criteria.powerType) {
-
-                switch (this.state.criteria.powerType) {
-                    case "None":
-                        // Special "None" option - this is used when reviewing if a spell isn't classified.
-                        if (spell.type.toLowerCase() === "spell" || spell.powers.length > 0) return false;
-                        break;
-                    case "Bookmark Lists":
-                        // Special "Bookmarked" option - this is for ones you've bookmarked for quick reference
+            if (this.state.criteria.spellType && this.state.criteria.spellOption) {
+                var spellType = this.state.spellTypes.find(function (t) {
+                    return t.name == _this3.state.criteria.spellType;
+                });
+                switch (spellType.matchBy) {
+                    case "bookmark":
                         var list = this.state.bookmarkLists.find(function (l) {
-                            return l.name === _this2.state.criteria.powerOption;
+                            return l.id === _this3.state.criteria.spellOption;
                         });
                         if (list && !list.spells[spell.name]) return false;
                         break;
-                    default:
-                        if (spell.powers.filter(function (p) {
-                            return p.powerType === _this2.state.criteria.powerType && (!_this2.state.criteria.powerOption || p.powerOption === _this2.state.criteria.powerOption);
-                        }).length === 0) return false;
-                        break;
+                    case "array":
+                        return spell[spellType.match] && spell[spellType.match].indexOf(this.state.criteria.spellOption) != -1;
                 }
             }
             if (this.state.criteria.levels.length > 0 && this.state.criteria.levels.indexOf(spell.level) === -1) return false;
@@ -172,13 +189,16 @@ var SpellList = function (_React$Component) {
     }, {
         key: 'criteriaChange',
         value: function criteriaChange(name, value) {
-            if (name === "powerType") {
+            if (name === "spellType") {
                 var _update;
 
-                var powerOption = "";
-                if (value === "Bookmark Lists") powerOption = this.state.activeBookmarkList.name;
+                var spellOption = "";
+                var spellType = this.state.spellTypes.find(function (t) {
+                    return t.name == value;
+                });
+                if (spellType && spellType.matchBy == "bookmark") spellOption = this.state.activeBookmarkList.name;
                 this.setState({
-                    criteria: (0, _immutabilityHelper2.default)(this.state.criteria, (_update = {}, _defineProperty(_update, name, { $set: value }), _defineProperty(_update, 'powerOption', { $set: powerOption }), _update)),
+                    criteria: (0, _immutabilityHelper2.default)(this.state.criteria, (_update = {}, _defineProperty(_update, name, { $set: value }), _defineProperty(_update, 'spellOption', { $set: spellOption }), _update)),
                     maxRows: defaultMaxRows
                 });
             } else {
@@ -206,7 +226,7 @@ var SpellList = function (_React$Component) {
     }, {
         key: 'render',
         value: function render() {
-            var _this3 = this;
+            var _this4 = this;
 
             var visibleSpells = this.state.spells.filter(this.meetsCriteria).sort(this.criteriaSort);
             var truncated = false;
@@ -237,12 +257,11 @@ var SpellList = function (_React$Component) {
                         'div',
                         { className: 'col-sm' },
                         _react2.default.createElement(_SpellSearch2.default, {
-                            powerTypes: this.state.powerTypes,
-                            powerOptions: this.state.powerOptions,
+                            spellTypes: this.state.spellTypes,
                             sortOptions: ["Name", "Level"],
                             displayModes: ["List", "Details"],
-                            powerType: this.state.criteria.powerType,
-                            powerOption: this.state.criteria.powerOption,
+                            spellType: this.state.criteria.spellType,
+                            spellOption: this.state.criteria.spellOption,
                             spellName: this.state.criteria.spellName,
                             sortBy: this.state.criteria.sortBy,
                             levels: this.state.criteria.levels,
@@ -263,16 +282,16 @@ var SpellList = function (_React$Component) {
                             'ul',
                             { className: 'list-group' },
                             visibleSpells.map(function (s) {
-                                if (_this3.state.criteria.displayMode == "Details") return _react2.default.createElement(_SpellDetail2.default, {
+                                if (_this4.state.criteria.displayMode == "Details") return _react2.default.createElement(_SpellDetail2.default, {
                                     key: s.name,
                                     spell: s,
-                                    bookmarked: _this3.isBookmarked(s),
-                                    onBookmark: _this3.bookmarkSpell
+                                    bookmarked: _this4.isBookmarked(s),
+                                    onBookmark: _this4.bookmarkSpell
                                 });else return _react2.default.createElement(_SpellListItem2.default, {
                                     key: s.name,
                                     spell: s,
                                     selected: s == selectedSpell,
-                                    onSelect: _this3.selectSpell
+                                    onSelect: _this4.selectSpell
                                 });
                             }),
                             truncated ? _react2.default.createElement(

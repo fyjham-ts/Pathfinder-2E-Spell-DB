@@ -1,5 +1,8 @@
 ﻿import React from 'react';
 import SpellList from './Spells/SpellList.js';
+import BookmarkList from './Bookmarks/BookmarkList.js';
+import QuickRefIndex from './QuickRef/QuickRefIndex.js';
+import About from './About/About.js';
 import Navigation from './Navigation.js';
 import BookmarkManager from './../BookmarkManager.js';
 
@@ -22,6 +25,9 @@ export default class BasePage extends React.PureComponent {
         var pageContent = null;
         switch (this.state.activePage) {
             case "spells": pageContent = <SpellList bookmarkManager={bookmarkMgr} />; break;
+            case "bookmarks": pageContent = <BookmarkList bookmarkManager={bookmarkMgr} />; break;
+            case "quickref": pageContent = <QuickRefIndex />; break;
+            case "about": pageContent = <About />; break;
             default: pageContent = <div>Page To Be Created</div>; break;
         }
 

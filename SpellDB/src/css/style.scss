@@ -215,9 +215,17 @@ $uniqueRarity: #25408f;
 .upgradeDetails {
     label { font-weight: bold; }
 }
-.quickRefs {
+.quickRefContent {
+    padding: 5px;
+    a.back {
+        padding: 0 5px;
+        cursor: pointer;
+    }
+}
+.quickRefGrid {
     display: flex;
     flex-wrap: wrap;
+
     .tile {
         width: 150px;
         height: 150px;
@@ -227,14 +235,16 @@ $uniqueRarity: #25408f;
         padding: 25px 0;
         margin: 10px;
         cursor: pointer;
+
         &:hover {
             background: #DDD;
         }
+
         .icon {
             font-size: 3em;
         }
-        .label {
 
+        .label {
         }
     }
 }
@@ -283,8 +293,8 @@ $uniqueRarity: #25408f;
         }
     }
 }
-.quickRefList {
-    padding: 15px 0;
+.quickRefList{
+
 
     .card-body {
         padding: 0.5rem;
@@ -339,7 +349,6 @@ $uniqueRarity: #25408f;
         }
     }
 }
-
 .randomNpc {
     .npcCard {
         margin-bottom: 20px;
@@ -377,5 +386,11 @@ $uniqueRarity: #25408f;
         td {
             text-align: right;
         }
+    }
+}
+.about {
+    padding: 10px;
+    pre {
+        white-space: pre-wrap;
     }
 }

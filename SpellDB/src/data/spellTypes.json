@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Traditions",
+    "matchBy": "array",
+    "match": "traditions",
+    "options": [
+      {
+        "name": "Arcane",
+        "value": "arcane"
+      },
+      {
+        "name": "Divine",
+        "value": "divine"
+      },
+      {
+        "name": "Occult",
+        "value": "occult"
+      },
+      {
+        "name": "Primal",
+        "value": "primal"
+      }
+    ]
+  },
+  {
+    "name": "Bookmarks",
+    "matchBy": "bookmark",
+    "options": []
+  }
+]

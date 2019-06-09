@@ -11760,10 +11760,16 @@ readers do not read off random characters that represent icons */
 .upgradeDetails label {
   font-weight: bold; }
 
-.quickRefs {
+.quickRefContent {
+  padding: 5px; }
+  .quickRefContent a.back {
+    padding: 0 5px;
+    cursor: pointer; }
+
+.quickRefGrid {
   display: flex;
   flex-wrap: wrap; }
-  .quickRefs .tile {
+  .quickRefGrid .tile {
     width: 150px;
     height: 150px;
     border: 1px solid grey;
@@ -11772,9 +11778,9 @@ readers do not read off random characters that represent icons */
     padding: 25px 0;
     margin: 10px;
     cursor: pointer; }
-    .quickRefs .tile:hover {
+    .quickRefGrid .tile:hover {
       background: #DDD; }
-    .quickRefs .tile .icon {
+    .quickRefGrid .tile .icon {
       font-size: 3em; }
 
 .dcTable thead th {
@@ -11804,17 +11810,15 @@ readers do not read off random characters that represent icons */
 .dcTable tbody tr td, .dcTable tbody tr th {
   border: 3px solid white; }
 
-.quickRefList {
-  padding: 15px 0; }
-  .quickRefList .card-body {
-    padding: 0.5rem; }
-    .quickRefList .card-body .card-subheading {
-      padding: 5px 0 5px 10px; }
-      .quickRefList .card-body .card-subheading .card-subheading-title {
+.quickRefList .card-body {
+  padding: 0.5rem; }
+  .quickRefList .card-body .card-subheading {
+    padding: 5px 0 5px 10px; }
+    .quickRefList .card-body .card-subheading .card-subheading-title {
+      font-weight: bold; }
+      .quickRefList .card-body .card-subheading .card-subheading-title::after {
+        content: ": ";
         font-weight: bold; }
-        .quickRefList .card-body .card-subheading .card-subheading-title::after {
-          content: ": ";
-          font-weight: bold; }
 
 .spellListConfig .spellListTable td, .spellListConfig .spellListTable th {
   text-align: center; }
@@ -11857,3 +11861,8 @@ readers do not read off random characters that represent icons */
     border-top: 0; }
   .randomNpc .abilityTable td {
     text-align: right; }
+
+.about {
+  padding: 10px; }
+  .about pre {
+    white-space: pre-wrap; }

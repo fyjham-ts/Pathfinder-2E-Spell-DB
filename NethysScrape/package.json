@@ -1,0 +1,14 @@
+{
+  "name": "nethys-scrape",
+  "version": "0.0.0",
+  "description": "NethysScrape",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  }
+}
