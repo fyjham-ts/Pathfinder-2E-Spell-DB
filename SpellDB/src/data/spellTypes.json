@@ -23,6 +23,12 @@
     ]
   },
   {
+    "name": "Traits",
+    "matchBy": "array",
+    "match": "traits",
+    "options": null
+  },
+  {
     "name": "Bookmarks",
     "matchBy": "bookmark",
     "options": []

@@ -36,6 +36,23 @@ export default class SpellList extends React.Component {
         };
         this.state.spellTypes.forEach(st => {
             if (st.matchBy == "bookmark") st.options = this.state.bookmarkLists.map(l => ({ "name": l.name, "value": l.id }));
+            if (st.matchBy == "array" && st.options == null) {
+                // Doing this every load may be too slow with all the spells. If it is, move this to a preprocessor build script for spell types.
+                st.options = [];
+                var added = {};
+                this.state.spells.forEach(s => {
+                    var opts = s[st.match];
+                    if (opts && Array.isArray(opts)) {
+                        opts.forEach(o => {
+                            if (o.length > 0 && !added[o]) {
+                                added[o] = true;
+                                st.options.push({ "name": o.charAt(0).toUpperCase() + o.slice(1), "value": o });
+                            }
+                        });
+                    }
+                    st.options.sort((lhs, rhs) => lhs.name < rhs.name ? -1 : (lhs.name == rhs.name ? 0 : 1));
+                });
+            }
         });
         this.criteriaReset = this.criteriaReset.bind(this);
         this.criteriaChange = this.criteriaChange.bind(this);
@@ -57,7 +74,7 @@ export default class SpellList extends React.Component {
         }).bind(this);
     }
     bookmarkListUpdate(ev, args) {
-        var types = JSON.parse(json.stringify(this.state.spellTypes));
+        var types = JSON.parse(JSON.stringify(this.state.spellTypes));
         types.forEach(st => {
             if (st.matchBy == "bookmark") st.options = this.state.bookmarkLists.map(l => ({ "name": l.name, "value": l.id }));
         });
