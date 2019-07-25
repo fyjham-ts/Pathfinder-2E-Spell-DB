@@ -82,7 +82,9 @@ $uniqueRarity: #25408f;
                 content: "";
             }
         }
-
+        img.actions {
+            height: 1em;
+        }
         .headerElement {
             &::after {
                 content: "; ";

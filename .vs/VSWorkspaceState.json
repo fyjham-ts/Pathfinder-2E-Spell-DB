@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\SpellDB",
-    "\\SpellDB\\bin\\Android",
-    "\\SpellDB\\bld\\Android",
     "\\SpellDB\\www",
     "\\SpellDB\\www\\scripts"
   ],
+  "SelectedNode": "\\SpellDB.sln",
   "PreviewInSolutionExplorer": false
 }
