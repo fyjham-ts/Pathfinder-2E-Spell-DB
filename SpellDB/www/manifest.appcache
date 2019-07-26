@@ -1,0 +1,34 @@
+CACHE MANIFEST
+# Cache Buster UTC Offset: 1564107917697
+# Cache Everything
+
+css/style.css
+images/action-1.png
+images/action-2.png
+images/action-3.png
+images/action-free.png
+images/action-reaction.png
+images/cordova.png
+index.html
+manifest.appcache
+scripts/bundle.js
+scripts/index.js
+scripts/platformOverrides.js
+webfonts/fa-brands-400.eot
+webfonts/fa-brands-400.svg
+webfonts/fa-brands-400.ttf
+webfonts/fa-brands-400.woff
+webfonts/fa-brands-400.woff2
+webfonts/fa-regular-400.eot
+webfonts/fa-regular-400.svg
+webfonts/fa-regular-400.ttf
+webfonts/fa-regular-400.woff
+webfonts/fa-regular-400.woff2
+webfonts/fa-solid-900.eot
+webfonts/fa-solid-900.svg
+webfonts/fa-solid-900.ttf
+webfonts/fa-solid-900.woff
+webfonts/fa-solid-900.woff2
+
+NETWORK:
+*

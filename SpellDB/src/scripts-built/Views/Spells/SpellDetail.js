@@ -154,7 +154,7 @@ var SpellDetail = function (_React$PureComponent) {
                             'Cast'
                         ),
                         ' ',
-                        _react2.default.createElement('img', { src: "../images/action-" + spell.action + ".png", className: 'actions', alt: spell.action }),
+                        _react2.default.createElement('img', { src: "images/action-" + spell.action + ".png", className: 'actions', alt: spell.action }),
                         ' ',
                         spell.components.map(function (c) {
                             return actionDesc[c];

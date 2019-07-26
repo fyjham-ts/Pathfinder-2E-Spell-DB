@@ -15,12 +15,14 @@
     "BeforeBuild": [
       "build:js",
       "build:css",
+      "build:manifest",
       "build:docs"
     ]
   },
   "scripts": {
     "watchBabel": "node node_modules/babel-cli/bin/babel.js --presets es2015,react --watch src/scripts --out-dir src/scripts-built",
     "build:js": "node buildScripts/browserify_glob.js 'src/scripts-built/**/*.js' > www/scripts/bundle.js",
+    "build:manifest": "node buildScripts/offlineManifest.js",
     "build:docs": "node buildScripts/copyDocs.js",
     "build:css": "node-sass --include-path src/css src/css/ -o www/css",
     "copyDependencies": "node buildScripts/copyDependencies.js"

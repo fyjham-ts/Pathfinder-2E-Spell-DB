@@ -195,10 +195,10 @@ var SpellSearch = function (_React$Component) {
                     ),
                     _react2.default.createElement(
                         'div',
-                        { className: 'form-row d-none d-sm-block' },
+                        { className: 'form-row d-none d-sm-flex' },
                         _react2.default.createElement(
                             'label',
-                            { htmlFor: 'displayMode', className: 'col-form-label form-label d-none d-sm-block' },
+                            { htmlFor: 'displayMode', className: 'col-form-label form-label' },
                             'Display As'
                         ),
                         _react2.default.createElement(

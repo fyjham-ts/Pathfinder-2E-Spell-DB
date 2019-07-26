@@ -79,8 +79,8 @@ export default class SpellSearch extends React.Component {
                             </select>
                         </div>
                     </div>
-                    <div className="form-row d-none d-sm-block">
-                        <label htmlFor="displayMode" className="col-form-label form-label d-none d-sm-block">Display As</label>
+                    <div className="form-row d-none d-sm-flex">
+                        <label htmlFor="displayMode" className="col-form-label form-label">Display As</label>
                         <div className="col">
                             <select className="form-control" id="displayMode" name="displayMode" value={this.props.displayMode} onChange={this.handleCriteriaChange}>
                                 {this.props.displayModes.map((p) => { return <option key={p} value={p}>{p}</option> })}
