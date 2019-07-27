@@ -13,3 +13,4 @@
 *.user
 *.userosscache
 *.sln.docstates
+/SpellDB/build.json

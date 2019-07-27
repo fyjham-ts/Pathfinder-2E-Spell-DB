@@ -39,6 +39,9 @@ export default class QuickRefIndex extends React.PureComponent {
                 </h2>
                 <a className="back" onClick={this.backToListing}><i className="fa fa-chevron-left"></i> Back to listing</a>
                 <div>
+                    {this.state.activeRef.description && <p class="quickRefDescription">
+                        {this.state.activeRef.description}
+                    </p>}
                     {listContent}
                 </div>
             </div>;

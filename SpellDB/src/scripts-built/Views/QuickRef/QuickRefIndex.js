@@ -96,6 +96,11 @@ var QuickRefIndex = function (_React$PureComponent) {
                     _react2.default.createElement(
                         'div',
                         null,
+                        this.state.activeRef.description && _react2.default.createElement(
+                            'p',
+                            { 'class': 'quickRefDescription' },
+                            this.state.activeRef.description
+                        ),
                         listContent
                     )
                 );

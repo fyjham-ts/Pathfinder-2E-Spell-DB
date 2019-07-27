@@ -30346,6 +30346,7 @@ function extend() {
 module.exports=[
   {
     "name": "Conditions",
+    "description": "Work In Progress - Data May Not Be Accrurate",
     "icon": "fa fa-allergies",
     "render": "list",
     "list": [
@@ -30368,10 +30369,6 @@ module.exports=[
       {
         "name": "Broken",
         "description": "The object can�t be used for its normal function or grant bonuses. It can still impose any item penalties or limitations as normal (if any). Broken armor is an exception insofar as it still grants item bonuses but also has a conditional penalty to AC: -1 for light armor, -2 for medium, or -3 for heavy."
-      },
-      {
-        "name": "Concealed",
-        "description": "Difficult to see but not invisible. A creature you�re concealed from must succeed at a DC 5 flat check when making an attack against you or targeting you with a spell or effect. On failure, the attack, spell, or effect has no effect."
       },
       {
         "name": "Confused",
@@ -30484,10 +30481,6 @@ module.exports=[
       {
         "name": "Stupefied",
         "description": "Take a conditional penalty equal to this conditions� value on spell rolls, spell DC, and mental checks (Intelligence, Wisdom, and Charisma). Any spell you cast is disrupted unless you succeed at a spell roll against the DC of this conditions� source."
-      },
-      {
-        "name": "Unseen",
-        "description": "When unseen by a creature, it can�t see you at all, has no idea what space you occupy, is flat-footed to you, and can�t target you with attacks or targeted spells and effects, though area effects can affect you. A creature can use the Seek action to try to find you. On success, you�re Sensed."
       }
 
     ]
@@ -30496,13 +30489,163 @@ module.exports=[
     "name": "Moster Abilities",
     "icon": "fab fa-optin-monster",
     "render": "list",
+    "description": "Work In Progress - Data May Not Be Accrurate",
     "list": []
   },
   {
     "name": "Weapon Traits",
     "icon": "fas fa-utensils",
     "render": "list",
+    "description": "Work In Progress - Data May Not Be Accrurate",
     "list": []
+  },
+  {
+    "name": "Sight",
+    "icon": "fa fa-glasses",
+    "render": "list",
+    "list": [
+      {
+        "name": "Observed",
+        "description": "You're in plain view."
+      },
+      {
+        "name": "Concealed",
+        "description": "Fog or similar obscuration makes you difficult to see and target. A creature you�re concealed from must succeed at a DC 5 flat check when making an attack against you or targeting you with a spell or effect. On failure, the attack, spell, or effect has no effect."
+      },
+      {
+        "name": "Hidden",
+        "description": "A creature you're hidden from knows your location but can't see you."
+      },
+      {
+        "name": "Undetected",
+        "description": "A creature you're undetected by doesn't know where you are."
+      },
+      {
+        "name": "Unnoticed",
+        "description": "A creature is entirely unaware you're present."
+      }
+    ]
+  },
+  {
+    "name": "Attitudes",
+    "icon": "fa fa-user-friends",
+    "render": "list",
+    "list": [
+      {
+        "name": "Helpful",
+        "description": "Wants to assist you."
+      },
+      {
+        "name": "Friendly",
+        "description": "Has a good attitude towards you."
+      },
+      {
+        "name": "Indifferent",
+        "description": "Doesn't have strong opinions about you.."
+      },
+      {
+        "name": "Unfriendly",
+        "description": "Doesn't like you."
+      },
+      {
+        "name": "Hostile",
+        "description": "Wants to harm you."
+      }
+    ]
+  },
+  {
+    "name": "Downtime",
+    "icon": "fas fa-campground",
+    "render": "list",
+    "list": [
+      {
+        "name": "Craft (Crafting)",
+        "description": "Create items for raw materials (pg 244)"
+      },
+      {
+        "name": "Create Forgery",
+        "description": "Forge a document (pg 251)"
+      },
+      {
+        "name": "Earn Income (Craft/Lore/Perform)",
+        "description": "Earn money (pg 236)"
+      },
+      {
+        "name": "Subsist",
+        "description": "Find food and shelter (pg 240)"
+      },
+      {
+        "name": "Treat Disease",
+        "description": "Spend time caring for a diseased creature (pg 248)"
+      }
+    ]
+  },
+  {
+    "name": "Exploration",
+    "icon": "fas fa-map-marked-alt",
+    "render": "list",
+    "list": [
+      {
+        "name": "Borrow an arcane spell (Arcana)",
+        "description": "Prepare a spell from someone else's spellbook (pg 241)"
+      },
+      {
+        "name": "Coerce (Intimidate)",
+        "description": "Threaten a creature so it does what you want (pg 247)"
+      },
+      {
+        "name": "Cover Tracks (Survival)",
+        "description": "Obscure your pasing (pg 252)"
+      },
+      {
+        "name": "Decipher Writing (Multiple)",
+        "description": "Understand archaic, esoteric or obscure text (pg 234)"
+      },
+      {
+        "name": "Gather Information (Diplomacy)",
+        "description": "Canvass area about an invidual or topic (pg 246)"
+      },
+      {
+        "name": "Identify Alchemy (Craft + Tools)",
+        "description": "Identify an alchemical item (pg 245)"
+      },
+      {
+        "name": "Identify Magic (Multiple)",
+        "description": "Learn about a magic item, location, or ongoing effect (pg 238)"
+      },
+      {
+        "name": "Impersonate (Deception/Disguise)",
+        "description": "Prepare a disguise (pg 245)"
+      },
+      {
+        "name": "Learn a Spell (Multiple)",
+        "description": "Learn a new spell (pg 238)"
+      },
+      {
+        "name": "Make an Impression (Diplomacy)",
+        "description": "Make a good impression on someone (pg 246)"
+      },
+      {
+        "name": "Repair (Crafting + Repair Kit)",
+        "description": "Fix a damaged item (pg 234)"
+      },
+      {
+        "name": "Sense Direction (Survival)",
+        "description": "Get an idea of where you are or cardinal directions (pg 252)"
+      },
+      {
+        "name": "Squeeze (Acrobatics)",
+        "description": "Squeese through very tight spaces (pg 241)"
+      },
+      {
+        "name": "Track (Survival)",
+        "description": "Find and follow tracks (pg 252)"
+      },
+      {
+        "name": "Treat Wounds (Medicine)",
+        "description": "Treat a living creature's wounds (pg 249)"
+      }
+    ]
   }
 ]
 },{}],290:[function(require,module,exports){
@@ -31686,6 +31829,11 @@ var QuickRefIndex = function (_React$PureComponent) {
                     _react2.default.createElement(
                         'div',
                         null,
+                        this.state.activeRef.description && _react2.default.createElement(
+                            'p',
+                            { 'class': 'quickRefDescription' },
+                            this.state.activeRef.description
+                        ),
                         listContent
                     )
                 );
