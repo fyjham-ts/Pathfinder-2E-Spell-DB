@@ -6,7 +6,7 @@ glob("www/**/*.*", function (err, files) {
     manifest += "# Cache Everything\r\n\r\n";
 
     files.forEach(v => {
-        if (v != "/www/manifest.appcache") {
+        if (v != "www/manifest.appcache") {
             manifest += v.substr(4) + "\r\n"; // don't need the "www/" part
         }
     });

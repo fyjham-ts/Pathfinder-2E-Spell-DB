@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Cache Buster UTC Offset: 1564205977669
+# Cache Buster UTC Offset: 1564206052612
 # Cache Everything
 
 css/style.css
@@ -10,7 +10,6 @@ images/action-free.png
 images/action-reaction.png
 images/cordova.png
 index.html
-manifest.appcache
 scripts/bundle.js
 scripts/index.js
 scripts/platformOverrides.js
