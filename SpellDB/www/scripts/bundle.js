@@ -32258,8 +32258,8 @@ var QuickRefTables = function (_React$PureComponent) {
                     this.props.tables.map(function (t, idx) {
                         return _react2.default.createElement(
                             'div',
-                            { className: 'col-md' },
-                            _react2.default.createElement(_QuickRefTable2.default, { key: idx, table: t })
+                            { key: idx, className: 'col-md' },
+                            _react2.default.createElement(_QuickRefTable2.default, { table: t })
                         );
                     })
                 )
