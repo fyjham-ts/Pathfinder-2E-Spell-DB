@@ -30494,10 +30494,142 @@ module.exports=[
   },
   {
     "name": "Weapon Traits",
-    "icon": "fas fa-utensils",
+    "icon": "fas fa-fan",
     "render": "list",
     "description": "Work In Progress - Data May Not Be Accrurate",
     "list": []
+  },
+  {
+    "name": "DC Table",
+    "icon": "fas fa-table",
+    "render": "tables",
+    "tables": [
+      {
+        "title": "DCs By Level",
+        "columns": [
+          {
+            "title": "Level",
+            "colType": "number"
+          },
+          {
+            "title": "DC",
+            "colType": "number"
+          },
+          {
+            "title": "Level",
+            "colType": "number split"
+          },
+          {
+            "title": "DC",
+            "colType": "number"
+          }
+        ],
+        "rows": [
+          [ 0, 14, 13, 31 ],
+          [ 1, 15, 14, 32 ],
+          [ 2, 16, 15, 34 ],
+          [ 3, 18, 16, 35 ],
+          [ 4, 19, 17, 36 ],
+          [ 5, 20, 18, 38 ],
+          [ 6, 22, 19, 39 ],
+          [ 7, 14, 20, 40 ],
+          [ 8, 24, 21, 42 ],
+          [ 9, 26, 22, 44 ],
+          [ 10, 27, 23, 46 ],
+          [ 11, 28, 24, 48 ],
+          [ 12, 30, 25, 50 ]
+        ]
+      },
+      {
+        "title": "DCs By Spell Level",
+        "columns": [
+          {
+            "title": "Spell Level",
+            "colType": "number"
+          },
+          {
+            "title": "DC",
+            "colType": "number"
+          }
+        ],
+        "rows": [
+          [ "1st", 15 ],
+          [ "2nd", 18 ],
+          [ "3rd", 20 ],
+          [ "4th", 23 ],
+          [ "5th", 26 ],
+          [ "6th", 28 ],
+          [ "7th", 31 ],
+          [ "8th", 34 ],
+          [ "9th", 36 ],
+          [ "10th", 39 ]
+        ]
+      },
+      {
+        "title": "DC Adjustments",
+        "columns": [
+          {
+            "title": "Difficulty",
+            "colType": "text"
+          },
+          {
+            "title": "Adjustment",
+            "colType": "number"
+          },
+          {
+            "title": "Rarity",
+            "colType": "text"
+          }
+        ],
+        "rows": [
+          [ "Incredibly Easy", -10, "-" ],
+          [ "Very Easy", -5, "-" ],
+          [ "Easy", -2, "-" ],
+          [ "Hard", 2, "Uncommon" ],
+          [ "Very Hard", 5, "Rare" ],
+          [ "Incredibly Hard", 10, "Unique" ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Monster ID",
+    "icon": "fas fa-fingerprint",
+    "render": "tables",
+    "tables": [
+      {
+        "columns": [
+          {
+            "title": "Trait",
+            "colType": "text"
+          },
+          {
+            "title": "Skills",
+            "colType": "value"
+          }
+        ],
+        "rows": [
+          [ "Abberation", "Occutism" ],
+          [ "Animal", "Nature" ],
+          [ "Astral", "Occultism" ],
+          [ "Beast", "Aracana, Nature" ],
+          [ "Celestial", "Religion" ],
+          [ "Construct", "Arcana, Crafting" ],
+          [ "Dragon", "Arcana" ],
+          [ "Elemental", "Arcana, Nature" ],
+          [ "Ethereal", "Occultism" ],
+          [ "Fey", "Nature" ],
+          [ "Fiend", "Religion" ],
+          [ "Fungus", "Nature" ],
+          [ "Humanoid", "Society" ],
+          [ "Monitor", "Religion" ],
+          [ "Ooze", "Occultism" ],
+          [ "Plant", "Nature" ],
+          [ "Spirit", "Occultism" ],
+          [ "Undead", "Religion" ]
+        ]
+      }
+    ]
   },
   {
     "name": "Sight",
@@ -30523,60 +30655,6 @@ module.exports=[
       {
         "name": "Unnoticed",
         "description": "A creature is entirely unaware you're present."
-      }
-    ]
-  },
-  {
-    "name": "Attitudes",
-    "icon": "fa fa-user-friends",
-    "render": "list",
-    "list": [
-      {
-        "name": "Helpful",
-        "description": "Wants to assist you."
-      },
-      {
-        "name": "Friendly",
-        "description": "Has a good attitude towards you."
-      },
-      {
-        "name": "Indifferent",
-        "description": "Doesn't have strong opinions about you.."
-      },
-      {
-        "name": "Unfriendly",
-        "description": "Doesn't like you."
-      },
-      {
-        "name": "Hostile",
-        "description": "Wants to harm you."
-      }
-    ]
-  },
-  {
-    "name": "Downtime",
-    "icon": "fas fa-campground",
-    "render": "list",
-    "list": [
-      {
-        "name": "Craft (Crafting)",
-        "description": "Create items for raw materials (pg 244)"
-      },
-      {
-        "name": "Create Forgery",
-        "description": "Forge a document (pg 251)"
-      },
-      {
-        "name": "Earn Income (Craft/Lore/Perform)",
-        "description": "Earn money (pg 236)"
-      },
-      {
-        "name": "Subsist",
-        "description": "Find food and shelter (pg 240)"
-      },
-      {
-        "name": "Treat Disease",
-        "description": "Spend time caring for a diseased creature (pg 248)"
       }
     ]
   },
@@ -30701,7 +30779,7 @@ module.exports=[
     //"area": "15-foot aura",
     //"duration": "1 round",
     "description": {
-      "main": "You shroud your hands in a cracling field of lightning. Make a melee spell attack roll. On a hit, the target takes 2d12 electricity damage. If the target is wearing metal armor or is made of metal, you gain a +1 circumstance bonus to your attack roll with *shocking grasp*, and the target also takes 1d4 persistent electricity damage on a hit. On a critical hit, doublt the initial damage, but not the persistent damage."
+      "main": "You shroud your hands in a crackling field of lightning. Make a melee spell attack roll. On a hit, the target takes 2d12 electricity damage. If the target is wearing metal armor or is made of metal, you gain a +1 circumstance bonus to your attack roll with *shocking grasp*, and the target also takes 1d4 persistent electricity damage on a hit. On a critical hit, double the initial damage, but not the persistent damage."
     }
   }
 ]
@@ -31139,7 +31217,7 @@ var BasePage = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = BasePage;
-},{"./../BookmarkManager.js":292,"./About/About.js":295,"./Bookmarks/BookmarkList.js":297,"./Navigation.js":301,"./QuickRef/QuickRefIndex.js":302,"./Spells/SpellList.js":307,"react":219}],297:[function(require,module,exports){
+},{"./../BookmarkManager.js":292,"./About/About.js":295,"./Bookmarks/BookmarkList.js":297,"./Navigation.js":301,"./QuickRef/QuickRefIndex.js":302,"./Spells/SpellList.js":310,"react":219}],297:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31747,6 +31825,10 @@ var _QuickRefList = require('./QuickRefList.js');
 
 var _QuickRefList2 = _interopRequireDefault(_QuickRefList);
 
+var _QuickRefTables = require('./QuickRefTables.js');
+
+var _QuickRefTables2 = _interopRequireDefault(_QuickRefTables);
+
 var _QuickRefTile = require('./QuickRefTile.js');
 
 var _QuickRefTile2 = _interopRequireDefault(_QuickRefTile);
@@ -31805,6 +31887,9 @@ var QuickRefIndex = function (_React$PureComponent) {
             } else {
                 var listContent = null;
                 switch (this.state.activeRef.render) {
+                    case "tables":
+                        listContent = _react2.default.createElement(_QuickRefTables2.default, { tables: this.state.activeRef.tables });
+                        break;
                     case "list":
                     default:
                         listContent = _react2.default.createElement(_QuickRefList2.default, { list: this.state.activeRef.list });
@@ -31845,7 +31930,7 @@ var QuickRefIndex = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = QuickRefIndex;
-},{"../../RefLoader.js":293,"./QuickRefList.js":303,"./QuickRefTile.js":304,"react":219}],303:[function(require,module,exports){
+},{"../../RefLoader.js":293,"./QuickRefList.js":303,"./QuickRefTables.js":306,"./QuickRefTile.js":307,"react":219}],303:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -31932,6 +32017,261 @@ var QuickRefList = function (_React$PureComponent) {
 
 exports.default = QuickRefList;
 },{"react":219,"react-markdown":189}],304:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactMarkdown = require('react-markdown');
+
+var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var QuickRefTable = function (_React$PureComponent) {
+    _inherits(QuickRefTable, _React$PureComponent);
+
+    function QuickRefTable(props) {
+        _classCallCheck(this, QuickRefTable);
+
+        var _this = _possibleConstructorReturn(this, (QuickRefTable.__proto__ || Object.getPrototypeOf(QuickRefTable)).call(this, props));
+
+        _this.state = {
+            expanded: {}
+        };
+        return _this;
+    }
+
+    _createClass(QuickRefTable, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                { className: 'quickRefTable' },
+                _react2.default.createElement(
+                    'table',
+                    { className: 'table' },
+                    _react2.default.createElement(
+                        'thead',
+                        null,
+                        _react2.default.createElement(
+                            'tr',
+                            null,
+                            this.props.table.columns.map(function (c, ci) {
+                                return _react2.default.createElement(
+                                    'th',
+                                    { key: ci, className: c.colType },
+                                    c.title
+                                );
+                            })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'tbody',
+                        null,
+                        this.props.table.rows.map(function (r, ri) {
+                            return _react2.default.createElement(
+                                'tr',
+                                { key: ri },
+                                _this2.props.table.columns.map(function (c, ci) {
+                                    return _react2.default.createElement(
+                                        'td',
+                                        { key: ci, className: c.colType },
+                                        r.length > ci && r[ci]
+                                    );
+                                })
+                            );
+                        })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return QuickRefTable;
+}(_react2.default.PureComponent);
+
+exports.default = QuickRefTable;
+},{"react":219,"react-markdown":189}],305:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactMarkdown = require('react-markdown');
+
+var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var QuickRefTable = function (_React$PureComponent) {
+    _inherits(QuickRefTable, _React$PureComponent);
+
+    function QuickRefTable(props) {
+        _classCallCheck(this, QuickRefTable);
+
+        var _this = _possibleConstructorReturn(this, (QuickRefTable.__proto__ || Object.getPrototypeOf(QuickRefTable)).call(this, props));
+
+        _this.state = {
+            expanded: {}
+        };
+        return _this;
+    }
+
+    _createClass(QuickRefTable, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                { className: 'quickRefTable' },
+                _react2.default.createElement(
+                    'table',
+                    { className: 'table' },
+                    _react2.default.createElement(
+                        'thead',
+                        null,
+                        this.props.table.title && _react2.default.createElement(
+                            'tr',
+                            null,
+                            _react2.default.createElement(
+                                'th',
+                                { className: 'title', colSpan: this.props.table.columns.length },
+                                this.props.table.title
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'tr',
+                            null,
+                            this.props.table.columns.map(function (c, ci) {
+                                return _react2.default.createElement(
+                                    'th',
+                                    { key: ci, className: c.colType },
+                                    c.title
+                                );
+                            })
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'tbody',
+                        null,
+                        this.props.table.rows.map(function (r, ri) {
+                            return _react2.default.createElement(
+                                'tr',
+                                { key: ri },
+                                _this2.props.table.columns.map(function (c, ci) {
+                                    return _react2.default.createElement(
+                                        'td',
+                                        { key: ci, className: c.colType },
+                                        r.length > ci && r[ci]
+                                    );
+                                })
+                            );
+                        })
+                    )
+                )
+            );
+        }
+    }]);
+
+    return QuickRefTable;
+}(_react2.default.PureComponent);
+
+exports.default = QuickRefTable;
+},{"react":219,"react-markdown":189}],306:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _QuickRefTable = require('./QuickRefTable.js');
+
+var _QuickRefTable2 = _interopRequireDefault(_QuickRefTable);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var QuickRefTables = function (_React$PureComponent) {
+    _inherits(QuickRefTables, _React$PureComponent);
+
+    function QuickRefTables(props) {
+        _classCallCheck(this, QuickRefTables);
+
+        var _this = _possibleConstructorReturn(this, (QuickRefTables.__proto__ || Object.getPrototypeOf(QuickRefTables)).call(this, props));
+
+        _this.state = {
+            expanded: {}
+        };
+        return _this;
+    }
+
+    _createClass(QuickRefTables, [{
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement(
+                'div',
+                { className: 'quickRefTables container' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'row justify-content-md-center' },
+                    this.props.tables.map(function (t, idx) {
+                        return _react2.default.createElement(
+                            'div',
+                            { className: 'col-md' },
+                            _react2.default.createElement(_QuickRefTable2.default, { key: idx, table: t })
+                        );
+                    })
+                )
+            );
+        }
+    }]);
+
+    return QuickRefTables;
+}(_react2.default.PureComponent);
+
+exports.default = QuickRefTables;
+},{"./QuickRefTable.js":305,"react":219}],307:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31993,7 +32333,7 @@ var QuickRefTile = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = QuickRefTile;
-},{"react":219}],305:[function(require,module,exports){
+},{"react":219}],308:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32055,7 +32395,7 @@ var QuickReferenceTile = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = QuickReferenceTile;
-},{"react":219}],306:[function(require,module,exports){
+},{"react":219}],309:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32253,7 +32593,7 @@ var SpellDetail = function (_React$PureComponent) {
 
 exports.default = SpellDetail;
 ;
-},{"react":219,"react-markdown":189}],307:[function(require,module,exports){
+},{"react":219,"react-markdown":189}],310:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32591,7 +32931,7 @@ var SpellList = function (_React$Component) {
 
 exports.default = SpellList;
 ;
-},{"../../SpellLoader.js":294,"./SpellDetail.js":306,"./SpellListItem.js":308,"./SpellSearch.js":309,"immutability-helper":30,"react":219}],308:[function(require,module,exports){
+},{"../../SpellLoader.js":294,"./SpellDetail.js":309,"./SpellListItem.js":311,"./SpellSearch.js":312,"immutability-helper":30,"react":219}],311:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32661,7 +33001,7 @@ var SpellListItem = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = SpellListItem;
-},{"react":219}],309:[function(require,module,exports){
+},{"react":219}],312:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -32891,7 +33231,7 @@ var SpellSearch = function (_React$Component) {
 
 exports.default = SpellSearch;
 ;
-},{"react":219,"react-checkbox-group":54}],310:[function(require,module,exports){
+},{"react":219,"react-checkbox-group":54}],313:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -32909,4 +33249,4 @@ var _BasePage2 = _interopRequireDefault(_BasePage);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(_BasePage2.default, null), document.getElementById('app'));
-},{"./Views/BasePage.js":296,"react":219,"react-dom":55}]},{},[292,310,293,294,295,296,297,298,299,300,301,305,302,303,304,306,307,308,309]);
+},{"./Views/BasePage.js":296,"react":219,"react-dom":55}]},{},[292,313,293,294,295,296,297,298,299,300,301,308,302,303,304,305,306,307,309,310,311,312]);

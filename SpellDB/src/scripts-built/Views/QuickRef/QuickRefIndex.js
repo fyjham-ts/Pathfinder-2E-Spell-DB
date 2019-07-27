@@ -14,6 +14,10 @@ var _QuickRefList = require('./QuickRefList.js');
 
 var _QuickRefList2 = _interopRequireDefault(_QuickRefList);
 
+var _QuickRefTables = require('./QuickRefTables.js');
+
+var _QuickRefTables2 = _interopRequireDefault(_QuickRefTables);
+
 var _QuickRefTile = require('./QuickRefTile.js');
 
 var _QuickRefTile2 = _interopRequireDefault(_QuickRefTile);
@@ -72,6 +76,9 @@ var QuickRefIndex = function (_React$PureComponent) {
             } else {
                 var listContent = null;
                 switch (this.state.activeRef.render) {
+                    case "tables":
+                        listContent = _react2.default.createElement(_QuickRefTables2.default, { tables: this.state.activeRef.tables });
+                        break;
                     case "list":
                     default:
                         listContent = _react2.default.createElement(_QuickRefList2.default, { list: this.state.activeRef.list });

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Attitudes",
+    "icon": "fa fa-user-friends",
+    "render": "list",
+    "list": [
+      {
+        "name": "Helpful",
+        "description": "Wants to assist you."
+      },
+      {
+        "name": "Friendly",
+        "description": "Has a good attitude towards you."
+      },
+      {
+        "name": "Indifferent",
+        "description": "Doesn't have strong opinions about you.."
+      },
+      {
+        "name": "Unfriendly",
+        "description": "Doesn't like you."
+      },
+      {
+        "name": "Hostile",
+        "description": "Wants to harm you."
+      }
+    ]
+  },
+  {
+    "name": "Downtime",
+    "icon": "fas fa-campground",
+    "render": "list",
+    "list": [
+      {
+        "name": "Craft (Crafting)",
+        "description": "Create items for raw materials (pg 244)"
+      },
+      {
+        "name": "Create Forgery",
+        "description": "Forge a document (pg 251)"
+      },
+      {
+        "name": "Earn Income (Craft/Lore/Perform)",
+        "description": "Earn money (pg 236)"
+      },
+      {
+        "name": "Subsist",
+        "description": "Find food and shelter (pg 240)"
+      },
+      {
+        "name": "Treat Disease",
+        "description": "Spend time caring for a diseased creature (pg 248)"
+      }
+    ]
+  }
+]

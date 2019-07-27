@@ -149,10 +149,142 @@
   },
   {
     "name": "Weapon Traits",
-    "icon": "fas fa-utensils",
+    "icon": "fas fa-fan",
     "render": "list",
     "description": "Work In Progress - Data May Not Be Accrurate",
     "list": []
+  },
+  {
+    "name": "DC Table",
+    "icon": "fas fa-table",
+    "render": "tables",
+    "tables": [
+      {
+        "title": "DCs By Level",
+        "columns": [
+          {
+            "title": "Level",
+            "colType": "number"
+          },
+          {
+            "title": "DC",
+            "colType": "number"
+          },
+          {
+            "title": "Level",
+            "colType": "number split"
+          },
+          {
+            "title": "DC",
+            "colType": "number"
+          }
+        ],
+        "rows": [
+          [ 0, 14, 13, 31 ],
+          [ 1, 15, 14, 32 ],
+          [ 2, 16, 15, 34 ],
+          [ 3, 18, 16, 35 ],
+          [ 4, 19, 17, 36 ],
+          [ 5, 20, 18, 38 ],
+          [ 6, 22, 19, 39 ],
+          [ 7, 14, 20, 40 ],
+          [ 8, 24, 21, 42 ],
+          [ 9, 26, 22, 44 ],
+          [ 10, 27, 23, 46 ],
+          [ 11, 28, 24, 48 ],
+          [ 12, 30, 25, 50 ]
+        ]
+      },
+      {
+        "title": "DCs By Spell Level",
+        "columns": [
+          {
+            "title": "Spell Level",
+            "colType": "number"
+          },
+          {
+            "title": "DC",
+            "colType": "number"
+          }
+        ],
+        "rows": [
+          [ "1st", 15 ],
+          [ "2nd", 18 ],
+          [ "3rd", 20 ],
+          [ "4th", 23 ],
+          [ "5th", 26 ],
+          [ "6th", 28 ],
+          [ "7th", 31 ],
+          [ "8th", 34 ],
+          [ "9th", 36 ],
+          [ "10th", 39 ]
+        ]
+      },
+      {
+        "title": "DC Adjustments",
+        "columns": [
+          {
+            "title": "Difficulty",
+            "colType": "text"
+          },
+          {
+            "title": "Adjustment",
+            "colType": "number"
+          },
+          {
+            "title": "Rarity",
+            "colType": "text"
+          }
+        ],
+        "rows": [
+          [ "Incredibly Easy", -10, "-" ],
+          [ "Very Easy", -5, "-" ],
+          [ "Easy", -2, "-" ],
+          [ "Hard", 2, "Uncommon" ],
+          [ "Very Hard", 5, "Rare" ],
+          [ "Incredibly Hard", 10, "Unique" ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Monster ID",
+    "icon": "fas fa-fingerprint",
+    "render": "tables",
+    "tables": [
+      {
+        "columns": [
+          {
+            "title": "Trait",
+            "colType": "text"
+          },
+          {
+            "title": "Skills",
+            "colType": "value"
+          }
+        ],
+        "rows": [
+          [ "Abberation", "Occutism" ],
+          [ "Animal", "Nature" ],
+          [ "Astral", "Occultism" ],
+          [ "Beast", "Aracana, Nature" ],
+          [ "Celestial", "Religion" ],
+          [ "Construct", "Arcana, Crafting" ],
+          [ "Dragon", "Arcana" ],
+          [ "Elemental", "Arcana, Nature" ],
+          [ "Ethereal", "Occultism" ],
+          [ "Fey", "Nature" ],
+          [ "Fiend", "Religion" ],
+          [ "Fungus", "Nature" ],
+          [ "Humanoid", "Society" ],
+          [ "Monitor", "Religion" ],
+          [ "Ooze", "Occultism" ],
+          [ "Plant", "Nature" ],
+          [ "Spirit", "Occultism" ],
+          [ "Undead", "Religion" ]
+        ]
+      }
+    ]
   },
   {
     "name": "Sight",
@@ -178,60 +310,6 @@
       {
         "name": "Unnoticed",
         "description": "A creature is entirely unaware you're present."
-      }
-    ]
-  },
-  {
-    "name": "Attitudes",
-    "icon": "fa fa-user-friends",
-    "render": "list",
-    "list": [
-      {
-        "name": "Helpful",
-        "description": "Wants to assist you."
-      },
-      {
-        "name": "Friendly",
-        "description": "Has a good attitude towards you."
-      },
-      {
-        "name": "Indifferent",
-        "description": "Doesn't have strong opinions about you.."
-      },
-      {
-        "name": "Unfriendly",
-        "description": "Doesn't like you."
-      },
-      {
-        "name": "Hostile",
-        "description": "Wants to harm you."
-      }
-    ]
-  },
-  {
-    "name": "Downtime",
-    "icon": "fas fa-campground",
-    "render": "list",
-    "list": [
-      {
-        "name": "Craft (Crafting)",
-        "description": "Create items for raw materials (pg 244)"
-      },
-      {
-        "name": "Create Forgery",
-        "description": "Forge a document (pg 251)"
-      },
-      {
-        "name": "Earn Income (Craft/Lore/Perform)",
-        "description": "Earn money (pg 236)"
-      },
-      {
-        "name": "Subsist",
-        "description": "Find food and shelter (pg 240)"
-      },
-      {
-        "name": "Treat Disease",
-        "description": "Spend time caring for a diseased creature (pg 248)"
       }
     ]
   },

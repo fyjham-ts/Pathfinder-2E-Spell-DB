@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import QuickRefList from './QuickRefList.js';
+import QuickRefTables from './QuickRefTables.js';
 import QuickRefTile from './QuickRefTile.js';
 import { loadRefData } from '../../RefLoader.js';
 var references = loadRefData();
@@ -28,6 +29,9 @@ export default class QuickRefIndex extends React.PureComponent {
         else {
             var listContent = null;
             switch (this.state.activeRef.render) {
+                case "tables":
+                    listContent = <QuickRefTables tables={this.state.activeRef.tables} />
+                    break;
                 case "list":
                 default:
                     listContent = <QuickRefList list={this.state.activeRef.list} />

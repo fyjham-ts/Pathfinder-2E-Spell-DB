@@ -5,6 +5,9 @@
 $pathfinderRed: #5e0000;
 $pathfinderGold: #dcb07b;
 
+$tr: #eee4c8;
+$tr-alt: #f5efe0;
+
 $darkGreen: #3e4f54;
 $title: #000000;
 $traitForeground: #FFF;
@@ -250,48 +253,40 @@ $uniqueRarity: #25408f;
         }
     }
 }
-.dcTable {
-    thead {
-        th {
-            background: white;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            width: 80px;
-            text-align: center;
-            border-bottom: 1px;
+.quickRefTable {
+    table.table {
+        thead tr {
+            background: $pathfinderRed;
+            color: #FFF;
+        }
 
-            &.level {
-                width: 80px;
+        tbody tr {
+            background: $tr;
+            color: #000;
+
+            &:nth-child(2n) {
+                background: $tr-alt;
             }
         }
-    }
 
-    tbody {
-        tr {
-            &:nth-child(2n+1) {
-                th, td {
-                    background: #DDD;
-                }
+        th {
+            font-weight: normal;
+            &.title {
+                text-align: center;
+                font-weight: bold;
             }
-            &.selected {
-                th, td {
-                    background: #FFFF00;
-                }
-            }
+        }
 
-            th {
-                text-align: right;
-                padding-right: 10px;
-            }
+        th, td {
+            padding: 3px 12px;
 
-            td {
+            &.number {
                 text-align: center;
             }
+        }
 
-            td, th {
-                border: 3px solid white;
-            }
+        td.split {
+            border-left: 4px solid $pathfinderRed;
         }
     }
 }
