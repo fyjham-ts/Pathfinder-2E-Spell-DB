@@ -13,7 +13,6 @@ $title: #000000;
 $traitForeground: #FFF;
 $traitBackground: $pathfinderRed;
 $powerRed: #8b1c1b;
-$darkGreen: #3e4f54;
 $uncommonRarity: #8b1c1b;
 $rareRarity: #e75722;
 $uniqueRarity: #25408f;
@@ -87,6 +86,9 @@ $uniqueRarity: #25408f;
         }
         img.actions {
             height: 1em;
+        }
+        span.actions-1, span.actions-2, span.actions-3 {
+            font-weight: bold;
         }
         .headerElement {
             &::after {

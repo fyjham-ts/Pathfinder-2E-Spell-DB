@@ -31018,7 +31018,7 @@ var About = function (_React$Component) {
                 _react2.default.createElement(
                     "p",
                     null,
-                    "This was created to help people quickly look up info for their 2E games - if you have some fun with it that's great! I wrote a similar one for playtest, this time I ported to mobile."
+                    "This was created to help people quickly look up info for their 2E games - if you have some fun with it that's great! I wrote a similar one for playtest for my local group. This time I ported to web and mobile & figured I'd let others know about it."
                 ),
                 _react2.default.createElement(
                     "p",
@@ -31032,6 +31032,11 @@ var About = function (_React$Component) {
                     " - I'd love to hear your input. If you hit any bugs or want to request a feature, raise a GitHub issue!"
                 ),
                 _react2.default.createElement(
+                    "p",
+                    null,
+                    "I'm a big fan of Paizo and I respect their hard work making my favourite hobby more fun. I've done this all in good faith, and will take down at a simple request from anyone from Paizo (Whether I've breached any license or not - if this bothers them I don't want to do it)."
+                ),
+                _react2.default.createElement(
                     "h2",
                     null,
                     "Credits"
@@ -31039,12 +31044,28 @@ var About = function (_React$Component) {
                 _react2.default.createElement(
                     "p",
                     null,
-                    "Written by Tim Schneider."
+                    "Code written by Tim Schneider"
                 ),
                 _react2.default.createElement(
                     "p",
                     null,
-                    "OGL & Community Use content from Paizo HEAVILY used. No claim being made here."
+                    "OGL & Community Use content from Paizo HEAVILY used."
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "Data gathered as a mix of scraping from ",
+                    _react2.default.createElement(
+                        "a",
+                        { href: "https://www.aonprd.com" },
+                        "Archives of Nethys"
+                    ),
+                    " and mind-numbing data entry. I wouldn't have been able to do this if I had to enter it all from scratch. They did the hard legwork."
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "For tech dependencies check out the GitHub."
                 ),
                 _react2.default.createElement(
                     "h2",
@@ -31057,11 +31078,6 @@ var About = function (_React$Component) {
                     "I'm a programmer not a lawyer, below comes the things I think I have to say to keep the legal people happy. Content from Paizo is licensed under OGL or Community Use as appropriate. My code is all available under MIT license."
                 ),
                 _react2.default.createElement(
-                    "p",
-                    null,
-                    "If anyone at paizo believes I've messed up let me know. I've done this all in good faith, and will take down at a simple request (Whether I've breached any license or not - I'm happy to honour any request from Paizo for how to use their content)."
-                ),
-                _react2.default.createElement(
                     "h3",
                     null,
                     "OGL"
@@ -31069,7 +31085,7 @@ var About = function (_React$Component) {
                 _react2.default.createElement(
                     "p",
                     null,
-                    "There'll totally be an OGL here once I have the playtest book in PDF form for copy-pasta."
+                    "There'll totally be an OGL here once I have the books in PDF form for copy-pasta."
                 ),
                 _react2.default.createElement(
                     "h3",
@@ -32412,6 +32428,10 @@ var _reactMarkdown = require('react-markdown');
 
 var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
 
+var _ActionIcons = require('../Utils/ActionIcons.js');
+
+var _ActionIcons2 = _interopRequireDefault(_ActionIcons);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32552,7 +32572,7 @@ var SpellDetail = function (_React$PureComponent) {
                             'Cast'
                         ),
                         ' ',
-                        _react2.default.createElement('img', { src: "images/action-" + spell.action + ".png", className: 'actions', alt: spell.action }),
+                        _react2.default.createElement(_ActionIcons2.default, { action: spell.action }),
                         ' ',
                         spell.components.map(function (c) {
                             return actionDesc[c];
@@ -32593,7 +32613,7 @@ var SpellDetail = function (_React$PureComponent) {
 
 exports.default = SpellDetail;
 ;
-},{"react":219,"react-markdown":189}],310:[function(require,module,exports){
+},{"../Utils/ActionIcons.js":313,"react":219,"react-markdown":189}],310:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -33232,6 +33252,74 @@ var SpellSearch = function (_React$Component) {
 exports.default = SpellSearch;
 ;
 },{"react":219,"react-checkbox-group":54}],313:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// Turns out Paizo says no to using their icons. Sadness.
+// If they ever become community use, flip this.
+var canUseIcons = false;
+
+var ActionIcons = function (_React$PureComponent) {
+    _inherits(ActionIcons, _React$PureComponent);
+
+    function ActionIcons() {
+        _classCallCheck(this, ActionIcons);
+
+        return _possibleConstructorReturn(this, (ActionIcons.__proto__ || Object.getPrototypeOf(ActionIcons)).apply(this, arguments));
+    }
+
+    _createClass(ActionIcons, [{
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            if (canUseIcons) return _react2.default.createElement("img", { className: "actions", src: "images/action-" + this.props.action + ".png", alt: this.props.action });else {
+                return _react2.default.createElement(
+                    "span",
+                    { className: "actions actions-" + this.props.action },
+                    function () {
+                        switch (_this2.props.action) {
+                            case "1":
+                                return "◈";
+                            case "2":
+                                return "◈◈";
+                            case "3":
+                                return "◈◈◈";
+                            case "free":
+                                return "⟐";
+                            case "reaction":
+                                return "⤾";
+                            default:
+                                return "?";
+                        }
+                    }()
+                );
+            }
+        }
+    }]);
+
+    return ActionIcons;
+}(_react2.default.PureComponent);
+
+exports.default = ActionIcons;
+},{"react":219}],314:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -33249,4 +33337,4 @@ var _BasePage2 = _interopRequireDefault(_BasePage);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(_BasePage2.default, null), document.getElementById('app'));
-},{"./Views/BasePage.js":296,"react":219,"react-dom":55}]},{},[292,313,293,294,295,296,297,298,299,300,301,308,302,303,304,305,306,307,309,310,311,312]);
+},{"./Views/BasePage.js":296,"react":219,"react-dom":55}]},{},[292,314,293,294,295,296,297,298,299,300,301,308,302,303,304,305,306,307,309,310,311,312,313]);

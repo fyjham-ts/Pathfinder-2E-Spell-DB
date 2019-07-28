@@ -14,6 +14,10 @@ var _reactMarkdown = require('react-markdown');
 
 var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
 
+var _ActionIcons = require('../Utils/ActionIcons.js');
+
+var _ActionIcons2 = _interopRequireDefault(_ActionIcons);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -154,7 +158,7 @@ var SpellDetail = function (_React$PureComponent) {
                             'Cast'
                         ),
                         ' ',
-                        _react2.default.createElement('img', { src: "images/action-" + spell.action + ".png", className: 'actions', alt: spell.action }),
+                        _react2.default.createElement(_ActionIcons2.default, { action: spell.action }),
                         ' ',
                         spell.components.map(function (c) {
                             return actionDesc[c];

@@ -46,7 +46,7 @@ var About = function (_React$Component) {
                 _react2.default.createElement(
                     "p",
                     null,
-                    "This was created to help people quickly look up info for their 2E games - if you have some fun with it that's great! I wrote a similar one for playtest, this time I ported to mobile."
+                    "This was created to help people quickly look up info for their 2E games - if you have some fun with it that's great! I wrote a similar one for playtest for my local group. This time I ported to web and mobile & figured I'd let others know about it."
                 ),
                 _react2.default.createElement(
                     "p",
@@ -60,6 +60,11 @@ var About = function (_React$Component) {
                     " - I'd love to hear your input. If you hit any bugs or want to request a feature, raise a GitHub issue!"
                 ),
                 _react2.default.createElement(
+                    "p",
+                    null,
+                    "I'm a big fan of Paizo and I respect their hard work making my favourite hobby more fun. I've done this all in good faith, and will take down at a simple request from anyone from Paizo (Whether I've breached any license or not - if this bothers them I don't want to do it)."
+                ),
+                _react2.default.createElement(
                     "h2",
                     null,
                     "Credits"
@@ -67,12 +72,28 @@ var About = function (_React$Component) {
                 _react2.default.createElement(
                     "p",
                     null,
-                    "Written by Tim Schneider."
+                    "Code written by Tim Schneider"
                 ),
                 _react2.default.createElement(
                     "p",
                     null,
-                    "OGL & Community Use content from Paizo HEAVILY used. No claim being made here."
+                    "OGL & Community Use content from Paizo HEAVILY used."
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "Data gathered as a mix of scraping from ",
+                    _react2.default.createElement(
+                        "a",
+                        { href: "https://www.aonprd.com" },
+                        "Archives of Nethys"
+                    ),
+                    " and mind-numbing data entry. I wouldn't have been able to do this if I had to enter it all from scratch. They did the hard legwork."
+                ),
+                _react2.default.createElement(
+                    "p",
+                    null,
+                    "For tech dependencies check out the GitHub."
                 ),
                 _react2.default.createElement(
                     "h2",
@@ -85,11 +106,6 @@ var About = function (_React$Component) {
                     "I'm a programmer not a lawyer, below comes the things I think I have to say to keep the legal people happy. Content from Paizo is licensed under OGL or Community Use as appropriate. My code is all available under MIT license."
                 ),
                 _react2.default.createElement(
-                    "p",
-                    null,
-                    "If anyone at paizo believes I've messed up let me know. I've done this all in good faith, and will take down at a simple request (Whether I've breached any license or not - I'm happy to honour any request from Paizo for how to use their content)."
-                ),
-                _react2.default.createElement(
                     "h3",
                     null,
                     "OGL"
@@ -97,7 +113,7 @@ var About = function (_React$Component) {
                 _react2.default.createElement(
                     "p",
                     null,
-                    "There'll totally be an OGL here once I have the playtest book in PDF form for copy-pasta."
+                    "There'll totally be an OGL here once I have the books in PDF form for copy-pasta."
                 ),
                 _react2.default.createElement(
                     "h3",

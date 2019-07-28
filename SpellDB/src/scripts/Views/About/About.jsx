@@ -12,16 +12,18 @@ export default class About extends React.Component {
     render() {
         return <div className="about">
             <h2>About</h2>
-            <p>This was created to help people quickly look up info for their 2E games - if you have some fun with it that's great! I wrote a similar one for playtest, this time I ported to mobile.</p>
+            <p>This was created to help people quickly look up info for their 2E games - if you have some fun with it that's great! I wrote a similar one for playtest for my local group. This time I ported to web and mobile & figured I'd let others know about it.</p>
             <p>The full code is available on GitHub - <a target="_blank" href="https://github.com/fyjham-ts/Pathfinder-2E-Spell-DB">https://github.com/fyjham-ts/Pathfinder-2E-Spell-DB</a> - I'd love to hear your input. If you hit any bugs or want to request a feature, raise a GitHub issue!</p>
+            <p>I'm a big fan of Paizo and I respect their hard work making my favourite hobby more fun. I've done this all in good faith, and will take down at a simple request from anyone from Paizo (Whether I've breached any license or not - if this bothers them I don't want to do it).</p>
             <h2>Credits</h2>
-            <p>Written by Tim Schneider.</p>
-            <p>OGL & Community Use content from Paizo HEAVILY used. No claim being made here.</p>
+            <p>Code written by Tim Schneider</p>
+            <p>OGL & Community Use content from Paizo HEAVILY used.</p>
+            <p>Data gathered as a mix of scraping from <a href="https://www.aonprd.com">Archives of Nethys</a> and mind-numbing data entry. I wouldn't have been able to do this if I had to enter it all from scratch. They did the hard legwork.</p>
+            <p>For tech dependencies check out the GitHub.</p>
             <h2>License Stuff</h2>
             <p>I'm a programmer not a lawyer, below comes the things I think I have to say to keep the legal people happy. Content from Paizo is licensed under OGL or Community Use as appropriate. My code is all available under MIT license.</p>
-            <p>If anyone at paizo believes I've messed up let me know. I've done this all in good faith, and will take down at a simple request (Whether I've breached any license or not - I'm happy to honour any request from Paizo for how to use their content).</p>
             <h3>OGL</h3>
-            <p>There'll totally be an OGL here once I have the playtest book in PDF form for copy-pasta.</p>
+            <p>There'll totally be an OGL here once I have the books in PDF form for copy-pasta.</p>
             <h3>MIT License</h3>
             <p>Copyright (c) 2019 Tim Schneider</p>
             <p>Permission is hereby granted, free of charge, to any person obtaining a copy

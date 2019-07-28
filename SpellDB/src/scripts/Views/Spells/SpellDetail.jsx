@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import ActionIcons from '../Utils/ActionIcons.js';
 
 export default class SpellDetail extends React.PureComponent {
     constructor(props) {
@@ -71,7 +72,7 @@ export default class SpellDetail extends React.PureComponent {
                 </ul>
                 <div className="header">
                     <div><strong>Traditions</strong> {spell.traditions.join(", ")}</div>
-                    <div><strong>Cast</strong> <img src={"images/action-" + spell.action + ".png"} className="actions" alt={spell.action} /> {spell.components.map(c => actionDesc[c]).join(", ")}</div>
+                    <div><strong>Cast</strong> <ActionIcons action={spell.action} /> {spell.components.map(c => actionDesc[c]).join(", ")}</div>
                     {headerTokens.map((t) => {
                         return <span key={t.title} className="headerElement"><strong>{t.title}</strong> {t.value}</span>
                     })}
