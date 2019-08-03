@@ -182,11 +182,15 @@ var SpellList = function (_React$Component) {
                         if (list && !list.spells[spell.name]) return false;
                         break;
                     case "array":
-                        return spell[spellType.match] && spell[spellType.match].indexOf(this.state.criteria.spellOption) != -1;
+                        if (spell[spellType.match] && spell[spellType.match].indexOf(this.state.criteria.spellOption) == -1) return false;
+                        break;
                 }
             }
-            if (this.state.criteria.levels.length > 0 && this.state.criteria.levels.indexOf(spell.level) === -1) return false;
-
+            if (this.state.criteria.levels.length > 0) {
+                if (spell.type == 'Cantrip') {
+                    if (this.state.criteria.levels.indexOf('C') === -1) return false;
+                } else if (this.state.criteria.levels.indexOf(spell.level) === -1) return false;
+            }
             return true;
         }
     }, {

@@ -24,7 +24,7 @@ export default class SpellSearch extends React.Component {
         var showSpellOptions = (this.props.spellType && this.props.spellTypes.find(t => t.name == this.props.spellType).options.length > 1);
 
         var levelRows = [
-            Array.from({ length: 6 }, (v, i) => i),
+            Array.from({ length: 6 }, (v, i) => i == 0 ? 'C' : i),
             Array.from({ length: 5 }, (v, i) => i + 6).concat('x')
         ];
 

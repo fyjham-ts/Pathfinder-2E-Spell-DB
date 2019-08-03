@@ -12,13 +12,7 @@ export default class SpellDetail extends React.PureComponent {
     }
     render() {
         var spell = this.props.spell;
-
-        var actionDesc = {
-            "S": "Somatic",
-            "V": "Verbal",
-            "M": "Material"
-        };
-
+        
         var headerTokens = [];
         if (spell['casting-time']) headerTokens.push({ 'title': 'Casting Time', 'value': spell['casting-time'] });
         if (spell.trigger) headerTokens.push({ 'title': 'Trigger', 'value': spell.trigger });
@@ -30,26 +24,8 @@ export default class SpellDetail extends React.PureComponent {
         if (spell.requirements) headerTokens.push({ 'title': "Requirements", 'value': spell.requirements });
 
         var bodySections = [];
-        bodySections.push({ 'title': null, className: 'mainText', 'text': spell.description.main.replace(/ [-•] /g, '<br/> - ') });
-        if (spell.description.subsections) {
-            for (var section in spell.description.subsections) {
-                var sectionTitle;
-                var sectionClass;
-                switch (section) {
-                    case 'success': sectionTitle = 'Success'; sectionClass = 'save'; break;
-                    case 'crit': sectionTitle = 'Critical Success'; sectionClass = 'save'; break;
-                    case 'failure': sectionTitle = 'Failure'; sectionClass = 'save';break;
-                    case 'crit-fail': sectionTitle = 'Critical Failure'; sectionClass = 'save';break;
-                    default: sectionTitle = section; sectionClass = 'option'; break;
-                }
-
-                bodySections.push({
-                    "title": <strong>{sectionTitle}</strong>,
-                    "className": sectionClass,
-                    "text": spell.description.subsections[section]
-                });
-            }
-        }
+        bodySections.push({ 'title': null, className: 'mainText', 'text': spell.description });
+ 
         for (var level in spell.heightened) {
             bodySections.push({'title': <strong>Heightened({level})</strong>, 'className': 'heighten', 'text': spell.heightened[level] });
         }
@@ -71,8 +47,8 @@ export default class SpellDetail extends React.PureComponent {
                     })}
                 </ul>
                 <div className="header">
-                    <div><strong>Traditions</strong> {spell.traditions.join(", ")}</div>
-                    <div><strong>Cast</strong> <ActionIcons action={spell.action} /> {spell.components.map(c => actionDesc[c]).join(", ")}</div>
+                    {spell.traditions && <div><strong>Traditions</strong> {spell.traditions.join(", ")}</div>}
+                    <div><strong>Cast</strong> <ActionIcons action={spell.action} /> {spell.components.join(", ")}</div>
                     {headerTokens.map((t) => {
                         return <span key={t.title} className="headerElement"><strong>{t.title}</strong> {t.value}</span>
                     })}

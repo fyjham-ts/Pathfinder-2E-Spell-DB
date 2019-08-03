@@ -48,12 +48,6 @@ var SpellDetail = function (_React$PureComponent) {
         value: function render() {
             var spell = this.props.spell;
 
-            var actionDesc = {
-                "S": "Somatic",
-                "V": "Verbal",
-                "M": "Material"
-            };
-
             var headerTokens = [];
             if (spell['casting-time']) headerTokens.push({ 'title': 'Casting Time', 'value': spell['casting-time'] });
             if (spell.trigger) headerTokens.push({ 'title': 'Trigger', 'value': spell.trigger });
@@ -65,35 +59,8 @@ var SpellDetail = function (_React$PureComponent) {
             if (spell.requirements) headerTokens.push({ 'title': "Requirements", 'value': spell.requirements });
 
             var bodySections = [];
-            bodySections.push({ 'title': null, className: 'mainText', 'text': spell.description.main.replace(/ [-•] /g, '<br/> - ') });
-            if (spell.description.subsections) {
-                for (var section in spell.description.subsections) {
-                    var sectionTitle;
-                    var sectionClass;
-                    switch (section) {
-                        case 'success':
-                            sectionTitle = 'Success';sectionClass = 'save';break;
-                        case 'crit':
-                            sectionTitle = 'Critical Success';sectionClass = 'save';break;
-                        case 'failure':
-                            sectionTitle = 'Failure';sectionClass = 'save';break;
-                        case 'crit-fail':
-                            sectionTitle = 'Critical Failure';sectionClass = 'save';break;
-                        default:
-                            sectionTitle = section;sectionClass = 'option';break;
-                    }
+            bodySections.push({ 'title': null, className: 'mainText', 'text': spell.description });
 
-                    bodySections.push({
-                        "title": _react2.default.createElement(
-                            'strong',
-                            null,
-                            sectionTitle
-                        ),
-                        "className": sectionClass,
-                        "text": spell.description.subsections[section]
-                    });
-                }
-            }
             for (var level in spell.heightened) {
                 bodySections.push({ 'title': _react2.default.createElement(
                         'strong',
@@ -138,7 +105,7 @@ var SpellDetail = function (_React$PureComponent) {
                 _react2.default.createElement(
                     'div',
                     { className: 'header' },
-                    _react2.default.createElement(
+                    spell.traditions && _react2.default.createElement(
                         'div',
                         null,
                         _react2.default.createElement(
@@ -160,9 +127,7 @@ var SpellDetail = function (_React$PureComponent) {
                         ' ',
                         _react2.default.createElement(_ActionIcons2.default, { action: spell.action }),
                         ' ',
-                        spell.components.map(function (c) {
-                            return actionDesc[c];
-                        }).join(", ")
+                        spell.components.join(", ")
                     ),
                     headerTokens.map(function (t) {
                         return _react2.default.createElement(

@@ -58,7 +58,7 @@ var SpellSearch = function (_React$Component) {
             }).options.length > 1;
 
             var levelRows = [Array.from({ length: 6 }, function (v, i) {
-                return i;
+                return i == 0 ? 'C' : i;
             }), Array.from({ length: 5 }, function (v, i) {
                 return i + 6;
             }).concat('x')];
