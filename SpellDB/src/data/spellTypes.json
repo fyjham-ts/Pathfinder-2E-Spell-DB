@@ -23,10 +23,222 @@
     ]
   },
   {
+    "name": "Type",
+    "matchBy": "array",
+    "match": "type",
+    "options": [
+      {
+        "name": "Spell",
+        "value": "Spell"
+      },
+      {
+        "name": "Focus",
+        "value": "Focus"
+      },
+      {
+        "name": "Cantrip",
+        "value": "Cantrip"
+      }
+    ]
+  },
+  {
     "name": "Traits",
     "matchBy": "array",
     "match": "traits",
     "options": null
+  },
+  {
+    "name": "Domain Powers",
+    "matchBy": "lookup",
+    "options": [
+      {
+        "name": "Air",
+        "value": "Air"
+      },
+      {
+        "name": "Ambition",
+        "value": "Ambition"
+      },
+      {
+        "name": "Cities",
+        "value": "Cities"
+      },
+      {
+        "name": "Confidence",
+        "value": "Confidence"
+      },
+      {
+        "name": "Creation",
+        "value": "Creation"
+      },
+      {
+        "name": "Darkness",
+        "value": "Darkness"
+      },
+      {
+        "name": "Death",
+        "value": "Death"
+      },
+      {
+        "name": "Destruction",
+        "value": "Destruction"
+      },
+      {
+        "name": "Dreams",
+        "value": "Dreams"
+      },
+      {
+        "name": "Earth",
+        "value": "Earth"
+      },
+      {
+        "name": "Family",
+        "value": "Family"
+      },
+      {
+        "name": "Fate",
+        "value": "Fate"
+      },
+      {
+        "name": "Fire",
+        "value": "Fire"
+      },
+      {
+        "name": "Freedom",
+        "value": "Freedom"
+      },
+      {
+        "name": "Healing",
+        "value": "Healing"
+      },
+      {
+        "name": "Indulgence",
+        "value": "Indulgence"
+      },
+      {
+        "name": "Knowledge",
+        "value": "Knowledge"
+      },
+      {
+        "name": "Luck",
+        "value": "Luck"
+      },
+      {
+        "name": "Magic",
+        "value": "Magic"
+      },
+      {
+        "name": "Might",
+        "value": "Might"
+      },
+      {
+        "name": "Moon",
+        "value": "Moon"
+      },
+      {
+        "name": "Nature",
+        "value": "Nature"
+      },
+      {
+        "name": "Nightmares",
+        "value": "Nightmares"
+      },
+      {
+        "name": "Pain",
+        "value": "Pain"
+      },
+      {
+        "name": "Passion",
+        "value": "Passion"
+      },
+      {
+        "name": "Perfection",
+        "value": "Perfection"
+      },
+      {
+        "name": "Protection",
+        "value": "Protection"
+      },
+      {
+        "name": "Secrecy",
+        "value": "Secrecy"
+      },
+      {
+        "name": "Sun",
+        "value": "Sun"
+      },
+      {
+        "name": "Travel",
+        "value": "Travel"
+      },
+      {
+        "name": "Trickery",
+        "value": "Trickery"
+      },
+      {
+        "name": "Truth",
+        "value": "Truth"
+      },
+      {
+        "name": "Tyranny",
+        "value": "Tyranny"
+      },
+      {
+        "name": "Undeath",
+        "value": "Undeath"
+      },
+      {
+        "name": "Water",
+        "value": "Water"
+      },
+      {
+        "name": "Wealth",
+        "value": "Wealth"
+      },
+      {
+        "name": "Zeal",
+        "value": "Zeal"
+      }
+    ],
+    "lookup": {
+      "Air": [ "Pushing Gust", "Disperse into Air" ],
+      "Ambition": [ "Blind Ambition", "Competitive Edge" ],
+      "Cities": [ "Face in the Crowd", "Pulse of the City" ],
+      "Confidence": [ "Veil of Confidence", "Delusional Pride" ],
+      "Creation": [ "Splash of Art", "Artistic Flourish" ],
+      "Darkness": [ "Cloak of Shadow", "Darkened Eyes" ],
+      "Death": [ "Death's Call", "Eradicate Undeath" ],
+      "Destruction": [ "Cry of Destruction", "Destructive Aura" ],
+      "Dreams": [ "Sweet Dream", "Dreamer's Call" ],
+      "Earth": [ "Hurtling Stone", "Localized Quake" ],
+      "Family": [ "Soothing Words", "Unity" ],
+      "Fate": [ "Read Fate", "Tempt Fate" ],
+      "Fire": [ "Fire Ray", "Flame Barrier" ],
+      "Freedom": [ "Unimpeded Stride", "Word of Freedom" ],
+      "Healing": [ "Healer's Blessing", "Rebuke Death" ],
+      "Indulgence": [ "Overstuff", "Take its Course" ],
+      "Knowledge": [ "Scholarly Recollection", "Know the Enemy" ],
+      "Luck": [ "Bit of Luck", "Lucky Break" ],
+      "Magic": [ "Magic's Vessel", "Mystic Beacon" ],
+      "Might": [ "Athletic Rush", "Enduring Might" ],
+      "Moon": [ "Moonbeam", "Touch of the Moon" ],
+      "Nature": [ "Vibrant Thorns", "Nature's Bounty" ],
+      "Nightmares": [ "Walking Nightmare", "Shared Nightmare" ],
+      "Pain": [ "Savor the Sting", "Retributive Pain" ],
+      "Passion": [ "Charming Touch", "Captivating Adoration" ],
+      "Perfection": [ "Perfected Mind", "Perfected Form" ],
+      "Protection": [ "Protector's Sacrifice", "Protector's Sphere" ],
+      "Secrecy": [ "Forced Quiet", "Safeguard Secret" ],
+      "Sun": [ "Dazzling Flash", "Positive Luminance" ],
+      "Travel": [ "Agile Feet", "Traveler's Transit" ],
+      "Trickery": [ "Sudden Shift", "Trickster's Twin" ],
+      "Truth": [ "Word of Truth", "Glimpse the Truth" ],
+      "Tyranny": [ "Touch of Obedience", "Commanding Lash" ],
+      "Undeath": [ "Touch of Undeath (Cleric)", "Malignant Sustenance" ],
+      "Water": [ "Tidal Surge", "Downpour" ],
+      "Wealth": [ "Appearance of Wealth", "Precious Metals" ],
+      "Zeal": [ "Weapon Surge", "Zeal for Battle" ]
+    }
   },
   {
     "name": "Bookmarks",

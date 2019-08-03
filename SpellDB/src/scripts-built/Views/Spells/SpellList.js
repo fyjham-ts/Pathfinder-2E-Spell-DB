@@ -181,6 +181,11 @@ var SpellList = function (_React$Component) {
                         });
                         if (list && !list.spells[spell.name]) return false;
                         break;
+                    case "lookup":
+                        // TODO: handle lookup without sub-option selected.
+                        if (!spellType.lookup[this.state.criteria.spellOption]) return false;
+                        if (spellType.lookup[this.state.criteria.spellOption].indexOf(spell.name) === -1) return false;
+                        break;
                     case "array":
                         if (spell[spellType.match] && spell[spellType.match].indexOf(this.state.criteria.spellOption) == -1) return false;
                         break;

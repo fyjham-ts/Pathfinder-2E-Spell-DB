@@ -1,141 +1,132 @@
 [
   {
     "name": "Conditions",
-    "description": "Work In Progress - Data May Not Be Accrurate",
     "icon": "fa fa-allergies",
     "render": "list",
     "list": [
       {
-        "name": "Accelerated",
-        "description": "One type of movement Speed is increased by a given distance per action. All types increase if the movement type is unspecified."
-      },
-      {
-        "name": "Asleep",
-        "description": "Can’t act. Gain the Blinded and Flat-footed conditions. Take a -4 conditional penalty to Armor Class (AC) and Perception. Critically fail all Reflex saves. Can’t remained seated or standing. Drop any held or wielded items unless an effect says otherwise. Awaken if you take damage, or an ally nudges or shakes you. If a loud noise is around you, you can attempt a Perception check as a free action at the start of your turn with a -4 circumstance penalty - unless magic explicitly prevents you such an attempt. On success, you awaken."
-      },
-      {
         "name": "Blinded",
-        "description": "Treat all terrain as difficult. All other creatures and objects are Unseen to you unless you succeed at a Seek action to sense them. Automatically fail or critically fail (whichever is worse) Perception checks that fully depend on sight. If vision is your only precise sense, take a –4 conditional penalty to Perception checks. You’re immune to visual effects. Blinded overrides dazzled."
+        "description": "You can't see. All normal terrain is difficult terrain to you. You can't detect anything using vision. You automatically critically fail Perception checks that require you to be able to see, and if vision is your only precise sense, you take a -4 status penalty to Perception checks. You are immune to visual effects. Blinded overrides dazzled."
       },
       {
         "name": "Bolstered",
-        "description": "You’ve been the subject of a spell or ability that can’t affect a creature more than once a day. Hence you’re immune to that same spell or ability from the same source for 24 hours, unless otherwise specified."
+        "description": "You've been the subject of a spell or ability that can't affect a creature more than once a day. Hence you're immune to that same spell or ability from the same source for 24 hours, unless otherwise specified."
       },
       {
         "name": "Broken",
-        "description": "The object can’t be used for its normal function or grant bonuses. It can still impose any item penalties or limitations as normal (if any). Broken armor is an exception insofar as it still grants item bonuses but also has a conditional penalty to AC: -1 for light armor, -2 for medium, or -3 for heavy."
+        "description": "Broken is a condition that affects objects. An object is broken when damage has reduced its Hit Points below its Broken Threshold. A broken object can't be used for its normal function, nor does it grant bonuses-with the exception of armor. Broken armor still grants its item bonus to AC, but it also imparts a status penalty to AC depending on its category: -1 for broken light armor, -2 for broken medium armor, or -3 for broken heavy armor.  \r\nA broken item still imposes penalties and limitations normally incurred by carrying, holding, or wearing it. For example, broken armor would still impose its Dexterity modifier cap, check penalty, and so forth.  \r\nIf an effect makes an item broken automatically and the item has more HP than its Broken Threshold, that effect also reduces the item's current HP to the Broken Threshold"
+      },
+      {
+        "name": "Clumsy",
+        "description": "Your movements become clumsy and inexact. Clumsy always includes a value. You take a status penalty equal to the condition value to Dexterity-based checks and DCs, including AC, Reflex saves, ranged attack rolls, and skill checks using Acrobatics, Stealth, and Thievery."
+      },
+      {
+        "name": "Controlled",
+        "description": "Someone else is making your decisions for you, usually because you're being commanded or magically dominated. The controller dictates how you act and can make you use any of your actions, including attacks, reactions, or even Delay. The controller usually does not have to spend their own actions when controlling you."
       },
       {
         "name": "Confused",
-        "description": "You can’t use reactions nor Delay or Ready an action. On each of your turns, you must use your actions to attack the creature that attacked you most recently. A GM may allow you to take actions needed to attempt this attack, such as drawing a weapon or moving. If no creature attacked you since your last turn, roll 1d4. On 1, attack nearest creature. On 2, attack yourself once (hitting automatically for normal damage) and end your turn. On 3, babble gibberish. On 4, act normally."
+        "description": "You don't have your wits about you, and you attack wildly. You are flat-footed, you don't treat anyone as your ally (though they might still treat you as theirs), and you can't Delay, Ready, or use reactions.  \r\nYou use all your actions to Strike or cast offensive cantrips, though the GM can have you use other actions to facilitate attack, such as draw a weapon, move so that a target is in reach, and so forth. Your targets are determined randomly by the GM. If you have no other viable targets, you target yourself, automatically hitting but not scoring a critical hit. If it's impossible for you to attack or cast spells, you babble incoherently, wasting your actions.  \r\nEach time you take damage from an attack or spell, you can attempt a DC 11 flat check to recover from your confusion and end the condition."
       },
       {
         "name": "Dazzled",
-        "description": "If vision is your only precise sense, all creatures and objects have the Concealed condition."
+        "description": "Your eyes are overstimulated. If vision is your only precise sense, all creatures and objects have the Concealed condition."
       },
       {
         "name": "Deafened",
-        "description": "You automatically fail or critically fail (whichever is worse) Perception checks based on sound. You take a -2 conditional penalty to Perception checks for initiative and those that involve sound but also rely on other senses. You must succeed at a DC 5 flat check to do any action with sound involved; on failure, the action is lost. You’re immune to auditory (hearing-based) effects."
+        "description": "You can't hear. You automatically critically fail Perception checks that require you to be able to hear. You take a -2 status penalty to Perception checks for initiative and checks that involve sound but also rely on other senses. If you perform an action with the auditory trait, you must succeed at a DC 5 flat check or the action is lost; attempt the check after spending the action but before any effects are applied. You are immune to auditory effects."
+      },
+      {
+        "name": "Doomed",
+        "description": "A powerful force has gripped your soul, calling you closer to death. Doomed always includes a value. The dying value at which you die is reduced by your doomed value. If your maximum dying value is reduced to 0, you instantly die. When you die, you're no longer doomed.  \r\nYour doomed value decreases by 1 each time you get a full night's rest."
       },
       {
         "name": "Drained",
-        "description": "You take a conditional penalty equal to the value of this condition on any Fortitude saves and Constitution-based checks. Lose Hit Points equal to your level multiplied by this conditions’ value. Your maximum Hit Points drop by the same total. This condition’s value drops by 1 and your maximum Hit Points rise by 1 for each day you regain Hit Points by resting."
+        "description": "When a creature successfully drains you of blood or life force, you become less healthy. Drained always includes a value. You take a status penalty equal to your drained value on Constitution-based checks, such as Fortitude saves. You also lose a number of Hit Points equal to your level (minimum 1) times the drained value, and your maximum Hit Points are reduced by the same amount. For example, if you're hit by an effect that inflicts drained 3 and you're a 3rd-level character, you lose 9 Hit Points and reduce your maximum Hit Points by 9. Losing these Hit Points doesn't count as taking damage.  \r\nEach time you get a full night's rest, your drained value decreases by 1. This increases your maximum Hit Points, but you don't immediately recover the lost Hit Points."
       },
       {
         "name": "Encumbered",
-        "description": "Decrease every type of movement Speed by 10 feet (to no lower than 5 feet). Raise armor check penalty by 2 or take a -2 armor check penalty if unarmored."
-      },
-      {
-        "name": "Enervated",
-        "description": "Take a conditional penalty equal to this conditions’ value on checks that include a proficiency modifier. This penalty cannot exceed your level. Treat your level as if lowered by this conditions’ value when determining which spells you can cast or abilities you can use. You can attempt a Fortitude save daily to drop this condition’s value by 1 (or 2 on critical success). A day of downtime training can drop this condition’s value by 1 automatically."
+        "description": "You are carrying more weight than you can manage. While you're encumbered, you're clumsy 1 and take a 10-foot penalty to all your Speeds. As with all penalties to your Speed, this can't reduce your Speed below 5 feet."
       },
       {
         "name": "Enfeebled",
-        "description": "Take a conditional penalty equal to this conditions’ value on attack and damage rolls as well as Strength-based checks."
-      },
-      {
-        "name": "Entangled",
-        "description": "Gain the Hampered 10 condition. You must succeed at a DC 5 flat check to not lose any attempt at a manipulate action, activity, free action, or reaction."
+        "description": "You're physically weakened. Enfeebled always includes a value. When you are enfeebled, you take a status penalty equal to the condition value to Strength-based rolls and DCs, including Strength-based melee attack rolls, Strength-based damage rolls, and Athletics checks."
       },
       {
         "name": "Fascinated",
-        "description": "Take a -2 conditional penalty to Perception and skill checks. You can’t concentrate except on the subject of your fascination. This condition ends at hostile acts toward you or allies."
+        "description": "You are compelled to focus your attention on something, distracting you from whatever else is going on around you. You take a -2 status penalty to Perception and skill checks, and you can't use actions with the concentrate trait unless they or their intended consequences are related to the subject of your fascination (as determined by the GM). For instance, you might be able to Seek and Recall Knowledge about the subject, but you likely couldn't cast a spell targeting a different creature. This condition ends if a creature uses hostile actions against you or any of your allies."
       },
       {
         "name": "Fatigued",
-        "description": "Gain the Hampered 5 condition. You take a -1 conditional penalty to AC and saves. Each action increases the penalty by 1 until the start of your next turn."
+        "description": "You're tired and can't summon much energy. You take a -1 status penalty to AC and saving throws. While exploring, you can't choose an exploration activity.  \r\nYou recover from fatigue after a full night's rest."
       },
       {
         "name": "Flat-footed",
-        "description": "Take a -2 circumstance penalty to AC. (Flanking applies this condition.)"
+        "description": "You're distracted or otherwise unable to focus your full attention on defense. You take a -2 circumstance penalty to AC."
       },
       {
         "name": "Fleeing",
-        "description": "Spend all actions to flee this condition’s seeming source. You can’t Delay or Ready."
+        "description": "Spend all actions to flee this condition's source as expediently as possible. You can't Delay or Ready."
       },
       {
         "name": "Frightened",
-        "description": "Take a conditional penalty equal to this conditions’ value on checks and saves. Unless specified, this condition’s value drops by 1 at the end of each of your turns."
+        "description": "You take a status penalty equal to this value to all your checks and DCs. Unless specified otherwise, at the end of each of your turns, the value of your frightened condition decreases by 1."
       },
       {
         "name": "Grabbed",
-        "description": "Gain the Flat-footed and Immobile conditions. You must succeed at a DC 5 flat check to not lose any attempt at a manipulate action, activity, free action, or reaction."
-      },
-      {
-        "name": "Hampered",
-        "description": "Decrease any specified type of movement Speed by this conditions’ value in feet (to no lower than 5 feet). If no type is specified, this affects all movement types."
+        "description": "You're held in place by another creature, giving you the flat-footed and immobilized conditions. If you attempt a manipulate action while grabbed, you must succeed at a DC 5 flat check or it is lost; roll the check after spending the action, but before any effects are applied."
       },
       {
         "name": "Immobile",
-        "description": "You can’t use any action, activity, free action, or reaction with a move trait. If an outside force would move you, it must succeed at a check against the DC of the effect rooting you or the defense (usually Fortitude) of the creature rooting you."
+        "description": "You can't use any action with the move trait. If you're immobilized by something holding you in place and an external force would move you out of your space, the force must succeed at a check against either the DC of the effect holding you in place or the relevant defense (usually Fortitude DC) of the monster holding you in place."
+      },
+      {
+        "name": "Invisible",
+        "description": "While invisible, you can't be seen. You're undetected to everyone. Creatures can Seek to attempt to detect you; if a creature succeeds at its Perception check against your Stealth DC, you become hidden to that creature until you Sneak to become undetected again. If you become invisible while someone can already see you, you start out hidden to the observer (instead of undetected) until you successfully Sneak. You can't become observed while invisible except via special abilities or magic."
       },
       {
         "name": "Paralyzed",
-        "description": "Gain the Flat-footed condition. You can’t act except to Recall Knowledge or mentally."
+        "description": "You have the flat-footed condition and can't act except to Recall Knowledge and use actions that require only the use of your mind (as determined by the GM). Your senses still function, but only in the areas you can perceive without moving your body, so you can't Seek while paralyzed."
       },
       {
-        "name": "Persisten",
-        "description": "Damage: At turn’s end, take this condition’s value in damage. After that, you can attempt a DC 20 flat check to remove the persistent damage. You can take persistent damage from multiple sources, so long as they are of different damage types. See p. 323."
+        "name": "Persistent Damage",
+        "description": " Instead of taking persistent damage immediately, you take it at the end of each of your turns as long as you have the condition, rolling any damage dice anew each time. After you take persistent damage, roll a DC 15 flat check to see if you recover from the persistent damage. If you succeed, the condition ends."
       },
       {
         "name": "Petrified",
-        "description": "You can’t act. Gain the Blinded and Deafened conditions. You become an object with double your normal Bulk (usually 16 if Medium size or 8 if Small). Gain AC 9, TAC 5, Hardness 8. You can take  1 plus your Constitution modifier in damage in Dents before breaking. See p. 323."
+        "description": "You can't act, nor can you sense anything. You become an object with a Bulk double your normal Bulk (typically 12 for a petrified Medium creature or 6 for a petrified Small creature), AC 9, Hardness 8, and the same current Hit Points you had when alive. You don't have a Broken Threshold. When you're turned back into flesh, you have the same number of Hit Points you had as a statue. If the statue is destroyed, you immediately die. While petrified, your mind and body are in stasis, so you don't age or notice the passing of time"
       },
       {
         "name": "Prone",
-        "description": "Take a -2 circumstance bonus penalty to attack rolls. Gain a +1 circumstance bonus to AC vs. ranged attacks. Flat-footed to melee attacks."
+        "description": "You're lying on the ground. You are flat-footed and take a -2 circumstance penalty to attack rolls. The only move actions you can use while you're prone are Crawl and Stand. Standing up ends the prone condition. You can Take Cover while prone to hunker down and gain cover against ranged attacks, even if you don't have an object to get behind, gaining a +4 circumstance bonus to AC against ranged attacks (but you remain flat-footed). If you would be knocked prone while you're Climbing or Flying, you fall (see pages 463-464 for the rules on falling). You can't be knocked prone when Swimming."
       },
       {
-        "name": "Quick",
-        "description": "Gain 1 extra action at the start of your turn each round. Source may specify action types."
+        "name": "Quickened",
+        "description": "You gain 1 additional action at the start of your turn each round. Many effects that make you quickened specify the types of actions you can use with this additional action. If you become quickened from multiple sources, you can use the extra action you've been granted for any single action allowed by any of the effects that made you quickened. Because quickened has its effect at the start of your turn, you don't immediately gain actions if you become quickened during your turn."
       },
       {
         "name": "Restrained",
-        "description": "Gain Immobile and Flat-footed conditions. You can’t do anything with attack or manipulate traits except for Break Grapple or Escape. Restrained overrides the Grabbed condition."
+        "description": "You're tied up and can barely move, or a creature has you pinned. You have the flat-footed and immobilized conditions, and you can't use any actions with the attack or manipulate traits except to attempt to Escape or Force Open your bonds. Restrained overrides grabbed."
       },
       {
-        "name": "Sensed",
-        "description": "You become Sensed when a creature to whom you’re Unseen figures out what space you’re in. The creature is flat-footed to you but can target you with a Strike or other action that targets individuals, though it must succeed at a DC 11 flat check or it fails to affect you."
-      },
-      {
-        "name": "Sick",
-        "description": "Take a conditional penalty equal to this conditions’ value on all your checks. You can’t willingly ingest anything, even potions. Spending an action retching grants a Fortitude save vs the DC of the source of your sickness. Drop this conditions’ value by 1 (success) or 2 (critical success)."
+        "name": "Sickened",
+        "description": "You feel ill. Sickened always includes a value. You take a status penalty equal to this value on all your checks and DCs. You can't willingly ingest anything-including elixirs and potions-while sickened.  \r\nYou can spend a single action retching in an attempt to recover, which lets you immediately attempt a Fortitude save against the DC of the effect that made you sickened. On a success, you reduce your sickened value by 1 (or by 2 on a critical success)"
       },
       {
         "name": "Slowed",
-        "description": "Reduce the number of actions on your turn by the value of this condition. You can’t Ready an action. When you get this condition, you don’t have fewer actions until your next turn."
+        "description": "Reduce the number of actions on your turn by the value of this condition. Because slowed has its effect at the start of your turn, you don't immediately lose actions if you become slowed during your turn."
       },
       {
-        "name": "Sluggish",
-        "description": "Take a conditional penalty equal to this conditions’ value to AC, attack rolls, Dexterity-based checks, and Reflex saves."
-      },
-z      {
         "name": "Stunned",
-        "description": "Your body is unresponsive. You can’t act."
+        "description": "You've become senseless. You can't act while stunned. Stunned usually includes a value, which indicates how many total actions you lose, possibly over multiple turns, from being stunned. Each time you regain actions (such as at the start of your turn), reduce the number you regain by your stunned value, then reduce your stunned value by the number of actions you lost. For example, if you were stunned 4, you would lose all 3 of your actions on your turn, reducing you to stunned 1; on your next turn, you would lose 1 more action, and then be able to use your remaining 2 actions normally. Stunned might also have a duration instead of a value, such as \"stunned for 1 minute.\" In this case, you lose all your actions for the listed duration.  \r\n Stunned overrides slowed. If the duration of your stunned condition ends while you are slowed, you count the actions lost to the stunned condition toward those lost to being slowed. So, if you were stunned 1 and slowed 2 at the beginning of your turn, you would lose 1 action from stunned, and then lose only 1 additional action by being slowed, so you would still have 1 action remaining to use that turn."
       },
       {
         "name": "Stupefied",
-        "description": "Take a conditional penalty equal to this conditions’ value on spell rolls, spell DC, and mental checks (Intelligence, Wisdom, and Charisma). Any spell you cast is disrupted unless you succeed at a spell roll against the DC of this conditions’ source."
+        "description": "Your thoughts and instincts are clouded. Stupefied always includes a value. You take a status penalty equal to this value on Intelligence-, Wisdom-, and Charisma-based checks and DCs, including Will saving throws, spell attack rolls, spell DCs, and skill checks that use these ability scores. Any time you attempt to Cast a Spell while stupefied, the spell is disrupted unless you succeed at a flat check with a DC equal to 5 + your stupefied value."
+      },
+      {
+        "name": "Unconscious",
+        "description": "You're sleeping, or you've been knocked out. You can't act. You take a -4 status penalty to AC, Perception, and Reflex saves, and you have the blinded and flat-footed conditions. When you gain this condition, you fall prone and drop items you are wielding or holding unless the effect states otherwise or the GM determines you're in a position in which you wouldn't."
       }
 
     ]
@@ -144,15 +135,266 @@ z      {
     "name": "Moster Abilities",
     "icon": "fab fa-optin-monster",
     "render": "list",
-    "description": "Work In Progress - Data May Not Be Accrurate",
-    "list": []
+    "list": [
+      {
+        "name": "All-Around Vision",
+        "description": "This monster can see in all directions simultaneously, and therefore cannot be flanked."
+      },
+      {
+        "name": "Aquatic Ambush",
+        "action": "1",
+        "description": "**Requirements** The monster is hiding in water and a creature that hasn't detected it is within the listed number of feet.  \r\n**Effect** The monster moves up to its swim Speed + 10 feet toward the triggering creature, traveling on water and on land. Once the creature is in reach, the monster makes a Strike against it. The creature is flat-footed against this Strike"
+      },
+      {
+        "name": "Attack of Opportunity",
+        "action": "reaction",
+        "description": "**Trigger** A creature within the monster's reach uses a manipulate action or a move action, makes a ranged attack, or leaves a square during a move action it's using.  \r\n**Effect** The monster attempts a melee Strike against the triggering creature. If the attack is a critical hit and the trigger was a manipulate action, the monster disrupts that action. This Strike doesn't count toward the monster's multiple attack penalty, and its multiple attack penalty doesn't apply to this Strike."
+      },
+      {
+        "name": "Aura",
+        "description": "A monster's aura automatically affects everything within a specified emanation around that monster. The monster doesn't need to spend actions on the aura; rather, the aura's effects are applied at specific times, such as when a creature ends its turn in the aura or when creatures enter the aura.  \r\nIf an aura does nothing but deal damage, its entry lists only the radius, damage, and saving throw. Such auras deal this damage to a creature when the creature enters the aura and when a creature starts its turn in the aura. A creature can take damage from the aura only once per round.  \r\nThe GM might determine that a monster's aura doesn't affect its own allies. For example, a creature might be immune to a monster' frightful presence if they have been around each other for a long time."
+      },
+      {
+        "name": "Buck",
+        "action": "reaction",
+        "description": "Most monsters that serve as mounts can attempt to buck off unwanted or annoying riders, but most mounts will not use this reaction against a trusted creature unless the mounts are spooked or mistreated.  \r\n**Trigger** A creature Mounts or uses the Command an Animal action while riding the monster.  \r\n**Effect** The triggering creature must succeed at a Reflex saving throw against the listed DC or fall off the creature and land prone. If the save is a critical failure, the triggering creature also takes 1d6 bludgeoning damage in addition to the normal damage for the fall"
+      },
+      {
+        "name": "Catch Rock",
+        "action": "reaction",
+        "description": "**Requirements** The monster must have a free hand but can Release anything it's holding as part of this reaction.  \r\n**Trigger** The monster is targeted with a thrown rock Strike or a rock would fall on the monster.  \r\n**Effect** The monster gains a +4 circumstance bonus to its AC against the triggering attack or to any defense against the falling rock. If the attack misses or the monster successfully defends against the falling rock, the monster catches the rock, takes no damage, and is now holding the rock."
+      },
+      {
+        "name": "Change Shape",
+        "action": "1",
+        "description": "(concentrate, magical tradition, polymorph, transmutation)  \r\nThe monster changes its shape indefinitely. It can use this action again to return to its natural shape or adopt a new shape. Unless otherwise noted, a monster cannot use Change Shape to appear as a specific individual. Using Change Shape counts as creating a disguise for the Impersonate use of Deception. The monster's transformation automatically defeats Perception DCs to determine whether the creature is a member of the ancestry or creature type into which it transformed, and it gains a +4 status bonus to its Deception DC to prevent others from seeing through its disguise. Change Shape abilities specify what shapes the monster can adopt. The monster doesn't gain any special abilities of the new shape, only its physical form. For example, in each shape, it replaces its normal Speeds and Strikes, and might potentially change its senses or size. Any changes are listed in its stat block."
+      },
+      {
+        "name": "Constrict",
+        "action": "1",
+        "description": "The monster deals the listed amount of damage to any number of creatures grabbed or restrained by it. Each of those creatures can attempt a basic Fortitude save with the listed DC."
+      },
+      {
+        "name": "Coven",
+        "description": "(divination, mental, occult)  \r\nThis monster can form a coven with two or more other creatures who also have the coven ability. This involves performing an 8-hour ceremony with all prospective coven members. After the coven is formed, each of its members gains elite adjustments (page 6), adjusting their levels accordingly. Coven members can sense other members' locations and conditions by spending a single action, which has the concentrate trait, and can sense what another coven member is sensing as a twoaction activity, which has the concentrate trait as well.  \r\nCovens also grant spells and rituals to their members, but these can be cast only in cooperation between three coven members who are all within 30 feet of one another. A coven member can contribute to a coven spell with a single-action spellcasting activity that has a single verbal component. If two coven members have contributed these actions within the last round, a third member can cast a coven spell on her turn by spending the normal spellcasting actions. A coven can cast its coven spells an unlimited number of times but can cast only one coven spell each round. All covens grant the 8th-level baleful polymorph spell and all the following spells, which the coven can cast at any level up to 5th: augury, charm, clairaudience, clairvoyance, dream message, illusory disguise, illusory scene, prying eye, and talking corpse. Individual creatures with the coven ability also grant additional spells to any coven they join. A coven can also cast the control weather ritual (Core Rulebook 411), with a DC of 23 instead of the standard DC.  \r\nIf a coven member leaving the coven or the death of a coven member brings the coven below three members, the remaining members keep their elite adjustments for 24 hours, but without enough members to contribute the necessary actions, they can't cast coven spells."
+      },
+      {
+        "name": "Engulf",
+        "action": "2",
+        "description": "The monster Strides up to double its Speed and can move through the spaces of any creatures in its path. Any creature of the monster's size or smaller whose space the monster moves through can attempt a Reflex save with the listed DC to avoid being engulfed. A creature unable to act automatically critically fails this save. If a creature succeeds at its save, it can choose to be either pushed aside (out of the monster's path) or pushed in front of the monster to the end of the monster's movement. The monster can attempt to Engulf the same creature only once in a single use of Engulf. The monster can contain as many creatures as can fit in its space.  \r\nA creature that fails its save is pulled into the monster's body. It is grabbed, is slowed 1, and has to hold its breath or start suffocating. The creature takes the listed amount of damage when first engulfed and at the end of each of its turns while it's engulfed. An engulfed creature can get free by Escaping against the listed escape DC. An engulfed creature can attack the monster engulfing it, but only with unarmed attacks or with weapons of light Bulk or less. The engulfing creature is flat-footed against the attack. If the monster takes piercing or slashing damage equaling or exceeding the listed Rupture value from a single attack or spell, the engulfed creature cuts itself free. A creature that gets free by either method can immediately breathe and exits the swallowing monster's space.  \r\nIf the monster dies, all creatures it has engulfed are automatically released as the monster's form loses cohesion."
+      },
+      {
+        "name": "Fast Healing",
+        "description": "A monster with this ability regains the given number of Hit Points each round at the beginning of its turn."
+      },
+      {
+        "name": "Ferocity",
+        "action": "reaction",
+        "description": "**Trigger** The monster is reduced to 0 HP.  \r\n**Effect** The monster avoids being knocked out and remains at 1 HP, but its wounded value increases by 1. When it is wounded 3, it can no longer use this ability."
+      },
+      {
+        "name": "Frightful Presence",
+        "description": "(aura, emotion, fear, mental)  \r\nA creature that first enters the area must attempt a Will save. Regardless of the result of the saving throw, the creature is temporarily immune to this monster's Frightful Presence for 1 minute.  \r\n**Critical Success** The creature is unaffected by the presence.  \r\n**Success** The creature is frightened 1.  \r\n**Failure** The creature is frightened 2.  \r\n**Critical Failure** The creature is frightened 4."
+      },
+      {
+        "name": "Grab",
+        "action": "1",
+        "description": "**Requirements** The monster's last action was a success with a Strike that lists Grab in its damage entry, or it has a creature grabbed using this action.  \r\n**Effect** The monster automatically Grabs the target until the end of the monster's next turn. The creature is grabbed by whichever body part the monster attacked with, and that body part can't be used to Strike creatures until the grab is ended.  \r\nUsing Grab extends the duration of the monster's Grab until the end of its next turn for all creatures grabbed by it. A grabbed creature can use the Escape action to get out of the grab, and the Grab ends for a grabbed creatures if the monster moves away from it."
+      },
+      {
+        "name": "Greater Constrict",
+        "action": "1",
+        "description": " The monster deals the listed amount of damage to any number of creatures grabbed or restrained by it. Each of those creatures can attempt a basic Fortitude save with the listed DC. A creature that fails this save falls unconscious, and a creature that succeeds is then temporarily immune to falling unconscious from Greater Constrict for 1 minute."
+      },
+      {
+        "name": "Improved Grab, Improved Knockdown, or Improved Push",
+        "action": "free",
+        "description": "The monster can use Grab, Knockdown, or Push (as appropriate) as a free action triggered by a hit with its initial attack. A monster with Improved Grab still needs to spend an action to extend the duration for creatures it already has grabbed."
+      },
+      {
+        "name": "Knockdown",
+        "action": "1",
+        "description": "**Requirements** The monster's last action was a success with a Strike that lists Knockdown in its damage entry.  \r\n**Effect** The monster knocks the target prone."
+      },
+      {
+        "name": "Lifesense",
+        "description": "Lifesense allows a monster to sense the vital essence of living and undead creatures within the listed range. The sense can distinguish between the positive energy animating living creatures and the negative energy animating undead creatures, much as sight distinguishes colors."
+      },
+      {
+        "name": "Light Blindness",
+        "description": " The monster can see in dim light as though it were bright light, so it ignores the concealed condition due to dim light."
+      },
+      {
+        "name": "Push",
+        "action": "1",
+        "description": "**Requirements** The monster's last action was a success with a Strike that lists Push in its damage entry.  \r\n**Effect** The monster automatically knocks the target away from the monster. Unless otherwise noted in the ability description, the creature is pushed 5 feet. If the attack was a critical hit, this distance is doubled."
+      },
+      {
+        "name": "Regeneration",
+        "description": "This monster regains the listed number of Hit Points each round at the beginning of its turn. Its dying condition never increases beyond dying 3 as long as its regeneration is active. However, if it takes damage of a type listed in the regeneration entry, its regeneration deactivates until the end of its next turn. Deactivate the regeneration before applying any damage of a listed type, since that damage might kill the monster by bringing it to dying 4."
+      },
+      {
+        "name": "Rend",
+        "action": "1",
+        "description": "A Rend entry lists a Strike the monster has.  \r\n**Requirements** The monster hit the same enemy with two consecutive Strikes of the listed type in the same round.  \r\n**Effect** The monster automatically deals that Strike's damage again to the enemy."
+      },
+      {
+        "name": "Retributive Strike",
+        "action": "reaction",
+        "description": "**Trigger** An enemy damages the monster's ally, and both are within 15 feet of the monster.  \r\n**Effect** The ally gains resistance to all damage against the triggering damage equal to 2 + the monster's level. If the foe is within reach, the monster makes a melee Strike against it."
+      },
+      {
+        "name": "Scent",
+        "description": "Scent involves sensing creatures or objects by smell, and is usually a vague sense. The range is listed in the ability, and it functions only if the creature or object being detected emits an aroma (for instance, incorporeal creatures usually do not exude an aroma).  \r\nIf a creature emits a heavy aroma or is upwind, the GM can double or even triple the range of scent abilities used to detect that creature, and the GM can reduce the range if a creature is downwind."
+      },
+      {
+        "name": "Shield Block",
+        "action": "reaction",
+        "description": "**Trigger** The monster has its shield raised and takes damage from a physical attack.  \r\n**Effect** The monster snaps its shield into place to deflect a blow. The shield prevents the monster from taking an amount of damage up to the shield's Hardness. The monster and the shield each take any remaining damage, possibly breaking or destroying the shield."
+      },
+      {
+        "name": "Sneak Attack",
+        "description": "When the monster Strikes a creature that has the flat-footed condition with an agile or finesse melee weapon, an agile or finesse unarmed attack, or a ranged weapon attack, it also deals the listed precision damage. For a ranged attack with a thrown weapon, that weapon must also be an agile or finesse weapon."
+      },
+      {
+        "name": "Swallow Whole",
+        "action": "1",
+        "description": "(attack)  \r\nThe monster attempts to swallow a creature of the listed size or smaller that it has grabbed in its jaws or mouth. If a swallowed creature is of the maximum size listed, the monster can't use Swallow Whole again. If the creature is smaller than the maximum, the monster can usually swallow more creatures; the GM determines the maximum. The monster attempts an Athletics check opposed by the grabbed creature's Reflex DC. If it succeeds, it swallows the creature. The monster's mouth or jaws no longer grab a creature it has swallowed, so the monster is free to use them to Strike or Grab once again. The monster can't attack creatures it has swallowed.  \r\nA swallowed creature is grabbed, is slowed 1, and has to hold its breath or start suffocating. The swallowed creature takes the listed amount of damage when first swallowed and at the end of each of its turns while it's swallowed. If the victim Escapes this ability's grabbed condition, it exits through the monster's mouth. This frees any other creature grabbed in the monster's mouth or jaws. A swallowed creature can attack the monster that has swallowed it, but only with unarmed attacks or with weapons of light Bulk or less. The engulfing creature is flat-footed against the attack. If the monster takes piercing or slashing damage equaling or exceeding the listed Rupture value from a single attack or spell, the engulfed creature cuts itself free. A creature that gets free by either Escaping or cutting itself free can immediately breathe and exits the swallowing monster's space.  \r\nIf the monster dies, a swallowed creature can be freed by creatures adjacent to the corpse if they spend a combined total of 3 actions cutting the monster open with a weapon or unarmed attack that deals piercing or slashing damage."
+      },
+      {
+        "name": "Swarm Mind",
+        "description": "This monster doesn't have a single mind (typically because it's a swarm of smaller creatures), and is immune to mental effects that target only a specific number of creatures. It is still subject to mental effects that affect all creatures in an area."
+      },
+      {
+        "name": "Telepathy",
+        "description": "(aura, divination, magical)  \r\nA monster with telepathy can communicate mentally with any creatures within the listed radius, as long as they share a language. This doesn't give any special access to their thoughts, and communicates no more information than normal speech would."
+      },
+      {
+        "name": "Throw Rock",
+        "action": "1",
+        "description": "The monster picks up a rock within reach or retrieves a stowed rock and throws it, making a ranged Strike."
+      },
+      {
+        "name": "Trample",
+        "action": "3",
+        "description": "The monster Strides up to double its Speed and can move through the spaces of creatures of the listed size, Trampling each creature whose space it enters. The monster can attempt to Trample the same creature only once in a single use of Trample. The monster deals the damage of the listed Strike, but trampled creatures can attempt a basic Reflex save at the listed DC (no damage on a critical success, half damage on a success, double damage on a critical failure)."
+      },
+      {
+        "name": "Tremorsense",
+        "description": "Tremorsense allows a monster to feel the vibrations through a solid surface caused by movement. It is an imprecise sense with a limited range (listed in the ability). Tremorsense functions only if the monster is on the same surface as the subject, and only if the subject is moving along (or burrowing through) the surface."
+      },
+      {
+        "name": "Wavesense",
+        "description": "This sense allows a monster to feel vibrations caused by movement through a liquid. It's an imprecise sense with a limited range (listed in the ability). Wavesense functions only if monster and the subject are in the same body of liquid, and only if the subject is moving through the liquid."
+      }
+    ]
   },
   {
     "name": "Weapon Traits",
     "icon": "fas fa-fan",
     "render": "list",
-    "description": "Work In Progress - Data May Not Be Accrurate",
-    "list": []
+    "list": [
+      {
+        "name": "Agile",
+        "description": "The multiple attack penalty you take with this weapon on the second attack on your turn is -4 instead of -5, and -8 instead of -10 on the third and subsequent attacks in the turn."
+      },
+      {
+        "name": "Attached",
+        "description": "An attached weapon must be combined with another piece of gear to be used. The trait lists what type of item the weapon must be attached to. You must be wielding or wearing the item the weapon is attached to in order to attack with it. For example, shield spikes are attached to a shield, allowing you to attack with the spikes instead of a shield bash, but only if you're wielding the shield. An attached weapon is usually bolted onto or built into the item it's attached to, and typically an item can have only one weapon attached to it. An attached weapon can be affixed to an item with 10 minutes of work and a successful DC 10 Crafting check; this includes the time needed to remove the weapon from a previous item, if necessary. If an item is destroyed, its attached weapon can usually be salvaged."
+      },
+      {
+        "name": "Backstabber",
+        "description": "When you hit a flat-footed creature, this weapon deals 1 precision damage in addition to its normal damage. The precision damage increases to 2 if the weapon is a +3 weapon."
+      },
+      {
+        "name": "Backswing",
+        "description": "You can use the momentum from a missed attack with this weapon to lead into your next attack. After missing with this weapon on your turn, you gain a +1 circumstance bonus to your next attack with this weapon before the end of your turn."
+      },
+      {
+        "name": "Deadly",
+        "description": "On a critical hit, the weapon adds a weapon damage die of the listed size. Roll this after doubling the weapon's damage. This increases to two dice if the weapon has a greater striking rune and three dice if the weapon has a major striking rune. For instance, a rapier with a greater striking rune deals 2d8 extra piercing damage on a critical hit. An ability that changes the size of the weapon's normal damage dice doesn't change the size of its deadly die."
+      },
+      {
+        "name": "Disarm",
+        "description": "You can use this weapon to Disarm with the Athletics skill even if you don't have a free hand. This uses the weapon's reach (if different from your own) and adds the weapon's item bonus to attack rolls (if any) as an item bonus to the Athletics check. If you critically fail a check to Disarm using the weapon, you can drop the weapon to take the effects of a failure instead of a critical failure. On a critical success, you still need a free hand if you want to take the item."
+      },
+      {
+        "name": "Fatal",
+        "description": "The fatal trait includes a die size. On a critical hit, the weapon's damage die increases to that die size instead of the normal die size, and the weapon adds one additional damage die of the listed size."
+      },
+      {
+        "name": "Finesse",
+        "description": "You can use your Dexterity modifier instead of your Strength modifier on attack rolls using this melee weapon. You still use your Strength modifier when calculating damage."
+      },
+      {
+        "name": "Forceful",
+        "description": "This weapon becomes more dangerous as you build momentum. When you attack with it more than once on your turn, the second attack gains a circumstance bonus to damage equal to the number of weapon damage dice, and each subsequent attack gains a circumstance bonus to damage equal to double the number of weapon damage dice."
+      },
+      {
+        "name": "Free-Hand",
+        "description": "This weapon doesn't take up your hand, usually because it is built into your armor. A free-hand weapon can't be Disarmed. You can use the hand covered by your free-hand weapon to wield other items, perform manipulate actions, and so on. You can't attack with a free-hand weapon if you're wielding anything in that hand or otherwise using that hand. When you're not wielding anything and not otherwise using the hand, you can use abilities that require you to have a hand free as well as those that require you to be wielding a weapon in that hand. Each of your hands can have only one free-hand weapon on it."
+      },
+      {
+        "name": "Grapple",
+        "description": "You can use this weapon to Grapple with the Athletics skill even if you don't have a free hand. This uses the weapon's reach (if different from your own) and adds the weapon's item bonus to attack rolls as an item bonus to the Athletics check. If you critically fail a check to Grapple using the weapon, you can drop the weapon to take the effects of a failure instead of a critical failure."
+      },
+      {
+        "name": "Jousting",
+        "description": "The weapon is suited for mounted combat with a harness or similar means. When mounted, if you moved at least 10 feet on the action before your attack, add a circumstance bonus to damage for that attack equal to the number of damage dice for the weapon. In addition, while mounted, you can wield the weapon in one hand, changing the damage die to the listed value."
+      },
+      {
+        "name": "Nonlethal",
+        "description": "Attacks with this weapon are nonlethal (page 453), and are used to knock creatures unconscious instead of kill them. You can use a nonlethal weapon to make a lethal attack with a -2 circumstance penalty."
+      },
+      {
+        "name": "Parry",
+        "description": "This weapon can be used defensively to block attacks. While wielding this weapon, if your proficiency with it is trained or better, you can spend an Interact action to position your weapon defensively, gaining a +1 circumstance bonus to AC until the start of your next turn."
+      },
+      {
+        "name": "Propulsive",
+        "description": "You add half your Strength modifier (if positive) to damage rolls with a propulsive ranged weapon. If you have a negative Strength modifier, you add your full Strength modifier instead."
+      },
+      {
+        "name": "Reach",
+        "description": "This weapon is long and can be used to attack creatures up to 10 feet away instead of only adjacent creatures. For creatures that already have reach with the limb or limbs that wield the weapon, the weapon increases their reach by 5 feet."
+      },
+      {
+        "name": "Shove",
+        "description": "You can use this weapon to Shove with the Athletics skill even if you don't have a free hand. This uses the weapon's reach (if different from your own) and adds the weapon's item bonus to attack rolls as an item bonus to the Athletics check. If you critically fail a check to Shove using the weapon, you can drop the weapon to take the effects of a failure instead of a critical failure."
+      },
+      {
+        "name": "Sweep",
+        "description": "This weapon makes wide sweeping or spinning attacks, making it easier to attack multiple enemies. When you attack with this weapon, you gain a +1 circumstance bonus to your attack roll if you already attempted to attack a different target this turn using this weapon."
+      },
+      {
+        "name": "Thrown",
+        "description": "You can throw this weapon as a ranged attack. A thrown weapon adds your Strength modifier to damage just like a melee weapon does. When this trait appears on a melee weapon, it also includes the range increment. Ranged weapons with this trait use the range increment specified in the weapon's Range entry."
+      },
+      {
+        "name": "Trip",
+        "description": "You can use this weapon to Trip with the Athletics skill even if you don't have a free hand. This uses the weapon's reach (if different from your own) and adds the weapon's item bonus to attack rolls as an item bonus to the Athletics check. If you critically fail a check to Trip using the weapon, you can drop the weapon to take the effects of a failure instead of a critical failure."
+      },
+      {
+        "name": "Twin",
+        "description": "These weapons are used as a pair, complementing each other. When you attack with a twin weapon, you add a circumstance bonus to the damage roll equal to the weapon's number of damage dice if you have previously attacked with a different weapon of the same type this turn. The weapons must be of the same type to benefit from this trait, but they don't need to have the same runes."
+      },
+      {
+        "name": "Two-Hand",
+        "description": "This weapon can be wielded with two hands. Doing so changes its weapon damage die to the indicated value. This change applies to all the weapon's damage dice, such as those from striking runes"
+      },
+      {
+        "name": "Unarmed",
+        "description": "An unarmed attack uses your body rather than a manufactured weapon. An unarmed attack isn't a weapon, though it's categorized with weapons for weapon groups, and it might have weapon traits. Since it's part of your body, an unarmed attack can't be Disarmed. It also doesn't take up a hand, though a fist or other grasping appendage follows the same rules as a free-hand weapon."
+      },
+      {
+        "name": "Versatile",
+        "description": "A versatile weapon can be used to deal a different type of damage than that listed in the Damage entry. This trait indicates the alternate damage type. For instance, a piercing weapon that is versatile S can be used to deal piercing or slashing damage. You choose the damage type each time you make an attack."
+      },
+      {
+        "name": "Volley",
+        "description": "This ranged weapon is less effective at close distances. Your attacks against targets that are at a distance within the range listed take a -2 penalty."
+      }
+    ]
   },
   {
     "name": "DC Table",
@@ -297,7 +539,7 @@ z      {
       },
       {
         "name": "Concealed",
-        "description": "Fog or similar obscuration makes you difficult to see and target. A creature you’re concealed from must succeed at a DC 5 flat check when making an attack against you or targeting you with a spell or effect. On failure, the attack, spell, or effect has no effect."
+        "description": "Fog or similar obscuration makes you difficult to see and target. A creature you're concealed from must succeed at a DC 5 flat check when making an attack against you or targeting you with a spell or effect. On failure, the attack, spell, or effect has no effect."
       },
       {
         "name": "Hidden",
@@ -320,7 +562,7 @@ z      {
     "list": [
       {
         "name": "Avoid Notice",
-        "description": "You attempt a Stealth check to avoid notice while traveling at half speed. If you have the Swift Stealth feat, you can move at full Speed rather than half, but you still can't use another exploration activity while you do so. If you have the Legendary Sneak feat, you can move at full Speed and use a second exploration activity.\r\n\r\nIf you're avoiding notice at the start of an encounter, you usually roll a Stealth check instead of a Perception check both to determine your initiative and to see if the enemies notice you (based on their Perception DCs, as normal for Sneak, regardless of their Initiative check results)"
+        "description": "You attempt a Stealth check to avoid notice while traveling at half speed. If you have the Swift Stealth feat, you can move at full Speed rather than half, but you still can't use another exploration activity while you do so. If you have the Legendary Sneak feat, you can move at full Speed and use a second exploration activity.  \r\n  \r\nIf you're avoiding notice at the start of an encounter, you usually roll a Stealth check instead of a Perception check both to determine your initiative and to see if the enemies notice you (based on their Perception DCs, as normal for Sneak, regardless of their Initiative check results)"
       },
       {
         "name": "Defend",
@@ -344,7 +586,7 @@ z      {
       },
       {
         "name": "Repeat a spell",
-        "description": "You repeatedly cast the same spell while moving at half speed. Typically this spell is a cantrip you want to have in effect at the start of combat, and it must be one you can cast in 2 actions or fewer. In order to prevent fatigue due to repeated casting you'll likely use this ability only when something out of the ordinary occurs.\r\nYou can instead use this activity to continue Sustainign a Spell or Activation with sustained duration. Most spells or item effects can be sustained for 10 minutes, though some specify they can be sustained for a different duration."
+        "description": "You repeatedly cast the same spell while moving at half speed. Typically this spell is a cantrip you want to have in effect at the start of combat, and it must be one you can cast in 2 actions or fewer. In order to prevent fatigue due to repeated casting you'll likely use this ability only when something out of the ordinary occurs.  \r\nYou can instead use this activity to continue Sustainign a Spell or Activation with sustained duration. Most spells or item effects can be sustained for 10 minutes, though some specify they can be sustained for a different duration."
       },
       {
         "name": "Scout",

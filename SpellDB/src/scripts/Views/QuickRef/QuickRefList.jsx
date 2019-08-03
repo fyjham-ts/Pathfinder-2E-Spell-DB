@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import ActionIcons from '../Utils/ActionIcons.js';
 
 export default class QuickRefList extends React.PureComponent {
     constructor(props) {
@@ -19,6 +20,7 @@ export default class QuickRefList extends React.PureComponent {
             {this.props.list.map((c) => <div key={c.name} className="card">
                 <div className="card-header" onClick={() => this.toggleExpand(c.name)}>
                     {c.icon && <span className={c.icon}>{c.iconText}</span>}
+                    {c.action && <span><ActionIcons action={c.action} />&nbsp;</span>}
                     {c.name}
                 </div>
                 {this.state.expanded[c.name] &&

@@ -76,7 +76,7 @@ async function loadSpell(url) {
                 var newItem = e.text().toLowerCase();
                 if (handledItems.indexOf(newItem) == -1 && activeItem == "description") {
                     // Unhandled extras in desc - Just put them in bold
-                    spellData[activeItem] += "\r\n**" + e.text() + "** ";
+                    spellData[activeItem] += "  \r\n**" + e.text() + "** ";
                 } else {
                     if (activeItem) {
                         if (subItem) { spellData[activeItem][subItem] = spellData[activeItem][subItem].trim().replace(/^;+/,"").replace(/;+$/,""); }

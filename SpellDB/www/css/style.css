@@ -11715,12 +11715,12 @@ readers do not read off random characters that represent icons */
     display: inline-block;
     color: #FFF;
     background-color: #5e0000;
-    border-top: 1px solid #dcb07b;
-    border-bottom: 1px solid #dcb07b;
+    border-top: 2px solid #dcb07b;
+    border-bottom: 2px solid #dcb07b;
     border-left: 3px solid #dcb07b;
     list-style: none;
     text-align: center;
-    padding: 2px 10px 10px;
+    padding: 3px 6px;
     font-size: 10px;
     font-weight: bold;
     text-transform: uppercase; }

@@ -14,6 +14,10 @@ var _reactMarkdown = require('react-markdown');
 
 var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
 
+var _ActionIcons = require('../Utils/ActionIcons.js');
+
+var _ActionIcons2 = _interopRequireDefault(_ActionIcons);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -65,6 +69,12 @@ var QuickRefList = function (_React$PureComponent) {
                                 'span',
                                 { className: c.icon },
                                 c.iconText
+                            ),
+                            c.action && _react2.default.createElement(
+                                'span',
+                                null,
+                                _react2.default.createElement(_ActionIcons2.default, { action: c.action }),
+                                '\xA0'
                             ),
                             c.name
                         ),
