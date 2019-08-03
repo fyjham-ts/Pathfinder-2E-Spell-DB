@@ -114,7 +114,7 @@ export default class SpellList extends React.Component {
                     if (spellType.lookup[this.state.criteria.spellOption].indexOf(spell.name) === -1) return false;
                     break;
                 case "array":
-                    if (spell[spellType.match] && spell[spellType.match].indexOf(this.state.criteria.spellOption) == -1) return false;
+                    if (!spell[spellType.match] || spell[spellType.match].indexOf(this.state.criteria.spellOption) == -1) return false;
                     break;
             }
         }
