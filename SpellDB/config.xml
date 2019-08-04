@@ -28,48 +28,48 @@
   <platform name="android">
     <preference name="SplashMaintainAspectRatio" value="true"/>
     <preference name="SplashShowOnlyFirstTime" value="true"/>
-    <icon density="ldpi" src="res/icon/android/ldpi.png"/>
-    <icon density="mdpi" src="res/icon/android/mdpi.png"/>
-    <icon density="hdpi" src="res/icon/android/hdpi.png"/>
-    <icon density="xhdpi" src="res/icon/android/xhdpi.png"/>
-    <icon density="xxhdpi" src="res/icon/android/xxhdpi.png"/>
-    <icon density="xxxhdpi" src="res/icon/android/xxxhdpi.png"/>
+    <icon density="ldpi" src="res/icons/android/ldpi.png"/>
+    <icon density="mdpi" src="res/icons/android/mdpi.png"/>
+    <icon density="hdpi" src="res/icons/android/hdpi.png"/>
+    <icon density="xhdpi" src="res/icons/android/xhdpi.png"/>
+    <icon density="xxhdpi" src="res/icons/android/xxhdpi.png"/>
+    <icon density="xxxhdpi" src="res/icons/android/xxxhdpi.png"/>
     <!--  Portrait  -->
-    <splash density="port-ldpi" src="res/screen/android/splash-port-ldpi.png"/>
-    <splash density="port-mdpi" src="res/screen/android/splash-port-mdpi.png"/>
-    <splash density="port-hdpi" src="res/screen/android/splash-port-hdpi.png"/>
-    <splash density="port-xhdpi" src="res/screen/android/splash-port-xhdpi.png"/>
-    <splash density="port-xxhdpi" src="res/screen/android/splash-port-xxhdpi.png"/>
-    <splash density="port-xxxhdpi" src="res/screen/android/splash-port-xxxhdpi.png"/>
+    <splash density="port-ldpi" src="res/screens/android/splash-port-ldpi.png"/>
+    <splash density="port-mdpi" src="res/screens/android/splash-port-mdpi.png"/>
+    <splash density="port-hdpi" src="res/screens/android/splash-port-hdpi.png"/>
+    <splash density="port-xhdpi" src="res/screens/android/splash-port-xhdpi.png"/>
+    <splash density="port-xxhdpi" src="res/screens/android/splash-port-xxhdpi.png"/>
+    <splash density="port-xxxhdpi" src="res/screens/android/splash-port-xxxhdpi.png"/>
   </platform>
   <platform name="ios">
-    <icon src="res/icon/ios/icon-1024.png" width="1024" height="1024"/>
-    <icon src="res/icon/ios/icon-small.png" width="29" height="29"/>
-    <icon src="res/icon/ios/icon-small@2x.png" width="58" height="58"/>
-    <icon src="res/icon/ios/icon-small@3x.png" width="87" height="87"/>
-    <icon src="res/icon/ios/icon-small-40.png" width="40" height="40"/>
-    <icon src="res/icon/ios/icon-small-40@2x.png" width="80" height="80"/>
-    <icon src="res/icon/ios/icon-small-40@3x.png" width="120" height="120"/>
-    <icon src="res/icon/ios/icon-small-50.png" width="50" height="50"/>
-    <icon src="res/icon/ios/icon-small-50@2x.png" width="100" height="100"/>
-    <icon src="res/icon/ios/icon.png" width="57" height="57"/>
-    <icon src="res/icon/ios/icon@2x.png" width="114" height="114"/>
-    <icon src="res/icon/ios/icon-60.png" width="60" height="60"/>
-    <icon src="res/icon/ios/icon-60@2x.png" width="120" height="120"/>
-    <icon src="res/icon/ios/icon-60@3x.png" width="180" height="180"/>
-    <icon src="res/icon/ios/icon-72.png" width="72" height="72"/>
-    <icon src="res/icon/ios/icon-72@2x.png" width="144" height="144"/>
-    <icon src="res/icon/ios/icon-76.png" width="76" height="76"/>
-    <icon src="res/icon/ios/icon-76@2x.png" width="152" height="152"/>
-    <icon src="res/icon/ios/icon-167.png" width="167" height="167"/>
-    <icon src="res/icon/ios/icon-83.5@2x.png" width="167" height="167"/>
+    <icon src="res/icons/ios/icon-1024.png" width="1024" height="1024"/>
+    <icon src="res/icons/ios/icon-small.png" width="29" height="29"/>
+    <icon src="res/icons/ios/icon-small@2x.png" width="58" height="58"/>
+    <icon src="res/icons/ios/icon-small@3x.png" width="87" height="87"/>
+    <icon src="res/icons/ios/icon-small-40.png" width="40" height="40"/>
+    <icon src="res/icons/ios/icon-small-40@2x.png" width="80" height="80"/>
+    <icon src="res/icons/ios/icon-small-40@3x.png" width="120" height="120"/>
+    <icon src="res/icons/ios/icon-small-50.png" width="50" height="50"/>
+    <icon src="res/icons/ios/icon-small-50@2x.png" width="100" height="100"/>
+    <icon src="res/icons/ios/icon.png" width="57" height="57"/>
+    <icon src="res/icons/ios/icon@2x.png" width="114" height="114"/>
+    <icon src="res/icons/ios/icon-60.png" width="60" height="60"/>
+    <icon src="res/icons/ios/icon-60@2x.png" width="120" height="120"/>
+    <icon src="res/icons/ios/icon-60@3x.png" width="180" height="180"/>
+    <icon src="res/icons/ios/icon-72.png" width="72" height="72"/>
+    <icon src="res/icons/ios/icon-72@2x.png" width="144" height="144"/>
+    <icon src="res/icons/ios/icon-76.png" width="76" height="76"/>
+    <icon src="res/icons/ios/icon-76@2x.png" width="152" height="152"/>
+    <icon src="res/icons/ios/icon-167.png" width="167" height="167"/>
+    <icon src="res/icons/ios/icon-83.5@2x.png" width="167" height="167"/>
     <!--  Storyboard portrait  -->
-    <splash src="res/screen/ios/Default@2x~iphone~anyany.png"/>
-    <splash src="res/screen/ios/Default@2x~iphone~comany.png"/>
-    <splash src="res/screen/ios/Default@3x~iphone~anyany.png"/>
-    <splash src="res/screen/ios/Default@3x~iphone~comany.png"/>
-    <splash src="res/screen/ios/Default@2x~ipad~anyany.png"/>
-    <splash src="res/screen/ios/Default@2x~ipad~comany.png"/>
+    <splash src="res/screens/ios/Default@2x~iphone~anyany.png"/>
+    <splash src="res/screens/ios/Default@2x~iphone~comany.png"/>
+    <splash src="res/screens/ios/Default@3x~iphone~anyany.png"/>
+    <splash src="res/screens/ios/Default@3x~iphone~comany.png"/>
+    <splash src="res/screens/ios/Default@2x~ipad~anyany.png"/>
+    <splash src="res/screens/ios/Default@2x~ipad~comany.png"/>
 
   </platform>
   <preference name="Orientation" value="default" />
