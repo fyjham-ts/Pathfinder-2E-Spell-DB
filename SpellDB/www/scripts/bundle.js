@@ -30477,7 +30477,7 @@ module.exports=[
     ]
   },
   {
-    "name": "Moster Abilities",
+    "name": "Monster Abilities",
     "icon": "fab fa-optin-monster",
     "render": "list",
     "list": [
