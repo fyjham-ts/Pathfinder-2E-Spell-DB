@@ -13,9 +13,10 @@ $title: #000000;
 $traitForeground: #FFF;
 $traitBackground: $pathfinderRed;
 $powerRed: #8b1c1b;
-$uncommonRarity: #8b1c1b;
-$rareRarity: #e75722;
-$uniqueRarity: #25408f;
+$uncommonRarity: #c45500;
+$rareRarity: #0c1466;
+$uniqueRarity: #54166e;
+$alignmentTrait: #4287f5;
 
 
 .selectedSpell .spellDetail {
@@ -71,6 +72,22 @@ $uniqueRarity: #25408f;
             &:last-child {
                 border-right: 3px solid $pathfinderGold;
             }
+
+            &.uncommon {
+                background-color: $uncommonRarity;
+            }
+
+            &.rare {
+                background-color: $rareRarity;
+            }
+
+            &.unique {
+                background-color: $uniqueRarity;
+            }
+
+            &.alignment {
+                background-color: $alignmentTrait;
+            }
         }
     }
 
@@ -84,12 +101,15 @@ $uniqueRarity: #25408f;
                 content: "";
             }
         }
+
         img.actions {
             height: 1em;
         }
+
         span.actions-1, span.actions-2, span.actions-3 {
             font-weight: bold;
         }
+
         .headerElement {
             &::after {
                 content: "; ";

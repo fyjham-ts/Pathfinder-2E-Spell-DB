@@ -5,12 +5,12 @@
 const canUseIcons = false; 
 
 export default class ActionIcons extends React.PureComponent {
-    render() {
-        if (canUseIcons) return <img className="actions" src={"images/action-" + this.props.action + ".png"} alt={this.props.action} />
+    renderIcon(action) {
+        if (canUseIcons) return <img className="actions" src={"images/action-" + this.props.action + ".png"} alt={action} />
         else {
-            return <span className={"actions actions-" + this.props.action}>
+            return <span className={"actions actions-" + action}>
                 {(() => {
-                    switch (this.props.action) {
+                    switch (action) {
                         case "1":
                             return "◈";
                         case "2":
@@ -22,10 +22,19 @@ export default class ActionIcons extends React.PureComponent {
                         case "reaction":
                             return "⤾";
                         default:
-                            return this.props.action;
+                            return action;
                     }
                 })()}
             </span>;
         }
+    }
+    render() {
+        if (Array.isArray(this.props.action)) {
+            var output = this.props.action.map(a => this.renderIcon(a));
+            // If we have 2 icons put " to " between
+            if (output.length == 2) output.splice(1, 0, ' to ');
+            return <span>{output}</span>;
+        }
+        else return this.renderIcon(this.props.action);
     }
 }

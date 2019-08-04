@@ -11726,6 +11726,14 @@ readers do not read off random characters that represent icons */
     text-transform: uppercase; }
     .spellDetail .traits li:last-child {
       border-right: 3px solid #dcb07b; }
+    .spellDetail .traits li.uncommon {
+      background-color: #c45500; }
+    .spellDetail .traits li.rare {
+      background-color: #0c1466; }
+    .spellDetail .traits li.unique {
+      background-color: #54166e; }
+    .spellDetail .traits li.alignment {
+      background-color: #4287f5; }
 
 .spellDetail .header .castingToken::after, .spellDetail .header .headerElement::after {
   content: ", "; }
@@ -11774,11 +11782,11 @@ readers do not read off random characters that represent icons */
     margin-left: 3px;
     background: black; }
     .spell-list-item .level.rarity-1 {
-      background: #8b1c1b; }
+      background: #c45500; }
     .spell-list-item .level.rarity-2 {
-      background: #e75722; }
+      background: #0c1466; }
     .spell-list-item .level.rarity-3 {
-      background: #25408f; }
+      background: #54166e; }
   .spell-list-item .powerTypes span {
     text-transform: capitalize; }
     .spell-list-item .powerTypes span:after {

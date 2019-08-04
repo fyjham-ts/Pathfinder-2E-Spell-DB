@@ -31470,7 +31470,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=381",
     "name": "Counter Performance",
-    "traits": [ "bard", "composition", "enchantment", "fortune", "mental" ],
+    "traits": [ "uncommon", "bard", "composition", "enchantment", "fortune", "mental" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 386",
@@ -31479,7 +31479,8 @@ module.exports=[
     "trigger": "You or an ally within 60 feet rolls a saving throw against an auditory or visual effect.",
     "area": "60-foot emanation",
     "description": "Your performance protects you and your allies. Roll a Performance check for a type you know: an auditory performance if the trigger was auditory, or a visual one for a visual trigger. You and allies in the area can use the better result between your Performance check and the saving throw.",
-    "components": [ "somaticorverbal" ]
+    "components": [ "somatic", "verbal" ],
+    "componentsSeparator":  " or "
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=385",
@@ -31514,7 +31515,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=389",
     "name": "Lingering Composition",
-    "traits": [ "bard", "enchantment" ],
+    "traits": [ "uncommon", "bard", "enchantment" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 387",
@@ -31526,7 +31527,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=390",
     "name": "Loremaster's Etude",
-    "traits": [ "bard", "divination", "fortune" ],
+    "traits": [ "uncommon", "bard", "divination", "fortune" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 387",
@@ -31569,7 +31570,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=382",
     "name": "Dirge of Doom",
-    "traits": [ "bard", "cantrip", "composition", "emotion", "enchantment", "fear", "mental" ],
+    "traits": [ "uncommon", "bard", "cantrip", "composition", "emotion", "enchantment", "fear", "mental" ],
     "type": "Cantrip",
     "level": 3,
     "source": "Core Rulebook pg. 386",
@@ -31583,7 +31584,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=388",
     "name": "Inspire Heroics",
-    "traits": [ "bard", "enchantment" ],
+    "traits": [ "uncommon", "bard", "enchantment" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 387",
@@ -31609,7 +31610,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=380",
     "name": "Allegro",
-    "traits": [ "bard", "cantrip", "composition", "emotion", "enchantment", "mental" ],
+    "traits": [ "uncommon", "bard", "cantrip", "composition", "emotion", "enchantment", "mental" ],
     "type": "Cantrip",
     "level": 7,
     "source": "Core Rulebook pg. 386",
@@ -31624,7 +31625,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=391",
     "name": "Soothing Ballade",
-    "traits": [ "bard", "composition", "emotion", "enchantment", "healing", "mental" ],
+    "traits": [ "uncommon", "bard", "composition", "emotion", "enchantment", "healing", "mental" ],
     "type": "Focus",
     "level": 7,
     "source": "Core Rulebook pg. 387",
@@ -31638,7 +31639,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=383",
     "name": "Fatal Aria",
-    "traits": [ "bard", "composition", "death", "emotion", "enchantment", "mental" ],
+    "traits": [ "uncommon", "bard", "composition", "death", "emotion", "enchantment", "mental" ],
     "type": "Focus",
     "level": 10,
     "source": "Core Rulebook pg. 386",
@@ -31652,7 +31653,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=395",
     "name": "Lay on Hands",
-    "traits": [ "champion", "healing", "necromancy", "positive" ],
+    "traits": [ "uncommon", "champion", "healing", "necromancy", "positive" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 387",
@@ -31666,7 +31667,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=397",
     "name": "Litany against Wrath",
-    "traits": [ "champion", "evocation", "good", "litany" ],
+    "traits": [ "uncommon", "champion", "evocation", "good", "litany" ],
     "type": "Focus",
     "level": 3,
     "source": "Core Rulebook pg. 388",
@@ -31682,7 +31683,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=396",
     "name": "Litany against Sloth",
-    "traits": [ "champion", "evocation", "good", "litany" ],
+    "traits": [ "uncommon", "champion", "evocation", "good", "litany" ],
     "type": "Focus",
     "level": 5,
     "source": "Core Rulebook pg. 388",
@@ -31698,7 +31699,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=393",
     "name": "Champion's Sacrifice",
-    "traits": [ "abjuration", "champion" ],
+    "traits": [ "uncommon", "abjuration", "champion" ],
     "type": "Focus",
     "level": 6,
     "source": "Core Rulebook pg. 387",
@@ -31713,7 +31714,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=398",
     "name": "Litany of Righteousness",
-    "traits": [ "champion", "evocation", "good", "litany" ],
+    "traits": [ "uncommon", "champion", "evocation", "good", "litany" ],
     "type": "Focus",
     "level": 7,
     "source": "Core Rulebook pg. 388",
@@ -31728,7 +31729,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=394",
     "name": "Hero's Defiance",
-    "traits": [ "champion", "healing", "necromancy", "positive" ],
+    "traits": [ "uncommon", "champion", "healing", "necromancy", "positive" ],
     "type": "Focus",
     "level": 10,
     "source": "Core Rulebook pg. 387",
@@ -31741,7 +31742,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=399",
     "name": "Agile Feet",
-    "traits": [ "cleric", "transmutation" ],
+    "traits": [ "uncommon", "cleric", "transmutation" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 389",
@@ -31754,7 +31755,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=400",
     "name": "Appearance of Wealth",
-    "traits": [ "cleric", "illusion" ],
+    "traits": [ "uncommon", "cleric", "illusion" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 389",
@@ -31770,7 +31771,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=402",
     "name": "Athletic Rush",
-    "traits": [ "cleric", "transmutation" ],
+    "traits": [ "uncommon", "cleric", "transmutation" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 389",
@@ -31783,7 +31784,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=403",
     "name": "Bit of Luck",
-    "traits": [ "cleric", "divination", "fortune" ],
+    "traits": [ "uncommon", "cleric", "divination", "fortune" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 389",
@@ -31798,7 +31799,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=404",
     "name": "Blind Ambition",
-    "traits": [ "cleric", "emotion", "enchantment", "mental" ],
+    "traits": [ "uncommon", "cleric", "emotion", "enchantment", "mental" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 389",
@@ -31814,7 +31815,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=406",
     "name": "Charming Touch",
-    "traits": [ "cleric", "emotion", "enchantment", "incapacitation", "mental" ],
+    "traits": [ "uncommon", "cleric", "emotion", "enchantment", "incapacitation", "mental" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 390",
@@ -31830,7 +31831,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=407",
     "name": "Cloak of Shadow",
-    "traits": [ "cleric", "darkness", "evocation", "shadow" ],
+    "traits": [ "uncommon", "cleric", "darkness", "evocation", "shadow" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 390",
@@ -31845,7 +31846,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=410",
     "name": "Cry of Destruction",
-    "traits": [ "cleric", "evocation", "sonic" ],
+    "traits": [ "uncommon", "cleric", "evocation", "sonic" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 390",
@@ -31859,7 +31860,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=412",
     "name": "Dazzling Flash",
-    "traits": [ "cleric", "evocation", "light", "visual" ],
+    "traits": [ "uncommon", "cleric", "evocation", "light", "visual" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 391",
@@ -31873,7 +31874,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=413",
     "name": "Death's Call",
-    "traits": [ "cleric", "necromancy" ],
+    "traits": [ "uncommon", "cleric", "necromancy" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 391",
@@ -31887,7 +31888,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=421",
     "name": "Face in the Crowd",
-    "traits": [ "cleric", "illusion", "visual" ],
+    "traits": [ "uncommon", "cleric", "illusion", "visual" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 392",
@@ -31900,7 +31901,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=422",
     "name": "Fire Ray",
-    "traits": [ "attack", "cleric", "evocation", "fire" ],
+    "traits": [ "uncommon", "attack", "cleric", "evocation", "fire" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 392",
@@ -31914,7 +31915,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=424",
     "name": "Forced Quiet",
-    "traits": [ "abjuration", "cleric" ],
+    "traits": [ "uncommon", "abjuration", "cleric" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 393",
@@ -31930,7 +31931,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=426",
     "name": "Healer's Blessing",
-    "traits": [ "cleric", "necromancy" ],
+    "traits": [ "uncommon", "cleric", "necromancy" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 393",
@@ -31959,7 +31960,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=431",
     "name": "Magic's Vessel",
-    "traits": [ "cleric", "enchantment" ],
+    "traits": [ "uncommon", "cleric", "enchantment" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 393",
@@ -31974,7 +31975,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=433",
     "name": "Moonbeam",
-    "traits": [ "attack", "cleric", "evocation", "fire", "light" ],
+    "traits": [ "uncommon", "attack", "cleric", "evocation", "fire", "light" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 394",
@@ -31988,7 +31989,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=436",
     "name": "Overstuff",
-    "traits": [ "cleric", "transmutation" ],
+    "traits": [ "uncommon", "cleric", "transmutation" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 394",
@@ -32003,7 +32004,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=438",
     "name": "Perfected Mind",
-    "traits": [ "abjuration", "cleric" ],
+    "traits": [ "uncommon", "abjuration", "cleric" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 394",
@@ -32015,7 +32016,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=441",
     "name": "Protector's Sacrifice",
-    "traits": [ "abjuration", "cleric" ],
+    "traits": [ "uncommon", "abjuration", "cleric" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 395",
@@ -32029,7 +32030,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=444",
     "name": "Pushing Gust",
-    "traits": [ "air", "cleric", "conjuration" ],
+    "traits": [ "uncommon", "air", "cleric", "conjuration" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 395",
@@ -32044,7 +32045,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=445",
     "name": "Read Fate",
-    "traits": [ "cleric", "divination", "prediction" ],
+    "traits": [ "uncommon", "cleric", "divination", "prediction" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 395",
@@ -32057,7 +32058,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=449",
     "name": "Savor the Sting",
-    "traits": [ "attack", "cleric", "enchantment", "mental", "nonlethal" ],
+    "traits": [ "uncommon", "attack", "cleric", "enchantment", "mental", "nonlethal" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 396",
@@ -32072,7 +32073,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=450",
     "name": "Scholarly Recollection",
-    "traits": [ "cleric", "divination", "fortune" ],
+    "traits": [ "uncommon", "cleric", "divination", "fortune" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 396",
@@ -32085,7 +32086,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=452",
     "name": "Soothing Words",
-    "traits": [ "cleric", "emotion", "enchantment", "mental" ],
+    "traits": [ "uncommon", "cleric", "emotion", "enchantment", "mental" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 396",
@@ -32100,7 +32101,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=453",
     "name": "Splash of Art",
-    "traits": [ "cleric", "illusion", "visual" ],
+    "traits": [ "uncommon", "cleric", "illusion", "visual" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 397",
@@ -32116,7 +32117,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=454",
     "name": "Sudden Shift",
-    "traits": [ "abjuration", "cleric", "illusion" ],
+    "traits": [ "uncommon", "abjuration", "cleric", "illusion" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 397",
@@ -32130,7 +32131,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=455",
     "name": "Sweet Dream",
-    "traits": [ "auditory", "cleric", "enchantment", "linguistic", "mental", "sleep" ],
+    "traits": [ "uncommon", "auditory", "cleric", "enchantment", "linguistic", "mental", "sleep" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 397",
@@ -32145,7 +32146,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=458",
     "name": "Tidal Surge",
-    "traits": [ "cleric", "evocation", "water" ],
+    "traits": [ "uncommon", "cleric", "evocation", "water" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 397",
@@ -32160,7 +32161,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=459",
     "name": "Touch of Obedience",
-    "traits": [ "cleric", "enchantment", "mental" ],
+    "traits": [ "uncommon", "cleric", "enchantment", "mental" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 398",
@@ -32176,7 +32177,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=461",
     "name": "Touch of Undeath (Cleric)",
-    "traits": [ "attack", "cleric", "necromancy", "negative" ],
+    "traits": [ "uncommon", "attack", "cleric", "necromancy", "negative" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 398",
@@ -32191,7 +32192,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=464",
     "name": "Unimpeded Stride",
-    "traits": [ "cleric", "transmutation" ],
+    "traits": [ "uncommon", "cleric", "transmutation" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 398",
@@ -32203,7 +32204,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=466",
     "name": "Veil of Confidence",
-    "traits": [ "cleric", "enchantment", "mental" ],
+    "traits": [ "uncommon", "cleric", "enchantment", "mental" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 398",
@@ -32216,7 +32217,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=467",
     "name": "Vibrant Thorns",
-    "traits": [ "cleric", "morph", "plant", "transmutation" ],
+    "traits": [ "uncommon", "cleric", "morph", "plant", "transmutation" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 399",
@@ -32229,7 +32230,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=468",
     "name": "Walking Nightmare",
-    "traits": [ "cleric", "emotion", "enchantment", "fear", "mental" ],
+    "traits": [ "uncommon", "cleric", "emotion", "enchantment", "fear", "mental" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 399",
@@ -32245,7 +32246,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=469",
     "name": "Weapon Surge",
-    "traits": [ "cleric", "evocation" ],
+    "traits": [ "uncommon", "cleric", "evocation" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 399",
@@ -32259,7 +32260,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=471",
     "name": "Word of Truth",
-    "traits": [ "cleric", "divination" ],
+    "traits": [ "uncommon", "cleric", "divination" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 399",
@@ -32272,7 +32273,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=401",
     "name": "Artistic Flourish",
-    "traits": [ "cleric", "transmutation" ],
+    "traits": [ "uncommon", "cleric", "transmutation" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 389",
@@ -32287,7 +32288,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=405",
     "name": "Captivating Adoration",
-    "traits": [ "cleric", "emotion", "enchantment", "mental", "visual" ],
+    "traits": [ "uncommon", "cleric", "emotion", "enchantment", "mental", "visual" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 389",
@@ -32302,7 +32303,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=408",
     "name": "Commanding Lash",
-    "traits": [ "cleric", "enchantment", "incapacitation", "mental" ],
+    "traits": [ "uncommon", "cleric", "enchantment", "incapacitation", "mental" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 390",
@@ -32319,7 +32320,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=409",
     "name": "Competitive Edge",
-    "traits": [ "cleric", "emotion", "enchantment", "mental" ],
+    "traits": [ "uncommon", "cleric", "emotion", "enchantment", "mental" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 390",
@@ -32332,7 +32333,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=411",
     "name": "Darkened Eyes",
-    "traits": [ "cleric", "darkness", "transmutation" ],
+    "traits": [ "uncommon", "cleric", "darkness", "transmutation" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 390",
@@ -32348,7 +32349,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=414",
     "name": "Delusional Pride",
-    "traits": [ "cleric", "emotion", "enchantment", "mental" ],
+    "traits": [ "uncommon", "cleric", "emotion", "enchantment", "mental" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 391",
@@ -32364,7 +32365,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=415",
     "name": "Destructive Aura",
-    "traits": [ "cleric", "evocation" ],
+    "traits": [ "uncommon", "cleric", "evocation" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 391",
@@ -32378,7 +32379,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=416",
     "name": "Disperse into Air",
-    "traits": [ "air", "cleric", "polymorph", "transmutation" ],
+    "traits": [ "uncommon", "air", "cleric", "polymorph", "transmutation" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 391",
@@ -32391,7 +32392,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=417",
     "name": "Downpour",
-    "traits": [ "cleric", "evocation", "water" ],
+    "traits": [ "uncommon", "cleric", "evocation", "water" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 391",
@@ -32406,7 +32407,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=418",
     "name": "Dreamer's Call",
-    "traits": [ "cleric", "enchantment", "incapacitation", "mental" ],
+    "traits": [ "uncommon", "cleric", "enchantment", "incapacitation", "mental" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 391",
@@ -32422,7 +32423,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=419",
     "name": "Enduring Might",
-    "traits": [ "abjuration", "cleric" ],
+    "traits": [ "uncommon", "abjuration", "cleric" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 392",
@@ -32435,7 +32436,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=420",
     "name": "Eradicate Undeath",
-    "traits": [ "cleric", "necromancy", "positive" ],
+    "traits": [ "uncommon", "cleric", "necromancy", "positive" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 392",
@@ -32449,7 +32450,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=423",
     "name": "Flame Barrier",
-    "traits": [ "abjuration", "cleric" ],
+    "traits": [ "uncommon", "abjuration", "cleric" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 392",
@@ -32464,7 +32465,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=425",
     "name": "Glimpse the Truth",
-    "traits": [ "cleric", "divination", "revelation" ],
+    "traits": [ "uncommon", "cleric", "divination", "revelation" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 393",
@@ -32478,7 +32479,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=428",
     "name": "Know the Enemy",
-    "traits": [ "cleric", "divination", "fortune" ],
+    "traits": [ "uncommon", "cleric", "divination", "fortune" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 393",
@@ -32491,7 +32492,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=429",
     "name": "Localized Quake",
-    "traits": [ "cleric", "earth", "transmutation" ],
+    "traits": [ "uncommon", "cleric", "earth", "transmutation" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 393",
@@ -32505,7 +32506,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=430",
     "name": "Lucky Break",
-    "traits": [ "cleric", "divination", "fortune" ],
+    "traits": [ "uncommon", "cleric", "divination", "fortune" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 393",
@@ -32518,7 +32519,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=432",
     "name": "Malignant Sustenance",
-    "traits": [ "cleric", "necromancy", "negative" ],
+    "traits": [ "uncommon", "cleric", "necromancy", "negative" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 394",
@@ -32533,7 +32534,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=434",
     "name": "Mystic Beacon",
-    "traits": [ "cleric", "evocation" ],
+    "traits": [ "uncommon", "cleric", "evocation" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 394",
@@ -32548,7 +32549,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=435",
     "name": "Nature's Bounty",
-    "traits": [ "cleric", "conjuration", "plant", "positive" ],
+    "traits": [ "uncommon", "cleric", "conjuration", "plant", "positive" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 394",
@@ -32561,7 +32562,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=437",
     "name": "Perfected Form",
-    "traits": [ "abjuration", "cleric", "fortune" ],
+    "traits": [ "uncommon", "abjuration", "cleric", "fortune" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 394",
@@ -32574,7 +32575,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=439",
     "name": "Positive Luminance",
-    "traits": [ "cleric", "light", "necromancy", "positive" ],
+    "traits": [ "uncommon", "cleric", "light", "necromancy", "positive" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 394",
@@ -32587,7 +32588,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=440",
     "name": "Precious Metals",
-    "traits": [ "cleric", "transmutation" ],
+    "traits": [ "uncommon", "cleric", "transmutation" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 395",
@@ -32602,7 +32603,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=442",
     "name": "Protector's Sphere",
-    "traits": [ "abjuration", "cleric" ],
+    "traits": [ "uncommon", "abjuration", "cleric" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 395",
@@ -32616,7 +32617,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=443",
     "name": "Pulse of the City",
-    "traits": [ "cleric", "divination", "scrying" ],
+    "traits": [ "uncommon", "cleric", "divination", "scrying" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 395",
@@ -32629,21 +32630,21 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=446",
     "name": "Rebuke Death",
-    "traits": [ "cleric", "healing", "necromancy", "positive" ],
+    "traits": [ "uncommon", "cleric", "healing", "necromancy", "positive" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 396",
     "cast": "to  somatic",
-    "action": "3",
+    "action": [ "1", "3" ],
     "area": "20-foot emanation",
     "targets": "1 living creature per action spent to cast this spell",
     "description": "You snatch creatures from the jaws of death. You can spend 1 to 3 actions Casting this Spell, and you can target a number of creatures equal to the actions spent. Each target regains 3d6 Hit Points. If the target had the dying condition, coming back from dying due to this healing doesn't increase its wounded condition.  \r\n**Heightened (+1)**  Increase the healing by 1d6.",
-    "components": [ "tosomatic" ]
+    "components": [ "somatic" ]
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=447",
     "name": "Retributive Pain",
-    "traits": [ "abjuration", "cleric", "mental", "nonlethal" ],
+    "traits": [ "uncommon", "abjuration", "cleric", "mental", "nonlethal" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 396",
@@ -32659,7 +32660,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=448",
     "name": "Safeguard Secret",
-    "traits": [ "abjuration", "cleric", "mental" ],
+    "traits": [ "uncommon", "abjuration", "cleric", "mental" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 396",
@@ -32673,7 +32674,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=451",
     "name": "Shared Nightmare",
-    "traits": [ "cleric", "emotion", "humanoid", "incapacitation", "mental" ],
+    "traits": [ "uncommon", "cleric", "emotion", "humanoid", "incapacitation", "mental" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 396",
@@ -32689,7 +32690,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=456",
     "name": "Take its Course",
-    "traits": [ "cleric", "necromancy" ],
+    "traits": [ "uncommon", "cleric", "necromancy" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 397",
@@ -32703,7 +32704,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=457",
     "name": "Tempt Fate",
-    "traits": [ "cleric", "divination", "fortune" ],
+    "traits": [ "uncommon", "cleric", "divination", "fortune" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 397",
@@ -32718,7 +32719,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=460",
     "name": "Touch of the Moon",
-    "traits": [ "cleric", "enchantment", "light" ],
+    "traits": [ "uncommon", "cleric", "enchantment", "light" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 398",
@@ -32733,7 +32734,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=462",
     "name": "Traveler's Transit",
-    "traits": [ "cleric", "evocation" ],
+    "traits": [ "uncommon", "cleric", "evocation" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 398",
@@ -32746,7 +32747,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=463",
     "name": "Trickster's Twin",
-    "traits": [ "cleric", "illusion", "visual" ],
+    "traits": [ "uncommon", "cleric", "illusion", "visual" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 398",
@@ -32762,7 +32763,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=465",
     "name": "Unity",
-    "traits": [ "abjuration", "cleric", "fortune" ],
+    "traits": [ "uncommon", "abjuration", "cleric", "fortune" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 398",
@@ -32777,7 +32778,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=470",
     "name": "Word of Freedom",
-    "traits": [ "cleric", "mental" ],
+    "traits": [ "uncommon", "cleric", "mental" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 399",
@@ -32792,7 +32793,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=472",
     "name": "Zeal for Battle",
-    "traits": [ "cleric", "emotion", "enchantment", "fortune", "mental" ],
+    "traits": [ "uncommon", "cleric", "emotion", "enchantment", "fortune", "mental" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 399",
@@ -32807,7 +32808,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=473",
     "name": "Goodberry",
-    "traits": [ "druid", "healing", "necromancy" ],
+    "traits": [ "uncommon", "druid", "healing", "necromancy" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 399",
@@ -32821,21 +32822,21 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=474",
     "name": "Heal Animal",
-    "traits": [ "druid", "healing", "necromancy", "positive" ],
+    "traits": [ "uncommon", "druid", "healing", "necromancy", "positive" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 399",
     "cast": "or  somatic",
-    "action": "2",
+    "action": [ "1", "2" ],
     "range": "touch or 30 feet (see text)",
     "targets": "1 willing living animal creature",
     "description": "You heal an animal's wounds, restoring 1d8 Hit Points to the target. The number of actions spent Casting this Spell determines its effect.   somatic Th e spell has a range of touch.  somatic, verbal The spell has a range of 30 feet and restores an additional 8 Hit Points to the target.  \r\n**Heightened (+1)**  The amount of healing increases by 1d8, and the additional healing for the 2-action version increases by 8.",
-    "components": [ "orsomatic" ]
+    "components": [ "omatic" ]
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=479",
     "name": "Tempest Surge",
-    "traits": [ "air", "druid", "electricity", "evocation" ],
+    "traits": [ "uncommon", "air", "druid", "electricity", "evocation" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 400",
@@ -32850,20 +32851,20 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=480",
     "name": "Wild Morph",
-    "traits": [ "druid", "morph", "transmutation" ],
+    "traits": [ "uncommon", "druid", "morph", "transmutation" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 400",
     "cast": "or  somatic, verbal",
-    "action": "2",
+    "action": [ "1", "2" ],
     "duration": "1 minute",
-    "description": "You morph your body based on your training, choosing one of the following effects based on your wild order feats. If you have Wild Shape, you can morph your hands into wild claws. Your hands transform into incredibly sharp claws. These claws are an unarmed attack you're trained in and deal 1d6 slashing damage each (agile, finesse). You can still hold and use items with your hands while they're transformed by this spell, but you cannot hold an item while attacking. If you have Insect Shape, you can instead transform your mouth into wild jaws, an unarmed attack you're trained in that deals 1d8 piercing damage. If you have Elemental Shape, you can morph your body to be partially composed of elemental matter, granting you resistance 5 to critical hits and precision damage. If you have Plant Shape, you can morph your arms into long vines, increasing your reach to 10 feet (or 15 feet with a reach weapon). If you have Soaring Shape, you can cast the spell as a two-action activity ( somatic, verbal) to grow wings from your back. These wings allow you to fly with a fly Speed of 30 feet.  \r\n**Heightened (6th)**  You can choose up to two of the effects from the list. Wild claws leave terrible, ragged wounds that also deal 2d6 persistent bleed damage on a hit, and wild jaws are envenomed, also dealing 2d6 persistent poison damage on a hit.  \r\n**Heightened (10th)**  You can choose up to three of the effects from the list. Wild claws deal 4d6 persistent bleed damage on a hit, and wild jaws deal 4d6 persistent poison damage on a hit.",
-    "components": [ "orsomatic", "verbal" ]
+    "description": "You morph your body based on your training, choosing one of the following effects based on your wild order feats. If you have Wild Shape, you can morph your hands into wild claws. Your hands transform into incredibly sharp claws. These claws are an unarmed attack you're trained in and deal 1d6 slashing damage each (agile, finesse). You can still hold and use items with your hands while they're transformed by this spell, but you cannot hold an item while attacking. If you have Insect Shape, you can instead transform your mouth into wild jaws, an unarmed attack you're trained in that deals 1d8 piercing damage. If you have Elemental Shape, you can morph your body to be partially composed of elemental matter, granting you resistance 5 to critical hits and precision damage. If you have Plant Shape, you can morph your arms into long vines, increasing your reach to 10 feet (or 15 feet with a reach weapon). If you have Soaring Shape, you can cast the spell as a two-action activity (somatic, verbal) to grow wings from your back. These wings allow you to fly with a fly Speed of 30 feet.  \r\n**Heightened (6th)**  You can choose up to two of the effects from the list. Wild claws leave terrible, ragged wounds that also deal 2d6 persistent bleed damage on a hit, and wild jaws are envenomed, also dealing 2d6 persistent poison damage on a hit.  \r\n**Heightened (10th)**  You can choose up to three of the effects from the list. Wild claws deal 4d6 persistent bleed damage on a hit, and wild jaws deal 4d6 persistent poison damage on a hit.",
+    "components": [ "somatic", "verbal" ]
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=481",
     "name": "Wild Shape",
-    "traits": [ "druid", "polymorph", "transmutation" ],
+    "traits": [ "uncommon", "druid", "polymorph", "transmutation" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 401",
@@ -32876,7 +32877,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=478",
     "name": "Stormwind Flight",
-    "traits": [ "air", "druid", "transmutation" ],
+    "traits": [ "uncommon", "air", "druid", "transmutation" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 400",
@@ -32889,7 +32890,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=476",
     "name": "Primal Summons",
-    "traits": [ "conjuration", "druid" ],
+    "traits": [ "uncommon", "conjuration", "druid" ],
     "type": "Focus",
     "level": 6,
     "source": "Core Rulebook pg. 400",
@@ -32901,7 +32902,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=475",
     "name": "Impaling Briars",
-    "traits": [ "conjuration", "druid", "plant" ],
+    "traits": [ "uncommon", "conjuration", "druid", "plant" ],
     "type": "Focus",
     "level": 8,
     "source": "Core Rulebook pg. 400",
@@ -32915,7 +32916,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=477",
     "name": "Storm Lord",
-    "traits": [ "air", "druid", "electricity", "evocation" ],
+    "traits": [ "uncommon", "air", "druid", "electricity", "evocation" ],
     "type": "Focus",
     "level": 9,
     "source": "Core Rulebook pg. 400",
@@ -32930,7 +32931,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=485",
     "name": "Ki Rush",
-    "traits": [ "monk", "transmutation" ],
+    "traits": [ "uncommon", "monk", "transmutation" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 401",
@@ -32942,7 +32943,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=486",
     "name": "Ki Strike",
-    "traits": [ "monk", "transmutation" ],
+    "traits": [ "uncommon", "monk", "transmutation" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 401",
@@ -32954,7 +32955,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=488",
     "name": "Wholeness of Body",
-    "traits": [ "healing", "monk", "necromancy", "positive" ],
+    "traits": [ "uncommon", "healing", "monk", "necromancy", "positive" ],
     "type": "Focus",
     "level": 2,
     "source": "Core Rulebook pg. 402",
@@ -32966,21 +32967,21 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=484",
     "name": "Ki Blast",
-    "traits": [ "evocation", "force", "monk" ],
+    "traits": [ "uncommon", "evocation", "force", "monk" ],
     "type": "Focus",
     "level": 3,
     "source": "Core Rulebook pg. 401",
     "cast": "to  somatic, verbal",
-    "action": "3",
+    "action": [ "1", "3" ],
     "area": "15-foot cone or more",
     "saving throw": "Fortitude",
     "description": "You unleash your ki as a powerful blast of force that deals 2d6 force damage. If you use 2 actions to cast ki blast, increase the size of the cone to 30 feet and the damage to 3d6. If you use 3 actions to cast ki blast, increase the size of the cone to 60 feet and the damage to 4d6. Each creature in the area must attempt a Fortitude saving throw.  \r\n**Critical Success**  The creature is unaffected.  \r\n**Success**  The creature takes half damage.  \r\n**Failure**  The creature takes full damage and is pushed 5 feet.  \r\n**Critical Failure**  The creature takes double damage and is pushed 10 feet.  \r\n**Heightened (+1)**  The damage increases by 1d6, or by 2d6 if you use 2 or 3 actions.",
-    "components": [ "tosomatic", "verbal" ]
+    "components": [ "somatic", "verbal" ]
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=482",
     "name": "Abundant Step",
-    "traits": [ "conjuration", "monk", "teleportation" ],
+    "traits": [ "uncommon", "conjuration", "monk", "teleportation" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 401",
@@ -32993,7 +32994,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=489",
     "name": "Wild Winds Stance",
-    "traits": [ "air", "evocation", "monk", "stance" ],
+    "traits": [ "uncommon", "air", "evocation", "monk", "stance" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 402",
@@ -33006,7 +33007,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=490",
     "name": "Wind Jump",
-    "traits": [ "air", "monk", "transmutation" ],
+    "traits": [ "uncommon", "air", "monk", "transmutation" ],
     "type": "Focus",
     "level": 5,
     "source": "Core Rulebook pg. 402",
@@ -33019,7 +33020,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=487",
     "name": "Quivering Palm",
-    "traits": [ "monk", "necromancy" ],
+    "traits": [ "uncommon", "monk", "necromancy" ],
     "type": "Focus",
     "level": 8,
     "source": "Core Rulebook pg. 401",
@@ -33033,7 +33034,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=483",
     "name": "Empty Body",
-    "traits": [ "conjuration", "monk", "teleportation" ],
+    "traits": [ "uncommon", "conjuration", "monk", "teleportation" ],
     "type": "Focus",
     "level": 9,
     "source": "Core Rulebook pg. 401",
@@ -33046,7 +33047,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=493",
     "name": "Ancestral Memories",
-    "traits": [ "divination", "sorcerer" ],
+    "traits": [ "uncommon", "divination", "sorcerer" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 402",
@@ -33059,7 +33060,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=494",
     "name": "Angelic Halo",
-    "traits": [ "abjuration", "good", "sorcerer" ],
+    "traits": [ "uncommon", "abjuration", "good", "sorcerer" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 402",
@@ -33073,7 +33074,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=498",
     "name": "Diabolic Edict",
-    "traits": [ "enchantment", "sorcerer" ],
+    "traits": [ "uncommon",  "enchantment", "sorcerer" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 403",
@@ -33088,7 +33089,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=500",
     "name": "Dragon Claws",
-    "traits": [ "morph", "sorcerer", "transmutation" ],
+    "traits": [ "uncommon", "morph", "sorcerer", "transmutation" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 403",
@@ -33101,7 +33102,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=505",
     "name": "Elemental Toss",
-    "traits": [ "attack", "evocation", "sorcerer" ],
+    "traits": [ "uncommon", "attack", "evocation", "sorcerer" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 404",
@@ -33115,23 +33116,23 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=508",
     "name": "Faerie Dust",
-    "traits": [ "enchantment", "mental", "sorcerer" ],
+    "traits": [ "uncommon", "enchantment", "mental", "sorcerer" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 404",
     "cast": "or more somatic, verbal",
-    "action": "1",
+    "action": [ "1", "3" ],
     "range": "30 feet",
     "area": "5-foot burst or more",
     "saving throw": "Will",
     "duration": "1 round",
     "description": "You sprinkle magical dust in the spell's area, making those within easier to trick. Each creature in the area must attempt a Will save. For each additional action you use Casting the Spell, the burst's radius increases by 5 feet.  \r\n**Success**  The creature is unaffected.  \r\n**Failure**  The creature can't use reactions and takes a -2 status penalty to Perception checks and Will saves.  \r\n**Critical Failure**  As failure, and the creature also takes a -1 status penalty to Perception checks and Will saves for 1 minute.  \r\n**Heightened (+3)**  The initial radius increases by 5 feet.",
-    "components": [ "ormoresomatic", "verbal" ]
+    "components": [ "somatic", "verbal" ]
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=511",
     "name": "Glutton's Jaw",
-    "traits": [ "morph", "necromancy", "sorcerer" ],
+    "traits": [ "uncommon", "morph", "necromancy", "sorcerer" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 404",
@@ -33144,7 +33145,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=515",
     "name": "Jealous Hex",
-    "traits": [ "curse", "necromancy", "sorcerer" ],
+    "traits": [ "uncommon", "curse", "necromancy", "sorcerer" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 405",
@@ -33160,7 +33161,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=517",
     "name": "Tentacular Limbs",
-    "traits": [ "morph", "sorcerer", "transmutation" ],
+    "traits": [ "uncommon", "morph", "sorcerer", "transmutation" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 405",
@@ -33173,7 +33174,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=518",
     "name": "Touch of Undeath (Sorcerer)",
-    "traits": [ "necromancy", "negative", "sorcerer" ],
+    "traits": [ "uncommon", "necromancy", "negative", "sorcerer" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 405",
@@ -33189,23 +33190,23 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=491",
     "name": "Aberrant Whispers",
-    "traits": [ "auditory", "enchantment", "mental", "sorcerer" ],
+    "traits": [ "uncommon", "auditory", "enchantment", "mental", "sorcerer" ],
     "type": "Focus",
     "level": 3,
     "source": "Core Rulebook pg. 402",
     "cast": "to  verbal",
-    "action": "3",
+    "action": [ "1", "3" ],
     "area": "5-foot emanation or more",
     "targets": "each foe in the area",
     "saving throw": "Will",
     "duration": "1 round",
     "description": "You utter phrases in an unknown tongue, assaulting the minds of those nearby. Each target must attempt a Will save. Regardless of the result of its save, each target is then temporarily immune for 1 minute. You can increase the number of actions it takes to Cast the Spell (to a maximum of 3 actions total). For each additional action, increase the emanation's radius by 5 feet, to a maximum of 10 extra feet for 3 actions.  \r\n**Success**  The target is unaffected.  \r\n**Failure**  The target is stupefied 2.  \r\n**Critical Failure**  The target is confused.  \r\n**Heightened (+3)**  The initial radius increases by 5 feet.",
-    "components": [ "toverbal" ]
+    "components": [ "verbal" ]
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=495",
     "name": "Angelic Wings",
-    "traits": [ "evocation", "light", "sorcerer" ],
+    "traits": [ "uncommon", "evocation", "light", "sorcerer" ],
     "type": "Focus",
     "level": 3,
     "source": "Core Rulebook pg. 403",
@@ -33218,7 +33219,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=499",
     "name": "Dragon Breath",
-    "traits": [ "evocation", "sorcerer" ],
+    "traits": [ "uncommon", "evocation", "sorcerer" ],
     "type": "Focus",
     "level": 3,
     "source": "Core Rulebook pg. 403",
@@ -33232,7 +33233,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=502",
     "name": "Drain Life",
-    "traits": [ "necromancy", "negative", "sorcerer" ],
+    "traits": [ "uncommon", "necromancy", "negative", "sorcerer" ],
     "type": "Focus",
     "level": 3,
     "source": "Core Rulebook pg. 403",
@@ -33247,7 +33248,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=504",
     "name": "Elemental Motion",
-    "traits": [ "evocation", "sorcerer" ],
+    "traits": [ "uncommon", "evocation", "sorcerer" ],
     "type": "Focus",
     "level": 3,
     "source": "Core Rulebook pg. 404",
@@ -33260,7 +33261,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=506",
     "name": "Embrace the Pit",
-    "traits": [ "evil", "morph", "sorcerer", "transmutation" ],
+    "traits": [ "uncommon", "evil", "morph", "sorcerer", "transmutation" ],
     "type": "Focus",
     "level": 3,
     "source": "Core Rulebook pg. 404",
@@ -33273,7 +33274,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=507",
     "name": "Extend Spell",
-    "traits": [ "divination", "metamagic", "sorcerer" ],
+    "traits": [ "uncommon", "divination", "metamagic", "sorcerer" ],
     "type": "Focus",
     "level": 3,
     "source": "Core Rulebook pg. 404",
@@ -33285,7 +33286,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=509",
     "name": "Fey Disappearance",
-    "traits": [ "enchantment", "sorcerer" ],
+    "traits": [ "uncommon", "enchantment", "sorcerer" ],
     "type": "Focus",
     "level": 3,
     "source": "Core Rulebook pg. 404",
@@ -33298,7 +33299,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=514",
     "name": "Horrific Visage",
-    "traits": [ "emotion", "fear", "illusion", "mental", "sorcerer", "visual" ],
+    "traits": [ "uncommon", "emotion", "fear", "illusion", "mental", "sorcerer", "visual" ],
     "type": "Focus",
     "level": 3,
     "source": "Core Rulebook pg. 405",
@@ -33312,23 +33313,23 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=516",
     "name": "Swamp of Sloth",
-    "traits": [ "conjuration", "sorcerer" ],
+    "traits": [ "uncommon", "conjuration", "sorcerer" ],
     "type": "Focus",
     "level": 3,
     "source": "Core Rulebook pg. 405",
     "cast": "to  somatic, verbal",
-    "action": "3",
+    "action": [ "1", "3" ],
     "range": "120 feet",
     "area": "5-foot burst or more",
     "saving throw": "basic Fortitude",
     "duration": "1 minute",
     "description": "Ground in the area turns swampy and fetid. The area is difficult terrain. The sludge at the bottom of the morass animates into diminutive sludge beasts that have a demonic appearance. These don't function as normal creatures, but they swarm over creatures in the swamp and exude a noxious stench. The swamp deals 1d6 poison damage; creatures that end their turn in the area must attempt a basic Fortitude save. You can increase the number of actions it takes to Cast the Spell. For each additional action, increase the burst's radius by 5 feet.  \r\n**Heightened (+2)**  The damage increases by 1d6, and the initial radius increases by 5 feet.",
-    "components": [ "tosomatic", "verbal" ]
+    "components": [ "somatic", "verbal" ]
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=492",
     "name": "Abyssal Wrath",
-    "traits": [ "evocation", "sorcerer" ],
+    "traits": [ "uncommon", "evocation", "sorcerer" ],
     "type": "Focus",
     "level": 5,
     "source": "Core Rulebook pg. 402",
@@ -33342,7 +33343,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=496",
     "name": "Arcane Countermeasure",
-    "traits": [ "abjuration", "sorcerer" ],
+    "traits": [ "uncommon", "abjuration", "sorcerer" ],
     "type": "Focus",
     "level": 5,
     "source": "Core Rulebook pg. 403",
@@ -33357,7 +33358,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=497",
     "name": "Celestial Brand",
-    "traits": [ "curse", "necromancy", "sorcerer" ],
+    "traits": [ "uncommon", "curse", "necromancy", "sorcerer" ],
     "type": "Focus",
     "level": 5,
     "source": "Core Rulebook pg. 403",
@@ -33372,7 +33373,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=501",
     "name": "Dragon Wings",
-    "traits": [ "morph", "sorcerer", "transmutation" ],
+    "traits": [ "uncommon", "morph", "sorcerer", "transmutation" ],
     "type": "Focus",
     "level": 5,
     "source": "Core Rulebook pg. 403",
@@ -33385,7 +33386,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=503",
     "name": "Elemental Blast",
-    "traits": [ "evocation", "sorcerer" ],
+    "traits": [ "uncommon", "evocation", "sorcerer" ],
     "type": "Focus",
     "level": 5,
     "source": "Core Rulebook pg. 404",
@@ -33400,7 +33401,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=510",
     "name": "Fey Glamour",
-    "traits": [ "illusion", "sorcerer" ],
+    "traits": [ "uncommon", "illusion", "sorcerer" ],
     "type": "Focus",
     "level": 5,
     "source": "Core Rulebook pg. 404",
@@ -33416,7 +33417,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=512",
     "name": "Grasping Grave",
-    "traits": [ "necromancy", "sorcerer" ],
+    "traits": [ "uncommon", "necromancy", "sorcerer" ],
     "type": "Focus",
     "level": 5,
     "source": "Core Rulebook pg. 404",
@@ -33431,7 +33432,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=513",
     "name": "Hellfire Plume",
-    "traits": [ "evil", "evocation", "fire", "sorcerer" ],
+    "traits": [ "uncommon", "evil", "evocation", "fire", "sorcerer" ],
     "type": "Focus",
     "level": 5,
     "source": "Core Rulebook pg. 405",
@@ -33446,7 +33447,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=519",
     "name": "Unusual Anatomy",
-    "traits": [ "polymorph", "sorcerer", "transmutation" ],
+    "traits": [ "uncommon", "polymorph", "sorcerer", "transmutation" ],
     "type": "Focus",
     "level": 5,
     "source": "Core Rulebook pg. 405",
@@ -33459,7 +33460,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=520",
     "name": "You're Mine",
-    "traits": [ "emotion", "enchantment", "incapacitation", "mental", "sorcerer" ],
+    "traits": [ "uncommon", "emotion", "enchantment", "incapacitation", "mental", "sorcerer" ],
     "type": "Focus",
     "level": 5,
     "source": "Core Rulebook pg. 406",
@@ -33475,7 +33476,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=521",
     "name": "Augment Summoning",
-    "traits": [ "conjuration", "wizard" ],
+    "traits": [ "uncommon", "conjuration", "wizard" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 406",
@@ -33489,7 +33490,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=522",
     "name": "Call of the Grave",
-    "traits": [ "arcane", "attack", "necromancy", "wizard" ],
+    "traits": [ "uncommon", "arcane", "attack", "necromancy", "wizard" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 406",
@@ -33503,7 +33504,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=523",
     "name": "Charming Words",
-    "traits": [ "auditory", "emotion", "enchantment", "incapacitation", "linguistic", "wizard" ],
+    "traits": [ "uncommon", "auditory", "emotion", "enchantment", "incapacitation", "linguistic", "wizard" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 406",
@@ -33519,7 +33520,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=525",
     "name": "Diviner's Sight",
-    "traits": [ "concentrate", "divination", "fortune", "wizard" ],
+    "traits": [ "uncommon", "concentrate", "divination", "fortune", "wizard" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 406",
@@ -33534,7 +33535,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=529",
     "name": "Force Bolt",
-    "traits": [ "attack", "evocation", "force", "wizard" ],
+    "traits": [ "uncommon", "attack", "evocation", "force", "wizard" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 407",
@@ -33548,7 +33549,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=530",
     "name": "Hand of the Apprentice",
-    "traits": [ "attack", "evocation", "wizard" ],
+    "traits": [ "uncommon", "attack", "evocation", "wizard" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 407",
@@ -33562,7 +33563,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=533",
     "name": "Physical Boost",
-    "traits": [ "transmutation", "wizard" ],
+    "traits": [ "uncommon", "transmutation", "wizard" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 407",
@@ -33577,7 +33578,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=534",
     "name": "Protective Ward",
-    "traits": [ "abjuration", "wizard" ],
+    "traits": [ "uncommon", "abjuration", "wizard" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 407",
@@ -33591,22 +33592,22 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=537",
     "name": "Warped Terrain",
-    "traits": [ "illusion", "visual", "wizard" ],
+    "traits": [ "uncommon", "illusion", "visual", "wizard" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 407",
     "cast": "to  somatic, verbal",
-    "action": "3",
+    "action": [ "1", "3" ],
     "range": "60 feet",
     "area": "5-foot burst or more",
     "duration": "1 minute",
     "description": "You create illusory hazards that cover all surfaces in the area (typically the ground). Any creature moving through the illusion treats the squares as difficult terrain. A creature can attempt to disbelieve the effect as normal after using a Seek action or otherwise spending actions interacting with the illusion. If it successfully disbelieves, it ignores the effect for the remaining duration. For each additional action you use casting the spell, the burst's radius increases by 5 feet, to a maximum of 10 extra feet for 3 actions.  \r\n**Heightened (4th)**  You can make the illusion appear in the air rather than on a surface, causing it to function as difficult terrain for flying creatures.",
-    "components": [ "tosomatic", "verbal" ]
+    "components": [ "somatic", "verbal" ]
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=524",
     "name": "Dimensional Steps",
-    "traits": [ "conjuration", "teleportation", "wizard" ],
+    "traits": [ "uncommon", "conjuration", "teleportation", "wizard" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 406",
@@ -33619,7 +33620,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=526",
     "name": "Dread Aura",
-    "traits": [ "emotion", "enchantment", "fear", "mental", "wizard" ],
+    "traits": [ "uncommon", "emotion", "enchantment", "fear", "mental", "wizard" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 406",
@@ -33633,7 +33634,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=527",
     "name": "Elemental Tempest",
-    "traits": [ "evocation", "metamagic", "wizard" ],
+    "traits": [ "uncommon", "evocation", "metamagic", "wizard" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 406",
@@ -33645,7 +33646,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=528",
     "name": "Energy Absorption",
-    "traits": [ "abjuration", "wizard" ],
+    "traits": [ "uncommon", "abjuration", "wizard" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 407",
@@ -33658,7 +33659,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=531",
     "name": "Invisibility Cloak",
-    "traits": [ "illusion", "wizard" ],
+    "traits": [ "uncommon", "illusion", "wizard" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 407",
@@ -33671,7 +33672,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=532",
     "name": "Life Siphon",
-    "traits": [ "healing", "necromancy", "wizard" ],
+    "traits": [ "uncommon", "healing", "necromancy", "wizard" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 407",
@@ -33684,7 +33685,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=535",
     "name": "Shifting Form",
-    "traits": [ "morph", "transmutation", "wizard" ],
+    "traits": [ "uncommon", "morph", "transmutation", "wizard" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 407",
@@ -33697,7 +33698,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=536",
     "name": "Vigilant Eye",
-    "traits": [ "divination", "wizard" ],
+    "traits": [ "uncommon", "divination", "wizard" ],
     "type": "Focus",
     "level": 4,
     "source": "Core Rulebook pg. 407",
@@ -34364,7 +34365,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=178",
     "name": "Magic Aura",
-    "traits": [ "illusion" ],
+    "traits": [ "uncommon", "illusion" ],
     "type": "Spell",
     "level": 1,
     "source": "Core Rulebook pg. 349",
@@ -34385,11 +34386,11 @@ module.exports=[
     "source": "Core Rulebook pg. 349",
     "traditions": [ "arcane", "occult" ],
     "cast": "to  somatic, verbal",
-    "action": "3",
+    "action": [ "1", "3" ],
     "range": "120 feet",
     "targets": "1 creature",
     "description": "You send a dart of force streaking toward a creature that you can see. It automatically hits and deals 1d4+1 force damage. For each additional action you use when Casting the Spell, increase the number of missiles you shoot by one, to a maximum of three missiles for 3 actions. You choose the target for each missile individually. If you shoot more than one missile at the same target, combine the damage before applying bonuses or penalties to damage, resistances, weaknesses, and so forth.  \r\n**Heightened (+2)**  You shoot one additional missile with each action you spend.",
-    "components": [ "tosomatic", "verbal" ]
+    "components": [ "somatic", "verbal" ]
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=182",
@@ -35392,7 +35393,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=173",
     "name": "Locate",
-    "traits": [ "detection", "divination" ],
+    "traits": [ "uncommon", "detection", "divination" ],
     "type": "Spell",
     "level": 3,
     "source": "Core Rulebook pg. 348",
@@ -35421,7 +35422,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=194",
     "name": "Mind Reading",
-    "traits": [ "detection", "divination", "mental" ],
+    "traits": [ "uncommon", "detection", "divination", "mental" ],
     "type": "Spell",
     "level": 3,
     "source": "Core Rulebook pg. 351",
@@ -35438,7 +35439,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=209",
     "name": "Nondetection",
-    "traits": [ "abjuration" ],
+    "traits": [ "uncommon", "abjuration" ],
     "type": "Spell",
     "level": 3,
     "source": "Core Rulebook pg. 355",
@@ -35639,7 +35640,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=68",
     "name": "Detect Scrying",
-    "traits": [ "detection", "divination" ],
+    "traits": [ "uncommon", "detection", "divination" ],
     "type": "Spell",
     "level": 4,
     "source": "Core Rulebook pg. 328",
@@ -35685,7 +35686,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=74",
     "name": "Discern Lies",
-    "traits": [ "divination", "mental", "revelation" ],
+    "traits": [ "uncommon", "divination", "mental", "revelation" ],
     "type": "Spell",
     "level": 4,
     "source": "Core Rulebook pg. 330",
@@ -35776,7 +35777,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=145",
     "name": "Hallucinatory Terrain",
-    "traits": [ "illusion" ],
+    "traits": [ "uncommon", "illusion" ],
     "type": "Spell",
     "level": 4,
     "source": "Core Rulebook pg. 342",
@@ -35839,7 +35840,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=235",
     "name": "Private Sanctum",
-    "traits": [ "abjuration" ],
+    "traits": [ "uncommon", "abjuration" ],
     "type": "Spell",
     "level": 4,
     "source": "Core Rulebook pg. 360",
@@ -35870,7 +35871,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=264",
     "name": "Rope Trick",
-    "traits": [ "conjuration", "extradimensional" ],
+    "traits": [ "uncommon", "conjuration", "extradimensional" ],
     "type": "Spell",
     "level": 4,
     "source": "Core Rulebook pg. 366",
@@ -36151,7 +36152,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=92",
     "name": "Drop Dead",
-    "traits": [ "illusion", "visual" ],
+    "traits": [ "uncommon", "illusion", "visual" ],
     "type": "Spell",
     "level": 5,
     "source": "Core Rulebook pg. 333",
@@ -36182,7 +36183,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=109",
     "name": "False Vision",
-    "traits": [ "illusion" ],
+    "traits": [ "uncommon", "illusion" ],
     "type": "Spell",
     "level": 5,
     "source": "Core Rulebook pg. 337",
@@ -36244,7 +36245,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=193",
     "name": "Mind Probe",
-    "traits": [ "divination", "linguistic", "mental" ],
+    "traits": [ "uncommon", "divination", "linguistic", "mental" ],
     "type": "Spell",
     "level": 5,
     "source": "Core Rulebook pg. 351",
@@ -36260,7 +36261,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=216",
     "name": "Passwall",
-    "traits": [ "conjuration", "earth" ],
+    "traits": [ "uncommon", "conjuration", "earth" ],
     "type": "Spell",
     "level": 5,
     "source": "Core Rulebook pg. 356",
@@ -36321,7 +36322,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=275",
     "name": "Shadow Walk",
-    "traits": [ "conjuration", "shadow", "teleportation" ],
+    "traits": [ "uncommon", "conjuration", "shadow", "teleportation" ],
     "type": "Spell",
     "level": 5,
     "source": "Core Rulebook pg. 368",
@@ -36383,7 +36384,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=335",
     "name": "Telepathic Bond",
-    "traits": [ "divination", "mental" ],
+    "traits": [ "uncommon", "divination", "mental" ],
     "type": "Spell",
     "level": 5,
     "source": "Core Rulebook pg. 377",
@@ -36398,7 +36399,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=340",
     "name": "Tongues",
-    "traits": [ "divination" ],
+    "traits": [ "uncommon", "divination" ],
     "type": "Spell",
     "level": 5,
     "source": "Core Rulebook pg. 378",
@@ -36507,7 +36508,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=87",
     "name": "Dominate",
-    "traits": [ "enchantment", "incapacitation", "mental" ],
+    "traits": [ "uncommon", "enchantment", "incapacitation", "mental" ],
     "type": "Spell",
     "level": 6,
     "source": "Core Rulebook pg. 332",
@@ -36642,7 +36643,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=268",
     "name": "Scrying",
-    "traits": [ "divination", "scrying" ],
+    "traits": [ "uncommon", "divination", "scrying" ],
     "type": "Spell",
     "level": 6,
     "source": "Core Rulebook pg. 367",
@@ -36674,7 +36675,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=338",
     "name": "Teleport",
-    "traits": [ "conjuration", "teleportation" ],
+    "traits": [ "uncommon", "conjuration", "teleportation" ],
     "type": "Spell",
     "level": 6,
     "source": "Core Rulebook pg. 378",
@@ -36762,7 +36763,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=71",
     "name": "Dimensional Lock",
-    "traits": [ "abjuration" ],
+    "traits": [ "uncommon", "abjuration" ],
     "type": "Spell",
     "level": 7,
     "source": "Core Rulebook pg. 329",
@@ -36869,7 +36870,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=222",
     "name": "Plane Shift",
-    "traits": [ "conjuration", "teleportation" ],
+    "traits": [ "uncommon", "conjuration", "teleportation" ],
     "type": "Spell",
     "level": 7,
     "source": "Core Rulebook pg. 357",
@@ -36883,7 +36884,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=226",
     "name": "Power Word Blind",
-    "traits": [ "auditory", "enchantment", "mental" ],
+    "traits": [ "uncommon", "auditory", "enchantment", "mental" ],
     "type": "Spell",
     "level": 7,
     "source": "Core Rulebook pg. 358",
@@ -36929,7 +36930,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=261",
     "name": "Reverse Gravity",
-    "traits": [ "evocation" ],
+    "traits": [ "uncommon", "evocation" ],
     "type": "Spell",
     "level": 7,
     "source": "Core Rulebook pg. 365",
@@ -36945,7 +36946,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=297",
     "name": "Spell Turning",
-    "traits": [ "abjuration" ],
+    "traits": [ "uncommon", "abjuration" ],
     "type": "Spell",
     "level": 7,
     "source": "Core Rulebook pg. 371",
@@ -36991,7 +36992,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=14",
     "name": "Antimagic Field",
-    "traits": [ "abjuration" ],
+    "traits": [ "rare", "abjuration" ],
     "type": "Spell",
     "level": 8,
     "source": "Core Rulebook pg. 318",
@@ -37022,7 +37023,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=75",
     "name": "Discern Location",
-    "traits": [ "detection", "divination" ],
+    "traits": [ "uncommon", "detection", "divination" ],
     "type": "Spell",
     "level": 8,
     "source": "Core Rulebook pg. 330",
@@ -37099,7 +37100,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=192",
     "name": "Mind Blank",
-    "traits": [ "abjuration" ],
+    "traits": [ "uncommon", "abjuration" ],
     "type": "Spell",
     "level": 8,
     "source": "Core Rulebook pg. 351",
@@ -37144,7 +37145,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=228",
     "name": "Power Word Stun",
-    "traits": [ "auditory", "enchantment", "mental" ],
+    "traits": [ "uncommon", "auditory", "enchantment", "mental" ],
     "type": "Spell",
     "level": 8,
     "source": "Core Rulebook pg. 359",
@@ -37226,7 +37227,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=77",
     "name": "Disjunction",
-    "traits": [ "abjuration" ],
+    "traits": [ "uncommon", "abjuration" ],
     "type": "Spell",
     "level": 9,
     "source": "Core Rulebook pg. 330",
@@ -37307,7 +37308,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=227",
     "name": "Power Word Kill",
-    "traits": [ "auditory", "death", "enchantment", "mental" ],
+    "traits": [ "uncommon", "auditory", "death", "enchantment", "mental" ],
     "type": "Spell",
     "level": 9,
     "source": "Core Rulebook pg. 358",
@@ -37415,7 +37416,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=130",
     "name": "Gate",
-    "traits": [ "conjuration", "teleportation" ],
+    "traits": [ "uncommon", "conjuration", "teleportation" ],
     "type": "Spell",
     "level": 10,
     "source": "Core Rulebook pg. 340",
@@ -37430,7 +37431,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=249",
     "name": "Remake",
-    "traits": [ "conjuration" ],
+    "traits": [ "uncommon", "conjuration" ],
     "type": "Spell",
     "level": 10,
     "source": "Core Rulebook pg. 363",
@@ -37593,7 +37594,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=65",
     "name": "Detect Alignment",
-    "traits": [ "detection", "divination" ],
+    "traits": [ "uncommon", "detection", "divination" ],
     "type": "Spell",
     "level": 1,
     "source": "Core Rulebook pg. 328",
@@ -37607,7 +37608,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=67",
     "name": "Detect Poison",
-    "traits": [ "detection", "divination" ],
+    "traits": [ "uncommon", "detection", "divination" ],
     "type": "Spell",
     "level": 1,
     "source": "Core Rulebook pg. 328",
@@ -37644,11 +37645,10 @@ module.exports=[
     "source": "Core Rulebook pg. 342",
     "traditions": [ "divine" ],
     "cast": "to",
-    "action": "3",
+    "action": [ "1", "3" ],
     "range": "varies",
     "targets": "1 living creature or 1 willing undead creature",
-    "description": "You channel negative energy to harm the living or heal the undead. If the target is a living creature, you deal 1d8 negative damage to it, and it gets a basic Fortitude save. If the target is a willing undead creature, you restore that amount of Hit Points. The number of actions you spend when Casting this Spell determines its targets, range, area, and other parameters.  (somatic) The spell has a range of touch.  (verbal, somatic) The spell has a range of 30 feet. If you're healing an undead creature, increase the Hit Points restored by 8.  (material, verbal, somatic) You disperse negative energy in a 30-foot emanation. This targets all living and undead creatures in the area.  \r\n**Heightened (+1)**  The amount of healing or damage increases by 1d8, and the extra healing for the 2-action version increases by 8.",
-    "components": [ "to" ]
+    "description": "You channel negative energy to harm the living or heal the undead. If the target is a living creature, you deal 1d8 negative damage to it, and it gets a basic Fortitude save. If the target is a willing undead creature, you restore that amount of Hit Points. The number of actions you spend when Casting this Spell determines its targets, range, area, and other parameters.  (somatic) The spell has a range of touch.  (verbal, somatic) The spell has a range of 30 feet. If you're healing an undead creature, increase the Hit Points restored by 8.  (material, verbal, somatic) You disperse negative energy in a 30-foot emanation. This targets all living and undead creatures in the area.  \r\n**Heightened (+1)**  The amount of healing or damage increases by 1d8, and the extra healing for the 2-action version increases by 8."
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=148",
@@ -37659,16 +37659,15 @@ module.exports=[
     "source": "Core Rulebook pg. 342",
     "traditions": [ "divine" ],
     "cast": "to",
-    "action": "3",
+    "action": [ "1", "3" ],
     "range": "varies",
     "targets": "1 willing living creature or 1 undead",
-    "description": "You channel positive energy to heal the living or damage the undead. If the target is a willing living creature, you restore 1d8 Hit Points. If the target is undead, you deal that amount of positive damage to it, and it gets a basic Fortitude save. The number of actions you spend when Casting this Spell determines its targets, range, area, and other parameters. (somatic) The spell has a range of touch. (verbal, somatic) The spell has a range of 30 feet. If you're healing a living creature, increase the Hit Points restored by 8. (material, somatic, verbal) You disperse positive energy in a 30-foot emanation. This targets all living and undead creatures in the burst.  \r\n**Heightened (+1)**  The amount of healing or damage increases by 1d8, and the extra healing for the 2-action version increases by 8.",
-    "components": [ "to" ]
+    "description": "You channel positive energy to heal the living or damage the undead. If the target is a willing living creature, you restore 1d8 Hit Points. If the target is undead, you deal that amount of positive damage to it, and it gets a basic Fortitude save. The number of actions you spend when Casting this Spell determines its targets, range, area, and other parameters. (somatic) The spell has a range of touch. (verbal, somatic) The spell has a range of 30 feet. If you're healing a living creature, increase the Hit Points restored by 8. (material, somatic, verbal) You disperse positive energy in a 30-foot emanation. This targets all living and undead creatures in the burst.  \r\n**Heightened (+1)**  The amount of healing or damage increases by 1d8, and the extra healing for the 2-action version increases by 8."
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=238",
     "name": "Protection",
-    "traits": [ "abjuration" ],
+    "traits": [ "uncommon", "abjuration" ],
     "type": "Spell",
     "level": 1,
     "source": "Core Rulebook pg. 361",
@@ -37972,7 +37971,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=348",
     "name": "Undetectable Alignment",
-    "traits": [ "abjuration" ],
+    "traits": [ "uncommon", "abjuration" ],
     "type": "Spell",
     "level": 2,
     "source": "Core Rulebook pg. 379",
@@ -38002,7 +38001,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=38",
     "name": "Circle of Protection",
-    "traits": [ "abjuration" ],
+    "traits": [ "uncommon", "abjuration" ],
     "type": "Spell",
     "level": 3,
     "source": "Core Rulebook pg. 324",
@@ -38119,7 +38118,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=379",
     "name": "Zone of Truth",
-    "traits": [ "enchantment", "mental" ],
+    "traits": [ "uncommon", "enchantment", "mental" ],
     "type": "Spell",
     "level": 3,
     "source": "Core Rulebook pg. 385",
@@ -38201,7 +38200,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=247",
     "name": "Read Omens",
-    "traits": [ "divination", "prediction" ],
+    "traits": [ "uncommon", "divination", "prediction" ],
     "type": "Spell",
     "level": 4,
     "source": "Core Rulebook pg. 363",
@@ -38227,7 +38226,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=329",
     "name": "Talking Corpse",
-    "traits": [ "necromancy" ],
+    "traits": [ "uncommon", "necromancy" ],
     "type": "Spell",
     "level": 4,
     "source": "Core Rulebook pg. 376",
@@ -38417,7 +38416,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=243",
     "name": "Raise Dead",
-    "traits": [ "healing", "necromancy" ],
+    "traits": [ "uncommon", "healing", "necromancy" ],
     "type": "Spell",
     "level": 6,
     "source": "Core Rulebook pg. 362",
@@ -38463,7 +38462,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=310",
     "name": "Stone Tell",
-    "traits": [ "earth", "evocation" ],
+    "traits": [ "uncommon", "earth", "evocation" ],
     "type": "Spell",
     "level": 6,
     "source": "Core Rulebook pg. 374",
@@ -38539,7 +38538,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=105",
     "name": "Ethereal Jaunt",
-    "traits": [ "conjuration", "teleportation" ],
+    "traits": [ "uncommon", "conjuration", "teleportation" ],
     "type": "Spell",
     "level": 7,
     "source": "Core Rulebook pg. 336",
@@ -38664,7 +38663,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=21",
     "name": "Bind Soul",
-    "traits": [ "evil", "necromancy" ],
+    "traits": [ "uncommon", "evil", "necromancy" ],
     "type": "Spell",
     "level": 9,
     "source": "Core Rulebook pg. 320",
@@ -38681,7 +38680,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=56",
     "name": "Crusade",
-    "traits": [ "enchantment", "linguistic", "mental" ],
+    "traits": [ "uncommon", "enchantment", "linguistic", "mental" ],
     "type": "Spell",
     "level": 9,
     "source": "Core Rulebook pg. 327",
@@ -38897,7 +38896,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=135",
     "name": "Glibness",
-    "traits": [ "enchantment", "mental" ],
+    "traits": [ "uncommon", "enchantment", "mental" ],
     "type": "Spell",
     "level": 4,
     "source": "Core Rulebook pg. 341",
@@ -38911,7 +38910,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=200",
     "name": "Modify Memory",
-    "traits": [ "divination", "mental" ],
+    "traits": [ "uncommon", "divination", "mental" ],
     "type": "Spell",
     "level": 4,
     "source": "Core Rulebook pg. 352",
@@ -39395,7 +39394,7 @@ module.exports=[
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=343",
     "name": "Tree Stride",
-    "traits": [ "conjuration", "plant", "teleportation" ],
+    "traits": [ "uncommon", "conjuration", "plant", "teleportation" ],
     "type": "Spell",
     "level": 5,
     "source": "Core Rulebook pg. 378",
@@ -40889,7 +40888,7 @@ var QuickRefList = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = QuickRefList;
-},{"../Utils/ActionIcons.js":313,"react":219,"react-markdown":189}],304:[function(require,module,exports){
+},{"../Utils/ActionIcons.js":314,"react":219,"react-markdown":189}],304:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41289,6 +41288,10 @@ var _ActionIcons = require('../Utils/ActionIcons.js');
 
 var _ActionIcons2 = _interopRequireDefault(_ActionIcons);
 
+var _Trait = require('../Utils/Trait.js');
+
+var _Trait2 = _interopRequireDefault(_Trait);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41366,11 +41369,7 @@ var SpellDetail = function (_React$PureComponent) {
                     'ul',
                     { className: 'traits' },
                     spell.traits.map(function (t, index) {
-                        return _react2.default.createElement(
-                            'li',
-                            { key: index },
-                            t
-                        );
+                        return _react2.default.createElement(_Trait2.default, { key: index, trait: t });
                     })
                 ),
                 _react2.default.createElement(
@@ -41398,7 +41397,7 @@ var SpellDetail = function (_React$PureComponent) {
                         ' ',
                         _react2.default.createElement(_ActionIcons2.default, { action: spell.action }),
                         ' ',
-                        spell.components.join(", ")
+                        spell.components && spell.components.join(spell.componentsSeparator || ", ")
                     ),
                     headerTokens.map(function (t) {
                         return _react2.default.createElement(
@@ -41435,7 +41434,7 @@ var SpellDetail = function (_React$PureComponent) {
 
 exports.default = SpellDetail;
 ;
-},{"../Utils/ActionIcons.js":313,"react":219,"react-markdown":189}],310:[function(require,module,exports){
+},{"../Utils/ActionIcons.js":314,"../Utils/Trait.js":315,"react":219,"react-markdown":189}],310:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -42132,16 +42131,14 @@ var ActionIcons = function (_React$PureComponent) {
     }
 
     _createClass(ActionIcons, [{
-        key: "render",
-        value: function render() {
-            var _this2 = this;
-
-            if (canUseIcons) return _react2.default.createElement("img", { className: "actions", src: "images/action-" + this.props.action + ".png", alt: this.props.action });else {
+        key: "renderIcon",
+        value: function renderIcon(action) {
+            if (canUseIcons) return _react2.default.createElement("img", { className: "actions", src: "images/action-" + this.props.action + ".png", alt: action });else {
                 return _react2.default.createElement(
                     "span",
-                    { className: "actions actions-" + this.props.action },
+                    { className: "actions actions-" + action },
                     function () {
-                        switch (_this2.props.action) {
+                        switch (action) {
                             case "1":
                                 return "◈";
                             case "2":
@@ -42153,11 +42150,29 @@ var ActionIcons = function (_React$PureComponent) {
                             case "reaction":
                                 return "⤾";
                             default:
-                                return _this2.props.action;
+                                return action;
                         }
                     }()
                 );
             }
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            var _this2 = this;
+
+            if (Array.isArray(this.props.action)) {
+                var output = this.props.action.map(function (a) {
+                    return _this2.renderIcon(a);
+                });
+                // If we have 2 icons put " to " between
+                if (output.length == 2) output.splice(1, 0, ' to ');
+                return _react2.default.createElement(
+                    "span",
+                    null,
+                    output
+                );
+            } else return this.renderIcon(this.props.action);
         }
     }]);
 
@@ -42166,6 +42181,74 @@ var ActionIcons = function (_React$PureComponent) {
 
 exports.default = ActionIcons;
 },{"react":219}],314:[function(require,module,exports){
+arguments[4][313][0].apply(exports,arguments)
+},{"dup":313,"react":219}],315:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// Turns out Paizo says no to using their icons. Sadness.
+// If they ever become community use, flip this.
+var canUseIcons = false;
+
+var Trait = function (_React$PureComponent) {
+    _inherits(Trait, _React$PureComponent);
+
+    function Trait() {
+        _classCallCheck(this, Trait);
+
+        return _possibleConstructorReturn(this, (Trait.__proto__ || Object.getPrototypeOf(Trait)).apply(this, arguments));
+    }
+
+    _createClass(Trait, [{
+        key: "determineClass",
+        value: function determineClass(trait) {
+            switch (trait) {
+                case "uncommon":
+                case "rare":
+                case "unique":
+                    return trait;
+                //                return "alignment";
+                case "evil":
+                case "good":
+                case "chaotic":
+                case "lawful":
+                default:
+                    return "";
+            }
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            return _react2.default.createElement(
+                "li",
+                { className: this.determineClass(this.props.trait) },
+                this.props.trait
+            );
+        }
+    }]);
+
+    return Trait;
+}(_react2.default.PureComponent);
+
+exports.default = Trait;
+},{"react":219}],316:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -42183,4 +42266,4 @@ var _BasePage2 = _interopRequireDefault(_BasePage);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(_BasePage2.default, null), document.getElementById('app'));
-},{"./Views/BasePage.js":296,"react":219,"react-dom":55}]},{},[292,314,293,294,295,296,297,298,299,300,301,308,302,303,304,305,306,307,309,310,311,312,313]);
+},{"./Views/BasePage.js":296,"react":219,"react-dom":55}]},{},[292,316,293,294,295,296,297,298,299,300,301,308,302,303,304,305,306,307,309,310,311,312,313,314,315]);

@@ -18,6 +18,10 @@ var _ActionIcons = require('../Utils/ActionIcons.js');
 
 var _ActionIcons2 = _interopRequireDefault(_ActionIcons);
 
+var _Trait = require('../Utils/Trait.js');
+
+var _Trait2 = _interopRequireDefault(_Trait);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -95,11 +99,7 @@ var SpellDetail = function (_React$PureComponent) {
                     'ul',
                     { className: 'traits' },
                     spell.traits.map(function (t, index) {
-                        return _react2.default.createElement(
-                            'li',
-                            { key: index },
-                            t
-                        );
+                        return _react2.default.createElement(_Trait2.default, { key: index, trait: t });
                     })
                 ),
                 _react2.default.createElement(
@@ -127,7 +127,7 @@ var SpellDetail = function (_React$PureComponent) {
                         ' ',
                         _react2.default.createElement(_ActionIcons2.default, { action: spell.action }),
                         ' ',
-                        spell.components.join(", ")
+                        spell.components && spell.components.join(spell.componentsSeparator || ", ")
                     ),
                     headerTokens.map(function (t) {
                         return _react2.default.createElement(

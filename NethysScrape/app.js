@@ -4,6 +4,16 @@
  *
  * Note: Currently fumbles on spells with multiple on 1 page. I don't trust that'll stay as-is anyway so I'm not reworking. Heightening has removed most those anyway.
  */
+
+/**
+ * Current manual cleanups:
+ * 3 action spells - the to goes in the components currently. Need to make the actions an array with all the options.
+ * Counter Performance - Really, you had to have 1 spell that allowed either cast action?
+ * Casting time not measured in actions
+ * Faerie Fire - I'm technically doing this wrong as it's an "or more"
+ * Misses the uncommon trait (it has different CSS class - may also miss rare, alignment & size)
+ */
+
 'use strict';
 const fs = require('fs');
 const rp = require('request-promise-native');

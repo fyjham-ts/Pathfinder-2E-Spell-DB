@@ -1,6 +1,7 @@
 ﻿import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import ActionIcons from '../Utils/ActionIcons.js';
+import Trait from '../Utils/Trait.js';
 
 export default class SpellDetail extends React.PureComponent {
     constructor(props) {
@@ -42,13 +43,11 @@ export default class SpellDetail extends React.PureComponent {
                     {spell.name}
                 </div>
                 <ul className="traits">
-                    {spell.traits.map((t, index) => {
-                        return <li key={index}>{t}</li>
-                    })}
+                    {spell.traits.map((t, index) => <Trait key={index} trait={t} />)}
                 </ul>
                 <div className="header">
                     {spell.traditions && <div><strong>Traditions</strong> {spell.traditions.join(", ")}</div>}
-                    <div><strong>Cast</strong> <ActionIcons action={spell.action} /> {spell.components.join(", ")}</div>
+                    <div><strong>Cast</strong> <ActionIcons action={spell.action} /> {spell.components && spell.components.join(spell.componentsSeparator || ", ")}</div>
                     {headerTokens.map((t) => {
                         return <span key={t.title} className="headerElement"><strong>{t.title}</strong> {t.value}</span>
                     })}
