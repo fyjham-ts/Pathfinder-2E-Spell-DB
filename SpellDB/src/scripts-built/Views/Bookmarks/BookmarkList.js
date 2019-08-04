@@ -108,6 +108,11 @@ var BookmarkList = function (_React$Component) {
                 'div',
                 { className: 'spellListConfig' },
                 _react2.default.createElement(
+                    'p',
+                    { className: 'alert alert-info' },
+                    'Bookmarks help you mark some related spells. Whether it be your spell book, the spells you\'ll need as GM for an encounter, or just a few spells you\'re interested in checking out later.'
+                ),
+                _react2.default.createElement(
                     'table',
                     { className: 'table spellListTable' },
                     _react2.default.createElement(

@@ -31003,6 +31003,68 @@ module.exports=[
         "description": "Treat a living creature's wounds (pg 249)"
       }
     ]
+  },
+  {
+    "name": "Challenge points",
+    "icon": "fas fa-chart-line",
+    "render": "tables",
+    "tables": [
+      {
+        "title": "PC Challenge Points",
+        "columns": [
+          {
+            "title": "Character Level",
+            "colType": "text"
+          },
+          {
+            "title": "Points",
+            "colType": "text"
+          }
+        ],
+        "rows": [
+          [ "Lowest", 2 ],
+          [ "Second Lowest", 3 ],
+          [ "Second Highest", 4 ],
+          [ "Highest", 6 ]
+        ]
+      },
+      {
+        "title": "Adjustments",
+        "columns": [
+          {
+            "title": "Table Points",
+            "colType": "text"
+          },
+          {
+            "title": "Subtier",
+            "colType": "text"
+          }
+        ],
+        "rows": [
+          [ "8-9", "Low Subtier" ],
+          [ "10-11", "Low Subtier (5 player adjust)" ],
+          [ "12-13", "Low Subtier (6 player adjust)  \r\n**OR (GM Choice)**  \r\nLow Subtier with Level Bump" ],
+          [ "14-15", "Low Subtier (5 player adjust with Level Bump)" ],
+          [ "16-18", "High Subtier" ],
+          [ "19-22", "High Subtier (5 player adjust)" ],
+          [ "23-27", "High Subtier (6 player adjust)  \r\n**OR (GM Choice)**  \r\nHigh Subtier with Level Bump" ],
+          [ "28-32", "High Subtier (5 player adjust with Level Bump)" ],
+          [ "33-42", "High Subtier (6 player adjust with Level Bump)" ]
+        ]
+      },
+      {
+        "title": "Level Bump",
+        "columns": [
+          {
+            "title": "",
+            "colType": "text"
+          }
+        ],
+        "rows": [
+          [ "**Applies**  \r\n* Any Character of minimum level playing high tier.  \r\n* When the table above says so (Applies to enemies)\r\n\r\n**Scenario Rules**  \r\n* +1 to all DC's, Attacks, Damage, Saves, Skills, Perception and AC.\r\n* +10 or 10% HP (Whichever is higher).\r\n\r\n**Player Rules**  \r\n+1 to AC, DCs, modifiers, and gain extra HP as though levelled." ]
+        ]
+      }
+    ]
   }
 ]
 },{}],290:[function(require,module,exports){
@@ -31056,7 +31118,7 @@ module.exports=[
     "options": null
   },
   {
-    "name": "Domain Powers",
+    "name": "Focus Powers - Domains",
     "matchBy": "lookup",
     "options": [
       {
@@ -31249,9 +31311,158 @@ module.exports=[
     }
   },
   {
+    "name": "Focus Powers - Bloodlines",
+    "matchBy": "lookup",
+    "options": [
+      {
+        "name": "Abberant",
+        "value": "Abberant"
+      },
+      {
+        "name": "Angelic",
+        "value": "Angelic"
+      },
+      {
+        "name": "Demonic",
+        "value": "Demonic"
+      },
+      {
+        "name": "Diabolic",
+        "value": "Diabolic"
+      },
+      {
+        "name": "Draconic",
+        "value": "Draconic"
+      },
+      {
+        "name": "Elemental",
+        "value": "Elemental"
+      },
+      {
+        "name": "Fey",
+        "value": "Fey"
+      },
+      {
+        "name": "Hag",
+        "value": "Hag"
+      },
+      {
+        "name": "Imperial",
+        "value": "Imperial"
+      },
+      {
+        "name": "Undead",
+        "value": "Undead"
+      }
+    ],
+    "lookup": {
+      "Abberant": [ "Tentacular Limbs", "Aberrant Whispers", "Unusual Anatomy" ],
+      "Angelic": [ "Angelic Halo", "Angelic Wings", "Celestial Brand" ],
+      "Demonic": [ "Glutton's Jaw", "Swamp of Sloth", "Abyssal Wrath" ],
+      "Diabolic": [ "Diabolic Edict", "Embrace the Pit", "Hellfire Plume" ],
+      "Draconic": [ "Dragon Claws", "Dragon Breath", "Dragon Wings" ],
+      "Elemental": [ "Elemental Toss", "Elemental Motion", "Elemental Blast" ],
+      "Fey": [ "Faerie Dust", "Fey Disappearance", "Fey Glamour" ],
+      "Hag": [ "Jealous Hex", "Horrific Visage", "You're Mine" ],
+      "Imperial": [ "Ancestral Memories", "Extend Spell", "Arcane Countermeasure" ],
+      "Undead": [ "Touch of Undeath (Sorcerer)", "Drain Life", "Grasping Grave" ]
+    }
+  },
+  {
     "name": "Bookmarks",
     "matchBy": "bookmark",
     "options": []
+  },
+  {
+    "name": "Focus Powers - Druid",
+    "matchBy": "list",
+    "options": [],
+    "lookup": [
+      "Goodberry",
+      "Heal Animal",
+      "Tempest Surge",
+      "Wild Morph",
+      "Wild Shape",
+      "Stormwind Flight",
+      "Primal Summons",
+      "Impaling Briars",
+      "Storm Lord"
+    ]
+  },
+  {
+    "name": "Focus Powers - Champion",
+    "matchBy": "list",
+    "options": [],
+    "lookup": [
+      "Lay on Hands",
+      "Litany against Wrath",
+      "Litany against Sloth",
+      "Champion's Sacrifice",
+      "Litany of Righteousness",
+      "Hero's Defiance"
+    ]
+  },
+  {
+    "name": "Focus Powers - Monk",
+    "matchBy": "list",
+    "options": [],
+    "lookup": [
+      "Ki Rush",
+      "Ki Strike",
+      "Wholeness of Body",
+      "Ki Blast",
+      "Abundant Step",
+      "Wild Winds Stance",
+      "Wind Jump",
+      "Quivering Palm",
+      "Empty Body"
+    ]
+  },
+  {
+    "name": "Focus Powers - Bard",
+    "matchBy": "list",
+    "options": [],
+    "lookup": [
+      "Counter Performance",
+      "Inspire Competence",
+      "Inspire Courage",
+      "Lingering Composition",
+      "Loremaster's Etude",
+      "Inspire Defiance",
+      "Triple Time",
+      "Dirge of Doom",
+      "Inspire Heroics",
+      "House of Imaginary Walls",
+      "Allegro",
+      "Soothing Ballade",
+      "Fatal Aria"
+    ]
+  },
+  {
+    "name": "Focus Powers - Wizard School",
+    "matchBy": "lookup",
+    "options": [
+      {"name":"Conjuration","value":"Conjuration"},
+      {"name":"Necromancy","value":"Necromancy"},
+      {"name":"Enchantment","value":"Enchantment"},
+      {"name":"Divination","value":"Divination"},
+      {"name":"Evocation","value":"Evocation"},
+      {"name":"Universalist","value":"Universalist"},
+      {"name":"Transmutation","value":"Transmutation"},
+      {"name":"Abjuration","value":"Abjuration"},
+      {"name":"Illusion","value":"Illusion"}
+    ],
+    "lookup": {
+      "Conjuration": [ "Augment Summoning", "Dimensional Steps" ],
+      "Necromancy": [ "Call of the Grave", "Life Siphon" ],
+      "Enchantment": [ "Charming Words", "Dread Aura" ],
+      "Divination": [ "Diviner's Sight", "Vigilant Eye" ],
+      "Evocation": [ "Force Bolt", "Elemental Tempest" ],
+      "Universalist": [ "Hand of the Apprentice" ],
+      "Transmutation": [ "Physical Boost", "Shifting Form" ],
+      "Abjuration": [ "Protective Ward", "Energy Absorption" ],
+      "Illusion": [ "Warped Terrain", "Invisibility Cloak" ]
+    }
   }
 ]
 },{}],291:[function(require,module,exports){
@@ -31449,7 +31660,7 @@ module.exports=[
     "action": "1",
     "range": "touch",
     "targets": "1 willing living creature or 1 undead creature",
-    "description": "Your hands become infused with positive energy, healing a living creature or damaging an undead creature with a touch. If you use lay on hands on a willing living target, you restore 6 Hit Points; if the target is one of your allies, they also gain a +2 status bonus to AC for 1 round. Against an undead target, you deal 1d6 damage and it must attempt a basic Fortitude save; if it fails, it also takes a �2 status penalty to AC for 1 round.  \r\n**Heightened (+1)**  The amount of healing increases by 6, and the damage to an undead target increases by 1d6.",
+    "description": "Your hands become infused with positive energy, healing a living creature or damaging an undead creature with a touch. If you use lay on hands on a willing living target, you restore 6 Hit Points; if the target is one of your allies, they also gain a +2 status bonus to AC for 1 round. Against an undead target, you deal 1d6 damage and it must attempt a basic Fortitude save; if it fails, it also takes a -2 status penalty to AC for 1 round.  \r\n**Heightened (+1)**  The amount of healing increases by 6, and the damage to an undead target increases by 1d6.",
     "components": [ "somatic" ]
   },
   {
@@ -31597,7 +31808,7 @@ module.exports=[
     "targets": "1 creature",
     "saving throw": "Will",
     "duration": "10 minutes",
-    "description": "You strengthen a target's ambition, increase its resentment of allies, and make its allegiances more susceptible to change. The target must attempt a Will save.  \r\n**Critical Success**  The target is unaffected.  \r\n**Success**  The target takes a �1 status penalty to its saving throws and other defenses against attempts to Coerce it, Request something of it, or use mental effects to convince it to do something (such as a suggestion spell). This penalty applies only if the target is being encouraged to advance its own ambitions.  \r\n**Failure**  As success, but the penalty is �2.  \r\n**Critical Failure**  The target is overcome with ambition, taking whatever actions would advance its own agenda over those of anyone else, even without attempts to convince it.",
+    "description": "You strengthen a target's ambition, increase its resentment of allies, and make its allegiances more susceptible to change. The target must attempt a Will save.  \r\n**Critical Success**  The target is unaffected.  \r\n**Success**  The target takes a -1 status penalty to its saving throws and other defenses against attempts to Coerce it, Request something of it, or use mental effects to convince it to do something (such as a suggestion spell). This penalty applies only if the target is being encouraged to advance its own ambitions.  \r\n**Failure**  As success, but the penalty is -2.  \r\n**Critical Failure**  The target is overcome with ambition, taking whatever actions would advance its own agenda over those of anyone else, even without attempts to convince it.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -31786,7 +31997,7 @@ module.exports=[
     "range": "30 feet",
     "targets": "1 living creature",
     "saving throw": "Fortitude",
-    "description": "Huge amounts of food and drink fill the target. It receives a full meal's worth of nourishment and must attempt a Fortitude save. A target sickened by this spell takes a �10-foot status penalty to its Speed until it's no longer sickened.  \r\n**Critical Success**  The target is unaffected.  \r\n**Success**  The target is sickened 1, but if it spends an action to end the condition, it succeeds automatically.  \r\n**Failure**  The target is sickened 1.  \r\n**Critical Failure**  The target is sickened 2.",
+    "description": "Huge amounts of food and drink fill the target. It receives a full meal's worth of nourishment and must attempt a Fortitude save. A target sickened by this spell takes a -10-foot status penalty to its Speed until it's no longer sickened.  \r\n**Critical Success**  The target is unaffected.  \r\n**Success**  The target is sickened 1, but if it spends an action to end the condition, it succeeds automatically.  \r\n**Failure**  The target is sickened 1.  \r\n**Critical Failure**  The target is sickened 2.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -31840,7 +32051,7 @@ module.exports=[
     "cast": "1 minute (material, somatic, verbal)",
     "range": "10 feet",
     "targets": "1 creature other than you",
-    "description": "You attempt to learn more about the target's fate in the short term, usually within the next day for most prosaic creatures, or the next hour or less for someone likely to have multiple rapid experiences, such as someone actively adventuring. You learn a single enigmatic word connected to the creature's fate in that time frame. Fate is notoriously inscrutable, and the word isn't necessarily meant to be taken at face value, so the meaning is often clear only in hindsight. The GM rolls a secret DC 6 flat check. If the creature's fate is too uncertain, or on a failed flat check, the spell yields the word �inconclusive.� Either way, the creature is then temporarily immune for 24 hours.",
+    "description": "You attempt to learn more about the target's fate in the short term, usually within the next day for most prosaic creatures, or the next hour or less for someone likely to have multiple rapid experiences, such as someone actively adventuring. You learn a single enigmatic word connected to the creature's fate in that time frame. Fate is notoriously inscrutable, and the word isn't necessarily meant to be taken at face value, so the meaning is often clear only in hindsight. The GM rolls a secret DC 6 flat check. If the creature's fate is too uncertain, or on a failed flat check, the spell yields the word \"inconclusive.\" Either way, the creature is then temporarily immune for 24 hours.",
     "components": [ "1minute(material", "somatic", "verbal)" ]
   },
   {
@@ -32147,7 +32358,7 @@ module.exports=[
     "targets": "1 creature",
     "saving throw": "Will",
     "duration": "varies",
-    "description": "You make the target overconfident, leading it to ascribe failure to external factors. If the target fails at an attack roll or skill check, it takes a �1 status penalty to attack rolls and skill checks until the end of its turn (or the end of its next turn, if it attempted the roll outside its turn). If the creature fails a second time while taking this penalty, the penalty increases to �2. The duration depends on the target's Will save. After attempting its save, the creature becomes temporarily immune for 24 hours.  \r\n**Critical Success**  The target is unaffected.  \r\n**Success**  The duration is 1 round.  \r\n**Failure**  The duration is 10 minutes.  \r\n**Critical Failure**  The duration is 24 hours.",
+    "description": "You make the target overconfident, leading it to ascribe failure to external factors. If the target fails at an attack roll or skill check, it takes a -1 status penalty to attack rolls and skill checks until the end of its turn (or the end of its next turn, if it attempted the roll outside its turn). If the creature fails a second time while taking this penalty, the penalty increases to -2. The duration depends on the target's Will save. After attempting its save, the creature becomes temporarily immune for 24 hours.  \r\n**Critical Success**  The target is unaffected.  \r\n**Success**  The duration is 1 round.  \r\n**Failure**  The duration is 10 minutes.  \r\n**Critical Failure**  The duration is 24 hours.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -32385,7 +32596,7 @@ module.exports=[
     "range": "touch",
     "targets": "1 metal weapon, up to 10 pieces of metal or metal-tipped ammunition, 1 suit of metal armor, or up to 1 bulk of metal material (such as coins)",
     "duration": "1 minute",
-    "description": "Your deity blesses base metals to transform them into precious materials. The target item transforms from its normal metal into cold iron, copper, gold, iron, silver, or steel (the details for these metals are found on pages 577�579). An item transmuted in this way deals damage according to its new material. For example, a steel sword transmuted to cold iron would deal additional damage to a creature with a weakness to cold iron. This change is clearly magical and temporary, so the item's monetary value doesn't change; you couldn't transmute copper coins to gold and use those coins to purchase something or as a cost for a spell.  \r\n**Heightened (8th)**  Add adamantine (page 578) and mithral (page 579) to the list of metals you can transform the item into.",
+    "description": "Your deity blesses base metals to transform them into precious materials. The target item transforms from its normal metal into cold iron, copper, gold, iron, silver, or steel (the details for these metals are found on pages 577-579). An item transmuted in this way deals damage according to its new material. For example, a steel sword transmuted to cold iron would deal additional damage to a creature with a weakness to cold iron. This change is clearly magical and temporary, so the item's monetary value doesn't change; you couldn't transmute copper coins to gold and use those coins to purchase something or as a cost for a spell.  \r\n**Heightened (8th)**  Add adamantine (page 578) and mithral (page 579) to the list of metals you can transform the item into.",
     "components": [ "material" ]
   },
   {
@@ -32412,7 +32623,7 @@ module.exports=[
     "cast": "material, somatic, verbal",
     "action": "3",
     "range": "25 miles",
-    "description": "You tap into the zeitgeist of the nearest settlement in range (if any). You learn the name of the settlement, and you can utter a special word to learn a brief summary of one significant event happening in the settlement. Choose one of the following words, which indicates the type of people involved and type of event you learn about. Wardens city guards, barristers, and judges (criminal reports, busts, changes in routines, legal trials) Titles nobles and politicians (high society weddings, elite soirees, political rallies) Masses common folk and merchants (gathering mobs, major sales) When uttering your word, you can exclude events you already know about, whether you know about them from this spell or from other experiences. If you cast pulse of the city again within 24 hours, you can say �echo� instead of another word to get an update on the event you learned about the last time you Cast the Spell. Pulse of the city reveals only publicly available or observable information. You never learn clandestine movements or other details people are specifically trying to hide. The spell is also notoriously bad at overcoming magic meant to avoid detection; it automatically fails to reveal information about events involving creatures, places, or objects affected by spells that could prevent or counteract pulse of the city (such as nondetection).  \r\n**Heightened (5th)**  The range increases to 100 miles.",
+    "description": "You tap into the zeitgeist of the nearest settlement in range (if any). You learn the name of the settlement, and you can utter a special word to learn a brief summary of one significant event happening in the settlement. Choose one of the following words, which indicates the type of people involved and type of event you learn about. Wardens city guards, barristers, and judges (criminal reports, busts, changes in routines, legal trials) Titles nobles and politicians (high society weddings, elite soirees, political rallies) Masses common folk and merchants (gathering mobs, major sales) When uttering your word, you can exclude events you already know about, whether you know about them from this spell or from other experiences. If you cast pulse of the city again within 24 hours, you can say \"echo\" instead of another word to get an update on the event you learned about the last time you Cast the Spell. Pulse of the city reveals only publicly available or observable information. You never learn clandestine movements or other details people are specifically trying to hide. The spell is also notoriously bad at overcoming magic meant to avoid detection; it automatically fails to reveal information about events involving creatures, places, or objects affected by spells that could prevent or counteract pulse of the city (such as nondetection).  \r\n**Heightened (5th)**  The range increases to 100 miles.",
     "components": [ "material", "somatic", "verbal" ]
   },
   {
@@ -32486,7 +32697,7 @@ module.exports=[
     "action": "2",
     "range": "touch",
     "targets": "1 creature",
-    "description": "When someone has overindulged, you can hasten them past the worst of their affliction or intensify their misery. This spell attempts to progress a disease affliction, a poison affliction, or persistent poison damage affecting the target. If the target is affected by more than one of these, you can choose from among those you are aware of; otherwise the GM chooses randomly. An unwilling target can attempt a Will save to negate take its course. The effect of this spell depends on whether you're attempting to end an affliction or persistent poison damage, and whether you are attempting to help or hinder the target's recovery. Affliction The target immediately attempts its next saving throw against the affliction. You can grant the creature your choice of a +2 status bonus or a �2 status penalty to its saving throw against the affliction. Persistent Poison You can cause the target take the persistent poison damage immediately when you Cast this Spell (in addition to taking it at the end of its next turn). Whether or not you do so, the target attempts an additional flat check against the persistent poison damage. You can set the DC of that flat check to 5 or 20 instead of the normal DC.  \r\n**Heightened (7th)**  You can attempt to progress any number of the target's eligible afflictions and persistent poison damage.",
+    "description": "When someone has overindulged, you can hasten them past the worst of their affliction or intensify their misery. This spell attempts to progress a disease affliction, a poison affliction, or persistent poison damage affecting the target. If the target is affected by more than one of these, you can choose from among those you are aware of; otherwise the GM chooses randomly. An unwilling target can attempt a Will save to negate take its course. The effect of this spell depends on whether you're attempting to end an affliction or persistent poison damage, and whether you are attempting to help or hinder the target's recovery. Affliction The target immediately attempts its next saving throw against the affliction. You can grant the creature your choice of a +2 status bonus or a -2 status penalty to its saving throw against the affliction. Persistent Poison You can cause the target take the persistent poison damage immediately when you Cast this Spell (in addition to taking it at the end of its next turn). Whether or not you do so, the target attempts an additional flat check against the persistent poison damage. You can set the DC of that flat check to 5 or 20 instead of the normal DC.  \r\n**Heightened (7th)**  You can attempt to progress any number of the target's eligible afflictions and persistent poison damage.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -32698,7 +32909,7 @@ module.exports=[
     "action": "2",
     "area": "ground within a 100-foot emanation",
     "duration": "sustained up to 1 minute",
-    "description": "The ground within the area transforms into a mass of dangerous briars that assault and impede your foes. Each round when you Sustain the Spell, you can select one of the following effects to occur in the area. Ensnare The briars clump around your foes, attempting to hold them in place. A foe within the area (or flying at most 20 feet above the area) must attempt a Reflex save. On a failure, it takes a �10-foot circumstance penalty to all Speeds for 1 round, and on a critical failure, it is immobilized for 1 round unless it Escapes. Impede The briars twist and writhe, making the entire area difficult terrain. Wall A wall of thorns appears in the area, lasting for 1 round. The wall is greater difficult terrain instead of difficult terrain. In addition, once per round you can direct the briars to impale any target in the area (or flying up to 20 feet above the area) that you can see by using a single action, which has the concentrate and manipulate traits. Make a spell attack roll. On a success, the target takes 10d6 piercing damage and takes a �10-foot circumstance penalty to all Speeds for 1 round; on a critical success, the target is immobilized for 1 round unless it Escapes.",
+    "description": "The ground within the area transforms into a mass of dangerous briars that assault and impede your foes. Each round when you Sustain the Spell, you can select one of the following effects to occur in the area. Ensnare The briars clump around your foes, attempting to hold them in place. A foe within the area (or flying at most 20 feet above the area) must attempt a Reflex save. On a failure, it takes a -10-foot circumstance penalty to all Speeds for 1 round, and on a critical failure, it is immobilized for 1 round unless it Escapes. Impede The briars twist and writhe, making the entire area difficult terrain. Wall A wall of thorns appears in the area, lasting for 1 round. The wall is greater difficult terrain instead of difficult terrain. In addition, once per round you can direct the briars to impale any target in the area (or flying up to 20 feet above the area) that you can see by using a single action, which has the concentrate and manipulate traits. Make a spell attack roll. On a success, the target takes 10d6 piercing damage and takes a -10-foot circumstance penalty to all Speeds for 1 round; on a critical success, the target is immobilized for 1 round unless it Escapes.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -32713,7 +32924,7 @@ module.exports=[
     "requirements": "You are outdoors and aboveground.",
     "area": "100-foot emanation",
     "duration": "sustained up to 1 minute",
-    "description": "The sky above you darkens in a matter of moments, swirling with ominous clouds punctuated by flashes of lighting. Each round when you Sustain the Spell, you can select one of the following effects to occur in the area.  No additional effect. effects of obscuring mist. Fog Heavy fog rolls in, concealing the area with the Rain Torrential rain falls from the sky, dousing ordinary flames. Creatures in the area take a �2 circumstance penalty to Acrobatics and Perception checks. Wind Powerful winds buffet the area in all directions. Ranged attacks take a �4 circumstance penalty, and all flying is against the wind and counts as moving through difficult terrain. In addition, once per round you can use a single action, which has the concentrate and manipulate traits, to call down a bolt of lightning, striking any target in range that you can see. You deal 10d6 electricity damage to the target; it must attempt a basic Reflex save. On a failure, it is also deafened for 1 round.",
+    "description": "The sky above you darkens in a matter of moments, swirling with ominous clouds punctuated by flashes of lighting. Each round when you Sustain the Spell, you can select one of the following effects to occur in the area.  No additional effect. effects of obscuring mist. Fog Heavy fog rolls in, concealing the area with the Rain Torrential rain falls from the sky, dousing ordinary flames. Creatures in the area take a -2 circumstance penalty to Acrobatics and Perception checks. Wind Powerful winds buffet the area in all directions. Ranged attacks take a -4 circumstance penalty, and all flying is against the wind and counts as moving through difficult terrain. In addition, once per round you can use a single action, which has the concentrate and manipulate traits, to call down a bolt of lightning, striking any target in range that you can see. You deal 10d6 electricity damage to the target; it must attempt a basic Reflex save. On a failure, it is also deafened for 1 round.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -32871,7 +33082,7 @@ module.exports=[
     "range": "30 feet",
     "targets": "1 willing living creature",
     "duration": "1 round",
-    "description": "You issue a diabolic edict, demanding the target perform a particular task and offering rewards for its fulfillment. It gains a +1 status bonus to attack rolls and skill checks related to performing the task. If it refuses to perform the task you proclaimed, it instead takes a �1 status penalty to all its attack rolls and skill checks.",
+    "description": "You issue a diabolic edict, demanding the target perform a particular task and offering rewards for its fulfillment. It gains a +1 status bonus to attack rolls and skill checks related to performing the task. If it refuses to perform the task you proclaimed, it instead takes a -1 status penalty to all its attack rolls and skill checks.",
     "components": [ "verbal" ]
   },
   {
@@ -32914,7 +33125,7 @@ module.exports=[
     "area": "5-foot burst or more",
     "saving throw": "Will",
     "duration": "1 round",
-    "description": "You sprinkle magical dust in the spell's area, making those within easier to trick. Each creature in the area must attempt a Will save. For each additional action you use Casting the Spell, the burst's radius increases by 5 feet.  \r\n**Success**  The creature is unaffected.  \r\n**Failure**  The creature can't use reactions and takes a �2 status penalty to Perception checks and Will saves.  \r\n**Critical Failure**  As failure, and the creature also takes a �1 status penalty to Perception checks and Will saves for 1 minute.  \r\n**Heightened (+3)**  The initial radius increases by 5 feet.",
+    "description": "You sprinkle magical dust in the spell's area, making those within easier to trick. Each creature in the area must attempt a Will save. For each additional action you use Casting the Spell, the burst's radius increases by 5 feet.  \r\n**Success**  The creature is unaffected.  \r\n**Failure**  The creature can't use reactions and takes a -2 status penalty to Perception checks and Will saves.  \r\n**Critical Failure**  As failure, and the creature also takes a -1 status penalty to Perception checks and Will saves for 1 minute.  \r\n**Heightened (+3)**  The initial radius increases by 5 feet.",
     "components": [ "ormoresomatic", "verbal" ]
   },
   {
@@ -33214,7 +33425,7 @@ module.exports=[
     "range": "60 feet",
     "area": "20-foot radius on the ground",
     "saving throw": "Reflex",
-    "description": "Hundreds of skeletal arms erupt from the ground in the area, clawing at creatures within and attempting to hold them in place. The skeletal arms deal 6d6 slashing damage. Each creature in the area must attempt a Reflex save.  \r\n**Critical Success**  The creature is unaffected.  \r\n**Success**  The creature takes half damage.  \r\n**Failure**  The creature takes full damage and a �10-foot circumstance penalty to its Speeds for 1 round.  \r\n**Critical Failure**  The creature takes double damage and is immobilized for 1 round or until it Escapes.  \r\n**Heightened (+1)**  The damage increases by 2d6.",
+    "description": "Hundreds of skeletal arms erupt from the ground in the area, clawing at creatures within and attempting to hold them in place. The skeletal arms deal 6d6 slashing damage. Each creature in the area must attempt a Reflex save.  \r\n**Critical Success**  The creature is unaffected.  \r\n**Success**  The creature takes half damage.  \r\n**Failure**  The creature takes full damage and a -10-foot circumstance penalty to its Speeds for 1 round.  \r\n**Critical Failure**  The creature takes double damage and is immobilized for 1 round or until it Escapes.  \r\n**Heightened (+1)**  The damage increases by 2d6.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -33302,7 +33513,7 @@ module.exports=[
     "targets": "1 creature",
     "saving throw": "Will",
     "duration": "until the start of your next turn",
-    "description": "You whisper enchanting words to deflect your foe's ire. The target must attempt a Will save.  \r\n**Critical Success**  The target is unaffected.  \r\n**Success**  The target takes a �1 circumstance penalty to attack rolls and damage rolls against you.  \r\n**Failure**  The target can't use hostile actions against you.  \r\n**Critical Failure**  The target is stunned 1 and can't use hostile actions against you.",
+    "description": "You whisper enchanting words to deflect your foe's ire. The target must attempt a Will save.  \r\n**Critical Success**  The target is unaffected.  \r\n**Success**  The target takes a -1 circumstance penalty to attack rolls and damage rolls against you.  \r\n**Failure**  The target can't use hostile actions against you.  \r\n**Critical Failure**  The target is stunned 1 and can't use hostile actions against you.",
     "components": [ "verbal" ]
   },
   {
@@ -33696,7 +33907,7 @@ module.exports=[
     "action": "2",
     "range": "120 feet",
     "targets": "1 creature",
-    "description": "You blast an icy ray. Make a spell attack roll. The ray deals cold damage equal to 1d4 + your spellcasting ability modifier.  \r\n**Critical Success**  The target takes double damage and takes a �10-foot status penalty to its Speeds for 1 round.  \r\n**Success**  The target takes normal damage.  \r\n**Heightened (+1)**  The damage increases by 1d4.",
+    "description": "You blast an icy ray. Make a spell attack roll. The ray deals cold damage equal to 1d4 + your spellcasting ability modifier.  \r\n**Critical Success**  The target takes double damage and takes a -10-foot status penalty to its Speeds for 1 round.  \r\n**Success**  The target takes normal damage.  \r\n**Heightened (+1)**  The damage increases by 1d4.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -33710,7 +33921,7 @@ module.exports=[
     "cast": "1 minute (somatic, verbal)",
     "range": "30 feet",
     "targets": "1 object",
-    "description": "You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you know whether that item is magical, and if it is, you learn the school of magic (pages 297�298). If the object is illusory, you detect this only if the effect's level is lower than the level of your read aura spell.  \r\n**Heightened (3rd)**  You can target up to 10 objects.  \r\n**Heightened (6th)**  You can target any number of objects.",
+    "description": "You focus on the target object, opening your mind to perceive magical auras. When the casting is complete, you know whether that item is magical, and if it is, you learn the school of magic (pages 297-298). If the object is illusory, you detect this only if the effect's level is lower than the level of your read aura spell.  \r\n**Heightened (3rd)**  You can target up to 10 objects.  \r\n**Heightened (6th)**  You can target any number of objects.",
     "components": [ "1minute(somatic", "verbal)" ]
   },
   {
@@ -33755,7 +33966,7 @@ module.exports=[
     "action": "2",
     "range": "30 feet",
     "targets": "1 creature",
-    "description": "A vine covered in sticky sap appears from thin air, flicking from your hand and lashing itself to the target. Attempt a spell attack against the target.  \r\n**Critical Success**  The target gains the immobilized condition and takes a �10-foot circumstance penalty to its Speeds for 1 round. It can attempt to Escape against your spell DC to remove the penalty and the immobilized condition.  \r\n**Success**  The target takes a �10-foot circumstance penalty to its Speeds for 1 round. It can attempt to Escape against your spell DC to remove the penalty.  \r\n**Failure**  The target is unaffected.  \r\n**Heightened (2nd)**  The effects last for 2 rounds.  \r\n**Heightened (4th)**  The effects last for 1 minute.",
+    "description": "A vine covered in sticky sap appears from thin air, flicking from your hand and lashing itself to the target. Attempt a spell attack against the target.  \r\n**Critical Success**  The target gains the immobilized condition and takes a -10-foot circumstance penalty to its Speeds for 1 round. It can attempt to Escape against your spell DC to remove the penalty and the immobilized condition.  \r\n**Success**  The target takes a -10-foot circumstance penalty to its Speeds for 1 round. It can attempt to Escape against your spell DC to remove the penalty.  \r\n**Failure**  The target is unaffected.  \r\n**Heightened (2nd)**  The effects last for 2 rounds.  \r\n**Heightened (4th)**  The effects last for 1 minute.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -33999,7 +34210,7 @@ module.exports=[
     "area": "4 contiguous 5-foot squares or",
     "targets": "1 object of Bulk 1 or less",
     "duration": "1 minute",
-    "description": "You conjure grease, with effects based on choosing area or target. Area All solid ground in the area is covered with grease. Each creature standing on the greasy surface must succeed at a Reflex save or an Acrobatics check against your spell DC or fall prone. Creatures using an action to move onto the greasy surface during the spell's duration must attempt either a Reflex save or an Acrobatics check to Balance. A creature that Steps or Crawls doesn't have to attempt a check or save. Target If you cast the spell on an unattended object, anyone trying to pick up the object must succeed at an Acrobatics check or Reflex save against your spell DC to do so. If you target an attended object, the creature that has the object must attempt an Acrobatics check or Reflex save. On a failure, the holder or wielder takes a �2 circumstance penalty to all checks that involve using the object; on a critical failure, the holder or wielder releases the item. The object lands in an adjacent square of the GM's choice. If you cast this spell on a worn object, the wearer gains a +2 circumstance bonus to Fortitude saves against attempts to grapple them.",
+    "description": "You conjure grease, with effects based on choosing area or target. Area All solid ground in the area is covered with grease. Each creature standing on the greasy surface must succeed at a Reflex save or an Acrobatics check against your spell DC or fall prone. Creatures using an action to move onto the greasy surface during the spell's duration must attempt either a Reflex save or an Acrobatics check to Balance. A creature that Steps or Crawls doesn't have to attempt a check or save. Target If you cast the spell on an unattended object, anyone trying to pick up the object must succeed at an Acrobatics check or Reflex save against your spell DC to do so. If you target an attended object, the creature that has the object must attempt an Acrobatics check or Reflex save. On a failure, the holder or wielder takes a -2 circumstance penalty to all checks that involve using the object; on a critical failure, the holder or wielder releases the item. The object lands in an adjacent square of the GM's choice. If you cast this spell on a worn object, the wearer gains a +2 circumstance bonus to Fortitude saves against attempts to grapple them.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -34237,7 +34448,7 @@ module.exports=[
     "cast": "somatic, verbal",
     "action": "2",
     "duration": "10 minutes",
-    "description": "You transform into a the battle form of a Tiny animal, such as a cat, insect, lizard, or rat. You can decide the specific type of animal (such as a rat or praying mantis), but this has no effect on the form's Size or statistics. While in this form, you gain the animal trait. You can Dismiss the spell. You gain the following statistics and abilities: AC = 15 + your level. Ignore your armor's check penalty and Speed reduction. Speed 10 feet. Weakness 5 to physical damage. (If you take physical damage in this form, you take 5 additional damage.) Low-light vision and imprecise scent 30 feet. Acrobatics and Stealth modifiers of +10, unless your own modifier is higher; Athletics modifier �4.  \r\n**Heightened (4th)**  You can turn into a flying creature, such as a bird, which grants you a fly Speed of 20 feet.",
+    "description": "You transform into a the battle form of a Tiny animal, such as a cat, insect, lizard, or rat. You can decide the specific type of animal (such as a rat or praying mantis), but this has no effect on the form's Size or statistics. While in this form, you gain the animal trait. You can Dismiss the spell. You gain the following statistics and abilities: AC = 15 + your level. Ignore your armor's check penalty and Speed reduction. Speed 10 feet. Weakness 5 to physical damage. (If you take physical damage in this form, you take 5 additional damage.) Low-light vision and imprecise scent 30 feet. Acrobatics and Stealth modifiers of +10, unless your own modifier is higher; Athletics modifier -4.  \r\n**Heightened (4th)**  You can turn into a flying creature, such as a bird, which grants you a fly Speed of 20 feet.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -34285,7 +34496,7 @@ module.exports=[
     "range": "30 feet",
     "area": "5-foot burst",
     "saving throw": "Will",
-    "description": "Each creature in the area becomes drowsy and might fall asleep. A creature that falls unconscious from this spell doesn't fall prone or release what it's holding. This spell doesn't prevent creatures from waking up due to a successful Perception check, limiting its utility in combat.  \r\n**Critical Success**  The creature is unaffected.  \r\n**Success**  The creature takes a �1 status penalty to Perception checks for 1 round.  \r\n**Failure**  The creature falls unconscious. If it's still unconscious after 1 minute, it wakes up automatically.  \r\n**Critical Failure**  The creature falls unconscious. If it's still unconscious after 1 hour, it wakes up automatically.  \r\n**Heightened (4th)**  The creatures fall unconscious for 1 round on a failure or 1 minute on a critical failure. They fall prone and release what they're holding, and they can't attempt Perception checks to wake up. When the duration ends, the creature is sleeping normally instead of automatically waking up.",
+    "description": "Each creature in the area becomes drowsy and might fall asleep. A creature that falls unconscious from this spell doesn't fall prone or release what it's holding. This spell doesn't prevent creatures from waking up due to a successful Perception check, limiting its utility in combat.  \r\n**Critical Success**  The creature is unaffected.  \r\n**Success**  The creature takes a -1 status penalty to Perception checks for 1 round.  \r\n**Failure**  The creature falls unconscious. If it's still unconscious after 1 minute, it wakes up automatically.  \r\n**Critical Failure**  The creature falls unconscious. If it's still unconscious after 1 hour, it wakes up automatically.  \r\n**Heightened (4th)**  The creatures fall unconscious for 1 round on a failure or 1 minute on a critical failure. They fall prone and release what they're holding, and they can't attempt Perception checks to wake up. When the duration ends, the creature is sleeping normally instead of automatically waking up.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -34316,7 +34527,7 @@ module.exports=[
     "action": "3",
     "range": "30 feet",
     "duration": "sustained up to 1 minute",
-    "description": "You conjure an animal to fight for you. You summon a common creature that has the animal trait and whose level is �1. Heightening the spell increases the maximum level of creature you can summon.  \r\n**Heightened (2nd)**  Level 1  \r\n**Heightened (3rd)**  Level 2  \r\n**Heightened (4th)**  Level 3  \r\n**Heightened (5th)**  Level 5  \r\n**Heightened (6th)**  Level 7  \r\n**Heightened (7th)**  Level 9  \r\n**Heightened (8th)**  Level 11  \r\n**Heightened (9th)**  Level 13  \r\n**Heightened (10th)**  Level 15",
+    "description": "You conjure an animal to fight for you. You summon a common creature that has the animal trait and whose level is -1. Heightening the spell increases the maximum level of creature you can summon.  \r\n**Heightened (2nd)**  Level 1  \r\n**Heightened (3rd)**  Level 2  \r\n**Heightened (4th)**  Level 3  \r\n**Heightened (5th)**  Level 5  \r\n**Heightened (6th)**  Level 7  \r\n**Heightened (7th)**  Level 9  \r\n**Heightened (8th)**  Level 11  \r\n**Heightened (9th)**  Level 13  \r\n**Heightened (10th)**  Level 15",
     "components": [ "material", "somatic", "verbal" ]
   },
   {
@@ -34330,7 +34541,7 @@ module.exports=[
     "cast": "material, somatic, verbal",
     "action": "3",
     "duration": "sustained up to 1 minute",
-    "description": "You conjure a construct to fight for you. This works like summon animal, except you summon a common creature that has the construct trait and whose level is �1.  \r\n**Heightened (2nd)**  Level 1  \r\n**Heightened (3rd)**  Level 2  \r\n**Heightened (4th)**  Level 3  \r\n**Heightened (5th)**  Level 5  \r\n**Heightened (6th)**  Level 7  \r\n**Heightened (7th)**  Level 9  \r\n**Heightened (8th)**  Level 11  \r\n**Heightened (9th)**  Level 13  \r\n**Heightened (10th)**  Level 15",
+    "description": "You conjure a construct to fight for you. This works like summon animal, except you summon a common creature that has the construct trait and whose level is -1.  \r\n**Heightened (2nd)**  Level 1  \r\n**Heightened (3rd)**  Level 2  \r\n**Heightened (4th)**  Level 3  \r\n**Heightened (5th)**  Level 5  \r\n**Heightened (6th)**  Level 7  \r\n**Heightened (7th)**  Level 9  \r\n**Heightened (8th)**  Level 11  \r\n**Heightened (9th)**  Level 13  \r\n**Heightened (10th)**  Level 15",
     "components": [ "material", "somatic", "verbal" ]
   },
   {
@@ -34359,7 +34570,7 @@ module.exports=[
     "action": "2",
     "range": "60 feet",
     "duration": "sustained",
-    "description": "You summon an unseen servant, which you can command as part of Sustaining the Spell. It serves you until its Hit Points are reduced to 0, at which point the spell ends, or until you stop Sustaining the Spell. The unseen servant gains the summoned trait.Unseen ServantCreature -1No AlignmentMedium  \r\n**AC**  13,   \r\n**Fort**  +0,   \r\n**Ref**  +4,   \r\n**Will**  +0  \r\n**HP**  4;   \r\n**Immunities**  disease, mental, non-magical attacks, paralysis, poison, precision, unconscious;\n;   \r\n**Resistances**  all damage 5 (except force or ghost touch)  \r\n**Speed**  fly 30 feet  \r\n**Force Body**  An unseen servant�s physical body is made of force. It can�t use attack actions. It can move and use Interact actions to do things such as fetch objects, open unstuck or unlocked doors, hold chairs, and clean. It can�t pass through solid objects.",
+    "description": "You summon an unseen servant, which you can command as part of Sustaining the Spell. It serves you until its Hit Points are reduced to 0, at which point the spell ends, or until you stop Sustaining the Spell. The unseen servant gains the summoned trait.Unseen ServantCreature -1No AlignmentMedium  \r\n**AC**  13,   \r\n**Fort**  +0,   \r\n**Ref**  +4,   \r\n**Will**  +0  \r\n**HP**  4;   \r\n**Immunities**  disease, mental, non-magical attacks, paralysis, poison, precision, unconscious;\n;   \r\n**Resistances**  all damage 5 (except force or ghost touch)  \r\n**Speed**  fly 30 feet  \r\n**Force Body**  An unseen servant's physical body is made of force. It can't use attack actions. It can move and use Interact actions to do things such as fetch objects, open unstuck or unlocked doors, hold chairs, and clean. It can't pass through solid objects.",
     "perception": "+0",
     "languages": "understands its creator",
     "skills": "Stealth +8",
@@ -34369,7 +34580,7 @@ module.exports=[
     "int": "-5,",
     "wis": "+0,",
     "cha": "+0",
-    "invisible": "An unseen servant is invisible, though it normally doesn�t Sneak, so it is usually only hidden.",
+    "invisible": "An unseen servant is invisible, though it normally doesn't Sneak, so it is usually only hidden.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -34661,7 +34872,7 @@ module.exports=[
     "action": "2",
     "range": "500 feet",
     "duration": "sustained",
-    "description": "You create an illusory image of a Large or smaller creature. It generates the appropriate sounds, smells, and feels believable to the touch. If you and the image are ever farther than 500 feet apart, the spell ends. The image can't speak, but you can use your actions to speak through the creature, with the spell disguising your voice as appropriate. You might need to attempt a Deception or Performance check to mimic the creature, as determined by the GM. This is especially likely if you're trying to imitate a specific person and engage with someone that person knows. In combat, the illusion can use 2 actions per turn, which it uses when you Sustain the Spell. It uses your spell attack roll for attack rolls and your spell DC for its AC. Its saving throw modifiers are equal to your spell DC � 10. It is substantial enough that it can flank other creatures. If the image is hit by an attack or fails a save, the spell ends. The illusion can cause damage by making the target believe the illusion's attacks are real, but it cannot otherwise directly affect the physical world. If the illusory creature hits with a Strike, the target takes mental damage equal to 1d4 plus your spellcasting ability modifier. This is a mental effect. The illusion's Strikes are nonlethal. If the damage doesn't correspond to the image of the monster�for example, if an illusory Large dragon deals only 5 damage�the GM might allow the target to attempt a Perception check to disbelieve the spell as a free action. Any relevant resistances and weaknesses apply if the target thinks they do, as judged by the GM. For example, if the illusion wields a warhammer and attacks a creature resistant to bludgeoning damage, the creature would take less mental damage. However, illusory damage does not deactivate regeneration or trigger other effects that require a certain damage type. The GM should track illusory damage dealt by the illusion. Any creature that touches the image or uses the Seek action to examine it can attempt to disbelieve your illusion. When a creature disbelieves the illusion, it recovers from half the damage it had taken from it (if any) and doesn't take any further damage from it.  \r\n**Heightened (+1)**  The damage of the image's Strikes increases by 1d4, and the maximum size of creature you can create increases by one (to a maximum of Gargantuan).",
+    "description": "You create an illusory image of a Large or smaller creature. It generates the appropriate sounds, smells, and feels believable to the touch. If you and the image are ever farther than 500 feet apart, the spell ends. The image can't speak, but you can use your actions to speak through the creature, with the spell disguising your voice as appropriate. You might need to attempt a Deception or Performance check to mimic the creature, as determined by the GM. This is especially likely if you're trying to imitate a specific person and engage with someone that person knows. In combat, the illusion can use 2 actions per turn, which it uses when you Sustain the Spell. It uses your spell attack roll for attack rolls and your spell DC for its AC. Its saving throw modifiers are equal to your spell DC - 10. It is substantial enough that it can flank other creatures. If the image is hit by an attack or fails a save, the spell ends. The illusion can cause damage by making the target believe the illusion's attacks are real, but it cannot otherwise directly affect the physical world. If the illusory creature hits with a Strike, the target takes mental damage equal to 1d4 plus your spellcasting ability modifier. This is a mental effect. The illusion's Strikes are nonlethal. If the damage doesn't correspond to the image of the monster�for example, if an illusory Large dragon deals only 5 damage�the GM might allow the target to attempt a Perception check to disbelieve the spell as a free action. Any relevant resistances and weaknesses apply if the target thinks they do, as judged by the GM. For example, if the illusion wields a warhammer and attacks a creature resistant to bludgeoning damage, the creature would take less mental damage. However, illusory damage does not deactivate regeneration or trigger other effects that require a certain damage type. The GM should track illusory damage dealt by the illusion. Any creature that touches the image or uses the Seek action to examine it can attempt to disbelieve your illusion. When a creature disbelieves the illusion, it recovers from half the damage it had taken from it (if any) and doesn't take any further damage from it.  \r\n**Heightened (+1)**  The damage of the image's Strikes increases by 1d4, and the maximum size of creature you can create increases by one (to a maximum of Gargantuan).",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -34723,7 +34934,7 @@ module.exports=[
     "cast": "somatic, verbal",
     "action": "2",
     "duration": "1 minute",
-    "description": "Three illusory images of you swirl about your space, potentially causing those who attack you to hit one of the images instead of you. Any attack that would hit you has a random chance of hitting one of your images instead of you. If all three images remain, there is a 1 in 4 chance of hitting you (1 on 1d4). With two images remaining, there is a 1 in 3 chance of hitting you (1�2 on 1d6). With only one image, the chances are 1 in 2 (1�3 on 1d6). Once an image is hit, it is destroyed. If an attack roll fails to hit your AC but doesn't critically fail, it destroys an image but has no additional effect (even if the attack would normally have an effect on a failure). If an attack roll is a critical success and would hit one of the images, one of the images is destroyed and the attack roll becomes a success against you. Once all the images are destroyed, the spell ends.",
+    "description": "Three illusory images of you swirl about your space, potentially causing those who attack you to hit one of the images instead of you. Any attack that would hit you has a random chance of hitting one of your images instead of you. If all three images remain, there is a 1 in 4 chance of hitting you (1 on 1d4). With two images remaining, there is a 1 in 3 chance of hitting you (1-2 on 1d6). With only one image, the chances are 1 in 2 (1-3 on 1d6). Once an image is hit, it is destroyed. If an attack roll fails to hit your AC but doesn't critically fail, it destroys an image but has no additional effect (even if the attack would normally have an effect on a failure). If an attack roll is a critical success and would hit one of the images, one of the images is destroyed and the attack roll becomes a success against you. Once all the images are destroyed, the spell ends.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -34938,7 +35149,7 @@ module.exports=[
     "range": "30 feet",
     "area": "10-foot burst",
     "duration": "1 minute",
-    "description": "You create a sticky web in the area that impedes creatures' movement each time they try to move through it. Squares filled with the web are difficult terrain. Each square can be cleared of the web by a single attack or effect that deals at least 5 slashing damage or 1 fire damage. A square has AC 5, and it automatically fails its saving throws. Each time a creature in the web begins to use a move action or enters the web during a move action, it must attempt an Athletics check or Reflex save against your spell DC to avoid taking a circumstance penalty to its Speeds or becoming immobilized. A creature that gets out of the web ceases to take a circumstance penalty to its Speed from the web.  \r\n**Critical Success**  The creature is unaffected, and it doesn't need to attempt further Athletics checks or saving throws against the web this turn. If it used an Athletics check, it clears the web from every square it leaves after leaving the square.  \r\n**Success**  The creature is unaffected during its action. If it used an Athletics check, it clears the web from every square it leaves after leaving the square.  \r\n**Failure**  The creature takes a �10-foot circumstance penalty to its Speeds until the start of its next turn.  \r\n**Critical Failure**  The creature is immobilized until the start of its next turn, after which it takes a �10-foot circumstance penalty to its Speeds for 1 round. It can attempt to Escape to remove its immobilized condition.  \r\n**Heightened (4th)**  The spell's area increases to a 20-foot burst, and its range increases to 60 feet.",
+    "description": "You create a sticky web in the area that impedes creatures' movement each time they try to move through it. Squares filled with the web are difficult terrain. Each square can be cleared of the web by a single attack or effect that deals at least 5 slashing damage or 1 fire damage. A square has AC 5, and it automatically fails its saving throws. Each time a creature in the web begins to use a move action or enters the web during a move action, it must attempt an Athletics check or Reflex save against your spell DC to avoid taking a circumstance penalty to its Speeds or becoming immobilized. A creature that gets out of the web ceases to take a circumstance penalty to its Speed from the web.  \r\n**Critical Success**  The creature is unaffected, and it doesn't need to attempt further Athletics checks or saving throws against the web this turn. If it used an Athletics check, it clears the web from every square it leaves after leaving the square.  \r\n**Success**  The creature is unaffected during its action. If it used an Athletics check, it clears the web from every square it leaves after leaving the square.  \r\n**Failure**  The creature takes a -10-foot circumstance penalty to its Speeds until the start of its next turn.  \r\n**Critical Failure**  The creature is immobilized until the start of its next turn, after which it takes a -10-foot circumstance penalty to its Speeds for 1 round. It can attempt to Escape to remove its immobilized condition.  \r\n**Heightened (4th)**  The spell's area increases to a 20-foot burst, and its range increases to 60 feet.",
     "components": [ "material", "somatic", "verbal" ]
   },
   {
@@ -35160,7 +35371,7 @@ module.exports=[
     "range": "touch",
     "targets": "1 unatteded object or willing creature",
     "duration": "5 minutes",
-    "description": "You defy gravity and levitate the target 5 feet off the ground. For the duration of the spell, you can move the target up or down 10 feet with a single action, which has the concentrate trait. A creature floating in the air from levitate takes a �2 circumstance penalty to attack rolls. A floating creature can spend an Interact action to stabilize itself and negate this penalty for the remainder of its turn. If the target is adjacent to a fixed object or terrain of suitable stability, it can move across the surface by climbing (if the surface is vertical, like a wall) or crawling (if the surface is horizontal, such as a ceiling). The GM determines which surfaces can be climbed or crawled across.",
+    "description": "You defy gravity and levitate the target 5 feet off the ground. For the duration of the spell, you can move the target up or down 10 feet with a single action, which has the concentrate trait. A creature floating in the air from levitate takes a -2 circumstance penalty to attack rolls. A floating creature can spend an Interact action to stabilize itself and negate this penalty for the remainder of its turn. If the target is adjacent to a fixed object or terrain of suitable stability, it can move across the surface by climbing (if the surface is vertical, like a wall) or crawling (if the surface is horizontal, such as a ceiling). The GM determines which surfaces can be climbed or crawled across.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -35190,7 +35401,7 @@ module.exports=[
     "range": "500 feet",
     "targets": "1 specific object or type of object",
     "duration": "sustained",
-    "description": "You learn the direction to the target (if you picked a specific object, such as �my mother's sword�) or the nearest target (if you picked a type of object, such as �swords�). If the target is a specific object, you must have observed it directly with your own senses. If it's a type of object, you still need to have an accurate mental image of the type of object. If there's lead or running water between you and the target, this spell can't locate the object. This means you might find a type of object farther away if the nearest one is behind lead or running water.  \r\n**Heightened (5th)**  You can target a specific creature or ancestry instead of an object, but you must have met or seen up close the creature or ancestry you want to target.",
+    "description": "You learn the direction to the target (if you picked a specific object, such as \"my mother's sword\") or the nearest target (if you picked a type of object, such as \"swords\"). If the target is a specific object, you must have observed it directly with your own senses. If it's a type of object, you still need to have an accurate mental image of the type of object. If there's lead or running water between you and the target, this spell can't locate the object. This means you might find a type of object farther away if the nearest one is behind lead or running water.  \r\n**Heightened (5th)**  You can target a specific creature or ancestry instead of an object, but you must have met or seen up close the creature or ancestry you want to target.",
     "components": [ "10minutes(material", "somatic", "verbal)" ]
   },
   {
@@ -35348,7 +35559,7 @@ module.exports=[
     "action": "2",
     "range": "120 feet",
     "duration": "1 minute",
-    "description": "You create a barrier of gusting winds that hinders anything moving through it. The wall of swirling winds is 5 feet thick, 60 feet long, and 30 feet high. The wall stands vertically, but you can shape its path. Though the wall of wind distorts the air, it does not hamper sight. The wall has the following effects. Ammunition from physical ranged attacks�such as arrows, bolts, sling bullets, and other objects of similar size�can't pass through the wall. Attacks with bigger ranged weapons, such as javelins, take a �2 circumstance penalty to their attack rolls if their paths pass through the wall. Massive ranged weapons and spell effects that don't create physical objects pass through the wall with no penalty. The wall is difficult terrain to creatures attempting to move overland through it. Gases, including creatures in gaseous form, can't pass through the wall. A creature that attempts to fly through the wall using a move action must attempt a Fortitude save.  \r\n**Critical Success**  The creature can move through the wall normally this turn.  \r\n**Success**  The flying creature can move through the wall this turn, but the wall is difficult terrain.  \r\n**Failure**  The wall stops the movement of the flying creature, and any remaining movement from its current action is wasted.  \r\n**Critical Failure**  As failure, and the creature is pushed 10 feet away from the wall.",
+    "description": "You create a barrier of gusting winds that hinders anything moving through it. The wall of swirling winds is 5 feet thick, 60 feet long, and 30 feet high. The wall stands vertically, but you can shape its path. Though the wall of wind distorts the air, it does not hamper sight. The wall has the following effects. Ammunition from physical ranged attacks�such as arrows, bolts, sling bullets, and other objects of similar size�can't pass through the wall. Attacks with bigger ranged weapons, such as javelins, take a -2 circumstance penalty to their attack rolls if their paths pass through the wall. Massive ranged weapons and spell effects that don't create physical objects pass through the wall with no penalty. The wall is difficult terrain to creatures attempting to move overland through it. Gases, including creatures in gaseous form, can't pass through the wall. A creature that attempts to fly through the wall using a move action must attempt a Fortitude save.  \r\n**Critical Success**  The creature can move through the wall normally this turn.  \r\n**Success**  The flying creature can move through the wall this turn, but the wall is difficult terrain.  \r\n**Failure**  The wall stops the movement of the flying creature, and any remaining movement from its current action is wasted.  \r\n**Critical Failure**  As failure, and the creature is pushed 10 feet away from the wall.",
     "components": [ "material", "somatic", "verbal" ]
   },
   {
@@ -35824,7 +36035,7 @@ module.exports=[
     "range": "30 feet",
     "targets": "1 creature that isn't on its home plane",
     "saving throw": "Will",
-    "description": "You send the target back to its home plane. The target must attempt a Will save. You can spend an extra action while Casting this Spell and add a material component to give the creature a �2 circumstance penalty to its save. The component must be a specially gathered object that is anathema to the creature, and not from a spell component pouch. This spell fails if you aren't on your home plane when you cast it.  \r\n**Critical Success**  The target resists being banished and you are stunned 1.  \r\n**Success**  The target resists being banished.  \r\n**Failure**  The target is banished.  \r\n**Critical Failure**  The target is banished and can't return by any means to the plane it's banished from for 1 week.  \r\n**Heightened (9th)**  You can target up to 10 creatures. The extra material component affects targets to which it is anathema.",
+    "description": "You send the target back to its home plane. The target must attempt a Will save. You can spend an extra action while Casting this Spell and add a material component to give the creature a -2 circumstance penalty to its save. The component must be a specially gathered object that is anathema to the creature, and not from a spell component pouch. This spell fails if you aren't on your home plane when you cast it.  \r\n**Critical Success**  The target resists being banished and you are stunned 1.  \r\n**Success**  The target resists being banished.  \r\n**Failure**  The target is banished.  \r\n**Critical Failure**  The target is banished and can't return by any means to the plane it's banished from for 1 week.  \r\n**Heightened (9th)**  You can target up to 10 creatures. The extra material component affects targets to which it is anathema.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -35855,7 +36066,7 @@ module.exports=[
     "action": "3",
     "range": "120 feet",
     "duration": "10 minutes",
-    "description": "You create an opaque wall of light in a single vibrant color. The wall is straight and vertical, stretching 60 feet long and 30 feet high. If the wall would pass through a creature, the spell is lost. The wall sheds bright light for 20 feet on each side, and dim light for the next 20 feet. You can ignore the wall's effects. Roll 1d4 to determine the color of the wall. Each color has a particular effect on items, effects, or creatures that attempt to pass through. Chromatic wall can't be counteracted normally; rather, each color is automatically counteracted when targeted by a specific spell, even if that spell's level is lower than that of chromatic wall. Red The wall destroys ranged weapon ammunition (such as arrows and crossbow bolts) that would pass through, and it deals 20 fire damage to anyone passing through, with a basic Reflex save. Cone of cold can counteract a red chromatic wall. Orange The wall destroys thrown weapons that would pass through, and it deals 25 acid damage to anyone passing through, with a basic Reflex save. Gust of wind can counteract an orange chromatic wall. Yellow The wall stops acid, cold, electricity, fire, force, negative, positive, and sonic effects from passing through, and it deals 30 electricity damage to anyone passing through, with a basic Reflex save. Disintegrate can counteract a yellow chromatic wall. Green The wall stops toxins, gases, and breath weapons from passing through. It deals 10 poison damage to anyone passing through and makes them enfeebled 1 for 1 minute. A basic Fortitude save reduces the damage and negates the enfeebled condition on a success. Passwall can counteract a green chromatic wall.  \r\n**Heightened (7th)**  The spell's duration increases to 1 hour. Roll 1d8 to determine the wall's color; the results for 5�8 are below. A red, orange, yellow, or green wall deals an extra 10 damage. Blue The wall stops auditory, petrification, and visual effects from passing through, and creatures passing through are subject to the effects of flesh to stone. Magic missile can counteract a blue chromatic wall. Indigo The wall stops divination and mental effects from passing through, and those passing through are subject to the effects of warp mind. Searing light can counteract an indigo chromatic wall. Violet The wall prevents spells from targeting the other side (area effects still cross as normal). Creatures passing through must succeed at a Will save or they are slowed 1 for 1 minute; on a critical failure, the creature is instead sent to another plane, with the effect of plane shift . Dispel magic can counteract a violet chromatic wall. Reroll, and creatures that pass through the wall take a �2 circumstance penalty to their saves.",
+    "description": "You create an opaque wall of light in a single vibrant color. The wall is straight and vertical, stretching 60 feet long and 30 feet high. If the wall would pass through a creature, the spell is lost. The wall sheds bright light for 20 feet on each side, and dim light for the next 20 feet. You can ignore the wall's effects. Roll 1d4 to determine the color of the wall. Each color has a particular effect on items, effects, or creatures that attempt to pass through. Chromatic wall can't be counteracted normally; rather, each color is automatically counteracted when targeted by a specific spell, even if that spell's level is lower than that of chromatic wall. Red The wall destroys ranged weapon ammunition (such as arrows and crossbow bolts) that would pass through, and it deals 20 fire damage to anyone passing through, with a basic Reflex save. Cone of cold can counteract a red chromatic wall. Orange The wall destroys thrown weapons that would pass through, and it deals 25 acid damage to anyone passing through, with a basic Reflex save. Gust of wind can counteract an orange chromatic wall. Yellow The wall stops acid, cold, electricity, fire, force, negative, positive, and sonic effects from passing through, and it deals 30 electricity damage to anyone passing through, with a basic Reflex save. Disintegrate can counteract a yellow chromatic wall. Green The wall stops toxins, gases, and breath weapons from passing through. It deals 10 poison damage to anyone passing through and makes them enfeebled 1 for 1 minute. A basic Fortitude save reduces the damage and negates the enfeebled condition on a success. Passwall can counteract a green chromatic wall.  \r\n**Heightened (7th)**  The spell's duration increases to 1 hour. Roll 1d8 to determine the wall's color; the results for 5-8 are below. A red, orange, yellow, or green wall deals an extra 10 damage. Blue The wall stops auditory, petrification, and visual effects from passing through, and creatures passing through are subject to the effects of flesh to stone. Magic missile can counteract a blue chromatic wall. Indigo The wall stops divination and mental effects from passing through, and those passing through are subject to the effects of warp mind. Searing light can counteract an indigo chromatic wall. Violet The wall prevents spells from targeting the other side (area effects still cross as normal). Creatures passing through must succeed at a Will save or they are slowed 1 for 1 minute; on a critical failure, the creature is instead sent to another plane, with the effect of plane shift . Dispel magic can counteract a violet chromatic wall. Reroll, and creatures that pass through the wall take a -2 circumstance penalty to their saves.",
     "components": [ "material", "somatic", "verbal" ]
   },
   {
@@ -35996,7 +36207,7 @@ module.exports=[
     "range": "30 feet",
     "targets": "1 creature",
     "duration": "1 hour",
-    "description": "The target consistently detects one thing as another, can't detect something that's there, or detects something that's not there, though it doesn't alter their beliefs. You choose which of these effects applies, and you determine the specifics of the hallucination. For example, you could make the target see all elves as humans, be unable to detect the presence of their brother, see their beloved pocket watch on their person even when it isn't, or see a tower in the center of town. The target can attempt an initial Will save, with effects below. They also receive a Will save to disbelieve the hallucination every time they Seek or directly interact with the hallucination. For example, the target could attempt to disbelieve the hallucination each time they interacted with an elf, bumped into their brother accidentally, tried to check their pocket watch, or studied the tower. The target can attempt to disbelieve with a large circumstance bonus in situations determined by the GM, such as if the target attempted to climb the nonexistent tower.  \r\n**Critical Success**  The creature is unaffected.  \r\n**Success**  The creature perceives what you chose until it disbelieves, but it knows what the hallucination is.  \r\n**Failure**  The creature perceives what you chose until it disbelieves.  \r\n**Critical Failure**  The creature perceives what you chose until it disbelieves, and it trusts its false senses, taking a �4 circumstance penalty to saves to disbelieve.  \r\n**Heightened (6th)**  Choose to either target up to 10 creatures or change the spell's duration to until the next time you make your daily preparations.  \r\n**Heightened (8th)**  Choose to either target any number of creatures or change the spell's duration to unlimited.",
+    "description": "The target consistently detects one thing as another, can't detect something that's there, or detects something that's not there, though it doesn't alter their beliefs. You choose which of these effects applies, and you determine the specifics of the hallucination. For example, you could make the target see all elves as humans, be unable to detect the presence of their brother, see their beloved pocket watch on their person even when it isn't, or see a tower in the center of town. The target can attempt an initial Will save, with effects below. They also receive a Will save to disbelieve the hallucination every time they Seek or directly interact with the hallucination. For example, the target could attempt to disbelieve the hallucination each time they interacted with an elf, bumped into their brother accidentally, tried to check their pocket watch, or studied the tower. The target can attempt to disbelieve with a large circumstance bonus in situations determined by the GM, such as if the target attempted to climb the nonexistent tower.  \r\n**Critical Success**  The creature is unaffected.  \r\n**Success**  The creature perceives what you chose until it disbelieves, but it knows what the hallucination is.  \r\n**Failure**  The creature perceives what you chose until it disbelieves.  \r\n**Critical Failure**  The creature perceives what you chose until it disbelieves, and it trusts its false senses, taking a -4 circumstance penalty to saves to disbelieve.  \r\n**Heightened (6th)**  Choose to either target up to 10 creatures or change the spell's duration to until the next time you make your daily preparations.  \r\n**Heightened (8th)**  Choose to either target any number of creatures or change the spell's duration to unlimited.",
     "components": [ "material", "somatic" ]
   },
   {
@@ -36043,7 +36254,7 @@ module.exports=[
     "targets": "1 creature",
     "saving throw": "Will",
     "duration": "sustained up to 1 minute",
-    "description": "You cast your thoughts through a creature's mind, sifting for information. You access the target's memories and knowledge unless it fends you off with a Will save.  \r\n**Success**  The target is unaffected.  \r\n**Failure**  Each round of the spell's duration, you can Sustain the Spell to ask a different question and attempt to uncover the answer. For each question, the target can attempt a Deception check against your spell DC; if the target succeeds, you don't learn the answer, and on a critical success, the target gives you a false answer that you believe is truthful Once you've asked the target a given question, asking it again, even with a separate casting of mind probe, produces the same result.  \r\n**Critical Failure**  As failure, and the target takes a �4 circumstance penalty to Deception checks against your questions.",
+    "description": "You cast your thoughts through a creature's mind, sifting for information. You access the target's memories and knowledge unless it fends you off with a Will save.  \r\n**Success**  The target is unaffected.  \r\n**Failure**  Each round of the spell's duration, you can Sustain the Spell to ask a different question and attempt to uncover the answer. For each question, the target can attempt a Deception check against your spell DC; if the target succeeds, you don't learn the answer, and on a critical success, the target gives you a false answer that you believe is truthful Once you've asked the target a given question, asking it again, even with a separate casting of mind probe, produces the same result.  \r\n**Critical Failure**  As failure, and the target takes a -4 circumstance penalty to Deception checks against your questions.",
     "components": [ "1minute(material", "somatic", "verbal)" ]
   },
   {
@@ -36683,7 +36894,7 @@ module.exports=[
     "range": "30 feet",
     "targets": "1 creature",
     "duration": "varies",
-    "description": "You utter an arcane word of power that can make the target blinded upon hearing it. Once targeted, the target is then temporarily immune for 10 minutes. The effect of the spell depends on the target's level.   \r\n**11th or Lower**  The target is blinded permanently.   \r\n**12th�13th**  The target is blinded for 1d4 minutes.   \r\n**14th or Higher**  The target is dazzled for 1 minute.  \r\n**Heightened (+1)**  The levels at which each outcome applies increase by 2.",
+    "description": "You utter an arcane word of power that can make the target blinded upon hearing it. Once targeted, the target is then temporarily immune for 10 minutes. The effect of the spell depends on the target's level.   \r\n**11th or Lower**  The target is blinded permanently.   \r\n**12th-13th**  The target is blinded for 1d4 minutes.   \r\n**14th or Higher**  The target is dazzled for 1 minute.  \r\n**Heightened (+1)**  The levels at which each outcome applies increase by 2.",
     "components": [ "verbal" ]
   },
   {
@@ -36850,7 +37061,7 @@ module.exports=[
     "range": "500 feet",
     "area": "60-foot burst",
     "duration": "1 round",
-    "description": "You shake the ground, topple creatures into fissures, and collapse structures. The GM might add additional effects in certain areas. Cliffs might collapse, causing creatures to fall, or a lake might drain as fissures open up below its surface, leaving a morass of quicksand. Shaking Ground The ground is difficult terrain, and creatures on it take a �2 circumstance penalty to attack rolls, AC, and skill checks. Fissures Each creature on the ground must attempt a Reflex save at the start of its turn to keep its footing and avoid falling into 40-foot-deep fissures that open beneath it. The fissures are permanent, and their sides require DC 15 Athletics to Climb. Collapse Structures and ceilings might collapse. The GM rolls a flat check for each (DC 16 for a sturdy structure, DC 14 for an average structure and most natural formations, DC 9 for a shoddy structure, all adjusted higher or lower as the GM sees fit). A collapse deals 11d6 bludgeoning damage; each creature caught in a collapse must attempt a Reflex save to avoid it.  \r\n**Critical Success**  The creature takes half the collapse damage.  \r\n**Success**  The creature takes half the collapse damage and falls prone.  \r\n**Failure**  The creature takes the full collapse damage and falls prone.  \r\n**Critical Failure**  The creature takes the full collapse damage and falls into a fissure.  \r\n**Heightened (10th)**  You create a massive earthquake that can devastate a settlement. The range increases to half a mile and the area to a quarter-mile burst.",
+    "description": "You shake the ground, topple creatures into fissures, and collapse structures. The GM might add additional effects in certain areas. Cliffs might collapse, causing creatures to fall, or a lake might drain as fissures open up below its surface, leaving a morass of quicksand. Shaking Ground The ground is difficult terrain, and creatures on it take a -2 circumstance penalty to attack rolls, AC, and skill checks. Fissures Each creature on the ground must attempt a Reflex save at the start of its turn to keep its footing and avoid falling into 40-foot-deep fissures that open beneath it. The fissures are permanent, and their sides require DC 15 Athletics to Climb. Collapse Structures and ceilings might collapse. The GM rolls a flat check for each (DC 16 for a sturdy structure, DC 14 for an average structure and most natural formations, DC 9 for a shoddy structure, all adjusted higher or lower as the GM sees fit). A collapse deals 11d6 bludgeoning damage; each creature caught in a collapse must attempt a Reflex save to avoid it.  \r\n**Critical Success**  The creature takes half the collapse damage.  \r\n**Success**  The creature takes half the collapse damage and falls prone.  \r\n**Failure**  The creature takes the full collapse damage and falls prone.  \r\n**Critical Failure**  The creature takes the full collapse damage and falls into a fissure.  \r\n**Heightened (10th)**  You create a massive earthquake that can devastate a settlement. The range increases to half a mile and the area to a quarter-mile burst.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -36943,7 +37154,7 @@ module.exports=[
     "range": "30 feet",
     "targets": "1 creature",
     "duration": "varies",
-    "description": "You stun the target with an arcane word of power. Once targeted, the target is then temporarily immune for 10 minutes. The effect of the spell depends on the target's level. 13th or Lower The target is stunned for 1d6 rounds. 14th�15th The target is stunned for 1 round. 16th or Higher The target is stunned 1.  \r\n**Heightened (+1)**  The levels at which each outcome applies increase by 2.",
+    "description": "You stun the target with an arcane word of power. Once targeted, the target is then temporarily immune for 10 minutes. The effect of the spell depends on the target's level. 13th or Lower The target is stunned for 1d6 rounds. 14th-15th The target is stunned for 1 round. 16th or Higher The target is stunned 1.  \r\n**Heightened (+1)**  The levels at which each outcome applies increase by 2.",
     "components": [ "verbal" ]
   },
   {
@@ -37360,7 +37571,7 @@ module.exports=[
     "targets": "enemies in the area",
     "saving throw": "Will",
     "duration": "1 minute",
-    "description": "You fill the minds of your enemies with doubt. Targets that fail their Will saves take a �1 status penalty to attack rolls as long as they are in the area. Once per turn, starting the turn after you cast bane, you can use a single action, which has the concentrate trait, to increase the emanation's radius by 5 feet and force enemies in the area that weren't yet affected to attempt another saving throw. Bane can counteract bless.",
+    "description": "You fill the minds of your enemies with doubt. Targets that fail their Will saves take a -1 status penalty to attack rolls as long as they are in the area. Once per turn, starting the turn after you cast bane, you can use a single action, which has the concentrate trait, to increase the emanation's radius by 5 feet and force enemies in the area that weren't yet affected to attempt another saving throw. Bane can counteract bless.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -37526,7 +37737,7 @@ module.exports=[
     "source": "Core Rulebook pg. 318",
     "traditions": [ "divine", "occult" ],
     "cast": "10 minutes (material, somatic, verbal)",
-    "description": "You gain a vague glimpse of the future. During the casting of this spell, ask about the results of a particular course of action. The spell can predict results up to 30 minutes into the future and reveals the GM's best guess among the following outcomes: Weal The results will be good. Woe The results will be bad. Weal and Woe The results will be a mix of good and bad. Nothing There won't be particularly good or bad results. The GM rolls a secret DC 6 flat check. On a failure, the result is always �nothing.� This makes it impossible to tell whether a �nothing� result is accurate. If anyone asks about the same topic as the first casting of augury during an additional casting, the GM uses the secret roll result from the first casting. If circumstances change, though, it's possible to get a different result.",
+    "description": "You gain a vague glimpse of the future. During the casting of this spell, ask about the results of a particular course of action. The spell can predict results up to 30 minutes into the future and reveals the GM's best guess among the following outcomes: Weal The results will be good. Woe The results will be bad. Weal and Woe The results will be a mix of good and bad. Nothing There won't be particularly good or bad results. The GM rolls a secret DC 6 flat check. On a failure, the result is always \"nothing.\" This makes it impossible to tell whether a \"nothing\" result is accurate. If anyone asks about the same topic as the first casting of augury during an additional casting, the GM uses the secret roll result from the first casting. If circumstances change, though, it's possible to get a different result.",
     "components": [ "10minutes(material", "somatic", "verbal)" ]
   },
   {
@@ -37543,7 +37754,7 @@ module.exports=[
     "area": "10-foot burst",
     "saving throw": "Will",
     "duration": "sustained up to 1 minute",
-    "description": "You forcibly calm creatures in the area, soothing them into a nonviolent state; each creature must attempt a Will save.  \r\n**Critical Success**  The creature is unaffected.  \r\n**Success**  Calming urges impose a �1 status penalty to the creature's attack rolls.  \r\n**Failure**  Any emotion effects that would affect the creature are suppressed and the creature can't use hostile actions. If the target is subject to hostility from any other creature, it ceases to be affected by calm emotions.  \r\n**Critical Failure**  As failure, but hostility doesn't end the effect.",
+    "description": "You forcibly calm creatures in the area, soothing them into a nonviolent state; each creature must attempt a Will save.  \r\n**Critical Success**  The creature is unaffected.  \r\n**Success**  Calming urges impose a -1 status penalty to the creature's attack rolls.  \r\n**Failure**  Any emotion effects that would affect the creature are suppressed and the creature can't use hostile actions. If the target is subject to hostility from any other creature, it ceases to be affected by calm emotions.  \r\n**Critical Failure**  As failure, but hostility doesn't end the effect.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -37919,7 +38130,7 @@ module.exports=[
     "area": "20-foot burst",
     "saving throw": "Will",
     "duration": "10 minutes",
-    "description": "You designate an area in which creatures are compelled to speak only truth. Creatures within or entering the area have difficulty lying. Each potentially affected creature must attempt a Will save when the spell is cast or when the creature first enters the area. It uses the results of this initial save if it leaves and reenters the area. Affected creatures are aware of this enchantment; therefore, they can avoid answering questions to which they would normally respond with a lie, or they can be evasive as long as they remain within the boundaries of the truth.  \r\n**Critical Success**  The target is unaffected.  \r\n**Success**  The target takes a �2 status penalty to Deception checks.  \r\n**Failure**  The target can't speak any deliberate and intentional lies, and it takes a �2 status penalty to Deception checks.  \r\n**Critical Failure**  The target can't speak any deliberate and intentional lies and takes a �4 status penalty to Deception checks.",
+    "description": "You designate an area in which creatures are compelled to speak only truth. Creatures within or entering the area have difficulty lying. Each potentially affected creature must attempt a Will save when the spell is cast or when the creature first enters the area. It uses the results of this initial save if it leaves and reenters the area. Affected creatures are aware of this enchantment; therefore, they can avoid answering questions to which they would normally respond with a lie, or they can be evasive as long as they remain within the boundaries of the truth.  \r\n**Critical Success**  The target is unaffected.  \r\n**Success**  The target takes a -2 status penalty to Deception checks.  \r\n**Failure**  The target can't speak any deliberate and intentional lies, and it takes a -2 status penalty to Deception checks.  \r\n**Critical Failure**  The target can't speak any deliberate and intentional lies and takes a -4 status penalty to Deception checks.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -38026,7 +38237,7 @@ module.exports=[
     "targets": "1 corpse",
     "saving throw": "Will",
     "duration": "10 minutes",
-    "description": "You grant the target corpse a semblance of life, which it uses to speak the answers to three questions posed to it. This spell calls on the physical body's latent memories rather than summoning back the deceased's spirit, so the corpse must be mostly intact for the spell to function. The more damage the corpse has taken, the more inaccurate or patchwork its answers are, and it must have a throat and mouth to speak at all. If anyone has previously cast this spell on the corpse in the last week, the spell automatically fails. The corpse can attempt a Will save to resist answering the questions using the statistics of the original creature at its time of death, with the following effects.  \r\n**Critical Success**  The target can lie or refuse to answer your questions, and the target's spirit haunts you for 24 hours, bothering you and causing you to be unable to gain any rest for that time.  \r\n**Success**  The target can provide false information or refuse to answer your questions.  \r\n**Failure**  The target must answer truthfully, but its answers can be brief, cryptic, and repetitive. It can still mislead you or attempt to stall so that the spell's duration runs out before you can ask all your questions.  \r\n**Critical Failure**  As failure, but the target's answers are more direct and less repetitive, though still cryptic. It takes a �2 status penalty to Deception checks to deceive or mislead you.",
+    "description": "You grant the target corpse a semblance of life, which it uses to speak the answers to three questions posed to it. This spell calls on the physical body's latent memories rather than summoning back the deceased's spirit, so the corpse must be mostly intact for the spell to function. The more damage the corpse has taken, the more inaccurate or patchwork its answers are, and it must have a throat and mouth to speak at all. If anyone has previously cast this spell on the corpse in the last week, the spell automatically fails. The corpse can attempt a Will save to resist answering the questions using the statistics of the original creature at its time of death, with the following effects.  \r\n**Critical Success**  The target can lie or refuse to answer your questions, and the target's spirit haunts you for 24 hours, bothering you and causing you to be unable to gain any rest for that time.  \r\n**Success**  The target can provide false information or refuse to answer your questions.  \r\n**Failure**  The target must answer truthfully, but its answers can be brief, cryptic, and repetitive. It can still mislead you or attempt to stall so that the spell's duration runs out before you can ask all your questions.  \r\n**Critical Failure**  As failure, but the target's answers are more direct and less repetitive, though still cryptic. It takes a -2 status penalty to Deception checks to deceive or mislead you.",
     "components": [ "10minutes(material", "somatic", "verbal)" ]
   },
   {
@@ -38059,7 +38270,7 @@ module.exports=[
     "stage 1": "drained 1 (1 day)",
     "stage 2": "drained increases by 2 (1 day).",
     "critical success": "The target is unaffected.",
-    "success": "The target takes 2 evil damage per spell level, and takes a �2 status penalty to saves against Abyssal plague for 1 day or until the target contracts it, whichever comes first.",
+    "success": "The target takes 2 evil damage per spell level, and takes a -2 status penalty to saves against Abyssal plague for 1 day or until the target contracts it, whichever comes first.",
     "failure": "The target is afflicted with Abyssal plague at stage 1.",
     "critical failure": " The target is afflicted with Abyssal plague at stage 2.",
     "components": [ "somatic", "verbal" ]
@@ -38530,7 +38741,7 @@ module.exports=[
     "range": "100 feet",
     "targets": "1 creature",
     "duration": "1 minute",
-    "description": "An immense weapon of force appears, hovering in the air above the target. The weapon has the ghostly visual appearance of your deity's favored weapon. Name war or peace when you cast this spell. If you name �war,� mentally choose one creature. This must be a creature both you and the target can see. The target instinctively knows which creature this is. At the end of each of the target's turns, if the target did not use a hostile action against the creature you chose during that turn, the weapon Strikes the target. If you name �peace,� mentally choose up to five allies. The target instinctively knows who those allies are. The weapon Strikes the target each time the target uses a hostile action against you or one of your allies. The weapon Strikes only once per action, even if the action targets multiple allies (such as for a fireball or a <%FEATS%Whirlwind Strike%%>Whirlwind Strike). Strikes with the weapon are melee weapon attacks, but they use your spell attack modifier. Regardless of its appearance, the weapon deals force damage equal to 3d10 plus your spellcasting ability modifier. The weapon takes a multiple attack penalty, which increases throughout the target's turn, but its penalty is separate from yours. When the weapon Strikes, you can deal damage of the normal damage type of the weapon instead of force damage (or any of the available damage types, for a versatile weapon). No other statistics or attributes of the weapon apply, and even a ranged weapon attacks adjacent creatures only. A weapon of judgment is a weapon for the purposes of triggers, resistances, and so forth. The weapon doesn't take up space, grant flanking, or have any other attributes a creature would. The weapon can't make any attack other than its Strike, and feats or spells that affect weapons do not apply to this weapon.  \r\n**Heightened (10th)**  The force damage increases by 1d10.",
+    "description": "An immense weapon of force appears, hovering in the air above the target. The weapon has the ghostly visual appearance of your deity's favored weapon. Name war or peace when you cast this spell. If you name \"war,\" mentally choose one creature. This must be a creature both you and the target can see. The target instinctively knows which creature this is. At the end of each of the target's turns, if the target did not use a hostile action against the creature you chose during that turn, the weapon Strikes the target. If you name \"peace,\" mentally choose up to five allies. The target instinctively knows who those allies are. The weapon Strikes the target each time the target uses a hostile action against you or one of your allies. The weapon Strikes only once per action, even if the action targets multiple allies (such as for a fireball or a <%FEATS%Whirlwind Strike%%>Whirlwind Strike). Strikes with the weapon are melee weapon attacks, but they use your spell attack modifier. Regardless of its appearance, the weapon deals force damage equal to 3d10 plus your spellcasting ability modifier. The weapon takes a multiple attack penalty, which increases throughout the target's turn, but its penalty is separate from yours. When the weapon Strikes, you can deal damage of the normal damage type of the weapon instead of force damage (or any of the available damage types, for a versatile weapon). No other statistics or attributes of the weapon apply, and even a ranged weapon attacks adjacent creatures only. A weapon of judgment is a weapon for the purposes of triggers, resistances, and so forth. The weapon doesn't take up space, grant flanking, or have any other attributes a creature would. The weapon can't make any attack other than its Strike, and feats or spells that affect weapons do not apply to this weapon.  \r\n**Heightened (10th)**  The force damage increases by 1d10.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -38635,7 +38846,7 @@ module.exports=[
     "cast": "material, somatic, verbal",
     "action": "3",
     "duration": "sustained up to 1 minute",
-    "description": "You conjure a fey to fight for you. This works like summon animal, except you summon a common creature that has the fey trait and whose level is �1.  \r\n**Heightened (2nd)**  Level 1  \r\n**Heightened (3rd)**  Level 2  \r\n**Heightened (4th)**  Level 3  \r\n**Heightened (5th)**  Level 5  \r\n**Heightened (6th)**  Level 7  \r\n**Heightened (7th)**  Level 9  \r\n**Heightened (8th)**  Level 11  \r\n**Heightened (9th)**  Level 13  \r\n**Heightened (10th)**  Level 15",
+    "description": "You conjure a fey to fight for you. This works like summon animal, except you summon a common creature that has the fey trait and whose level is -1.  \r\n**Heightened (2nd)**  Level 1  \r\n**Heightened (3rd)**  Level 2  \r\n**Heightened (4th)**  Level 3  \r\n**Heightened (5th)**  Level 5  \r\n**Heightened (6th)**  Level 7  \r\n**Heightened (7th)**  Level 9  \r\n**Heightened (8th)**  Level 11  \r\n**Heightened (9th)**  Level 13  \r\n**Heightened (10th)**  Level 15",
     "components": [ "material", "somatic", "verbal" ]
   },
   {
@@ -38774,7 +38985,7 @@ module.exports=[
     "targets": "1 creature",
     "saving throw": "Will",
     "duration": "1 minute",
-    "description": "The target's senses are suddenly rewired in unexpected ways, causing them to process noises as bursts of color, smells as sounds, and so on. This has three effects, and the target must attempt a Will save. Due to the distraction, the target must succeed at a DC 5 flat check each time it uses a concentrate action, or the action fails and is wasted. The target's difficulty processing visual input makes all creatures and objects concealed from it. The creature has trouble moving, making it clumsy 3 and giving it a �10-foot status penalty to its Speeds.  \r\n**Critical Success**  The target is unaffected.  \r\n**Success**  The target is affected for 1 round.  \r\n**Failure**  The target is affected for 1 minute.  \r\n**Critical Failure**  As failure, and the target is stunned 2 as it attempts to process the sensory shifts.",
+    "description": "The target's senses are suddenly rewired in unexpected ways, causing them to process noises as bursts of color, smells as sounds, and so on. This has three effects, and the target must attempt a Will save. Due to the distraction, the target must succeed at a DC 5 flat check each time it uses a concentrate action, or the action fails and is wasted. The target's difficulty processing visual input makes all creatures and objects concealed from it. The creature has trouble moving, making it clumsy 3 and giving it a -10-foot status penalty to its Speeds.  \r\n**Critical Success**  The target is unaffected.  \r\n**Success**  The target is affected for 1 round.  \r\n**Failure**  The target is affected for 1 minute.  \r\n**Critical Failure**  As failure, and the target is stunned 2 as it attempts to process the sensory shifts.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -38883,7 +39094,7 @@ module.exports=[
     "targets": "up to 5 creatures",
     "saving throw": "Will",
     "duration": "varies",
-    "description": "Choose a single statement you want the targets to believe. The fact could be narrow, such as �a dragon is circling overhead and wants to kill me�; wide-reaching, such as �all humanoids are disguised abominations�; or conceptual, such as �if I don't live a kinder life, I'll be punished in the afterlife.� The targets' experiences color how they react to this �truth� and how their behavior changes. If the statement changes what they perceive, they treat the change as a sudden revelation. The effect of the spell depends on the targets' Will saves. If a target is already subject to fabricated truth, your spell tries to counteract it. If the counteract check fails, the outcome of the target's saving throw can't be worse than a success.  \r\n**Critical Success**  The target doesn't believe the statement, and it knows you tried to trick it.  \r\n**Success**  The target doesn't believe the statement or realize you tried to trick it.  \r\n**Failure**  The target believes the statement for a duration of 1 week.  \r\n**Critical Failure**  The target believes the statement with unlimited duration.",
+    "description": "Choose a single statement you want the targets to believe. The fact could be narrow, such as \"a dragon is circling overhead and wants to kill me\"; wide-reaching, such as \"all humanoids are disguised abominations\"; or conceptual, such as \"if I don't live a kinder life, I'll be punished in the afterlife.\" The targets' experiences color how they react to this \"truth\" and how their behavior changes. If the statement changes what they perceive, they treat the change as a sudden revelation. The effect of the spell depends on the targets' Will saves. If a target is already subject to fabricated truth, your spell tries to counteract it. If the counteract check fails, the outcome of the target's saving throw can't be worse than a success.  \r\n**Critical Success**  The target doesn't believe the statement, and it knows you tried to trick it.  \r\n**Success**  The target doesn't believe the statement or realize you tried to trick it.  \r\n**Failure**  The target believes the statement for a duration of 1 week.  \r\n**Critical Failure**  The target believes the statement with unlimited duration.",
     "components": [ "material", "somatic", "verbal" ]
   },
   {
@@ -38944,7 +39155,7 @@ module.exports=[
     "cast": "material, somatic, verbal",
     "action": "3",
     "duration": "sustained up to 1 minute",
-    "description": "You conjure a plant or fungus to fight for you. This works like summon animal, except you summon a common creature that has the plant or fungus trait and whose level is �1.  \r\n**Heightened (2nd)**  Level 1  \r\n**Heightened (3rd)**  Level 2  \r\n**Heightened (4th)**  Level 3  \r\n**Heightened (5th)**  Level 5  \r\n**Heightened (6th)**  Level 7  \r\n**Heightened (7th)**  Level 9  \r\n**Heightened (8th)**  Level 11  \r\n**Heightened (9th)**  Level 13  \r\n**Heightened (10th)**  Level 15",
+    "description": "You conjure a plant or fungus to fight for you. This works like summon animal, except you summon a common creature that has the plant or fungus trait and whose level is -1.  \r\n**Heightened (2nd)**  Level 1  \r\n**Heightened (3rd)**  Level 2  \r\n**Heightened (4th)**  Level 3  \r\n**Heightened (5th)**  Level 5  \r\n**Heightened (6th)**  Level 7  \r\n**Heightened (7th)**  Level 9  \r\n**Heightened (8th)**  Level 11  \r\n**Heightened (9th)**  Level 13  \r\n**Heightened (10th)**  Level 15",
     "components": [ "material", "somatic", "verbal" ]
   },
   {
@@ -39004,7 +39215,7 @@ module.exports=[
     "range": "120 feet",
     "area": "all squares in a 20-foot-radius burst that contain plants",
     "duration": "1 minute",
-    "description": "Plants in the area entangle creatures. The area counts as difficult terrain. Each round that a creature starts its turn in the area, it must attempt a Reflex save. On a failure, it takes a �10-foot circumstance penalty to its Speeds until it leaves the area, and on a critical failure, it is also immobilized for 1 round. Creatures can attempt to Escape at entangle's DC to remove these effects.",
+    "description": "Plants in the area entangle creatures. The area counts as difficult terrain. Each round that a creature starts its turn in the area, it must attempt a Reflex save. On a failure, it takes a -10-foot circumstance penalty to its Speeds until it leaves the area, and on a critical failure, it is also immobilized for 1 round. Creatures can attempt to Escape at entangle's DC to remove these effects.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -39221,7 +39432,7 @@ module.exports=[
     "range": "500 feet",
     "area": "40-foot burst",
     "duration": "10 minutes",
-    "description": "Dense, twitching creepers sprout from every surface and fill any bodies of water in the area. Any creature moving on the land, or Climbing or Swimming within the creepers, takes a �10- foot circumstance penalty to its Speeds while in the area. Once per round, you can make a vine lash out from any square within the expanse of creepers by using a single action, which has the concentrate trait. This vine has a 15-foot reach and makes a melee unarmed attack using your spell attack modifier. If the attack succeeds, the vine pulls the target into the creepers and makes it immobilized for 1 round or until the creature Escapes (against your spell DC), whichever comes first.",
+    "description": "Dense, twitching creepers sprout from every surface and fill any bodies of water in the area. Any creature moving on the land, or Climbing or Swimming within the creepers, takes a -10- foot circumstance penalty to its Speeds while in the area. Once per round, you can make a vine lash out from any square within the expanse of creepers by using a single action, which has the concentrate trait. This vine has a 15-foot reach and makes a melee unarmed attack using your spell attack modifier. If the attack succeeds, the vine pulls the target into the creepers and makes it immobilized for 1 round or until the creature Escapes (against your spell DC), whichever comes first.",
     "components": [ "material", "somatic", "verbal" ]
   },
   {
@@ -39253,7 +39464,7 @@ module.exports=[
     "range": "120 feet",
     "area": "5-foot radius, 80-foot tall cylinder",
     "saving throw": "Reflex",
-    "description": "The ground opens up, spraying a column of lava high into the air in a vertical cylinder, dealing 14d6 fire damage to creatures in the area. The lava rapidly cools and encases creatures in the area. A creature encased in rock is clumsy 1 and takes a �10-foot status penalty to its Speeds. All normal terrain is difficult terrain to a flying creature, and such creatures immediately descend 20 feet the moment they're encased, but they don't take damage from this fall. A creature encased in rock can attempt to Escape against your spell DC to end the effect. Otherwise, the creature remains encased until it takes a total of 50 damage, freeing it from the rock. Additionally, creatures in the area and those within 5 feet of the lava column automatically take 3d6 fire damage from the intense heat, regardless of the results of their saving throws.  \r\n**Critical Success**  The creature is unaffected.  \r\n**Success**  The creature takes half damage.  \r\n**Failure**  The creature takes full damage and is encased.  \r\n**Critical Failure**  The creature takes double damage and is encased.  \r\n**Heightened (+1)**  The damage in the area increases by 2d6, and the damage from the intense heat increases by 1d6.",
+    "description": "The ground opens up, spraying a column of lava high into the air in a vertical cylinder, dealing 14d6 fire damage to creatures in the area. The lava rapidly cools and encases creatures in the area. A creature encased in rock is clumsy 1 and takes a -10-foot status penalty to its Speeds. All normal terrain is difficult terrain to a flying creature, and such creatures immediately descend 20 feet the moment they're encased, but they don't take damage from this fall. A creature encased in rock can attempt to Escape against your spell DC to end the effect. Otherwise, the creature remains encased until it takes a total of 50 damage, freeing it from the rock. Additionally, creatures in the area and those within 5 feet of the lava column automatically take 3d6 fire damage from the intense heat, regardless of the results of their saving throws.  \r\n**Critical Success**  The creature is unaffected.  \r\n**Success**  The creature takes half damage.  \r\n**Failure**  The creature takes full damage and is encased.  \r\n**Critical Failure**  The creature takes double damage and is encased.  \r\n**Heightened (+1)**  The damage in the area increases by 2d6, and the damage from the intense heat increases by 1d6.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -39301,7 +39512,7 @@ module.exports=[
     "area": "500-foot burst",
     "targets": "up to 5 creatures",
     "duration": "10 minutes",
-    "description": "Animals and plants in the area turn against the targets. Each target suffers from the following effects as long as it remains in the area. Vegetation springs up from every surface, giving each target a �10-foot circumstance penalty to its Speed any time it's adjacent to the plants. Aggressive animals attack unpredictably. At the start of its turn, each target rolls a DC 8 flat check. On a failure, it's attacked by swarming creatures that deal 2d10 slashing damage. The target attempts a basic Reflex save, and it is flat-footed for 1 round on any outcome other than a critical success. The target loses any connection to nature or natural creatures. The target has to succeed at a DC 5 flat check when casting any primal spell or the spell fails. Furthermore, animal or plant creatures become hostile to it, even one with a strong bond to the target, such as an animal companion. The GM might decide that you can't subject some creatures, such as an emissary of a nature deity, to the ire of nature.",
+    "description": "Animals and plants in the area turn against the targets. Each target suffers from the following effects as long as it remains in the area. Vegetation springs up from every surface, giving each target a -10-foot circumstance penalty to its Speed any time it's adjacent to the plants. Aggressive animals attack unpredictably. At the start of its turn, each target rolls a DC 8 flat check. On a failure, it's attacked by swarming creatures that deal 2d10 slashing damage. The target attempts a basic Reflex save, and it is flat-footed for 1 round on any outcome other than a critical success. The target loses any connection to nature or natural creatures. The target has to succeed at a DC 5 flat check when casting any primal spell or the spell fails. Furthermore, animal or plant creatures become hostile to it, even one with a strong bond to the target, such as an animal companion. The GM might decide that you can't subject some creatures, such as an emissary of a nature deity, to the ire of nature.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -39317,7 +39528,7 @@ module.exports=[
     "range": "800 feet",
     "area": "360-foot burst",
     "duration": "sustained up to 1 minute",
-    "description": "A massive storm cloud forms in the air in a 360-foot burst. Beneath it, rain begins to fall, and gales impose a �4 circumstance penalty to physical ranged attacks and weapon ranged attacks, and the air in the area becomes greater difficult terrain for flying creatures. When you Cast this Spell and the first time each round you Sustain the Spell, you can choose one of the following storm effects. You can't choose the same effect twice in a row. Acid Rain Each creature in the storm takes 4d8 acid damage with no saving throw. Hail The storm deals 4d10 bludgeoning damage to creatures beneath it (basic Fortitude save). Lightning Up to 10 bolts of lightning strike down, targeting creatures of your choice in the storm. No more than one bolt can target any one creature. Each bolt deals 7d6 electricity damage (basic Reflex save). Rain and Wind Heavy rain and whipping wind reduce visibility and mobility, making the area under the storm cloud difficult terrain and making everything seen within or through the area concealed. Thunderclap Each creature in the storm must succeed at a Fortitude save or be deafened for 10 minutes. A creature that succeeds is temporarily immune to thunderclaps from storm of vengeance for 1 hour.  \r\n**Heightened (10th)**  The range increases to 2,200 feet, and the cloud is a 1,000-foot burst.",
+    "description": "A massive storm cloud forms in the air in a 360-foot burst. Beneath it, rain begins to fall, and gales impose a -4 circumstance penalty to physical ranged attacks and weapon ranged attacks, and the air in the area becomes greater difficult terrain for flying creatures. When you Cast this Spell and the first time each round you Sustain the Spell, you can choose one of the following storm effects. You can't choose the same effect twice in a row. Acid Rain Each creature in the storm takes 4d8 acid damage with no saving throw. Hail The storm deals 4d10 bludgeoning damage to creatures beneath it (basic Fortitude save). Lightning Up to 10 bolts of lightning strike down, targeting creatures of your choice in the storm. No more than one bolt can target any one creature. Each bolt deals 7d6 electricity damage (basic Reflex save). Rain and Wind Heavy rain and whipping wind reduce visibility and mobility, making the area under the storm cloud difficult terrain and making everything seen within or through the area concealed. Thunderclap Each creature in the storm must succeed at a Fortitude save or be deafened for 10 minutes. A creature that succeeds is temporarily immune to thunderclaps from storm of vengeance for 1 hour.  \r\n**Heightened (10th)**  The range increases to 2,200 feet, and the cloud is a 1,000-foot burst.",
     "components": [ "material", "somatic", "verbal" ]
   },
   {
@@ -39347,7 +39558,7 @@ module.exports=[
     "range": "30 feet",
     "targets": "you and up to 5 willing targets",
     "duration": "1 minute",
-    "description": "Summoning the power of the natural world, you transform the targets into a herd of mammoths, and they each assume a Huge battle form. Each target must have enough space to expand into or the spell fails for that target. Each target gains the animal trait. Each target can Dismiss the spell�s effects on themself. Each target gains the following while transformed: AC = 22 + the target�s level. Ignore any armor check penalty and Speed reduction. 20 temporary Hit Points. Speed 40 feet. Low-light vision. The following unarmed melee attacks, which are the only attacks the target can use. They�re trained with them. When attacking with these attacks, the target uses their attack modifier with the proficiency and item bonuses of their most favorable weapon or unarmed Strike, and the damage is listed for each attack. These attacks are Strength based (for the purpose of the enfeebled condition, for example). If the target�s unarmed attack modifier is higher, they can use it instead. Melee  tusk (reach 15 feet), Damage 4d8+19 piercing; Melee  trunk (agile, reach 15 feet), Damage 4d6+16 bludgeoning; Melee  foot (agile, reach 15 feet), Damage 4d6+13 bludgeoning. Athletics modifier of +30, unless the target�s own modifier is higher. Trample  yot move up to twice your Speed and move through the space of Large or smaller creatures, trampling each creature whose space you enter. A trampled creature takes damage from its foot Strike based on a basic Reflex save (DC = 19 + the target�s level).",
+    "description": "Summoning the power of the natural world, you transform the targets into a herd of mammoths, and they each assume a Huge battle form. Each target must have enough space to expand into or the spell fails for that target. Each target gains the animal trait. Each target can Dismiss the spell's effects on themself. Each target gains the following while transformed: AC = 22 + the target's level. Ignore any armor check penalty and Speed reduction. 20 temporary Hit Points. Speed 40 feet. Low-light vision. The following unarmed melee attacks, which are the only attacks the target can use. They're trained with them. When attacking with these attacks, the target uses their attack modifier with the proficiency and item bonuses of their most favorable weapon or unarmed Strike, and the damage is listed for each attack. These attacks are Strength based (for the purpose of the enfeebled condition, for example). If the target's unarmed attack modifier is higher, they can use it instead. Melee  tusk (reach 15 feet), Damage 4d8+19 piercing; Melee  trunk (agile, reach 15 feet), Damage 4d6+16 bludgeoning; Melee  foot (agile, reach 15 feet), Damage 4d6+13 bludgeoning. Athletics modifier of +30, unless the target's own modifier is higher. Trample  yot move up to twice your Speed and move through the space of Large or smaller creatures, trampling each creature whose space you enter. A trampled creature takes damage from its foot Strike based on a basic Reflex save (DC = 19 + the target's level).",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -39974,6 +40185,11 @@ var BookmarkList = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 { className: 'spellListConfig' },
+                _react2.default.createElement(
+                    'p',
+                    { className: 'alert alert-info' },
+                    'Bookmarks help you mark some related spells. Whether it be your spell book, the spells you\'ll need as GM for an encounter, or just a few spells you\'re interested in checking out later.'
+                ),
                 _react2.default.createElement(
                     'table',
                     { className: 'table spellListTable' },
@@ -40849,7 +41065,7 @@ var QuickRefTable = function (_React$PureComponent) {
                                     return _react2.default.createElement(
                                         'td',
                                         { key: ci, className: c.colType },
-                                        r.length > ci && r[ci]
+                                        r.length > ci && _react2.default.createElement(_reactMarkdown2.default, { source: String(r[ci]) })
                                     );
                                 })
                             );
@@ -41392,24 +41608,39 @@ var SpellList = function (_React$Component) {
             if (this.state.criteria.spellName) {
                 if (spell.name.toLowerCase().indexOf(this.state.criteria.spellName.toLowerCase()) === -1) return false;
             }
-            if (this.state.criteria.spellType && this.state.criteria.spellOption) {
+            if (this.state.criteria.spellType) {
                 var spellType = this.state.spellTypes.find(function (t) {
                     return t.name == _this3.state.criteria.spellType;
                 });
                 switch (spellType.matchBy) {
                     case "bookmark":
-                        var list = this.state.bookmarkLists.find(function (l) {
-                            return l.id === _this3.state.criteria.spellOption;
-                        });
-                        if (list && !list.spells[spell.name]) return false;
+                        if (this.state.criteria.spellOption) {
+                            var list = this.state.bookmarkLists.find(function (l) {
+                                return l.id === _this3.state.criteria.spellOption;
+                            });
+                            if (list && !list.spells[spell.name]) return false;
+                        }
                         break;
                     case "lookup":
-                        // TODO: handle lookup without sub-option selected.
-                        if (!spellType.lookup[this.state.criteria.spellOption]) return false;
-                        if (spellType.lookup[this.state.criteria.spellOption].indexOf(spell.name) === -1) return false;
+                        if (this.state.criteria.spellOption) {
+                            if (!spellType.lookup[this.state.criteria.spellOption]) return false;
+                            if (spellType.lookup[this.state.criteria.spellOption].indexOf(spell.name) === -1) return false;
+                        } else {
+                            // For lookups, filter that it must be in one of the lists
+                            var found = false;
+                            for (var option in spellType.lookup) {
+                                found = found || spellType.lookup[option].indexOf(spell.name) !== -1;
+                            }
+                            if (!found) return false;
+                        }
+                        break;
+                    case "list":
+                        if (spellType.lookup.indexOf(spell.name) === -1) return false;
                         break;
                     case "array":
-                        if (!spell[spellType.match] || spell[spellType.match].indexOf(this.state.criteria.spellOption) == -1) return false;
+                        if (this.state.criteria.spellOption) {
+                            if (spell[spellType.match] && spell[spellType.match].indexOf(this.state.criteria.spellOption) == -1) return false;
+                        }
                         break;
                 }
             }
@@ -41607,7 +41838,7 @@ var SpellListItem = function (_React$PureComponent) {
             };
             var css = "spell-list-item list-group-item list-group-item-action" + (this.props.selected ? " active" : "");
             var description = null;
-            if (spell.traditions.length > 0) {
+            if (spell.traditions && spell.traditions.length > 0) {
                 description = _react2.default.createElement(
                     "span",
                     { className: "powerTypes" },

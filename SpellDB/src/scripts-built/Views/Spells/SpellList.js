@@ -170,24 +170,39 @@ var SpellList = function (_React$Component) {
             if (this.state.criteria.spellName) {
                 if (spell.name.toLowerCase().indexOf(this.state.criteria.spellName.toLowerCase()) === -1) return false;
             }
-            if (this.state.criteria.spellType && this.state.criteria.spellOption) {
+            if (this.state.criteria.spellType) {
                 var spellType = this.state.spellTypes.find(function (t) {
                     return t.name == _this3.state.criteria.spellType;
                 });
                 switch (spellType.matchBy) {
                     case "bookmark":
-                        var list = this.state.bookmarkLists.find(function (l) {
-                            return l.id === _this3.state.criteria.spellOption;
-                        });
-                        if (list && !list.spells[spell.name]) return false;
+                        if (this.state.criteria.spellOption) {
+                            var list = this.state.bookmarkLists.find(function (l) {
+                                return l.id === _this3.state.criteria.spellOption;
+                            });
+                            if (list && !list.spells[spell.name]) return false;
+                        }
                         break;
                     case "lookup":
-                        // TODO: handle lookup without sub-option selected.
-                        if (!spellType.lookup[this.state.criteria.spellOption]) return false;
-                        if (spellType.lookup[this.state.criteria.spellOption].indexOf(spell.name) === -1) return false;
+                        if (this.state.criteria.spellOption) {
+                            if (!spellType.lookup[this.state.criteria.spellOption]) return false;
+                            if (spellType.lookup[this.state.criteria.spellOption].indexOf(spell.name) === -1) return false;
+                        } else {
+                            // For lookups, filter that it must be in one of the lists
+                            var found = false;
+                            for (var option in spellType.lookup) {
+                                found = found || spellType.lookup[option].indexOf(spell.name) !== -1;
+                            }
+                            if (!found) return false;
+                        }
+                        break;
+                    case "list":
+                        if (spellType.lookup.indexOf(spell.name) === -1) return false;
                         break;
                     case "array":
-                        if (spell[spellType.match] && spell[spellType.match].indexOf(this.state.criteria.spellOption) == -1) return false;
+                        if (this.state.criteria.spellOption) {
+                            if (spell[spellType.match] && spell[spellType.match].indexOf(this.state.criteria.spellOption) == -1) return false;
+                        }
                         break;
                 }
             }

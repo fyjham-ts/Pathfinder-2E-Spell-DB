@@ -48,7 +48,7 @@
     "options": null
   },
   {
-    "name": "Domain Powers",
+    "name": "Focus Powers - Domains",
     "matchBy": "lookup",
     "options": [
       {
@@ -241,8 +241,157 @@
     }
   },
   {
+    "name": "Focus Powers - Bloodlines",
+    "matchBy": "lookup",
+    "options": [
+      {
+        "name": "Abberant",
+        "value": "Abberant"
+      },
+      {
+        "name": "Angelic",
+        "value": "Angelic"
+      },
+      {
+        "name": "Demonic",
+        "value": "Demonic"
+      },
+      {
+        "name": "Diabolic",
+        "value": "Diabolic"
+      },
+      {
+        "name": "Draconic",
+        "value": "Draconic"
+      },
+      {
+        "name": "Elemental",
+        "value": "Elemental"
+      },
+      {
+        "name": "Fey",
+        "value": "Fey"
+      },
+      {
+        "name": "Hag",
+        "value": "Hag"
+      },
+      {
+        "name": "Imperial",
+        "value": "Imperial"
+      },
+      {
+        "name": "Undead",
+        "value": "Undead"
+      }
+    ],
+    "lookup": {
+      "Abberant": [ "Tentacular Limbs", "Aberrant Whispers", "Unusual Anatomy" ],
+      "Angelic": [ "Angelic Halo", "Angelic Wings", "Celestial Brand" ],
+      "Demonic": [ "Glutton's Jaw", "Swamp of Sloth", "Abyssal Wrath" ],
+      "Diabolic": [ "Diabolic Edict", "Embrace the Pit", "Hellfire Plume" ],
+      "Draconic": [ "Dragon Claws", "Dragon Breath", "Dragon Wings" ],
+      "Elemental": [ "Elemental Toss", "Elemental Motion", "Elemental Blast" ],
+      "Fey": [ "Faerie Dust", "Fey Disappearance", "Fey Glamour" ],
+      "Hag": [ "Jealous Hex", "Horrific Visage", "You're Mine" ],
+      "Imperial": [ "Ancestral Memories", "Extend Spell", "Arcane Countermeasure" ],
+      "Undead": [ "Touch of Undeath (Sorcerer)", "Drain Life", "Grasping Grave" ]
+    }
+  },
+  {
     "name": "Bookmarks",
     "matchBy": "bookmark",
     "options": []
+  },
+  {
+    "name": "Focus Powers - Druid",
+    "matchBy": "list",
+    "options": [],
+    "lookup": [
+      "Goodberry",
+      "Heal Animal",
+      "Tempest Surge",
+      "Wild Morph",
+      "Wild Shape",
+      "Stormwind Flight",
+      "Primal Summons",
+      "Impaling Briars",
+      "Storm Lord"
+    ]
+  },
+  {
+    "name": "Focus Powers - Champion",
+    "matchBy": "list",
+    "options": [],
+    "lookup": [
+      "Lay on Hands",
+      "Litany against Wrath",
+      "Litany against Sloth",
+      "Champion's Sacrifice",
+      "Litany of Righteousness",
+      "Hero's Defiance"
+    ]
+  },
+  {
+    "name": "Focus Powers - Monk",
+    "matchBy": "list",
+    "options": [],
+    "lookup": [
+      "Ki Rush",
+      "Ki Strike",
+      "Wholeness of Body",
+      "Ki Blast",
+      "Abundant Step",
+      "Wild Winds Stance",
+      "Wind Jump",
+      "Quivering Palm",
+      "Empty Body"
+    ]
+  },
+  {
+    "name": "Focus Powers - Bard",
+    "matchBy": "list",
+    "options": [],
+    "lookup": [
+      "Counter Performance",
+      "Inspire Competence",
+      "Inspire Courage",
+      "Lingering Composition",
+      "Loremaster's Etude",
+      "Inspire Defiance",
+      "Triple Time",
+      "Dirge of Doom",
+      "Inspire Heroics",
+      "House of Imaginary Walls",
+      "Allegro",
+      "Soothing Ballade",
+      "Fatal Aria"
+    ]
+  },
+  {
+    "name": "Focus Powers - Wizard School",
+    "matchBy": "lookup",
+    "options": [
+      {"name":"Conjuration","value":"Conjuration"},
+      {"name":"Necromancy","value":"Necromancy"},
+      {"name":"Enchantment","value":"Enchantment"},
+      {"name":"Divination","value":"Divination"},
+      {"name":"Evocation","value":"Evocation"},
+      {"name":"Universalist","value":"Universalist"},
+      {"name":"Transmutation","value":"Transmutation"},
+      {"name":"Abjuration","value":"Abjuration"},
+      {"name":"Illusion","value":"Illusion"}
+    ],
+    "lookup": {
+      "Conjuration": [ "Augment Summoning", "Dimensional Steps" ],
+      "Necromancy": [ "Call of the Grave", "Life Siphon" ],
+      "Enchantment": [ "Charming Words", "Dread Aura" ],
+      "Divination": [ "Diviner's Sight", "Vigilant Eye" ],
+      "Evocation": [ "Force Bolt", "Elemental Tempest" ],
+      "Universalist": [ "Hand of the Apprentice" ],
+      "Transmutation": [ "Physical Boost", "Shifting Form" ],
+      "Abjuration": [ "Protective Ward", "Energy Absorption" ],
+      "Illusion": [ "Warped Terrain", "Invisibility Cloak" ]
+    }
   }
 ]

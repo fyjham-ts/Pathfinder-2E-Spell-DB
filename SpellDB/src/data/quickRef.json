@@ -658,5 +658,67 @@
         "description": "Treat a living creature's wounds (pg 249)"
       }
     ]
+  },
+  {
+    "name": "Challenge points",
+    "icon": "fas fa-chart-line",
+    "render": "tables",
+    "tables": [
+      {
+        "title": "PC Challenge Points",
+        "columns": [
+          {
+            "title": "Character Level",
+            "colType": "text"
+          },
+          {
+            "title": "Points",
+            "colType": "text"
+          }
+        ],
+        "rows": [
+          [ "Lowest", 2 ],
+          [ "Second Lowest", 3 ],
+          [ "Second Highest", 4 ],
+          [ "Highest", 6 ]
+        ]
+      },
+      {
+        "title": "Adjustments",
+        "columns": [
+          {
+            "title": "Table Points",
+            "colType": "text"
+          },
+          {
+            "title": "Subtier",
+            "colType": "text"
+          }
+        ],
+        "rows": [
+          [ "8-9", "Low Subtier" ],
+          [ "10-11", "Low Subtier (5 player adjust)" ],
+          [ "12-13", "Low Subtier (6 player adjust)  \r\n**OR (GM Choice)**  \r\nLow Subtier with Level Bump" ],
+          [ "14-15", "Low Subtier (5 player adjust with Level Bump)" ],
+          [ "16-18", "High Subtier" ],
+          [ "19-22", "High Subtier (5 player adjust)" ],
+          [ "23-27", "High Subtier (6 player adjust)  \r\n**OR (GM Choice)**  \r\nHigh Subtier with Level Bump" ],
+          [ "28-32", "High Subtier (5 player adjust with Level Bump)" ],
+          [ "33-42", "High Subtier (6 player adjust with Level Bump)" ]
+        ]
+      },
+      {
+        "title": "Level Bump",
+        "columns": [
+          {
+            "title": "",
+            "colType": "text"
+          }
+        ],
+        "rows": [
+          [ "**Applies**  \r\n* Any Character of minimum level playing high tier.  \r\n* When the table above says so (Applies to enemies)\r\n\r\n**Scenario Rules**  \r\n* +1 to all DC's, Attacks, Damage, Saves, Skills, Perception and AC.\r\n* +10 or 10% HP (Whichever is higher).\r\n\r\n**Player Rules**  \r\n+1 to AC, DCs, modifiers, and gain extra HP as though levelled." ]
+        ]
+      }
+    ]
   }
 ]

@@ -38,7 +38,7 @@ var SpellListItem = function (_React$PureComponent) {
             };
             var css = "spell-list-item list-group-item list-group-item-action" + (this.props.selected ? " active" : "");
             var description = null;
-            if (spell.traditions.length > 0) {
+            if (spell.traditions && spell.traditions.length > 0) {
                 description = _react2.default.createElement(
                     "span",
                     { className: "powerTypes" },

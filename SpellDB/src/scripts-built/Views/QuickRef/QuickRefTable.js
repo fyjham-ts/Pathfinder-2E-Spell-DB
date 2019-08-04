@@ -82,7 +82,7 @@ var QuickRefTable = function (_React$PureComponent) {
                                     return _react2.default.createElement(
                                         'td',
                                         { key: ci, className: c.colType },
-                                        r.length > ci && r[ci]
+                                        r.length > ci && _react2.default.createElement(_reactMarkdown2.default, { source: String(r[ci]) })
                                     );
                                 })
                             );

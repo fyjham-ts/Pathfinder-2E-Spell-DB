@@ -23,7 +23,7 @@ export default class QuickRefTable extends React.PureComponent {
                     {this.props.table.rows.map((r, ri) =>
                         <tr key={ri}>
                             {this.props.table.columns.map((c, ci) =>
-                                <td key={ci} className={c.colType}>{r.length > ci && r[ci]}</td>
+                                <td key={ci} className={c.colType}>{r.length > ci && <ReactMarkdown source={String(r[ci])} />}</td>
                             )}
                         </tr>
                     )}

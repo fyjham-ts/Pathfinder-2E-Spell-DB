@@ -48,6 +48,10 @@ var handledItems = [
     "casting-time"
 ];
 
+function cleanup(s) {
+    return s.trim().replace(/^;+/, "").replace(/;+$/, "").replace(/–/g, '-');
+}
+
 async function loadSpell(url) {
     try {
         var $ = await rp({
@@ -79,8 +83,8 @@ async function loadSpell(url) {
                     spellData[activeItem] += "  \r\n**" + e.text() + "** ";
                 } else {
                     if (activeItem) {
-                        if (subItem) { spellData[activeItem][subItem] = spellData[activeItem][subItem].trim().replace(/^;+/,"").replace(/;+$/,""); }
-                        else { spellData[activeItem] = spellData[activeItem].trim().replace(/^;+/, "").replace(/;+$/, ""); }
+                        if (subItem) { spellData[activeItem][subItem] = cleanup(spellData[activeItem][subItem]); }
+                        else { spellData[activeItem] = cleanup(spellData[activeItem].trim()); }
                     }
                     activeItem = e.text().toLowerCase();
                     subItem = null;
@@ -100,8 +104,8 @@ async function loadSpell(url) {
             }
             else if (e.is('hr')) {
                 if (activeItem) {
-                    if (subItem) { spellData[activeItem][subItem] = spellData[activeItem][subItem].trim().replace(/^;+/, "").replace(/;+$/, ""); }
-                    else { spellData[activeItem] = spellData[activeItem].trim().replace(/^;+/, "").replace(/;+$/, ""); }
+                    if (subItem) { spellData[activeItem][subItem] = cleanup(spellData[activeItem][subItem]); }
+                    else { spellData[activeItem] = cleanup(spellData[activeItem]); }
                 }
                 activeItem = "description";
                 subItem = null;
@@ -136,7 +140,6 @@ async function loadSpell(url) {
         // We've scraped, time for cleanup
         if (spellData.traditions) spellData.traditions = spellData.traditions.replace(/ /g, '').split(',');
         if (spellData.cast) spellData.components = spellData.cast.replace(/ /g, '').split(',');
-        if (spellData.range) spellData.range = spellData.range.replace(/\;+$/, '');
        
         return spellData;
     }

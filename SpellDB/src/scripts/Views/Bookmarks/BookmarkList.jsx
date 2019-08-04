@@ -55,6 +55,7 @@ export default class BookmarkList extends React.Component {
     render() {
         return (
             <div className="spellListConfig">
+                <p className="alert alert-info">Bookmarks help you mark some related spells. Whether it be your spell book, the spells you'll need as GM for an encounter, or just a few spells you're interested in checking out later.</p>
                 <table className="table spellListTable">
                     <thead>
                         <tr>
