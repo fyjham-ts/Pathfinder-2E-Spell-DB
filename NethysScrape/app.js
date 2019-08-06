@@ -59,7 +59,7 @@ var handledItems = [
 ];
 
 function cleanup(s) {
-    return s.trim().replace(/^;+/, "").replace(/;+$/, "").replace(/–/g, '-');
+    return s.trim().replace(/^;+/, "").replace(/;+$/, "").replace(/[—–]/g, '-');
 }
 
 async function loadSpell(url) {
