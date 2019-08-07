@@ -29,7 +29,7 @@ export default class SpellSearch extends React.Component {
         ];
 
         return (
-            <form className="spell-search row">
+            <form className="spell-search row" onSubmit={(e) => { e.preventDefault(); return false; }}>
                 <CheckboxGroup className="col-md levels" name="levels" value={this.props.levels} onChange={this.handleLevelChange} checkboxDepth={3}>
                     {levelRows.map((lr) => {
                         return <div className="level-row" key={lr[0]}>
