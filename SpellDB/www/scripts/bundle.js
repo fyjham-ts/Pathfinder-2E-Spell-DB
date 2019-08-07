@@ -41698,6 +41698,8 @@ var SpellList = function (_React$Component) {
                     return 0;
                 case "Level":
                     if (lhs.level - rhs.level != 0) return lhs.level - rhs.level;
+                    if (lhs.type == "Cantrip" && rhs.type != "Cantrip") return -1;
+                    if (lhs.type != "Cantrip" && rhs.type == "Cantrip") return 1;
                     if (lhs.name.toLowerCase() < rhs.name.toLowerCase()) return -1;
                     if (lhs.name.toLowerCase() > rhs.name.toLowerCase()) return 1;
                     break;
