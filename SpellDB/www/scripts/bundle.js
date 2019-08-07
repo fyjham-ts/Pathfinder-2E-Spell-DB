@@ -35458,7 +35458,7 @@ module.exports=[
     "type": "Spell",
     "level": 3,
     "source": "Core Rulebook pg. 356",
-    "traditions": [ "arcane", "primal" ],
+    "traditions": [ "arcane", "occult" ],
     "cast": "somatic, verbal",
     "action": "2",
     "range": "30 feet",
