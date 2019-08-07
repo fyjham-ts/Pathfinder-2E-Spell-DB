@@ -201,7 +201,7 @@ var SpellList = function (_React$Component) {
                         break;
                     case "array":
                         if (this.state.criteria.spellOption) {
-                            if (spell[spellType.match] && spell[spellType.match].indexOf(this.state.criteria.spellOption) == -1) return false;
+                            if (!spell[spellType.match] || spell[spellType.match].indexOf(this.state.criteria.spellOption) == -1) return false;
                         }
                         break;
                 }
