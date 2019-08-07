@@ -239,7 +239,7 @@ var SpellList = function (_React$Component) {
                 var spellType = this.state.spellTypes.find(function (t) {
                     return t.name == value;
                 });
-                if (spellType && spellType.matchBy == "bookmark") spellOption = this.state.activeBookmarkList.name;
+                if (spellType && spellType.matchBy == "bookmark") spellOption = this.state.activeBookmarkList.id;
                 this.setState({
                     criteria: (0, _immutabilityHelper2.default)(this.state.criteria, (_update = {}, _defineProperty(_update, name, { $set: value }), _defineProperty(_update, 'spellOption', { $set: spellOption }), _update)),
                     maxRows: defaultMaxRows

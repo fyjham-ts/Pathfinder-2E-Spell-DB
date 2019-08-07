@@ -157,7 +157,7 @@ export default class SpellList extends React.Component {
         if (name === "spellType") {
             var spellOption = "";
             var spellType = this.state.spellTypes.find(t => t.name == value);
-            if (spellType && spellType.matchBy == "bookmark") spellOption = this.state.activeBookmarkList.name;
+            if (spellType && spellType.matchBy == "bookmark") spellOption = this.state.activeBookmarkList.id;
             this.setState({
                 criteria: update(this.state.criteria, {
                     [name]: { $set: value },
