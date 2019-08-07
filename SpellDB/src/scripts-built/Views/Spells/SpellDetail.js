@@ -141,7 +141,22 @@ var SpellDetail = function (_React$PureComponent) {
                             ' ',
                             t.value
                         );
-                    })
+                    }),
+                    spell['saving throw'] && _react2.default.createElement(
+                        'div',
+                        null,
+                        _react2.default.createElement(
+                            'span',
+                            { className: 'headerElement' },
+                            _react2.default.createElement(
+                                'strong',
+                                null,
+                                'Saving Throw'
+                            ),
+                            ' ',
+                            spell['saving throw']
+                        )
+                    )
                 ),
                 _react2.default.createElement(
                     'div',

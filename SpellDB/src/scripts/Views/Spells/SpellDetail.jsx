@@ -51,6 +51,7 @@ export default class SpellDetail extends React.PureComponent {
                     {headerTokens.map((t) => {
                         return <span key={t.title} className="headerElement"><strong>{t.title}</strong> {t.value}</span>
                     })}
+                    {spell['saving throw'] && <div><span className="headerElement"><strong>Saving Throw</strong> {spell['saving throw']}</span></div>}
                 </div>
                 <div className="body">
                     {bodySections.map((s, index) => {
