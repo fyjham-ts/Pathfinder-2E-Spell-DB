@@ -6,9 +6,9 @@ const canUseIcons = false;
 
 export default class ActionIcons extends React.PureComponent {
     renderIcon(action) {
-        if (canUseIcons) return <img className="actions" src={"images/action-" + this.props.action + ".png"} alt={action} />
+        if (canUseIcons) return <img key={action} className="actions" src={"images/action-" + action + ".png"} alt={action} />
         else {
-            return <span className={"actions actions-" + action}>
+            return <span key={action} className={"actions actions-" + action}>
                 {(() => {
                     switch (action) {
                         case "1":

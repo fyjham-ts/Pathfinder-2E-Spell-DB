@@ -19,6 +19,11 @@ export default class SpellSearch extends React.Component {
 
         this.props.onCriteriaChange(name, value);
     }
+    formSubmitAttempted(e) {
+        e.preventDefault();
+        document.activeElement.blur();
+        return false;
+    }
     render() {
         var spellOption = null;
         var showSpellOptions = (this.props.spellType && this.props.spellTypes.find(t => t.name == this.props.spellType).options.length > 1);
@@ -29,7 +34,7 @@ export default class SpellSearch extends React.Component {
         ];
 
         return (
-            <form className="spell-search row" onSubmit={(e) => { e.preventDefault(); return false; }}>
+            <form className="spell-search row" onSubmit={this.formSubmitAttempted}>
                 <CheckboxGroup className="col-md levels" name="levels" value={this.props.levels} onChange={this.handleLevelChange} checkboxDepth={3}>
                     {levelRows.map((lr) => {
                         return <div className="level-row" key={lr[0]}>

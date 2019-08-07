@@ -48,6 +48,13 @@ var SpellSearch = function (_React$Component) {
             this.props.onCriteriaChange(name, value);
         }
     }, {
+        key: 'formSubmitAttempted',
+        value: function formSubmitAttempted(e) {
+            e.preventDefault();
+            document.activeElement.blur();
+            return false;
+        }
+    }, {
         key: 'render',
         value: function render() {
             var _this2 = this;
@@ -65,9 +72,7 @@ var SpellSearch = function (_React$Component) {
 
             return _react2.default.createElement(
                 'form',
-                { className: 'spell-search row', onSubmit: function onSubmit(e) {
-                        e.preventDefault();return false;
-                    } },
+                { className: 'spell-search row', onSubmit: this.formSubmitAttempted },
                 _react2.default.createElement(
                     _reactCheckboxGroup.CheckboxGroup,
                     { className: 'col-md levels', name: 'levels', value: this.props.levels, onChange: this.handleLevelChange, checkboxDepth: 3 },

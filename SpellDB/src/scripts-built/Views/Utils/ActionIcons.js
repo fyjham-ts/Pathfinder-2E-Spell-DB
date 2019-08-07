@@ -34,10 +34,10 @@ var ActionIcons = function (_React$PureComponent) {
     _createClass(ActionIcons, [{
         key: "renderIcon",
         value: function renderIcon(action) {
-            if (canUseIcons) return _react2.default.createElement("img", { className: "actions", src: "images/action-" + this.props.action + ".png", alt: action });else {
+            if (canUseIcons) return _react2.default.createElement("img", { key: action, className: "actions", src: "images/action-" + action + ".png", alt: action });else {
                 return _react2.default.createElement(
                     "span",
-                    { className: "actions actions-" + action },
+                    { key: action, className: "actions actions-" + action },
                     function () {
                         switch (action) {
                             case "1":
