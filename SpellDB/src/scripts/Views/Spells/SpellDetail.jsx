@@ -28,7 +28,7 @@ export default class SpellDetail extends React.PureComponent {
         bodySections.push({ 'title': null, className: 'mainText', 'text': spell.description });
  
         for (var level in spell.heightened) {
-            bodySections.push({'title': <strong>Heightened({level})</strong>, 'className': 'heighten', 'text': spell.heightened[level] });
+            bodySections.push({'title': <strong>Heightened({level}): </strong>, 'className': 'heighten', 'text': spell.heightened[level] });
         }
 
         return (

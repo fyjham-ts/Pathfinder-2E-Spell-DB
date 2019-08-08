@@ -71,7 +71,7 @@ var SpellDetail = function (_React$PureComponent) {
                         null,
                         'Heightened(',
                         level,
-                        ')'
+                        '): '
                     ), 'className': 'heighten', 'text': spell.heightened[level] });
             }
 

@@ -11756,8 +11756,6 @@ readers do not read off random characters that represent icons */
 .spellDetail .body > div {
   margin-top: 2px;
   margin-bottom: 2px; }
-  .spellDetail .body > div strong::after {
-    content: ": "; }
   .spellDetail .body > div.save {
     padding-left: 10px; }
     .spellDetail .body > div.save strong::after {
@@ -11765,6 +11763,34 @@ readers do not read off random characters that represent icons */
   .spellDetail .body > div.option {
     display: list-item;
     list-style: circle inside none; }
+
+.spellDetail .body hr {
+  margin-top: 3px;
+  margin-bottom: 3px; }
+
+.spellDetail .body table thead tr {
+  background: #5e0000;
+  color: #FFF; }
+
+.spellDetail .body table tbody tr {
+  background: #eee4c8;
+  color: #000; }
+  .spellDetail .body table tbody tr:nth-child(2n) {
+    background: #f5efe0; }
+
+.spellDetail .body table th {
+  font-weight: normal; }
+  .spellDetail .body table th.title {
+    text-align: center;
+    font-weight: bold; }
+
+.spellDetail .body table th, .spellDetail .body table td {
+  padding: 3px 12px; }
+  .spellDetail .body table th.number, .spellDetail .body table td.number {
+    text-align: center; }
+
+.spellDetail .body table td.split {
+  border-left: 4px solid #5e0000; }
 
 @media (max-width: 575px) {
   .spellListList {
@@ -11877,6 +11903,9 @@ readers do not read off random characters that represent icons */
 
 .quickRefTable table.table td.split {
   border-left: 4px solid #5e0000; }
+
+.quickRefTable table.compact th, .quickRefTable table.compact td {
+  padding: 3px; }
 
 .quickRefList .card-body {
   padding: 0.5rem; }

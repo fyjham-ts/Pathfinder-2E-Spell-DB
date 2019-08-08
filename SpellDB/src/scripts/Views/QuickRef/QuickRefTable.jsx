@@ -10,14 +10,14 @@ export default class QuickRefTable extends React.PureComponent {
     }
     render() {
         return <div className="quickRefTable">
-            <table className="table">
+            <table className={ this.props.table.cssClass || "table" }>
                 <thead>
                     {this.props.table.title && <tr>
                         <th className="title" colSpan={this.props.table.columns.length}>{this.props.table.title}</th>
                     </tr>}
-                    <tr>
+                    {!this.props.table.hideHeader && <tr>
                         {this.props.table.columns.map((c, ci) => <th key={ci} className={c.colType}>{c.title}</th>)}
-                    </tr>
+                    </tr>}
                 </thead>
                 <tbody>
                     {this.props.table.rows.map((r, ri) =>

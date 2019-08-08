@@ -46,7 +46,7 @@ var QuickRefTable = function (_React$PureComponent) {
                 { className: 'quickRefTable' },
                 _react2.default.createElement(
                     'table',
-                    { className: 'table' },
+                    { className: this.props.table.cssClass || "table" },
                     _react2.default.createElement(
                         'thead',
                         null,
@@ -59,7 +59,7 @@ var QuickRefTable = function (_React$PureComponent) {
                                 this.props.table.title
                             )
                         ),
-                        _react2.default.createElement(
+                        !this.props.table.hideHeader && _react2.default.createElement(
                             'tr',
                             null,
                             this.props.table.columns.map(function (c, ci) {

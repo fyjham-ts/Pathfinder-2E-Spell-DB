@@ -509,7 +509,7 @@
           [ "Abberation", "Occutism" ],
           [ "Animal", "Nature" ],
           [ "Astral", "Occultism" ],
-          [ "Beast", "Aracana, Nature" ],
+          [ "Beast", "Arcana, Nature" ],
           [ "Celestial", "Religion" ],
           [ "Construct", "Arcana, Crafting" ],
           [ "Dragon", "Arcana" ],
@@ -717,6 +717,82 @@
         ],
         "rows": [
           [ "**Applies**  \r\n* Any Character of minimum level playing high tier.  \r\n* When the table above says so (Applies to enemies)\r\n\r\n**Scenario Rules**  \r\n* +1 to all DC's, Attacks, Damage, Saves, Skills, Perception and AC.\r\n* +10 or 10% HP (Whichever is higher).\r\n\r\n**Player Rules**  \r\n+1 to AC, DCs, modifiers, and gain extra HP as though levelled." ]
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Earn Income",
+    "icon": "fas fa-pencil-ruler",
+    "render": "tables",
+    "tables": [
+      {
+        "cssClass": "table compact",
+        "title":  "Amount Earned (Per Day, Crit = lvl+1)",
+        "columns": [
+          {
+            "title": "Task lvl",
+            "colType": "number"
+          },
+          {
+            "title": "Fail",
+            "colType": "number"
+          },
+          {
+            "title": "T",
+            "colType": "number"
+          },
+          {
+            "title": "E",
+            "colType": "number"
+          },
+          {
+            "title": "M",
+            "colType": "number"
+          },
+          {
+            "title": "L",
+            "colType": "number"
+          }
+        ],
+        "rows": [
+          [ "0", "1c", "5c", "5c", "5c", "5c" ],
+          [ "1", "2c", "2s", "2s", "2s", "2s" ],
+          [ "2", "4c", "3s", "3s", "3s", "3s" ],
+          [ "3", "8c", "5s", "5s", "5s", "5s" ],
+          [ "4", "1s", "7s", "8s", "8s", "8s" ],
+          [ "5", "2s", "9s", "1g", "1g", "1g" ],
+          [ "6", "3s", "1.5g", "2g", "2g", "2g" ],
+          [ "7", "4s", "2g", "2.5g", "2.5g", "2.5g" ],
+          [ "8", "5s", "2.5g", "3g", "3g", "3g" ],
+          [ "9", "6s", "3g", "4g", "4g", "4g" ],
+          [ "10", "7s", "4g", "5g", "6g", "6g" ],
+          [ "11", "8s", "5g", "6g", "8g", "8g" ],
+          [ "12", "9s", "6g", "8g", "10g", "10g" ],
+          [ "13", "1g", "7g", "10g", "15g", "15g" ],
+          [ "14", "1.5g", "8g", "15g", "20g", "20g" ],
+          [ "15", "2g", "10g", "20g", "28g", "28g" ],
+          [ "16", "2.5g", "13g", "25g", "36g", "40g" ],
+          [ "17", "3g", "15g", "30g", "45g", "55g" ],
+          [ "18", "4g", "20g", "45g", "70g", "90g" ],
+          [ "19", "6g", "30g", "60g", "100g", "130g" ],
+          [ "20", "8g", "40g", "75g", "150g", "200g" ],
+          [ "21", "", "50g", "90g", "175g", "300g" ]
+        ]
+      },
+      {
+        "title": "PFS Assumptions",
+        "hideHeader":  true,
+        "columns": [
+          {
+            "title": "content",
+            "type": "text"
+          }
+        ],
+        "rows": [
+          [ "You can always find a job at level - 2 for Lore, Crafting or Performance." ],
+          [ "You get 8 days downtime from a scenario, 2 from a quest & 24 for AP/Module. 50% extra for Field Commission Agents." ],
+          [ "Make a separate Earn Income roll for each 8 days of downtime."]
         ]
       }
     ]

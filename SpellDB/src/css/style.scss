@@ -125,11 +125,7 @@ $alignmentTrait: #4287f5;
         > div {
             margin-top: 2px;
             margin-bottom: 2px;
-
-            strong::after {
-                content: ": "
-            }
-
+            
             &.save {
                 padding-left: 10px;
 
@@ -141,6 +137,46 @@ $alignmentTrait: #4287f5;
             &.option {
                 display: list-item;
                 list-style: circle inside none;
+            }
+        }
+        hr {
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+        table {
+            thead tr {
+                background: $pathfinderRed;
+                color: #FFF;
+            }
+
+            tbody tr {
+                background: $tr;
+                color: #000;
+
+                &:nth-child(2n) {
+                    background: $tr-alt;
+                }
+            }
+
+            th {
+                font-weight: normal;
+
+                &.title {
+                    text-align: center;
+                    font-weight: bold;
+                }
+            }
+
+            th, td {
+                padding: 3px 12px;
+
+                &.number {
+                    text-align: center;
+                }
+            }
+
+            td.split {
+                border-left: 4px solid $pathfinderRed;
             }
         }
     }
@@ -293,6 +329,7 @@ $alignmentTrait: #4287f5;
 
         th {
             font-weight: normal;
+
             &.title {
                 text-align: center;
                 font-weight: bold;
@@ -309,6 +346,12 @@ $alignmentTrait: #4287f5;
 
         td.split {
             border-left: 4px solid $pathfinderRed;
+        }
+    }
+
+    table.compact {
+        th, td {
+            padding: 3px;
         }
     }
 }
