@@ -218,7 +218,19 @@ export default class SpellList extends React.Component {
                 if (lhs.type != "Cantrip" && rhs.type == "Cantrip") return 1;
                 if (lhs.name.toLowerCase() < rhs.name.toLowerCase()) return -1;
                 if (lhs.name.toLowerCase() > rhs.name.toLowerCase()) return 1;
-                break;
+                return 0;
+            case "Actions":
+                var seq = ["free", "reaction", "1", "2", "3"];
+                var lhsA = seq.indexOf(Array.isArray(lhs.action) ? lhs.action[0] : lhs.action);
+                var rhsA = seq.indexOf(Array.isArray(rhs.action) ? rhs.action[0] : rhs.action);
+                if (lhsA != -1 && rhsA == -1) return -1; // Assume if it's not in the list it's longer
+                if (lhsA == -1 && rhsA != -1) return 1;
+                if (lhsA < rhsA) return -1;
+                if (lhsA > rhsA) return 1;
+                // Fallback to alpha
+                if (lhs.name.toLowerCase() < rhs.name.toLowerCase()) return -1;
+                if (lhs.name.toLowerCase() > rhs.name.toLowerCase()) return 1;
+                return 0;
         }
     }
     render() {
@@ -247,7 +259,7 @@ export default class SpellList extends React.Component {
                     <div className="col-sm">
                         <SpellSearch
                             spellTypes={this.state.spellTypes}
-                            sortOptions={["Name", "Level"]}
+                            sortOptions={["Name", "Level", "Actions"]}
                             displayModes={["List", "Details"]}
                             spellType={this.state.criteria.spellType}
                             spellOption={this.state.criteria.spellOption}
