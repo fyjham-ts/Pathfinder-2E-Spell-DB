@@ -42,6 +42,13 @@
     ]
   },
   {
+    "name": "Duration",
+    "matchBy": "value",
+    "match": "duration",
+    "sort":  "duration",
+    "options": null
+  },
+  {
     "name": "Traits",
     "matchBy": "array",
     "match": "traits",
@@ -372,15 +379,42 @@
     "name": "Focus Powers - Wizard School",
     "matchBy": "lookup",
     "options": [
-      {"name":"Conjuration","value":"Conjuration"},
-      {"name":"Necromancy","value":"Necromancy"},
-      {"name":"Enchantment","value":"Enchantment"},
-      {"name":"Divination","value":"Divination"},
-      {"name":"Evocation","value":"Evocation"},
-      {"name":"Universalist","value":"Universalist"},
-      {"name":"Transmutation","value":"Transmutation"},
-      {"name":"Abjuration","value":"Abjuration"},
-      {"name":"Illusion","value":"Illusion"}
+      {
+        "name": "Conjuration",
+        "value": "Conjuration"
+      },
+      {
+        "name": "Necromancy",
+        "value": "Necromancy"
+      },
+      {
+        "name": "Enchantment",
+        "value": "Enchantment"
+      },
+      {
+        "name": "Divination",
+        "value": "Divination"
+      },
+      {
+        "name": "Evocation",
+        "value": "Evocation"
+      },
+      {
+        "name": "Universalist",
+        "value": "Universalist"
+      },
+      {
+        "name": "Transmutation",
+        "value": "Transmutation"
+      },
+      {
+        "name": "Abjuration",
+        "value": "Abjuration"
+      },
+      {
+        "name": "Illusion",
+        "value": "Illusion"
+      }
     ],
     "lookup": {
       "Conjuration": [ "Augment Summoning", "Dimensional Steps" ],

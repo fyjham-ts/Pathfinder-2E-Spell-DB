@@ -36,13 +36,14 @@ export default class SpellList extends React.Component {
         };
         this.state.spellTypes.forEach(st => {
             if (st.matchBy == "bookmark") st.options = this.state.bookmarkLists.map(l => ({ "name": l.name, "value": l.id }));
-            if (st.matchBy == "array" && st.options == null) {
+
+            if ((st.matchBy == "array" || st.matchBy == 'value') && st.options == null) {
                 // Doing this every load may be too slow with all the spells. If it is, move this to a preprocessor build script for spell types.
                 st.options = [];
                 var added = {};
                 this.state.spells.forEach(s => {
                     var opts = s[st.match];
-                    if (opts && Array.isArray(opts)) {
+                    if (st.matchBy == "array" && opts && Array.isArray(opts)) {
                         opts.forEach(o => {
                             if (o.length > 0 && !added[o]) {
                                 added[o] = true;
@@ -50,7 +51,32 @@ export default class SpellList extends React.Component {
                             }
                         });
                     }
-                    st.options.sort((lhs, rhs) => lhs.name < rhs.name ? -1 : (lhs.name == rhs.name ? 0 : 1));
+                    else if (st.matchBy == 'value' && opts) {
+                        if (!added[opts]) {
+                            added[opts] = true;
+                            st.options.push({ "name": opts.charAt(0).toUpperCase() + opts.slice(1), "value": opts });
+                        }
+                    }
+                    switch (st.sort) {
+                        case "duration":
+                            var durations = ['round', 'minute', 'hour', 'day', 'month', 'year'];
+                            var splitExp = new RegExp("(\\d+) ((?:" + durations.join(")|(?:") + "))s?", "i");
+                            st.options.sort((lhs, rhs) => {
+                                var lhsMatch = lhs.name.match(splitExp);
+                                var rhsMatch = rhs.name.match(splitExp);
+                                if (lhsMatch && !rhsMatch) return -1;
+                                else if (!lhsMatch && rhsMatch) return 1;
+                                else if (!lhsMatch && !rhsMatch) return lhs.name < rhs.name ? -1 : (lhs.name == rhs.name ? 0 : 1);
+                                else {
+                                    if (lhsMatch[2] != rhsMatch[2]) return durations.indexOf(lhsMatch[2].toLowerCase()) - durations.indexOf(rhsMatch[2].toLowerCase());
+                                    else if (lhsMatch[1] != rhsMatch[1]) return parseInt(lhsMatch[1]) - parseInt(rhsMatch[1]);
+                                    else return lhs.name < rhs.name ? -1 : (lhs.name == rhs.name ? 0 : 1);
+                                }
+                            });
+                            break;
+                        default:
+                            st.options.sort((lhs, rhs) => lhs.name < rhs.name ? -1 : (lhs.name == rhs.name ? 0 : 1));
+                    }
                 });
             }
         });
@@ -129,6 +155,11 @@ export default class SpellList extends React.Component {
                 case "array":
                     if (this.state.criteria.spellOption) {
                         if (!spell[spellType.match] || spell[spellType.match].indexOf(this.state.criteria.spellOption) == -1) return false;
+                    }
+                    break;
+                case "value":
+                    if (this.state.criteria.spellOption) {
+                        if (!spell[spellType.match] || spell[spellType.match] != this.state.criteria.spellOption) return false;
                     }
                     break;
             }

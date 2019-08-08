@@ -31112,6 +31112,13 @@ module.exports=[
     ]
   },
   {
+    "name": "Duration",
+    "matchBy": "value",
+    "match": "duration",
+    "sort":  "duration",
+    "options": null
+  },
+  {
     "name": "Traits",
     "matchBy": "array",
     "match": "traits",
@@ -31442,15 +31449,42 @@ module.exports=[
     "name": "Focus Powers - Wizard School",
     "matchBy": "lookup",
     "options": [
-      {"name":"Conjuration","value":"Conjuration"},
-      {"name":"Necromancy","value":"Necromancy"},
-      {"name":"Enchantment","value":"Enchantment"},
-      {"name":"Divination","value":"Divination"},
-      {"name":"Evocation","value":"Evocation"},
-      {"name":"Universalist","value":"Universalist"},
-      {"name":"Transmutation","value":"Transmutation"},
-      {"name":"Abjuration","value":"Abjuration"},
-      {"name":"Illusion","value":"Illusion"}
+      {
+        "name": "Conjuration",
+        "value": "Conjuration"
+      },
+      {
+        "name": "Necromancy",
+        "value": "Necromancy"
+      },
+      {
+        "name": "Enchantment",
+        "value": "Enchantment"
+      },
+      {
+        "name": "Divination",
+        "value": "Divination"
+      },
+      {
+        "name": "Evocation",
+        "value": "Evocation"
+      },
+      {
+        "name": "Universalist",
+        "value": "Universalist"
+      },
+      {
+        "name": "Transmutation",
+        "value": "Transmutation"
+      },
+      {
+        "name": "Abjuration",
+        "value": "Abjuration"
+      },
+      {
+        "name": "Illusion",
+        "value": "Illusion"
+      }
     ],
     "lookup": {
       "Conjuration": [ "Augment Summoning", "Dimensional Steps" ],
@@ -41533,23 +41567,43 @@ var SpellList = function (_React$Component) {
             if (st.matchBy == "bookmark") st.options = _this.state.bookmarkLists.map(function (l) {
                 return { "name": l.name, "value": l.id };
             });
-            if (st.matchBy == "array" && st.options == null) {
+
+            if ((st.matchBy == "array" || st.matchBy == 'value') && st.options == null) {
                 // Doing this every load may be too slow with all the spells. If it is, move this to a preprocessor build script for spell types.
                 st.options = [];
                 var added = {};
                 _this.state.spells.forEach(function (s) {
                     var opts = s[st.match];
-                    if (opts && Array.isArray(opts)) {
+                    if (st.matchBy == "array" && opts && Array.isArray(opts)) {
                         opts.forEach(function (o) {
                             if (o.length > 0 && !added[o]) {
                                 added[o] = true;
                                 st.options.push({ "name": o.charAt(0).toUpperCase() + o.slice(1), "value": o });
                             }
                         });
+                    } else if (st.matchBy == 'value' && opts) {
+                        if (!added[opts]) {
+                            added[opts] = true;
+                            st.options.push({ "name": opts.charAt(0).toUpperCase() + opts.slice(1), "value": opts });
+                        }
                     }
-                    st.options.sort(function (lhs, rhs) {
-                        return lhs.name < rhs.name ? -1 : lhs.name == rhs.name ? 0 : 1;
-                    });
+                    switch (st.sort) {
+                        case "duration":
+                            var durations = ['round', 'minute', 'hour', 'day', 'month', 'year'];
+                            var splitExp = new RegExp("(\\d+) ((?:" + durations.join(")|(?:") + "))s?", "i");
+                            st.options.sort(function (lhs, rhs) {
+                                var lhsMatch = lhs.name.match(splitExp);
+                                var rhsMatch = rhs.name.match(splitExp);
+                                if (lhsMatch && !rhsMatch) return -1;else if (!lhsMatch && rhsMatch) return 1;else if (!lhsMatch && !rhsMatch) return lhs.name < rhs.name ? -1 : lhs.name == rhs.name ? 0 : 1;else {
+                                    if (lhsMatch[2] != rhsMatch[2]) return durations.indexOf(lhsMatch[2].toLowerCase()) - durations.indexOf(rhsMatch[2].toLowerCase());else if (lhsMatch[1] != rhsMatch[1]) return parseInt(lhsMatch[1]) - parseInt(rhsMatch[1]);else return lhs.name < rhs.name ? -1 : lhs.name == rhs.name ? 0 : 1;
+                                }
+                            });
+                            break;
+                        default:
+                            st.options.sort(function (lhs, rhs) {
+                                return lhs.name < rhs.name ? -1 : lhs.name == rhs.name ? 0 : 1;
+                            });
+                    }
                 });
             }
         });
@@ -41654,6 +41708,11 @@ var SpellList = function (_React$Component) {
                     case "array":
                         if (this.state.criteria.spellOption) {
                             if (!spell[spellType.match] || spell[spellType.match].indexOf(this.state.criteria.spellOption) == -1) return false;
+                        }
+                        break;
+                    case "value":
+                        if (this.state.criteria.spellOption) {
+                            if (!spell[spellType.match] || spell[spellType.match] != this.state.criteria.spellOption) return false;
                         }
                         break;
                 }
