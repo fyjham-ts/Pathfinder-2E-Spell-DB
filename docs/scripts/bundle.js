@@ -30774,7 +30774,7 @@ module.exports=[
           [ 4, 19, 17, 36 ],
           [ 5, 20, 18, 38 ],
           [ 6, 22, 19, 39 ],
-          [ 7, 14, 20, 40 ],
+          [ 7, 23, 20, 40 ],
           [ 8, 24, 21, 42 ],
           [ 9, 26, 22, 44 ],
           [ 10, 27, 23, 46 ],
@@ -31137,7 +31137,7 @@ module.exports=[
         "rows": [
           [ "You can always find a job at level - 2 for Lore, Crafting or Performance." ],
           [ "You get 8 days downtime from a scenario, 2 from a quest & 24 for AP/Module. 50% extra for Field Commission Agents." ],
-          [ "Make a separate Earn Income for each 8 days of downtime."]
+          [ "Make a separate Earn Income roll for each 8 days of downtime."]
         ]
       }
     ]
