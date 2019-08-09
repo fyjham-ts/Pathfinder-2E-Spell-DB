@@ -6587,6 +6587,7 @@
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=265",
+    "manual":  true,
     "name": "Sanctified Ground",
     "traits": [ "abjuration", "consecration" ],
     "type": "Spell",
@@ -6594,8 +6595,10 @@
     "source": "Core Rulebook pg. 366",
     "traditions": [ "divine" ],
     "cast": "1 minute (material, somatic, verbal)",
-    "cost": "  1 vial of holy waterArea 30-foot burst centered on youYou sanctify the area, sprinkling it with holy water and warding it against your foes. Choose aberrations, celestials, dragons, fiends, monitors, or undead. All creatures in the area gain a +1 status bonus to AC, attack rolls, damage rolls, and saving throws against the chosen creatures.",
-    "components": [ "1minute(material", "somatic", "verbal)" ]
+    "cost": "1 vial of holy water",
+    "area": "30-foot burst centered on you",
+    "description": "You sanctify the area, sprinkling it with holy water and warding it against your foes. Choose aberrations, celestials, dragons, fiends, monitors, or undead. All creatures in the area gain a +1 status bonus to AC, attack rolls, damage rolls, and saving throws against the chosen creatures.",
+    "components": [ "1minute", "material", "somatic", "verbal)" ]
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=269",
