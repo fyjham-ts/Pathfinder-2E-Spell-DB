@@ -11,8 +11,8 @@ let { spells, spellTypes } = loadSpellData();
 
 spellTypes.sort((lhs, rhs) => lhs.name < rhs.name ? -1 : (lhs.name > rhs.name ? 1 : 0));
 
-const throttleMs = 5000;
-const debounceMs = 5000;
+const throttleMs = 500;
+const debounceMs = 500;
 
 var defaultMaxRows = 50;
 var getDefaultCriteria = () => {
