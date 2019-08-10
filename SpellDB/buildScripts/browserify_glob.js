@@ -4,12 +4,11 @@ var glob = require('glob');
 
 var bundler = browserify();
 
-console.error('Called with: ' + process.argv.slice(2));
 var glob_pattern = process.argv[2];
 if (glob_pattern.charAt(0) === "'") { // Needed for Windows compatibility
     glob_pattern = glob_pattern.slice(1, -1);
 }
-process.env.NODE_ENV = 'production';
+
 
 glob(glob_pattern, function (error, srcFiles) {
     if (error) { throw error; }
@@ -21,20 +20,37 @@ glob(glob_pattern, function (error, srcFiles) {
         }
         i++;
     });
-    bundler
-        .transform('unassertify', { global: true })
-        .transform('envify', {
-            global: true,
-            _: 'purge',
-            NODE_ENV: "production"
-        })
-        .transform(babelify.configure({
-            presets: ["@babel/preset-env", "@babel/preset-react"]
-        }))
-        .transform('uglifyify', { global: true })
-        .plugin('common-shakeify')
-        .plugin('browser-pack-flat/plugin')
-        .bundle()
-        .pipe(require('minify-stream')({ sourceMap: false }))
-        .pipe(process.stdout);
+    if (process.argv.length < 3 || process.argv[3] != 'dev') {
+        process.env.NODE_ENV = 'production';
+        bundler
+            .transform('unassertify', { global: true })
+            .transform('envify', {
+                global: true,
+                _: 'purge',
+                NODE_ENV: "production"
+            })
+            .transform(babelify.configure({
+                presets: ["@babel/preset-env", "@babel/preset-react"]
+            }))
+            .transform('uglifyify', { global: true })
+            .plugin('common-shakeify')
+            .plugin('browser-pack-flat/plugin')
+            .bundle()
+            .pipe(require('minify-stream')({ sourceMap: false }))
+            .pipe(process.stdout);
+    }
+    else {
+        process.env.NODE_ENV = 'development';
+        bundler
+            .transform('envify', {
+                global: true,
+                _: 'purge',
+                NODE_ENV: "development"
+            })
+            .transform(babelify.configure({
+                presets: ["@babel/preset-env", "@babel/preset-react"]
+            }))
+            .bundle()
+            .pipe(process.stdout);
+    }
 });

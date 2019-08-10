@@ -5,6 +5,7 @@ import QuickRefIndex from './QuickRef/QuickRefIndex.jsx';
 import About from './About/About.jsx';
 import Navigation from './Navigation.jsx';
 import BookmarkManager from './../BookmarkManager.jsx';
+import {ThemeContext} from './../Contexts/ThemeContext.jsx';
 
 var bookmarkMgr = new BookmarkManager();
 const darkModeKey = "SpellDB_darkMode";
@@ -24,9 +25,9 @@ export default class BasePage extends React.PureComponent {
             "darkMode": initialDarkMode
         };
         this.navClick = this.navClick.bind(this);
-        this.darkToggle = this.darkToggle.bind(this);
+        this.changeDarkMode = this.changeDarkMode.bind(this);
     }
-    darkToggle(dark) {
+    changeDarkMode(dark) {
         this.setState({
             "darkMode": dark
         });
@@ -48,8 +49,10 @@ export default class BasePage extends React.PureComponent {
         }
 
         return <div className={this.state.darkMode ? "dark" : "light"}>
-            <Navigation onNavClick={this.navClick} darkMode={this.state.darkMode} onDarkToggle={this.darkToggle} activePage={this.state.activePage} />
-            {pageContent}
+            <ThemeContext.Provider value={{ 'darkMode': this.state.darkMode, 'changeDarkMode': this.changeDarkMode}}>
+                <Navigation onNavClick={this.navClick} activePage={this.state.activePage} />
+                {pageContent}
+            </ThemeContext.Provider>
         </div>;
     }
 }

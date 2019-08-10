@@ -20,6 +20,7 @@
   },
   "scripts": {
     "build:js": "node buildScripts/browserify_glob.js 'src/scripts/**/*.jsx' > www/scripts/bundle.js",
+    "build:js:dev": "node buildScripts/browserify_glob.js 'src/scripts/**/*.jsx' dev > www/scripts/bundle.js",
     "build:manifest": "node buildScripts/offlineManifest.js",
     "build:docs": "node buildScripts/copyDocs.js",
     "build:css": "node-sass --include-path src/css src/css/ -o www/css",
