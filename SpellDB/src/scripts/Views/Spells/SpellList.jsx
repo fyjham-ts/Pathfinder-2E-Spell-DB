@@ -5,10 +5,14 @@ import SpellListItem from './SpellListItem.jsx';
 import SpellDetail from './SpellDetail.jsx';
 import update from 'immutability-helper';
 import { loadSpellData } from '../../SpellLoader.jsx';
+import { throttle, debounce } from 'throttle-debounce';
 
 let { spells, spellTypes } = loadSpellData();
 
 spellTypes.sort((lhs, rhs) => lhs.name < rhs.name ? -1 : (lhs.name > rhs.name ? 1 : 0));
+
+const throttleMs = 5000;
+const debounceMs = 5000;
 
 var defaultMaxRows = 50;
 var getDefaultCriteria = () => {
@@ -32,7 +36,8 @@ export default class SpellList extends React.Component {
             criteria: getDefaultCriteria(),
             selectedSpell: null,
             bookmarkLists: this.props.bookmarkManager.getBookmarkLists(),
-            activeBookmarkList: this.props.bookmarkManager.getActiveBookmarkList()
+            activeBookmarkList: this.props.bookmarkManager.getActiveBookmarkList(),
+            visibleSpells: []
         };
         this.state.spellTypes.forEach(st => {
             if (st.matchBy == "bookmark") st.options = this.state.bookmarkLists.map(l => ({ "name": l.name, "value": l.id }));
@@ -82,12 +87,13 @@ export default class SpellList extends React.Component {
         });
         this.criteriaReset = this.criteriaReset.bind(this);
         this.criteriaChange = this.criteriaChange.bind(this);
-        this.criteriaSort = this.criteriaSort.bind(this);
-        this.meetsCriteria = this.meetsCriteria.bind(this);
+        this.buildSort = this.buildSort.bind(this);
+        this.buildFilter = this.buildFilter.bind(this);
         this.selectSpell = this.selectSpell.bind(this);
         this.showMore = this.showMore.bind(this);
         this.isBookmarked = this.isBookmarked.bind(this);
         this.bookmarkSpell = this.bookmarkSpell.bind(this);
+        this.recalcVisibleSpells.bind(this);
 
         this.bookmarkListUpdate = this.bookmarkListUpdate.bind(this);
         this.activeBookmarkListUpdate = this.activeBookmarkListUpdate.bind(this);
@@ -98,6 +104,16 @@ export default class SpellList extends React.Component {
             this.props.bookmarkManager.off(this.props.bookmarkManager.events.dataUpdate, this.bookmarkListUpdate);
             this.props.bookmarkManager.off(this.props.bookmarkManager.events.activeListUpdate, this.activeBookmarkListUpdate);
         }).bind(this);
+        this.state.visibleSpells = this.state.spells.filter(this.buildFilter()).sort(this.buildSort())
+
+        this.recalcVisibleSpellsThrottled = throttle(throttleMs, this.recalcVisibleSpells);
+        this.recalcVisibleSpellsDebounced = debounce(debounceMs, this.recalcVisibleSpells);
+    }
+    recalcVisibleSpells(criteria) {
+        // Accepts the criteria separate to setState cause with throttling it may not actually be in the state yet.
+        this.setState({
+            'visibleSpells': this.state.spells.filter(this.buildFilter(criteria)).sort(this.buildSort(criteria))
+        });
     }
     bookmarkListUpdate(ev, args) {
         var types = JSON.parse(JSON.stringify(this.state.spellTypes));
@@ -123,54 +139,57 @@ export default class SpellList extends React.Component {
     showMore() {
         this.setState((s) => { return { 'maxRows': s.maxRows + defaultMaxRows }; });
     }
-    meetsCriteria(spell) {
-        if (this.state.criteria.spellName) {
-            if (spell.name.toLowerCase().indexOf(this.state.criteria.spellName.toLowerCase()) === -1) return false;
-        }
-        if (this.state.criteria.spellType) {
-            var spellType = this.state.spellTypes.find(t => t.name == this.state.criteria.spellType);
-            switch (spellType.matchBy) {
-                case "bookmark":
-                    if (this.state.criteria.spellOption) {
-                        var list = this.state.bookmarkLists.find(l => l.id === this.state.criteria.spellOption);
-                        if (list && !list.spells[spell.name]) return false;
-                    }
-                    break;
-                case "lookup":
-                    if (this.state.criteria.spellOption) {
-                        if (!spellType.lookup[this.state.criteria.spellOption]) return false;
-                        if (spellType.lookup[this.state.criteria.spellOption].indexOf(spell.name) === -1) return false;
-                    } else {
-                        // For lookups, filter that it must be in one of the lists
-                        var found = false;
-                        for (var option in spellType.lookup) {
-                            found = found || (spellType.lookup[option].indexOf(spell.name) !== -1);
+    buildFilter(criteria) {
+        if (!criteria) criteria = this.state.criteria;
+        return (spell) => {
+            if (criteria.spellName) {
+                if (spell.name.toLowerCase().indexOf(criteria.spellName.toLowerCase()) === -1) return false;
+            }
+            if (criteria.spellType) {
+                var spellType = this.state.spellTypes.find(t => t.name == criteria.spellType);
+                switch (spellType.matchBy) {
+                    case "bookmark":
+                        if (criteria.spellOption) {
+                            var list = this.state.bookmarkLists.find(l => l.id === criteria.spellOption);
+                            if (list && !list.spells[spell.name]) return false;
                         }
-                        if (!found) return false;
-                    }
-                    break;
-                case "list":
-                    if (spellType.lookup.indexOf(spell.name) === -1) return false;
-                    break;
-                case "array":
-                    if (this.state.criteria.spellOption) {
-                        if (!spell[spellType.match] || spell[spellType.match].indexOf(this.state.criteria.spellOption) == -1) return false;
-                    }
-                    break;
-                case "value":
-                    if (this.state.criteria.spellOption) {
-                        if (!spell[spellType.match] || spell[spellType.match] != this.state.criteria.spellOption) return false;
-                    }
-                    break;
+                        break;
+                    case "lookup":
+                        if (criteria.spellOption) {
+                            if (!spellType.lookup[criteria.spellOption]) return false;
+                            if (spellType.lookup[criteria.spellOption].indexOf(spell.name) === -1) return false;
+                        } else {
+                            // For lookups, filter that it must be in one of the lists
+                            var found = false;
+                            for (var option in spellType.lookup) {
+                                found = found || (spellType.lookup[option].indexOf(spell.name) !== -1);
+                            }
+                            if (!found) return false;
+                        }
+                        break;
+                    case "list":
+                        if (spellType.lookup.indexOf(spell.name) === -1) return false;
+                        break;
+                    case "array":
+                        if (criteria.spellOption) {
+                            if (!spell[spellType.match] || spell[spellType.match].indexOf(criteria.spellOption) == -1) return false;
+                        }
+                        break;
+                    case "value":
+                        if (criteria.spellOption) {
+                            if (!spell[spellType.match] || spell[spellType.match] != criteria.spellOption) return false;
+                        }
+                        break;
+                }
             }
-        }
-        if (this.state.criteria.levels.length > 0) {
-            if (spell.type == 'Cantrip') {
-                if (this.state.criteria.levels.indexOf('C') === -1) return false;
+            if (criteria.levels.length > 0) {
+                if (spell.type == 'Cantrip') {
+                    if (criteria.levels.indexOf('C') === -1) return false;
+                }
+                else if (criteria.levels.indexOf(spell.level) === -1) return false;
             }
-            else if (this.state.criteria.levels.indexOf(spell.level) === -1) return false;
-        }
-        return true;
+            return true;
+        };
     }
     selectSpell(spell) {
         this.setState({
@@ -183,58 +202,71 @@ export default class SpellList extends React.Component {
         this.setState({
             criteria: newCriteria
         });
+        this.recalcVisibleSpells(newCriteria);
     }
     criteriaChange(name, value) {
+        var criteria;
         if (name === "spellType") {
             var spellOption = "";
             var spellType = this.state.spellTypes.find(t => t.name == value);
             if (spellType && spellType.matchBy == "bookmark") spellOption = this.state.activeBookmarkList.id;
+            criteria = update(this.state.criteria, {
+                [name]: { $set: value },
+                spellOption: { $set: spellOption }
+            });
             this.setState({
-                criteria: update(this.state.criteria, {
-                    [name]: { $set: value },
-                    spellOption: { $set: spellOption }  
-                }),
+                criteria: criteria,
                 maxRows: defaultMaxRows
             });
         }
         else {
+            criteria = update(this.state.criteria, {
+                [name]: { $set: value }
+            });
             this.setState({
-                criteria: update(this.state.criteria, {
-                    [name]: { $set: value }
-                }),
+                criteria: criteria,
                 maxRows: defaultMaxRows
             });
         }
-    }
-    criteriaSort(lhs, rhs) {
-        switch (this.state.criteria.sortBy) {
-            case "Name":
-                if (lhs.name.toLowerCase() < rhs.name.toLowerCase()) return -1;
-                if (lhs.name.toLowerCase() > rhs.name.toLowerCase()) return 1;
-                return 0;
-            case "Level":
-                if (lhs.level - rhs.level != 0) return lhs.level - rhs.level;
-                if (lhs.type == "Cantrip" && rhs.type != "Cantrip") return -1;
-                if (lhs.type != "Cantrip" && rhs.type == "Cantrip") return 1;
-                if (lhs.name.toLowerCase() < rhs.name.toLowerCase()) return -1;
-                if (lhs.name.toLowerCase() > rhs.name.toLowerCase()) return 1;
-                return 0;
-            case "Actions":
-                var seq = ["free", "reaction", "1", "2", "3"];
-                var lhsA = seq.indexOf(Array.isArray(lhs.action) ? lhs.action[0] : lhs.action);
-                var rhsA = seq.indexOf(Array.isArray(rhs.action) ? rhs.action[0] : rhs.action);
-                if (lhsA != -1 && rhsA == -1) return -1; // Assume if it's not in the list it's longer
-                if (lhsA == -1 && rhsA != -1) return 1;
-                if (lhsA < rhsA) return -1;
-                if (lhsA > rhsA) return 1;
-                // Fallback to alpha
-                if (lhs.name.toLowerCase() < rhs.name.toLowerCase()) return -1;
-                if (lhs.name.toLowerCase() > rhs.name.toLowerCase()) return 1;
-                return 0;
+        if (name == "spellName") {
+            if (value.length < 5 || value.endsWith(' ')) this.recalcVisibleSpellsThrottled(criteria);
+            else this.recalcVisibleSpellsDebounced(criteria);
         }
+        else
+            this.recalcVisibleSpells(criteria);
+    }
+    buildSort(criteria) {
+        if (!criteria) criteria = this.state.criteria;
+        return (lhs, rhs) => {
+            switch (this.state.criteria.sortBy) {
+                case "Name":
+                    if (lhs.name.toLowerCase() < rhs.name.toLowerCase()) return -1;
+                    if (lhs.name.toLowerCase() > rhs.name.toLowerCase()) return 1;
+                    return 0;
+                case "Level":
+                    if (lhs.level - rhs.level != 0) return lhs.level - rhs.level;
+                    if (lhs.type == "Cantrip" && rhs.type != "Cantrip") return -1;
+                    if (lhs.type != "Cantrip" && rhs.type == "Cantrip") return 1;
+                    if (lhs.name.toLowerCase() < rhs.name.toLowerCase()) return -1;
+                    if (lhs.name.toLowerCase() > rhs.name.toLowerCase()) return 1;
+                    return 0;
+                case "Actions":
+                    var seq = ["free", "reaction", "1", "2", "3"];
+                    var lhsA = seq.indexOf(Array.isArray(lhs.action) ? lhs.action[0] : lhs.action);
+                    var rhsA = seq.indexOf(Array.isArray(rhs.action) ? rhs.action[0] : rhs.action);
+                    if (lhsA != -1 && rhsA == -1) return -1; // Assume if it's not in the list it's longer
+                    if (lhsA == -1 && rhsA != -1) return 1;
+                    if (lhsA < rhsA) return -1;
+                    if (lhsA > rhsA) return 1;
+                    // Fallback to alpha
+                    if (lhs.name.toLowerCase() < rhs.name.toLowerCase()) return -1;
+                    if (lhs.name.toLowerCase() > rhs.name.toLowerCase()) return 1;
+                    return 0;
+            }
+        };
     }
     render() {
-        var visibleSpells = this.state.spells.filter(this.meetsCriteria).sort(this.criteriaSort);
+        var visibleSpells = this.state.visibleSpells;
         var truncated = false;
         if (visibleSpells.length > this.state.maxRows) {
             visibleSpells = visibleSpells.slice(0, this.state.maxRows);
@@ -242,7 +274,7 @@ export default class SpellList extends React.Component {
         }
 
         var selectedSpell = this.state.selectedSpell;
-        if ((!selectedSpell || !this.meetsCriteria(selectedSpell)) && visibleSpells.length > 0)
+        if ((!selectedSpell || !this.buildFilter()(selectedSpell)) && visibleSpells.length > 0)
             selectedSpell = visibleSpells[0];
 
         var detail = null;

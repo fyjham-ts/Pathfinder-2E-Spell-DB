@@ -8,7 +8,8 @@
     "immutability-helper": "latest",
     "react-markdown": "latest",
     "bootstrap-css-only": "latest",
-    "@fortawesome/fontawesome-free": "latest"
+    "@fortawesome/fontawesome-free": "latest",
+    "throttle-debounce": "latest"
   },
   "-vs-binding": {
     "BeforeBuild": [
