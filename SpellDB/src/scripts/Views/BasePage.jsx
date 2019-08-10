@@ -12,9 +12,16 @@ export default class BasePage extends React.PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            "activePage": "spells"
+            "activePage": "spells",
+            "darkMode": false /* TODO: Store */
         };
         this.navClick = this.navClick.bind(this);
+        this.darkToggle = this.darkToggle.bind(this);
+    }
+    darkToggle(dark) {
+        this.setState({
+            "darkMode": dark
+        });
     }
     navClick(name, page) {
         this.setState({
@@ -31,8 +38,8 @@ export default class BasePage extends React.PureComponent {
             default: pageContent = <div>Page To Be Created</div>; break;
         }
 
-        return <div>
-            <Navigation onNavClick={this.navClick} activePage={this.state.activePage} />
+        return <div className={this.state.darkMode ? "dark" : "light"}>
+            <Navigation onNavClick={this.navClick} darkMode={this.state.darkMode} onDarkToggle={this.darkToggle} activePage={this.state.activePage} />
             {pageContent}
         </div>;
     }

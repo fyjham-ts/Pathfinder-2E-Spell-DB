@@ -11685,6 +11685,72 @@ readers do not read off random characters that represent icons */
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
 
+#app > .light, #app > .dark {
+  min-height: 100vh; }
+
+.light {
+  background-color: #fff;
+  color: #212529; }
+
+.dark {
+  background: #1A1A1A;
+  color: #EEE; }
+  .dark .table {
+    color: #EEE; }
+  .dark .card-header {
+    background-color: #444; }
+  .dark .card-body {
+    background-color: #222; }
+  .dark .list-group-item-info, .dark .alert-info {
+    background-color: #3498DB;
+    color: #EEE; }
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+  vertical-align: middle; }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+  .switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 17px; }
+  .switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #FFF;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%; }
+  .switch input:checked + .slider {
+    background-color: #2196F3; }
+  .switch input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3; }
+  .switch input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px); }
+
+.nav-item .nav-link {
+  cursor: pointer; }
+  .nav-item .nav-link .switch {
+    margin-right: 8px; }
+
 .selectedSpell .spellDetail {
   position: -webkit-sticky;
   position: sticky;
@@ -11700,6 +11766,9 @@ readers do not read off random characters that represent icons */
   text-transform: uppercase;
   border-bottom: 1px solid #000000;
   padding-bottom: 2px; }
+  .dark .spellDetail .title {
+    color: #EEE;
+    border-color: #FFF; }
   .spellDetail .title .spellClass {
     display: inline-block;
     float: right; }
@@ -11850,12 +11919,15 @@ readers do not read off random characters that represent icons */
         border-radius: 3px;
         display: inline-block;
         position: relative; }
+        .dark .spell-search .levels .level-row .level-col input[type=checkbox] + label {
+          color: #FFF;
+          background-color: #444;
+          border-color: #444; }
       .spell-search .levels .level-row .level-col input[type=checkbox]:checked + label {
         background-color: #FFFF00;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1); }
-
-.upgradeDetails label {
-  font-weight: bold; }
+        .dark .spell-search .levels .level-row .level-col input[type=checkbox]:checked + label {
+          background-color: #2384c6; }
 
 .quickRefContent {
   padding: 5px; }
@@ -11869,14 +11941,18 @@ readers do not read off random characters that represent icons */
   .quickRefGrid .tile {
     width: 150px;
     height: 150px;
-    border: 1px solid grey;
+    border: 1px solid #808080;
     border-radius: 5px;
     text-align: center;
     padding: 25px 0;
     margin: 10px;
     cursor: pointer; }
+    .dark .quickRefGrid .tile {
+      border-color: #C0C0C0; }
     .quickRefGrid .tile:hover {
       background: #DDD; }
+      .dark .quickRefGrid .tile:hover {
+        background: #333; }
     .quickRefGrid .tile .icon {
       font-size: 3em; }
 

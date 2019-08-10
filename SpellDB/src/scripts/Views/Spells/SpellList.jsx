@@ -292,7 +292,7 @@ export default class SpellList extends React.Component {
                                         onSelect={this.selectSpell}
                                     />);
                             })}
-                            {truncated ? <li className="list-group-item list-group-item-info"><a onClick={this.showMore}>Show More...</a></li> : null}
+                            {truncated ? <li className="list-group-item list-group-item-info" onClick={this.showMore}>Show More...</li> : null}
                         </ul>
                     </div>
                     {detail}

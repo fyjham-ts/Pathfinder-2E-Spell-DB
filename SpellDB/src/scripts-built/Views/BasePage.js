@@ -53,13 +53,22 @@ var BasePage = function (_React$PureComponent) {
         var _this = _possibleConstructorReturn(this, (BasePage.__proto__ || Object.getPrototypeOf(BasePage)).call(this, props));
 
         _this.state = {
-            "activePage": "spells"
+            "activePage": "spells",
+            "darkMode": false /* TODO: Store */
         };
         _this.navClick = _this.navClick.bind(_this);
+        _this.darkToggle = _this.darkToggle.bind(_this);
         return _this;
     }
 
     _createClass(BasePage, [{
+        key: 'darkToggle',
+        value: function darkToggle(dark) {
+            this.setState({
+                "darkMode": dark
+            });
+        }
+    }, {
         key: 'navClick',
         value: function navClick(name, page) {
             this.setState({
@@ -89,8 +98,8 @@ var BasePage = function (_React$PureComponent) {
 
             return _react2.default.createElement(
                 'div',
-                null,
-                _react2.default.createElement(_Navigation2.default, { onNavClick: this.navClick, activePage: this.state.activePage }),
+                { className: this.state.darkMode ? "dark" : "light" },
+                _react2.default.createElement(_Navigation2.default, { onNavClick: this.navClick, darkMode: this.state.darkMode, onDarkToggle: this.darkToggle, activePage: this.state.activePage }),
                 pageContent
             );
         }

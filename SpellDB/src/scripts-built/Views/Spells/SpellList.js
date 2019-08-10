@@ -378,12 +378,8 @@ var SpellList = function (_React$Component) {
                             }),
                             truncated ? _react2.default.createElement(
                                 'li',
-                                { className: 'list-group-item list-group-item-info' },
-                                _react2.default.createElement(
-                                    'a',
-                                    { onClick: this.showMore },
-                                    'Show More...'
-                                )
+                                { className: 'list-group-item list-group-item-info', onClick: this.showMore },
+                                'Show More...'
                             ) : null
                         )
                     ),
