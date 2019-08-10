@@ -12,13 +12,9 @@ if (glob_pattern.charAt(0) === "'") { // Needed for Windows compatibility
 
 glob(glob_pattern, function (error, srcFiles) {
     if (error) { throw error; }
-    var i = 0;
     srcFiles.forEach(function (srcFile) {
-        if (true || (i < 18 && srcFile != "src/scripts/main.jsx" && srcFile != "src/scripts/Views/BasePage.jsx" && srcFile != "src/scripts/Views/Spells/SpellList.jsx")) {
-            console.error('- Adding', srcFile);
-            bundler.add(srcFile);
-        }
-        i++;
+        console.error('- Adding', srcFile);
+        bundler.add(srcFile);
     });
     if (process.argv.length < 3 || process.argv[3] != 'dev') {
         process.env.NODE_ENV = 'production';
