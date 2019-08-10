@@ -43,6 +43,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var bookmarkMgr = new _BookmarkManager2.default();
+var darkModeKey = "SpellDB_darkMode";
 
 var BasePage = function (_React$PureComponent) {
     _inherits(BasePage, _React$PureComponent);
@@ -52,9 +53,15 @@ var BasePage = function (_React$PureComponent) {
 
         var _this = _possibleConstructorReturn(this, (BasePage.__proto__ || Object.getPrototypeOf(BasePage)).call(this, props));
 
+        var initialDarkMode = false;
+        try {
+            initialDarkMode = window.localStorage.getItem(darkModeKey) == "1";
+        } catch (ex) {
+            initialDarkMode = false;
+        }
         _this.state = {
             "activePage": "spells",
-            "darkMode": false /* TODO: Store */
+            "darkMode": initialDarkMode
         };
         _this.navClick = _this.navClick.bind(_this);
         _this.darkToggle = _this.darkToggle.bind(_this);
@@ -67,6 +74,7 @@ var BasePage = function (_React$PureComponent) {
             this.setState({
                 "darkMode": dark
             });
+            window.localStorage.setItem(darkModeKey, dark ? "1" : "0");
         }
     }, {
         key: 'navClick',

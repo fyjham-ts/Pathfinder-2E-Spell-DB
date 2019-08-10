@@ -40111,6 +40111,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var bookmarkMgr = new _BookmarkManager2.default();
+var darkModeKey = "SpellDB_darkMode";
 
 var BasePage = function (_React$PureComponent) {
     _inherits(BasePage, _React$PureComponent);
@@ -40120,9 +40121,15 @@ var BasePage = function (_React$PureComponent) {
 
         var _this = _possibleConstructorReturn(this, (BasePage.__proto__ || Object.getPrototypeOf(BasePage)).call(this, props));
 
+        var initialDarkMode = false;
+        try {
+            initialDarkMode = window.localStorage.getItem(darkModeKey) == "1";
+        } catch (ex) {
+            initialDarkMode = false;
+        }
         _this.state = {
             "activePage": "spells",
-            "darkMode": false /* TODO: Store */
+            "darkMode": initialDarkMode
         };
         _this.navClick = _this.navClick.bind(_this);
         _this.darkToggle = _this.darkToggle.bind(_this);
@@ -40135,6 +40142,7 @@ var BasePage = function (_React$PureComponent) {
             this.setState({
                 "darkMode": dark
             });
+            window.localStorage.setItem(darkModeKey, dark ? "1" : "0");
         }
     }, {
         key: 'navClick',
@@ -40177,7 +40185,7 @@ var BasePage = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = BasePage;
-},{"./../BookmarkManager.js":292,"./About/About.js":295,"./Bookmarks/BookmarkList.js":297,"./Navigation.js":301,"./QuickRef/QuickRefIndex.js":302,"./Spells/SpellList.js":310,"react":219}],297:[function(require,module,exports){
+},{"./../BookmarkManager.js":292,"./About/About.js":295,"./Bookmarks/BookmarkList.js":297,"./Navigation.js":301,"./QuickRef/QuickRefIndex.js":302,"./Spells/SpellList.js":309,"react":219}],297:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -40947,7 +40955,7 @@ var QuickRefIndex = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = QuickRefIndex;
-},{"../../RefLoader.js":293,"./QuickRefList.js":303,"./QuickRefTables.js":306,"./QuickRefTile.js":307,"react":219}],303:[function(require,module,exports){
+},{"../../RefLoader.js":293,"./QuickRefList.js":303,"./QuickRefTables.js":305,"./QuickRefTile.js":306,"react":219}],303:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41043,98 +41051,7 @@ var QuickRefList = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = QuickRefList;
-},{"../Utils/ActionIcons.js":314,"react":219,"react-markdown":189}],304:[function(require,module,exports){
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = require('react');
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactMarkdown = require('react-markdown');
-
-var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var QuickRefTable = function (_React$PureComponent) {
-    _inherits(QuickRefTable, _React$PureComponent);
-
-    function QuickRefTable(props) {
-        _classCallCheck(this, QuickRefTable);
-
-        var _this = _possibleConstructorReturn(this, (QuickRefTable.__proto__ || Object.getPrototypeOf(QuickRefTable)).call(this, props));
-
-        _this.state = {
-            expanded: {}
-        };
-        return _this;
-    }
-
-    _createClass(QuickRefTable, [{
-        key: 'render',
-        value: function render() {
-            var _this2 = this;
-
-            return _react2.default.createElement(
-                'div',
-                { className: 'quickRefTable' },
-                _react2.default.createElement(
-                    'table',
-                    { className: 'table' },
-                    _react2.default.createElement(
-                        'thead',
-                        null,
-                        _react2.default.createElement(
-                            'tr',
-                            null,
-                            this.props.table.columns.map(function (c, ci) {
-                                return _react2.default.createElement(
-                                    'th',
-                                    { key: ci, className: c.colType },
-                                    c.title
-                                );
-                            })
-                        )
-                    ),
-                    _react2.default.createElement(
-                        'tbody',
-                        null,
-                        this.props.table.rows.map(function (r, ri) {
-                            return _react2.default.createElement(
-                                'tr',
-                                { key: ri },
-                                _this2.props.table.columns.map(function (c, ci) {
-                                    return _react2.default.createElement(
-                                        'td',
-                                        { key: ci, className: c.colType },
-                                        r.length > ci && r[ci]
-                                    );
-                                })
-                            );
-                        })
-                    )
-                )
-            );
-        }
-    }]);
-
-    return QuickRefTable;
-}(_react2.default.PureComponent);
-
-exports.default = QuickRefTable;
-},{"react":219,"react-markdown":189}],305:[function(require,module,exports){
+},{"../Utils/ActionIcons.js":313,"react":219,"react-markdown":189}],304:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41234,7 +41151,7 @@ var QuickRefTable = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = QuickRefTable;
-},{"react":219,"react-markdown":189}],306:[function(require,module,exports){
+},{"react":219,"react-markdown":189}],305:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41298,7 +41215,7 @@ var QuickRefTables = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = QuickRefTables;
-},{"./QuickRefTable.js":305,"react":219}],307:[function(require,module,exports){
+},{"./QuickRefTable.js":304,"react":219}],306:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -41360,7 +41277,7 @@ var QuickRefTile = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = QuickRefTile;
-},{"react":219}],308:[function(require,module,exports){
+},{"react":219}],307:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -41422,7 +41339,7 @@ var QuickReferenceTile = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = QuickReferenceTile;
-},{"react":219}],309:[function(require,module,exports){
+},{"react":219}],308:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -41604,7 +41521,7 @@ var SpellDetail = function (_React$PureComponent) {
 
 exports.default = SpellDetail;
 ;
-},{"../Utils/ActionIcons.js":314,"../Utils/Trait.js":315,"react":219,"react-markdown":189}],310:[function(require,module,exports){
+},{"../Utils/ActionIcons.js":313,"../Utils/Trait.js":314,"react":219,"react-markdown":189}],309:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -42001,7 +41918,7 @@ var SpellList = function (_React$Component) {
 
 exports.default = SpellList;
 ;
-},{"../../SpellLoader.js":294,"./SpellDetail.js":309,"./SpellListItem.js":311,"./SpellSearch.js":312,"immutability-helper":30,"react":219}],311:[function(require,module,exports){
+},{"../../SpellLoader.js":294,"./SpellDetail.js":308,"./SpellListItem.js":310,"./SpellSearch.js":311,"immutability-helper":30,"react":219}],310:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -42071,7 +41988,7 @@ var SpellListItem = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = SpellListItem;
-},{"react":219}],312:[function(require,module,exports){
+},{"react":219}],311:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -42308,7 +42225,7 @@ var SpellSearch = function (_React$Component) {
 
 exports.default = SpellSearch;
 ;
-},{"react":219,"react-checkbox-group":54}],313:[function(require,module,exports){
+},{"react":219,"react-checkbox-group":54}],312:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -42392,7 +42309,7 @@ var ActionIcons = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = ActionIcons;
-},{"react":219}],314:[function(require,module,exports){
+},{"react":219}],313:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -42476,7 +42393,7 @@ var ActionIcons = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = ActionIcons;
-},{"react":219}],315:[function(require,module,exports){
+},{"react":219}],314:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -42542,7 +42459,7 @@ var Trait = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = Trait;
-},{"react":219}],316:[function(require,module,exports){
+},{"react":219}],315:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -42560,4 +42477,4 @@ var _BasePage2 = _interopRequireDefault(_BasePage);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(_BasePage2.default, null), document.getElementById('app'));
-},{"./Views/BasePage.js":296,"react":219,"react-dom":55}]},{},[292,316,293,294,295,296,297,298,299,300,301,308,302,303,304,305,306,307,309,310,311,312,313,314,315]);
+},{"./Views/BasePage.js":296,"react":219,"react-dom":55}]},{},[292,315,293,294,295,296,297,298,299,300,301,307,302,303,304,305,306,308,309,310,311,312,313,314]);

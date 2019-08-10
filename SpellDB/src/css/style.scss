@@ -150,6 +150,10 @@ $dark-text: #EEE;
 
                 &.active {
                     color: purple;
+
+                    .dark & {
+                        color: #b300b2
+                    }
                 }
             }
         }

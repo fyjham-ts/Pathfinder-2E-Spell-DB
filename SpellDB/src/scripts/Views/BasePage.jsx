@@ -7,13 +7,21 @@ import Navigation from './Navigation.js';
 import BookmarkManager from './../BookmarkManager.js';
 
 var bookmarkMgr = new BookmarkManager();
+const darkModeKey = "SpellDB_darkMode";
 
 export default class BasePage extends React.PureComponent {
     constructor(props) {
         super(props);
+        var initialDarkMode = false;
+        try {
+            initialDarkMode = window.localStorage.getItem(darkModeKey) == "1";
+        }
+        catch (ex) {
+            initialDarkMode = false;
+        }
         this.state = {
             "activePage": "spells",
-            "darkMode": false /* TODO: Store */
+            "darkMode": initialDarkMode
         };
         this.navClick = this.navClick.bind(this);
         this.darkToggle = this.darkToggle.bind(this);
@@ -22,6 +30,7 @@ export default class BasePage extends React.PureComponent {
         this.setState({
             "darkMode": dark
         });
+        window.localStorage.setItem(darkModeKey, dark ? "1" : "0");
     }
     navClick(name, page) {
         this.setState({
