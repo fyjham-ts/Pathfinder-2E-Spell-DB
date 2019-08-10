@@ -1,5 +1,4 @@
 ﻿import React from 'react';
-import { Checkbox, CheckboxGroup } from 'react-checkbox-group';
 
 export default class SpellSearch extends React.Component {
     constructor(props) {
@@ -8,9 +7,15 @@ export default class SpellSearch extends React.Component {
         this.handleCriteriaChange = this.handleCriteriaChange.bind(this);
         this.handleLevelChange = this.handleLevelChange.bind(this);
     }
-    handleLevelChange(newLevels) {
-        if (newLevels.indexOf('x') !== -1) this.props.onCriteriaReset();
-        else this.props.onCriteriaChange('levels', newLevels);
+    handleLevelChange(level, checked) {
+        if (level == 'x') this.props.onCriteriaReset();
+        else {
+            var levels = [... this.props.levels];
+            var idx = levels.indexOf(level);
+            if (idx == -1 && checked) levels.push(level);
+            else if (idx != -1 && !checked) levels.splice(idx, 1);
+            this.props.onCriteriaChange('levels', levels);
+        }
     }
     handleCriteriaChange(event) {
         const target = event.target;
@@ -35,18 +40,18 @@ export default class SpellSearch extends React.Component {
 
         return (
             <form className="spell-search row" onSubmit={this.formSubmitAttempted}>
-                <CheckboxGroup className="col-md levels" name="levels" value={this.props.levels} onChange={this.handleLevelChange} checkboxDepth={3}>
+                <div className="col-md levels">
                     {levelRows.map((lr) => {
                         return <div className="level-row" key={lr[0]}>
                             {lr.map((l) => {
                                 return <span key={l} className="level-col">
-                                    <Checkbox id={"spell-level-" + l} value={l} />
+                                    <input id={"spell-level-" + l} name='level' type="checkbox" checked={this.props.levels.indexOf(l) != -1} onChange={(ev) => this.handleLevelChange(l, ev.target.checked)} value={l} />
                                     <label htmlFor={"spell-level-" + l} className="form-check-label">{String(l)}</label>
                                 </span>;
                             })}
                         </div>;
                     })}
-                </CheckboxGroup>
+                </div>
                 <div className="col-md criteria">
                     <div className="form-row">
                         <label htmlFor="spellName" className="col-form-label form-label">Search</label>

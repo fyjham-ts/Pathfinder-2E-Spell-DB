@@ -1,8 +1,8 @@
 ﻿import React from 'react';
-import QuickRefList from './QuickRefList.js';
-import QuickRefTables from './QuickRefTables.js';
-import QuickRefTile from './QuickRefTile.js';
-import { loadRefData } from '../../RefLoader.js';
+import QuickRefList from './QuickRefList.jsx';
+import QuickRefTables from './QuickRefTables.jsx';
+import QuickRefTile from './QuickRefTile.jsx';
+import { loadRefData } from '../../RefLoader.jsx';
 var references = loadRefData();
 
 export default class QuickRefIndex extends React.PureComponent {

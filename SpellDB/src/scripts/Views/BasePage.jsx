@@ -1,10 +1,10 @@
 ﻿import React from 'react';
-import SpellList from './Spells/SpellList.js';
-import BookmarkList from './Bookmarks/BookmarkList.js';
-import QuickRefIndex from './QuickRef/QuickRefIndex.js';
-import About from './About/About.js';
-import Navigation from './Navigation.js';
-import BookmarkManager from './../BookmarkManager.js';
+import SpellList from './Spells/SpellList.jsx';
+import BookmarkList from './Bookmarks/BookmarkList.jsx';
+import QuickRefIndex from './QuickRef/QuickRefIndex.jsx';
+import About from './About/About.jsx';
+import Navigation from './Navigation.jsx';
+import BookmarkManager from './../BookmarkManager.jsx';
 
 var bookmarkMgr = new BookmarkManager();
 const darkModeKey = "SpellDB_darkMode";

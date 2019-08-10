@@ -1,10 +1,10 @@
 ﻿import React from 'react';
 //import { ipcRenderer } from 'electron';
-import SpellSearch from './SpellSearch.js';
-import SpellListItem from './SpellListItem.js';
-import SpellDetail from './SpellDetail.js';
+import SpellSearch from './SpellSearch.jsx';
+import SpellListItem from './SpellListItem.jsx';
+import SpellDetail from './SpellDetail.jsx';
 import update from 'immutability-helper';
-import { loadSpellData } from '../../SpellLoader.js';
+import { loadSpellData } from '../../SpellLoader.jsx';
 
 let { spells, spellTypes } = loadSpellData();
 

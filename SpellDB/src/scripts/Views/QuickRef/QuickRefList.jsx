@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import ActionIcons from '../Utils/ActionIcons.js';
+import ActionIcons from '../Utils/ActionIcons.jsx';
 
 export default class QuickRefList extends React.PureComponent {
     constructor(props) {

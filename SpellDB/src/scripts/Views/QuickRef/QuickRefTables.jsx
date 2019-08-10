@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import QuickRefTable from './QuickRefTable.js';
+import QuickRefTable from './QuickRefTable.jsx';
 
 export default class QuickRefTables extends React.PureComponent {
     constructor(props) {

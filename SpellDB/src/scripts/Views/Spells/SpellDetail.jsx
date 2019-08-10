@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import ActionIcons from '../Utils/ActionIcons.js';
-import Trait from '../Utils/Trait.js';
+import ActionIcons from '../Utils/ActionIcons.jsx';
+import Trait from '../Utils/Trait.jsx';
 
 export default class SpellDetail extends React.PureComponent {
     constructor(props) {

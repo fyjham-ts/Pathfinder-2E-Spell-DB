@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import update from 'immutability-helper';
-import BookmarkListRow from './BookmarkListRow.js';
+import BookmarkListRow from './BookmarkListRow.jsx';
 
 export default class BookmarkList extends React.Component {
     constructor(props) {
