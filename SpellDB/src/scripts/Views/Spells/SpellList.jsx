@@ -238,7 +238,7 @@ export default class SpellList extends React.Component {
     buildSort(criteria) {
         if (!criteria) criteria = this.state.criteria;
         return (lhs, rhs) => {
-            switch (this.state.criteria.sortBy) {
+            switch (criteria.sortBy) {
                 case "Name":
                     if (lhs.name.toLowerCase() < rhs.name.toLowerCase()) return -1;
                     if (lhs.name.toLowerCase() > rhs.name.toLowerCase()) return 1;
