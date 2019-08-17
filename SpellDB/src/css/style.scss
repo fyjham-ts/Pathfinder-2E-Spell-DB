@@ -27,6 +27,9 @@ $light-text: #212529;
 $dark-bg: #1A1A1A;
 $dark-text: #EEE;
 
+$unprepareIcon: #dc3545;
+$prepareIcon: #28a745;
+
 #app > .light, #app > .dark {
     min-height: 100vh;
 }
@@ -117,11 +120,90 @@ $dark-text: #EEE;
         }
     }
 }
+a { cursor: pointer; }
 .selectedSpell .spellDetail {
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
 }
+.vancian {
+    display: inline-block;
+    span.item {
+        padding: 0 4px;
+    }
+    .action {
+        display: none;
+        display: inline-block;
+
+        i {
+            cursor: pointer;
+            padding: 0 4px;
+        }
+
+        i.fa-minus-square {
+            color: $unprepareIcon;
+        }
+
+        i.fa-plus-square {
+            color: $prepareIcon;
+        }
+    }
+
+    .fa-ban {
+        color: $unprepareIcon;
+    }
+
+    .fa-magic {
+        color: $prepareIcon;
+    }
+}
+.bookmarkListSummary {
+    .card-header {
+        padding: 3px 10px;
+        .listName {
+            font-size: 20px;
+        }
+        .modeToggle {
+            display: inline-flex;
+            flex-direction: row;
+            float: right;
+            border: 3px solid #DDD;
+            border-radius: 10px;
+            background: #EEE;
+
+            .dark & {
+                border-color: #555;
+                background: #666;
+                color: #000;
+            }
+
+            .mode {
+                flex-grow: 1;
+                padding: 3px;
+                border-radius: 7px;
+                background-clip: border-box;
+
+                &.active {
+                    background: $prepareIcon;
+                }
+            }
+        }
+    }
+
+    .spellLevel {
+        color: $title;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 1px solid $title;
+        padding-bottom: 2px;
+
+        .dark & {
+            color: $dark-text;
+            border-color: #FFF;
+        }
+    }
+}
+
 .spellDetail {
     > div, > ul {
         padding-left: 5px;
@@ -290,12 +372,14 @@ $dark-text: #EEE;
         }
     }
 }
+
 @media (max-width: 575px) {
     .spellListList {
         max-height: 150px;
         overflow-y: scroll;
     }
 }
+
 .spell-list-item {
     text-transform: capitalize;
 
@@ -333,6 +417,7 @@ $dark-text: #EEE;
         }
     }
 }
+
 .spell-search {
     select, select option {
         text-transform: capitalize;
@@ -394,13 +479,16 @@ $dark-text: #EEE;
         }
     }
 }
+
 .quickRefContent {
     padding: 5px;
+
     a.back {
         padding: 0 5px;
         cursor: pointer;
     }
 }
+
 .quickRefGrid {
     display: flex;
     flex-wrap: wrap;
@@ -421,6 +509,7 @@ $dark-text: #EEE;
 
         &:hover {
             background: #DDD;
+
             .dark & {
                 background: #333;
             }
@@ -434,6 +523,7 @@ $dark-text: #EEE;
         }
     }
 }
+
 .quickRefTable {
     table.table {
         thead tr {
@@ -478,7 +568,8 @@ $dark-text: #EEE;
         }
     }
 }
-.quickRefList{
+
+.quickRefList {
 
 
     .card-body {
@@ -498,14 +589,17 @@ $dark-text: #EEE;
         }
     }
 }
+
 .spellListConfig {
     .spellListTable {
-        td, th { 
-            text-align: center; 
+        td, th {
+            text-align: center;
+
             &:first-child, &:last-child {
                 text-align: left;
             }
         }
+
         .spellListRow {
             a.activeList {
                 &, &:hover {
@@ -526,14 +620,16 @@ $dark-text: #EEE;
     }
 
     .global-actions {
-        button { 
+        button {
             margin-left: 10px;
+
             &:first-child {
                 margin-left: 0px;
             }
         }
     }
 }
+
 .randomNpc {
     .npcCard {
         margin-bottom: 20px;
@@ -573,8 +669,10 @@ $dark-text: #EEE;
         }
     }
 }
+
 .about {
     padding: 10px;
+
     pre {
         white-space: pre-wrap;
     }

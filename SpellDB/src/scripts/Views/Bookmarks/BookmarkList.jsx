@@ -11,11 +11,12 @@ export default class BookmarkList extends React.Component {
         };
         this.onToggleEdit = this.onToggleEdit.bind(this);
         this.onNameChange = this.onNameChange.bind(this);
+        this.onVancianChange = this.onVancianChange.bind(this);
         this.onDeleteList = this.onDeleteList.bind(this);
         this.onSaveList = this.onSaveList.bind(this);
         this.onLoadList = this.onLoadList.bind(this);
         this.onAddList = this.onAddList.bind(this);
-
+        
         this.bookmarkListUpdate = this.bookmarkListUpdate.bind(this);
         this.activeBookmarkListUpdate = this.activeBookmarkListUpdate.bind(this);
 
@@ -52,6 +53,10 @@ export default class BookmarkList extends React.Component {
     onNameChange(list, value) {
         this.props.bookmarkManager.updateListName(list.id, value);
     }
+    onVancianChange(list, value) {
+        this.props.bookmarkManager.updateListVancian(list.id, value);
+    }
+    
     render() {
         return (
             <div className="spellListConfig">
@@ -62,6 +67,7 @@ export default class BookmarkList extends React.Component {
                             <th>List Name</th>
                             <th>Spells</th>
                             <th>Editing</th>
+                            <th>Vancian</th>
                             <th>&nbsp;</th>
                         </tr>
                     </thead>
@@ -72,6 +78,7 @@ export default class BookmarkList extends React.Component {
                             canDelete={this.state.lists.length > 1}
                             isEditList={l.id == this.state.editList}
                             onNameChange={this.onNameChange}
+                            onVancianChange={this.onVancianChange}
                             onDeleteList={this.onDeleteList}
                             onSaveList={this.onSaveList}
                             onToggleEdit={this.onToggleEdit} />

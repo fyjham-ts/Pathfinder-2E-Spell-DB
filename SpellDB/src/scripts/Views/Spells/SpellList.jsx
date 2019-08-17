@@ -6,6 +6,7 @@ import SpellDetail from './SpellDetail.jsx';
 import update from 'immutability-helper';
 import { loadSpellData } from '../../SpellLoader.jsx';
 import { throttle, debounce } from 'throttle-debounce';
+import BookmarkListSummary from '../Bookmarks/BookmarkListSummary.jsx';
 
 let { spells, spellTypes } = loadSpellData();
 
@@ -37,7 +38,8 @@ export default class SpellList extends React.Component {
             selectedSpell: null,
             bookmarkLists: this.props.bookmarkManager.getBookmarkLists(),
             activeBookmarkList: this.props.bookmarkManager.getActiveBookmarkList(),
-            visibleSpells: []
+            visibleSpells: [],
+            vancianMode: 'prep' // Values: prep, cast, off
         };
         this.state.spellTypes.forEach(st => {
             if (st.matchBy == "bookmark") st.options = this.state.bookmarkLists.map(l => ({ "name": l.name, "value": l.id }));
@@ -93,8 +95,12 @@ export default class SpellList extends React.Component {
         this.showMore = this.showMore.bind(this);
         this.isBookmarked = this.isBookmarked.bind(this);
         this.bookmarkSpell = this.bookmarkSpell.bind(this);
-        this.recalcVisibleSpells.bind(this);
-
+        this.getVancianInfo = this.getVancianInfo.bind(this);
+        this.vancianPrep = this.vancianPrep.bind(this);
+        this.vancianCast = this.vancianCast.bind(this);
+        this.changeVancianMode = this.changeVancianMode.bind(this);
+        this.recalcVisibleSpells = this.recalcVisibleSpells.bind(this);
+        this.clickBookmarkListSpell = this.clickBookmarkListSpell.bind(this);
         this.bookmarkListUpdate = this.bookmarkListUpdate.bind(this);
         this.activeBookmarkListUpdate = this.activeBookmarkListUpdate.bind(this);
 
@@ -108,6 +114,20 @@ export default class SpellList extends React.Component {
 
         this.recalcVisibleSpellsThrottled = throttle(throttleMs, this.recalcVisibleSpells);
         this.recalcVisibleSpellsDebounced = debounce(debounceMs, this.recalcVisibleSpells);
+    }
+    changeVancianMode(mode) {
+        this.setState({
+            "vancianMode": mode
+        });
+    }
+    clickBookmarkListSpell(s) {
+        var newCriteria = getDefaultCriteria();
+        newCriteria.displayMode = this.state.criteria.displayMode;
+        newCriteria.spellName = s.name;
+        this.setState({
+            criteria: newCriteria
+        });
+        this.recalcVisibleSpells(newCriteria);
     }
     recalcVisibleSpells(criteria) {
         // Accepts the criteria separate to setState cause with throttling it may not actually be in the state yet.
@@ -135,6 +155,23 @@ export default class SpellList extends React.Component {
     }
     bookmarkSpell(spell) {
         this.props.bookmarkManager.toggleSpell(spell.name);
+    }
+    getVancianInfo(spell) {
+        if (!this.isBookmarked(spell)) return { 'enabled': false };
+        if (this.state.activeBookmarkList.vancian == false) return { 'enabled': false };
+        else {
+            return {
+                'enabled': true,
+                'prep': this.state.activeBookmarkList.spells[spell.name].vancianPrep || 0,
+                'cast': this.state.activeBookmarkList.spells[spell.name].vancianCast || 0
+            }
+        }
+    }
+    vancianPrep(spell, amt) {
+        this.props.bookmarkManager.vancianPrep(spell.name, amt);
+    }
+    vancianCast(spell, amt) {
+        this.props.bookmarkManager.vancianCast(spell.name, amt);
     }
     showMore() {
         this.setState((s) => { return { 'maxRows': s.maxRows + defaultMaxRows }; });
@@ -282,6 +319,10 @@ export default class SpellList extends React.Component {
             detail = <div className="col-sm selectedSpell">
                 <SpellDetail spell={selectedSpell}
                     bookmarked={this.isBookmarked(selectedSpell)}
+                    vancian={this.getVancianInfo(selectedSpell)}
+                    vancianMode={this.state.vancianMode}
+                    onVancianPrep={this.vancianPrep}
+                    onVancianCast={this.vancianCast}
                     onBookmark={this.bookmarkSpell}
                 />
             </div>;
@@ -305,6 +346,20 @@ export default class SpellList extends React.Component {
                         />
                     </div>
                 </div>
+                {this.state.activeBookmarkList.vancian && <div className="row">
+                    <div className="col-sm">
+                        <BookmarkListSummary
+                            listSpells={this.state.activeBookmarkList.spells}
+                            listVancian={this.state.activeBookmarkList.vancian}
+                            listName={this.state.activeBookmarkList.name}
+                            spells={this.state.spells}
+                            vancianMode={this.state.vancianMode}
+                            onChangeVancianMode={this.changeVancianMode}
+                            onVancianPrep={this.vancianPrep}
+                            onVancianCast={this.vancianCast}
+                            onClickSpell={this.clickBookmarkListSpell} />
+                    </div>
+                </div>}
                 <div className="row">
                     <div className={"col-sm spellList" + this.state.criteria.displayMode}>
                         <ul className="list-group">
@@ -315,6 +370,10 @@ export default class SpellList extends React.Component {
                                         spell={s}
                                         bookmarked={this.isBookmarked(s)}
                                         onBookmark={this.bookmarkSpell}
+                                        vancian={this.getVancianInfo(s)}
+                                        vancianMode={this.state.vancianMode}
+                                        onVancianPrep={this.vancianPrep}
+                                        onVancianCast={this.vancianCast}
                                     />;
                                 else
                                     return (<SpellListItem

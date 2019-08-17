@@ -2,14 +2,37 @@
 import ReactMarkdown from 'react-markdown';
 import ActionIcons from '../Utils/ActionIcons.jsx';
 import Trait from '../Utils/Trait.jsx';
+import VancianPrep from '../Bookmarks/VancianPrep.jsx';
 
 export default class SpellDetail extends React.PureComponent {
     constructor(props) {
         super(props);
         this.toggleBookmark = this.toggleBookmark.bind(this);
+        this.addVancianPrep = this.addVancianPrep.bind(this);
+        this.removeVancianPrep = this.removeVancianPrep.bind(this);
+        this.addVancianCast = this.addVancianCast.bind(this);
+        this.resetVancianCast = this.resetVancianCast.bind(this);
     }
     toggleBookmark() {
         this.props.onBookmark(this.props.spell);
+    }
+    getVancianIcon(mode) {
+        switch (mode) {
+            case 'prep': return 'fa-book';
+            case 'cast': return 'fa-magic';
+        }
+    }
+    addVancianCast() {
+        this.props.onVancianCast(this.props.spell, 1);
+    }
+    resetVancianCast() {
+        this.props.onVancianCast(this.props.spell, -(this.props.vancian.cast || 0));
+    }
+    addVancianPrep() {
+        this.props.onVancianPrep(this.props.spell, 1);
+    }
+    removeVancianPrep() {
+        this.props.onVancianPrep(this.props.spell, -1);
     }
     render() {
         var spell = this.props.spell;
@@ -35,6 +58,19 @@ export default class SpellDetail extends React.PureComponent {
             <div className="spellDetail clearfix">
                 <div className="title">
                     <span className="spellClass">
+                        
+                        {this.props.vancian.enabled && <VancianPrep
+                            prep={this.props.vancian.prep}
+                            cast={this.props.vancian.cast}
+                            type={spell.type}
+                            allowPrep={this.props.vancianMode == 'prep'}
+                            allowCast={this.props.vancianMode == 'cast'}
+                            allowReset={this.props.vancianMode == 'cast' || this.props.vancianMode == 'prep'}
+                            onAddVancianPrep={this.addVancianPrep}
+                            onRemoveVancianPrep={this.removeVancianPrep}
+                            onCastVancian={this.addVancianCast}
+                            onResetCastVancian={this.resetVancianCast}
+                        />}
                         <span className={this.props.bookmarked ? "bookmark active" : "bookmark inactive"} onClick={this.toggleBookmark}>
                             <i className={this.props.bookmarked ? "fas fa-bookmark" : "far fa-bookmark"} />
                         </span>

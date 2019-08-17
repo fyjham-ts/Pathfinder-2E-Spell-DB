@@ -17,6 +17,7 @@ export default class BookmarkManager {
         this.bookmarkLists = null;
         try {
             this.bookmarkLists = JSON.parse(window.localStorage.getItem(bookmarkKey));
+            this.upgradeBookmarkLists();
         }
         catch (ex) {
             this.bookmarkLists = null;
@@ -60,6 +61,18 @@ export default class BookmarkManager {
             this.emit(this.events.activeListUpdate, this.getActiveBookmarkList());
         }).bind(this);
     }
+    upgradeBookmarkLists() {
+        for (var i = 0; i < this.bookmarkLists.length; i++) {
+            for (var s in this.bookmarkLists[i].spells) {
+                if (this.bookmarkLists[i].spells[s] === true) {
+                    this.bookmarkLists[i].spells[s] = {
+                        'vancianPrep': 0,
+                        'vancianCast': 0
+                    };
+                }
+            }
+        }
+    }
     setActiveList(id) {
         var idx = this.getIndexFromId(id);
         if (idx != -1) {
@@ -72,8 +85,16 @@ export default class BookmarkManager {
             "id": uuidv4(),
             "name": "",
             "spells": {},
-            "spellCount": 0
+            "spellCount": 0,
+            "vancian": {}
         });
+        this.saveLists();
+    }
+    updateListVancian(id, vancian) {
+        var idx = this.getIndexFromId(id);
+        if (idx != -1) {
+            this.bookmarkLists[idx].vancian = vancian;
+        }
         this.saveLists();
     }
     updateListName(id, name) {
@@ -108,7 +129,7 @@ export default class BookmarkManager {
         if (this.activeList == -1) return;
         else {
             if (!this.bookmarkLists[this.activeList].spells[name]) {
-                this.bookmarkLists[this.activeList].spells[name] = true;
+                this.bookmarkLists[this.activeList].spells[name] = {};
                 this.bookmarkLists[this.activeList].spellCount++;
             }
             else {
@@ -117,6 +138,24 @@ export default class BookmarkManager {
             }
         }
         this.saveLists();
+    }
+    vancianPrep(name, amt) {
+        if (this.activeList == -1) return;
+        else {
+            if (this.bookmarkLists[this.activeList].spells[name]) {
+                this.bookmarkLists[this.activeList].spells[name].vancianPrep = Math.max((this.bookmarkLists[this.activeList].spells[name].vancianPrep || 0) + amt, 0); 
+                this.saveLists();
+            }
+        }
+    }
+    vancianCast(name, amt) {
+        if (this.activeList == -1) return;
+        else {
+            if (this.bookmarkLists[this.activeList].spells[name]) {
+                this.bookmarkLists[this.activeList].spells[name].vancianCast = Math.max((this.bookmarkLists[this.activeList].spells[name].vancianCast || 0) + amt, 0);
+                this.saveLists();
+            }
+        }
     }
     getBookmarkLists() {
         return this.bookmarkLists;

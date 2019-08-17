@@ -11751,10 +11751,65 @@ readers do not read off random characters that represent icons */
   .nav-item .nav-link .switch {
     margin-right: 8px; }
 
+a {
+  cursor: pointer; }
+
 .selectedSpell .spellDetail {
   position: -webkit-sticky;
   position: sticky;
   top: 0px; }
+
+.vancian {
+  display: inline-block; }
+  .vancian span.item {
+    padding: 0 4px; }
+  .vancian .action {
+    display: none;
+    display: inline-block; }
+    .vancian .action i {
+      cursor: pointer;
+      padding: 0 4px; }
+    .vancian .action i.fa-minus-square {
+      color: #dc3545; }
+    .vancian .action i.fa-plus-square {
+      color: #28a745; }
+  .vancian .fa-ban {
+    color: #dc3545; }
+  .vancian .fa-magic {
+    color: #28a745; }
+
+.bookmarkListSummary .card-header {
+  padding: 3px 10px; }
+  .bookmarkListSummary .card-header .listName {
+    font-size: 20px; }
+  .bookmarkListSummary .card-header .modeToggle {
+    display: inline-flex;
+    flex-direction: row;
+    float: right;
+    border: 3px solid #DDD;
+    border-radius: 10px;
+    background: #EEE; }
+    .dark .bookmarkListSummary .card-header .modeToggle {
+      border-color: #555;
+      background: #666;
+      color: #000; }
+    .bookmarkListSummary .card-header .modeToggle .mode {
+      flex-grow: 1;
+      padding: 3px;
+      border-radius: 7px;
+      background-clip: border-box; }
+      .bookmarkListSummary .card-header .modeToggle .mode.active {
+        background: #28a745; }
+
+.bookmarkListSummary .spellLevel {
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 2px; }
+  .dark .bookmarkListSummary .spellLevel {
+    color: #EEE;
+    border-color: #FFF; }
 
 .spellDetail > div, .spellDetail > ul {
   padding-left: 5px;

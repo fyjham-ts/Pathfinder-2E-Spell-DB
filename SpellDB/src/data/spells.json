@@ -225,7 +225,7 @@
     "targets": "1 evil creature",
     "saving throw": "Will",
     "duration": "1 round",
-    "description": "Your litany rails against the sin of sloth, interfering with the target's ability to react. The target must attempt a Will save. A particularly slothful creature, such as a sloth demon, uses the outcome one degree of success worse than the result of its saving throw. The target becomes temporarily immune to all of your litanies for 1 minute.Critical Success The target is unaffected.Success The target can't use reactions.Failure The target can't use reactions and is slowed 1.Critical Failure The target can't use reactions and is slowed 2.",
+    "description": "Your litany rails against the sin of sloth, interfering with the target's ability to react. The target must attempt a Will save. A particularly slothful creature, such as a sloth demon, uses the outcome one degree of success worse than the result of its saving throw. The target becomes temporarily immune to all of your litanies for 1 minute.  \r\n **Critical Success** The target is unaffected.  \r\n **Success** The target can't use reactions.  \r\n **Failure** The target can't use reactions and is slowed 1.  \r\n **Critical Failure** The target can't use reactions and is slowed 2.",
     "components": [ "verbal" ]
   },
   {
@@ -1872,7 +1872,7 @@
     "action": "2",
     "area": "60-foot cone",
     "saving throw": "basic Reflex",
-    "description": "You evoke the energy of an Abyssal realm. The damage types of the spell (one energy and one physical) are based on the result of rolling on the table below. Abyssal Wrath 1d4RealmManifestationDamage Type 1SkiesBolts and lightning and flying debrisBludgeoning and electricity 2DepthsAcid and demonic shellsAcid and slashing 3FrozenFrigid air and iceBludgeoning and cold 4VolcanicJagged volcanic rocks and magmaFire and piercing  You deal 4d6 damage of each of the corresponding damage types to each creature in the cone (8d6 total damage).  \r\n**Heightened (+1)**  The damage for each type increases by 1d6.",
+    "description": "You evoke the energy of an Abyssal realm. The damage types of the spell (one energy and one physical) are based on the result of rolling on the table below.  \r\n\r\n| 1d4 | Realm | Manifestation | Damage Type |\r\n| :---: | :---: | :---: | :---: |\r\n | 1 | Skies | Bolts and lightning and flying debris | Bludgeoning and electricity |\r\n| 2 | Depths | Acid and demonic shells | Acid and slashing |\r\n| 3 | Frozen | Frigid air and ice | Bludgeoning and cold |\r\n| 4 | Volcanic | Jagged volcanic rocks and magma | Fire and piercing |\r\n\r\nYou deal 4d6 damage of each of the corresponding damage types to each creature in the cone (8d6 total damage).  \r\n**Heightened (+1)**  The damage for each type increases by 1d6.",
     "components": [ "somatic", "verbal" ]
   },
   {
@@ -6176,7 +6176,7 @@
     "type": "Spell",
     "level": 1,
     "source": "Core Rulebook pg. 342",
-    "traditions": [ "divine" ],
+    "traditions": [ "divine", "primal" ],
     "cast": "to",
     "action": [ "1", "3" ],
     "range": "varies",
