@@ -158,7 +158,7 @@ export default class SpellList extends React.Component {
     }
     getVancianInfo(spell) {
         if (!this.isBookmarked(spell)) return { 'enabled': false };
-        if (this.state.activeBookmarkList.vancian == false) return { 'enabled': false };
+        if (this.state.activeBookmarkList.vancian != true) return { 'enabled': false };
         else {
             return {
                 'enabled': true,

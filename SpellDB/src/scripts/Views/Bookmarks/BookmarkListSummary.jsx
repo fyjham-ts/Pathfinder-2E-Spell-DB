@@ -75,11 +75,21 @@ export default class BookmarkListSummary extends React.Component {
                     'spells': []
                 });
             }
-            spellLevels[listIdx].spells.push({
-                'spell': spell,
-                'bookmark': this.props.listSpells[spellName]
-            });
+            var laterNameIdx = spellLevels[listIdx].spells.findIndex(s => s.spell.name > spell.name);
+            if (laterNameIdx == -1) {
+                spellLevels[listIdx].spells.push({
+                    'spell': spell,
+                    'bookmark': this.props.listSpells[spellName]
+                });
+            } 
+            else {
+                spellLevels[listIdx].spells.splice(laterNameIdx, 0, {
+                    'spell': spell,
+                    'bookmark': this.props.listSpells[spellName]
+                });
+            }
         }
+
         return <div className="bookmarkListSummary card">
             <div className="card-header" onClick={this.toggleExpand}>
                 <span className="listName">
