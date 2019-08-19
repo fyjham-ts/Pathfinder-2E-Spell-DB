@@ -11801,13 +11801,28 @@ a {
       .bookmarkListSummary .card-header .modeToggle .mode.active {
         background: #28a745; }
 
-.bookmarkListSummary .spellLevel {
+.bookmarkListSummary .card-body ul.spells {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; }
+  .bookmarkListSummary .card-body ul.spells > li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #666; }
+    .bookmarkListSummary .card-body ul.spells > li a.spellName {
+      flex-grow: 1; }
+    .bookmarkListSummary .card-body ul.spells > li span.vancian {
+      white-space: nowrap; }
+
+.bookmarkListSummary .card-body .spellLevel {
   color: #000000;
   font-weight: bold;
   text-transform: uppercase;
   border-bottom: 1px solid #000000;
-  padding-bottom: 2px; }
-  .dark .bookmarkListSummary .spellLevel {
+  padding-bottom: 2px;
+  margin-right: 1ex; }
+  .dark .bookmarkListSummary .card-body .spellLevel {
     color: #EEE;
     border-color: #FFF; }
 

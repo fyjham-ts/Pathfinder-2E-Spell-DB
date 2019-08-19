@@ -160,9 +160,11 @@ a { cursor: pointer; }
 .bookmarkListSummary {
     .card-header {
         padding: 3px 10px;
+
         .listName {
             font-size: 20px;
         }
+
         .modeToggle {
             display: inline-flex;
             flex-direction: row;
@@ -190,16 +192,40 @@ a { cursor: pointer; }
         }
     }
 
-    .spellLevel {
-        color: $title;
-        font-weight: bold;
-        text-transform: uppercase;
-        border-bottom: 1px solid $title;
-        padding-bottom: 2px;
+    .card-body {
+        ul.spells {
+            padding-left: 1rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
 
-        .dark & {
-            color: $dark-text;
-            border-color: #FFF;
+            > li {
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                border-bottom: 1px solid #666;
+
+                a.spellName {
+                    flex-grow: 1;
+                }
+
+                span.vancian {
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .spellLevel {
+            color: $title;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid $title;
+            padding-bottom: 2px;
+            margin-right: 1ex;
+
+            .dark & {
+                color: $dark-text;
+                border-color: #FFF;
+            }
         }
     }
 }

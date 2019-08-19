@@ -109,7 +109,7 @@ export default class BookmarkListSummary extends React.Component {
                         {this.props.listVancian && <span>, {l.spells.reduce((agg, s) => agg + (s.bookmark.vancianPrep || 0), 0)} Prepared</span>}
                         )
                     </div>
-                    <ul>
+                    <ul className="spells">
                         {l.spells.map(s =>
                             <li key={s.spell.name}>
                                 <a className="spellName" onClick={() => this.clickSpell(s.spell)}>{s.spell.name}</a>
