@@ -17,9 +17,11 @@ Also used a lot of tech libraries to make this work. I believe all remaining one
 
 # I'm a developer, can I use the data?
 
-I'm all for it! Make sure you have the appropriate OGL & Community use licensing in place because it's ultimately Paizo's data so you have to play by their rules (just like me) but I'm more than happy to have others build on top of the data I've found. As a help searching the repository, the app's reference data is all stored in the [/SpellDb/src/data](https://github.com/fyjham-ts/Pathfinder-2E-Spell-DB/tree/master/SpellDB/src/data]/SpellDb/src/data) folder.
+I'm all for it! Make sure you have the appropriate OGL & Community use licensing in place because it's ultimately Paizo's data so you have to play by their rules (just like me) but I'm more than happy to have others build on top of the data I've collected. If you do use the data I'd love to hear about your project - as if it's good I'll proabably want to use it too!
 
-Also you may want to check our [pathfinder-2-sqlite](https://gitlab.com/jrmiller82/pathfinder-2-sqlite) - found out about it as they incorporated some of our spell data. If you're after data you may find more there.
+As a help searching the repository, the app's reference data is all stored in the [/SpellDb/src/data](https://github.com/fyjham-ts/Pathfinder-2E-Spell-DB/tree/master/SpellDB/src/data]/SpellDb/src/data) folder.
+
+Also if you're looking for pathfinder data you may want to check our [pathfinder-2-sqlite](https://gitlab.com/jrmiller82/pathfinder-2-sqlite) - found out about it as it incorporated some of my spell data, but they're aiming for more of a collated data set that other apps can use & a more structured SQLite format. If you're after data similar to what this app has you may find more there!
 
 # Licensing?
 I'm not a lawyer, I'm acting on a belief the data itself is licensed under the OGL (See license).
