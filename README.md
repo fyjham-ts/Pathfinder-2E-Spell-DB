@@ -15,7 +15,17 @@ For iOS/Windows user (And I guess android users who don't like apps) I've got it
 
 Also used a lot of tech libraries to make this work. I believe all remaining ones exist as node dependencies. Too many to list, but they're all in packages.json.
 
-# I'm a developer, can I use the data?
+# I'm a developer
+
+## How do I get a build environment set up?
+
+I'm running in Visual Studio 2017 with the Apache Cordova plugins, but realistically I don't think that's critical. Get NPM running to load the packages, then you'll find the node commands for separate parts of the build in the pacjage.json. A build is as defined in the "BeforeBuild" in -vs-binding. After this you'll just want to serve up the "www" folder via a webserver & you'll be able to test.
+
+I recommend using "nocache.html" for local dev to save yourself having to clear cache - it's exactly the same as the other but . If you end up getting a cached version then using chrome://appcache-internals to delete your offline cache or running build:manifest to generate a new manifest checksum is the way to get around it.
+
+The final android build happens via PhoneGap Build pulling from this repo.
+
+## Can I use the data?
 
 I'm all for it! Make sure you have the appropriate OGL & Community use licensing in place because it's ultimately Paizo's data so you have to play by their rules (just like me) but I'm more than happy to have others build on top of the data I've collected. If you do use the data I'd love to hear about your project - as if it's good I'll proabably want to use it too!
 
