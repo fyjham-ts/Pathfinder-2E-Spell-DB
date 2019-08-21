@@ -12065,23 +12065,22 @@ a {
         content: ": ";
         font-weight: bold; }
 
-.spellListConfig .spellListTable td, .spellListConfig .spellListTable th {
-  text-align: center; }
-  .spellListConfig .spellListTable td:first-child, .spellListConfig .spellListTable td:last-child, .spellListConfig .spellListTable th:first-child, .spellListConfig .spellListTable th:last-child {
-    text-align: left; }
-
-.spellListConfig .spellListTable .spellListRow a.activeList, .spellListConfig .spellListTable .spellListRow a.activeList:hover {
-  color: #e7711b; }
-
-.spellListConfig .spellListTable .spellListRow .actions a {
-  margin-left: 10px; }
-  .spellListConfig .spellListTable .spellListRow .actions a:first-child {
-    margin-left: 0; }
+.spellListConfig .bookmarkListRow {
+  margin-bottom: 20px; }
+  .spellListConfig .bookmarkListRow .row {
+    margin-bottom: 10px; }
+  .spellListConfig .bookmarkListRow .spellListHeaderRow {
+    font-weight: bold; }
+  .spellListConfig .bookmarkListRow .spellListDetailRow {
+    text-align: center; }
+  .spellListConfig .bookmarkListRow .spellListDetailHeaderRow {
+    text-align: center;
+    font-weight: bold; }
+  .spellListConfig .bookmarkListRow .actions {
+    text-align: center; }
 
 .spellListConfig .global-actions button {
   margin-left: 10px; }
-  .spellListConfig .global-actions button:first-child {
-    margin-left: 0px; }
 
 .randomNpc .npcCard {
   margin-bottom: 20px; }

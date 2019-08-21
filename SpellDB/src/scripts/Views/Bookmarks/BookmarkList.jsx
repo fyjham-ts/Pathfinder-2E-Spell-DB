@@ -61,30 +61,19 @@ export default class BookmarkList extends React.Component {
         return (
             <div className="spellListConfig">
                 <p className="alert alert-info">Bookmarks help you mark some related spells. Whether it be your spell book, the spells you'll need as GM for an encounter, or just a few spells you're interested in checking out later.</p>
-                <table className="table spellListTable">
-                    <thead>
-                        <tr>
-                            <th>List Name</th>
-                            <th>Spells</th>
-                            <th>Editing</th>
-                            <th>Vancian</th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.state.lists.map((l) => <BookmarkListRow
-                            key={l.id}
-                            SpellList={l}
-                            canDelete={this.state.lists.length > 1}
-                            isEditList={l.id == this.state.editList}
-                            onNameChange={this.onNameChange}
-                            onVancianChange={this.onVancianChange}
-                            onDeleteList={this.onDeleteList}
-                            onSaveList={this.onSaveList}
-                            onToggleEdit={this.onToggleEdit} />
-                        )}
-                    </tbody>
-                </table>
+                <div className="spellLists">
+                    {this.state.lists.map((l) => <BookmarkListRow
+                        key={l.id}
+                        SpellList={l}
+                        canDelete={this.state.lists.length > 1}
+                        isEditList={l.id == this.state.editList}
+                        onNameChange={this.onNameChange}
+                        onVancianChange={this.onVancianChange}
+                        onDeleteList={this.onDeleteList}
+                        onSaveList={this.onSaveList}
+                        onToggleEdit={this.onToggleEdit} />
+                    )}
+                </div>
                 <div className="global-actions">
                     <button className="btn btn-success" onClick={this.onAddList}>
                         <i className="fas fa-plus"></i>&nbsp;&nbsp;Create New List

@@ -617,41 +617,33 @@ a { cursor: pointer; }
 }
 
 .spellListConfig {
-    .spellListTable {
-        td, th {
-            text-align: center;
-
-            &:first-child, &:last-child {
-                text-align: left;
-            }
+    .bookmarkListRow {
+        margin-bottom: 20px;
+        .row {
+            margin-bottom: 10px;
+        }
+        .spellListHeaderRow {
+            font-weight: bold;
         }
 
-        .spellListRow {
-            a.activeList {
-                &, &:hover {
-                    color: #e7711b;
-                }
-            }
+        .spellListDetailRow {
+            text-align: center;
+        }
 
-            .actions {
-                a {
-                    margin-left: 10px;
+        .spellListDetailHeaderRow {
+            text-align: center;
+            font-weight: bold;
+        }
 
-                    &:first-child {
-                        margin-left: 0;
-                    }
-                }
-            }
+        .actions {
+            text-align: center;
         }
     }
 
     .global-actions {
+
         button {
             margin-left: 10px;
-
-            &:first-child {
-                margin-left: 0px;
-            }
         }
     }
 }

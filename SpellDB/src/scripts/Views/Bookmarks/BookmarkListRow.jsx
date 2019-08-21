@@ -25,31 +25,43 @@ export default class BookmarkListRow extends React.Component {
         this.props.onNameChange(this.props.SpellList, event.target.value);
     }
     render() {
-        return (
-            <tr className="spellListRow">
-                <td><input className="form-control" type="text" name="name" value={this.props.SpellList.name} onChange={this.nameChanged} /></td>
-                <td>{this.props.SpellList.spellCount}</td>
-                <td>
+        return <div className="container bookmarkListRow">
+            <div className="row spellListHeaderRow">
+                <div className={this.props.canDelete && !this.props.isEditList ? "col-8" : "col"}>List Name</div>
+                {this.props.canDelete && !this.props.isEditList && <div className="col-4">&nbsp;</div>}
+            </div>
+            <div className="row spellListRow">
+                <div className={this.props.canDelete && !this.props.isEditList ? "col-8" : "col"}>
+                    <input className="form-control" type="text" name="name" value={this.props.SpellList.name} onChange={this.nameChanged} />
+                </div>
+                {this.props.canDelete && !this.props.isEditList && <div className="col-4 actions">
+                    <a className="btn btn-outline-danger" onClick={this.deleteList}><i className="fas fa-trash-alt"></i></a>
+                </div>}
+            </div>
+            <div className="row spellListDetailHeaderRow">
+                <div className="col">Active</div>
+                <div className="col">Vancian</div>
+                <div className="col">Spells</div>
+            </div>
+            <div className="row spellListDetailRow">
+                <div className="col">
                     <a className={"btn" + (this.props.isEditList ? " editList" : "")} onClick={this.toggleEdit}>
                         {this.props.isEditList ?
                             <i className="fas fa-check-circle"></i> :
                             <i className="far fa-circle"></i>
                         }
                     </a>
-                </td>
-                <td>
+                </div>
+                <div className="col">
                     <a className={"btn" + (this.props.SpellList.vancian ? " vancianList" : "")} onClick={this.toggleVancian}>
                         {this.props.SpellList.vancian ?
                             <i className="fas fa-check-circle"></i> :
                             <i className="far fa-circle"></i>
                         }
                     </a>
-                </td>
-                <td className="actions">
-                    {/*<a className="btn btn-outline-primary" onClick={this.saveList} title="Export list to file"><i className="fas fa-save"></i></a>*/}
-                    {this.props.canDelete && !this.props.isEditList && <a className="btn btn-outline-danger" onClick={this.deleteList}><i className="fas fa-trash-alt"></i></a>}
-                </td>
-            </tr>
-        )
+                </div>
+                <div className="col">{this.props.SpellList.spellCount}</div>
+            </div>
+        </div>;
     }
 };  
