@@ -4,10 +4,24 @@ This was created for my own personal use - if you have some fun with it that's g
 
 It allows you to search & find spells and powers across different classes quickly and easily.
 
+# But how do I use it?
+
+For android users, download the app from [Google Play](https://play.google.com/store/apps/details?id=com.fyjham_ts.pathfinder_2e_spell_db).
+
+For iOS/Windows user (And I guess android users who don't like apps) I've got it up as a [offline-capable website](https://fyjham-ts.github.io/Pathfinder-2E-Spell-DB). What this means is once you visit that URL, you'll be able to bookmark it and open it even if you have no internet connection!
+
 # Credit
 [Paizo](http://www.paizo.com) as the makers of Pathfinder are ultimately the source of all the information in this application.
 
 Also used a lot of tech libraries to make this work. I believe all remaining ones exist as node dependencies. Too many to list, but they're all in packages.json.
+
+# I'm a developer, can I use the data?
+
+I'm all for it! Make sure you have the appropriate OGL & Community use licensing in place because it's ultimately Paizo's data so you have to play by their rules (just like me) but I'm more than happy to have others build on top of the data I've collected. If you do use the data I'd love to hear about your project - as if it's good I'll proabably want to use it too!
+
+As a help searching the repository, the app's reference data is all stored in the [/SpellDb/src/data](https://github.com/fyjham-ts/Pathfinder-2E-Spell-DB/tree/master/SpellDB/src/data]/SpellDb/src/data) folder.
+
+Also if you're looking for pathfinder data you may want to check our [pathfinder-2-sqlite](https://gitlab.com/jrmiller82/pathfinder-2-sqlite) - found out about it as it incorporated some of my spell data, but they're aiming for more of a collated data set that other apps can use & a more structured SQLite format. If you're after data similar to what this app has you may find more there!
 
 # Licensing?
 I'm not a lawyer, I'm acting on a belief the data itself is licensed under the OGL (See license).
