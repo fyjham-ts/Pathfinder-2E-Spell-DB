@@ -85,26 +85,19 @@ termination of this License.<br />
 only to the extent necessary to make it enforceable.<br />
 15. COPYRIGHT NOTICE<br />
 Open Game License v 1.0a © 2000, Wizards of the Coast, Inc.<br />
-System Reference Document © 2000, Wizards of the Coast, Inc.; Authors: Jonathan Tweet, Monte Cook, and
-Skip Williams, based on material by E. Gary Gygax and Dave Arneson.<br />
-Pathfinder Core Rulebook (Second Edition) © 2019, Paizo Inc.; Designers: Logan Bonner, Jason Bulmahn,
-Stephen Radney-MacFarland, and Mark Seifter<br />
-Daemon, Guardian from the Tome of Horrors Complete © 2011, Necromancer Games, Inc., published and
-distributed by Frog God Games; Author: Scott Greene, based on original material by Ian McDowall.<br />
-Dark Creeper from the Tome of Horrors Complete © 2011, Necromancer Games, Inc., published and distributed
-by Frog God Games; Author: Scott Greene, based on original material by Rik Shepard.<br />
-Dark Stalker from the Tome of Horrors Complete © 2011, Necromancer Games, Inc., published and distributed
-by Frog God Games; Author: Scott Greene, based on original material by Simon Muth.<br />
-Dragon, Faerie from the Tome of Horrors Complete © 2011, Necromancer Games, Inc., published and distributed
-by Frog God Games; Author: Scott Greene, based on original material by Brian Jaeger and Gary Gygax.<br />
-Genie, Marid from the Tome of Horrors Complete © 2011, Necromancer Games, Inc., published and distributed
-by Frog God Games; Author: Scott Greene, based on original material by Gary Gygax.<br />
-Mite from the Tome of Horrors Complete © 2011, Necromancer Games, Inc., published and distributed by Frog
-God Games; Author: Scott Greene, based on original material by Ian Livingstone and Mark Barnes.<br />
-Pathfinder Bestiary (Second Edition) © 2019, Paizo Inc.; Authors: Alexander Augunas, Logan Bonner, Jason Bulmahn,
-John Compton, Paris Crenshaw, Adam Daigle, Eleanor Ferron, Leo Glass, Thurston Hillman, James Jacobs, Jason Keeley,
-Lyz Liddell, Ron Lundeen, Robert G. McCreary, Tim Nightengale, Stephen Radney-MacFarland, Alex Riggs, David N.
-Ross, Michael Sayre, Mark Seifter, Chris S. Sims, Jeffrey Swank, Jason Tondro, Tonya Woldridge, and Linda Zayas-Palmer.</p>
+System Reference Document © 2000, Wizards of the Coast, Inc.; Authors: Jonathan Tweet, Monte Cook, and Skip Williams, based on material by E. Gary Gygax and Dave Arneson.<br />
+Pathfinder Core Rulebook (Second Edition) © 2019, Paizo Inc.; Designers: Logan Bonner, Jason Bulmahn, Stephen Radney-MacFarland, and Mark Seifter<br />
+Daemon, Guardian from the Tome of Horrors Complete © 2011, Necromancer Games, Inc., published and distributed by Frog God Games; Author: Scott Greene, based on original material by Ian McDowall.<br />
+Dark Creeper from the Tome of Horrors Complete © 2011, Necromancer Games, Inc., published and distributed by Frog God Games; Author: Scott Greene, based on original material by Rik Shepard.<br />
+Dark Stalker from the Tome of Horrors Complete © 2011, Necromancer Games, Inc., published and distributed by Frog God Games; Author: Scott Greene, based on original material by Simon Muth.<br />
+Dragon, Faerie from the Tome of Horrors Complete © 2011, Necromancer Games, Inc., published and distributed by Frog God Games; Author: Scott Greene, based on original material by Brian Jaeger and Gary Gygax.<br />
+Genie, Marid from the Tome of Horrors Complete © 2011, Necromancer Games, Inc., published and distributed by Frog God Games; Author: Scott Greene, based on original material by Gary Gygax.<br />
+Mite from the Tome of Horrors Complete © 2011, Necromancer Games, Inc., published and distributed by Frog God Games; Author: Scott Greene, based on original material by Ian Livingstone and Mark Barnes.<br />
+Pathfinder Bestiary (Second Edition) © 2019, Paizo Inc.; Authors: Alexander Augunas, Logan Bonner, Jason Bulmahn, John Compton, Paris Crenshaw, Adam Daigle, Eleanor Ferron, Leo Glass, Thurston Hillman, James Jacobs, Jason Keeley, Lyz Liddell, Ron Lundeen, Robert G. McCreary, Tim Nightengale, Stephen Radney-MacFarland, Alex Riggs, David N.
+Ross, Michael Sayre, Mark Seifter, Chris S. Sims, Jeffrey Swank, Jason Tondro, Tonya Woldridge, and Linda Zayas-Palmer.<br />
+The Archives of Nethys. Copyright 2010, Blake Davis.<br />
+Pathfinder Lost Omens World Guide (Second Edition) © 2019, Paizo Inc.; Authors: Tanya DePass, James Jacobs, Lyz Liddell, Ron Lundeen, Liane Merciel, Erik Mona, Mark Seifter, James L. Sutter.
+            </p>
             <h3>MIT License</h3>
             <p>Copyright (c) 2019 Tim Schneider</p>
             <p>Permission is hereby granted, free of charge, to any person obtaining a copy

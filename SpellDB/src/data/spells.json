@@ -12,7 +12,7 @@
     "area": "60-foot emanation",
     "description": "Your performance protects you and your allies. Roll a Performance check for a type you know: an auditory performance if the trigger was auditory, or a visual one for a visual trigger. You and allies in the area can use the better result between your Performance check and the saving throw.",
     "components": [ "somatic", "verbal" ],
-    "componentsSeparator":  " or "
+    "componentsSeparator": " or "
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=385",
@@ -39,7 +39,6 @@
     "cast": "verbal",
     "action": "1",
     "area": "60-foot emanation",
-    "saving throw": "NULl",
     "duration": "1 round",
     "description": "You inspire your allies with words or tunes of encouragement. You and all allies in the area gain a +1 status bonus to attack rolls, damage rolls, and saves against fear effects.",
     "components": [ "verbal" ]
@@ -1608,7 +1607,7 @@
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=498",
     "name": "Diabolic Edict",
-    "traits": [ "uncommon",  "enchantment", "sorcerer" ],
+    "traits": [ "uncommon", "enchantment", "sorcerer" ],
     "type": "Focus",
     "level": 1,
     "source": "Core Rulebook pg. 403",
@@ -1622,7 +1621,7 @@
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=500",
-    "manual":  true,
+    "manual": true,
     "name": "Dragon Claws",
     "traits": [ "uncommon", "morph", "sorcerer", "transmutation" ],
     "type": "Focus",
@@ -6324,7 +6323,7 @@
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=134",
-    "manual":  true,
+    "manual": true,
     "name": "Ghoulish Cravings",
     "traits": [ "attack", "disease", "evil", "necromancy" ],
     "type": "Spell",
@@ -6587,7 +6586,7 @@
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=265",
-    "manual":  true,
+    "manual": true,
     "name": "Sanctified Ground",
     "traits": [ "abjuration", "consecration" ],
     "type": "Spell",
@@ -6937,7 +6936,7 @@
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=263",
-    "manual":  true,
+    "manual": true,
     "name": "Righteous Might",
     "traits": [ "polymorph", "transmutation" ],
     "type": "Spell",
@@ -7669,7 +7668,7 @@
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=10",
-    "manual":  true,
+    "manual": true,
     "name": "Animal Form",
     "traits": [ "polymorph", "transmutation" ],
     "type": "Spell",
@@ -8088,5 +8087,124 @@
     "action": "3",
     "description": "You request a direct intercession from the natural world. Nature always refuses unnatural requests and might grant a different request (potentially more powerful or better fitting its character) than the one you asked for. A primal phenomenon spell can do any of the following things. Duplicate any primal spell of 9th level or lower. Duplicate any non-primal spell of 7th level or lower. Produce any effect whose power level is in line with the above effects. Reverse certain effects that refer to the wish spell. At the GM's discretion, you can try to use primal phenomenon to produce greater effects than these, but doing so may be dangerous, or the spell may have only a partial effect.\n\n\t\t\t\t\t",
     "components": [ "material", "somatic", "verbal" ]
+  },
+  {
+    "name": "Mantis Form",
+    "manual": true,
+    "traits": [ "uncommon", "polymorph", "transmutation" ],
+    "type": "Focus",
+    "level": 4,
+    "source": "Lost Omens World Guide pg. 71",
+    "traditions": null,
+    "action": "2",
+    "duration": "1 minute",
+    "description": "You become a mantis. You gain the effects of *insect form*, heightened to *mantis form*'s level, and you can only transform into a mantis.",
+    "components": [ "somatic", "verbal" ]
+  },
+  {
+    "name": "Perfect Strike",
+    "manual": true,
+    "traits": [ "uncommon", "divination", "fortune" ],
+    "type": "Focus",
+    "level": 2,
+    "source": "Lost Omens World guide pg. 83",
+    "traditions": null,
+    "action": "reaction",
+    "trigger": "You miss a Strike with an unarmed attack.",
+    "description": "You call upon insight from your training to recover accuracy. Reroll the missed attack roll and keep the new result.",
+    "components": [ "verbal" ]
+  },
+  {
+    "name": "Unblinking Flame Revelation",
+    "manual": true,
+    "traits": [ "uncommon", "abjuration" ],
+    "type": "Focus",
+    "level": 3,
+    "source": "Lost Omens World guide pg. 83",
+    "traditions": null,
+    "requirements": "Your previous action was a successful unarmed Strike",
+    "targets": "the creature you hit",
+    "action": "1",
+    "duration": "2 rounds",
+    "description": "You light your foe with revealing flame. the GM attempts a secret counteract check against each illusion affecting the creature; on a success, you suppress the illusion for the duration, rather than end the effect.",
+    "components": [ "verbal" ]
+  },
+  {
+    "name": "Unbreaking Wave Advance",
+    "manual": true,
+    "traits": [ "uncommon", "evocation", "water" ],
+    "type": "Focus",
+    "level": 3,
+    "source": "Lost Omens World guide pg. 83",
+    "traditions": null,
+    "area": "15-foot cone",
+    "saving throw": "basic Fortitude",
+    "action": "1",
+    "description": "You unleash a mighty wave from your hand that buffets back your foes. Each creature in the area must attempt a Fortitude saving throw. If a creature pushed by *unbreaking wave advance* would be pushed into a solid barrier or another creature, it stops at that point and takes 3d6 damage.\r\n  \r\n **Success** The creature is unaffected.  \r\n **Failure** The creature is pushed 10 feet.  \r\n **Critical Failure** The creature is pushed 20 feet.  \r\n**Heightened (+1)** The damage for pushing a creature into a solid barrier increases by 1d6.",
+    "components": [ "verbal" ]
+  },
+  {
+    "name": "Unfolding Wind Rush",
+    "manual": true,
+    "traits": [ "uncommon", "evocation" ],
+    "type": "Focus",
+    "level": 3,
+    "source": "Lost Omens World guide pg. 83",
+    "traditions": null,
+    "action": "1",
+    "description": "You travel on a rushing wind. Move two times: two Strides, two Steps, or one Stride and one Step (in either order). You can Stride or Step into the air during this movement, moving upward at a 45-degree angle at most; if you end your movement in the air, you fall after taking one action or when your turn ends, whichever comes first. A *wall of wind* appears in all the spaces you left during this movement, lasting for 1 round.  \r\n**Heightened (5th)** The *wall of wind* lasts 3 rounds.",
+    "components": [ "verbal" ]
+  },
+  {
+    "name": "Untwisting Iron Buffer",
+    "manual": true,
+    "traits": [ "uncommon", "abjuration" ],
+    "type": "Focus",
+    "level": 3,
+    "source": "Lost Omens World guide pg. 83",
+    "traditions": null,
+    "action": "1",
+    "duration": null,
+    "description": "You send currents of protective ki to the surface of your body that protect you from harm, at least until your enemies dissipate them. You gain 15 temporary Hit Points, which last for up to 3 rounds.  \r\n **Heightened (+1)** The temporary Hit Points increase by 5.",
+    "components": [ "verbal" ]
+  },
+  {
+    "name": "Untwisting Iron Buffer",
+    "manual": true,
+    "traits": [ "uncommon", "abjuration" ],
+    "type": "Focus",
+    "level": 3,
+    "source": "Lost Omens World guide pg. 83",
+    "traditions": null,
+    "action": "1",
+    "duration": null,
+    "description": "You send currents of protective ki to the surface of your body that protect you from harm, at least until your enemies dissipate them. You gain 15 temporary Hit Points, which last for up to 3 rounds.  \r\n **Heightened (+1)** The temporary Hit Points increase by 5.",
+    "components": [ "verbal" ]
+  },
+  {
+    "name": "Magic Warrior Aspect",
+    "manual": true,
+    "traits": [ "uncommon", "morph", "transmutation" ],
+    "type": "Focus",
+    "level": 2,
+    "source": "Lost Omens World guide pg. 96",
+    "traditions": null,
+    "action": "2",
+    "duration": "5 minutes",
+    "description": "You call upon the aspect of the animal from your mask, gaining physical features reminiscent of that animal. You morph slightly into that creature, gaining the Speeds and senses you would gain from using *animal form* to turn into the type of animal your mask represents; these special Speeds can't be increased by status bonuses or item bonuses.",
+    "components": [ "somatic", "verbal" ]
+  },
+  {
+    "name": "Magic Warrior Transformation",
+    "manual": true,
+    "traits": [ "uncommon", "polymorph", "transmutation" ],
+    "type": "Focus",
+    "level": 2,
+    "source": "Lost Omens World guide pg. 96",
+    "traditions": null,
+    "action": "2",
+    "duration": "1 minute",
+    "description": "You transform into the animal from your mask. You gain the effects of *animal form*, heightened to *magic warrior transformation*'s level, and you can transform into only the type of animal your mask represents.",
+    "components": [ "somatic", "verbal" ]
   }
 ]

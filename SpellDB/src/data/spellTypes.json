@@ -45,7 +45,7 @@
     "name": "Duration",
     "matchBy": "value",
     "match": "duration",
-    "sort":  "duration",
+    "sort": "duration",
     "options": null
   },
   {
@@ -373,6 +373,35 @@
       "Allegro",
       "Soothing Ballade",
       "Fatal Aria"
+    ]
+  },
+  {
+    "name": "Focus Powers - Magic Warrior",
+    "matchBy": "list",
+    "options": [],
+    "lookup": [
+      "Magic Warrior Aspect",
+      "Magic Warrior Transformation"
+    ]
+  },
+  {
+    "name": "Focus Powers - Red Mantis",
+    "matchBy": "list",
+    "options": [],
+    "lookup": [
+      "Mantis Form"
+    ]
+  },
+  {
+    "name": "Focus Powers - Student of Perfection",
+    "matchBy": "list",
+    "options": [],
+    "lookup": [
+      "Perfect Strike",
+      "Unblinking Flame Revelation",
+      "Unbreaking Wave Advance",
+      "Unfolding Wind Rush",
+      "Untwisting Iron Buffer"
     ]
   },
   {
