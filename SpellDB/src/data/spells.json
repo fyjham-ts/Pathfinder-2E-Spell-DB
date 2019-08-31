@@ -8169,19 +8169,6 @@
     "components": [ "verbal" ]
   },
   {
-    "name": "Untwisting Iron Buffer",
-    "manual": true,
-    "traits": [ "uncommon", "abjuration" ],
-    "type": "Focus",
-    "level": 3,
-    "source": "Lost Omens World guide pg. 83",
-    "traditions": null,
-    "action": "1",
-    "duration": null,
-    "description": "You send currents of protective ki to the surface of your body that protect you from harm, at least until your enemies dissipate them. You gain 15 temporary Hit Points, which last for up to 3 rounds.  \r\n **Heightened (+1)** The temporary Hit Points increase by 5.",
-    "components": [ "verbal" ]
-  },
-  {
     "name": "Magic Warrior Aspect",
     "manual": true,
     "traits": [ "uncommon", "morph", "transmutation" ],
