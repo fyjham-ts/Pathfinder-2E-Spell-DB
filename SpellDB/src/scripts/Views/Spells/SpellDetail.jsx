@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import ReactMarkdown from 'react-markdown';
+import { RemarkPlugins, RemarkRenderers } from '../Utils/RemarkExtensions.jsx';
 import ActionIcons from '../Utils/ActionIcons.jsx';
 import Trait from '../Utils/Trait.jsx';
 import VancianPrep from '../Bookmarks/VancianPrep.jsx';
@@ -91,7 +92,7 @@ export default class SpellDetail extends React.PureComponent {
                 </div>
                 <div className="body">
                     {bodySections.map((s, index) => {
-                        return <div key={index} className={s.className}>{s.title}<ReactMarkdown source={s.text} /></div>
+                        return <div key={index} className={s.className}>{s.title}<ReactMarkdown source={s.text} plugins={RemarkPlugins} renderers={RemarkRenderers} /></div>
                     })}
                 </div>
             </div>

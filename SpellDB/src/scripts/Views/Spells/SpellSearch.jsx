@@ -56,7 +56,11 @@ export default class SpellSearch extends React.Component {
                     <div className="form-row">
                         <label htmlFor="spellName" className="col-form-label form-label">Search</label>
                         <div className="col">
-                            <input className="form-control" id="spellName" name="spellName" type="text" value={this.props.spellName} onChange={this.handleCriteriaChange} />
+                            <input className="form-control" id="spellName" name="spellName" type="search" value={this.props.spellName} onChange={this.handleCriteriaChange}
+                                autoCapitalize="off"
+                                autoComplete="off"
+                                spellCheck="false"
+                                autoCorrect="off" />
                         </div>
                     </div>
                     <div className="form-row">

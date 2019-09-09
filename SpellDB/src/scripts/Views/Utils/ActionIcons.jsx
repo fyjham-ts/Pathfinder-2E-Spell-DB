@@ -3,10 +3,12 @@
 // Turns out Paizo says no to using their icons. Sadness.
 // If they ever become community use, flip this.
 const canUseIcons = false; 
-
+const iconActions = ["1", "2", "3", "free", "reaction"];
 export default class ActionIcons extends React.PureComponent {
     renderIcon(action) {
-        if (canUseIcons) return <img key={action} className="actions" src={"images/action-" + action + ".png"} alt={action} />
+        if (canUseIcons && iconActions.indexOf(action) != -1) {
+            return <img key={action} className="actions" src={"images/action-" + action + ".png"} alt={action} />
+        }
         else {
             return <span key={action} className={"actions actions-" + action}>
                 {(() => {

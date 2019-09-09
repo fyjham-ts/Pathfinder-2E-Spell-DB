@@ -11882,9 +11882,6 @@ a {
 .spellDetail .header .castingToken:last-child::after, .spellDetail .header .headerElement:last-child::after {
   content: ""; }
 
-.spellDetail .header img.actions {
-  height: 1em; }
-
 .spellDetail .header span.actions-1, .spellDetail .header span.actions-2, .spellDetail .header span.actions-3 {
   font-weight: bold; }
 
@@ -11932,6 +11929,9 @@ a {
 
 .spellDetail .body table td.split {
   border-left: 4px solid #5e0000; }
+
+img.actions {
+  height: 1em; }
 
 @media (max-width: 575px) {
   .spellListList {

@@ -12,10 +12,11 @@ let { spells, spellTypes } = loadSpellData();
 
 spellTypes.sort((lhs, rhs) => lhs.name < rhs.name ? -1 : (lhs.name > rhs.name ? 1 : 0));
 
-const throttleMs = 500;
-const debounceMs = 500;
+const throttleMs = 1000;
+const debounceMs = 1000;
+const throttleMaxChars = 10;
 
-var defaultMaxRows = 50;
+var defaultMaxRows = 20;
 var getDefaultCriteria = () => {
     return {
         'spellName': '',
@@ -130,6 +131,7 @@ export default class SpellList extends React.Component {
         this.recalcVisibleSpells(newCriteria);
     }
     recalcVisibleSpells(criteria) {
+        console.log("Recalcing....");
         // Accepts the criteria separate to setState cause with throttling it may not actually be in the state yet.
         this.setState({
             'visibleSpells': this.state.spells.filter(this.buildFilter(criteria)).sort(this.buildSort(criteria))
@@ -266,7 +268,7 @@ export default class SpellList extends React.Component {
             });
         }
         if (name == "spellName") {
-            if (value.length < 5 || value.endsWith(' ')) this.recalcVisibleSpellsThrottled(criteria);
+            if (value.length < throttleMaxChars || value.endsWith(' ')) this.recalcVisibleSpellsThrottled(criteria);
             else this.recalcVisibleSpellsDebounced(criteria);
         }
         else

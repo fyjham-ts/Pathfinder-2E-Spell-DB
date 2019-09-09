@@ -317,10 +317,6 @@ a { cursor: pointer; }
             }
         }
 
-        img.actions {
-            height: 1em;
-        }
-
         span.actions-1, span.actions-2, span.actions-3 {
             font-weight: bold;
         }
@@ -397,6 +393,10 @@ a { cursor: pointer; }
             }
         }
     }
+}
+
+img.actions {
+    height: 1em;
 }
 
 @media (max-width: 575px) {
