@@ -14,5 +14,6 @@
 *.userosscache
 *.sln.docstates
 /SpellDB/build.json
+/SpellDB/node_modules
 *.dtbcache
 /.vs/SpellDB/DesignTimeBuild
