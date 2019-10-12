@@ -19,9 +19,17 @@ Also used a lot of tech libraries to make this work. I believe all remaining one
 
 ## How do I get a build environment set up?
 
-I'm running in Visual Studio 2017 with the Apache Cordova plugins, but realistically I don't think that's critical. Get NPM running to load the packages, then you'll find the node commands for separate parts of the build in the pacjage.json. A build is as defined in the "BeforeBuild" in -vs-binding. After this you'll just want to serve up the "www" folder via a webserver & you'll be able to test.
+I'm running in Visual Studio 2017 with the Apache Cordova plugins, but realistically I don't think that's critical. Get NPM running to load the packages, then you'll find the node commands for separate parts of the build in the package.json. A build is as defined in the "BeforeBuild" in -vs-binding. After this you'll just want to serve up the "www" folder via a webserver & you'll be able to test.
 
-I recommend using "nocache.html" for local dev to save yourself having to clear cache - it's exactly the same as the other but . If you end up getting a cached version then using chrome://appcache-internals to delete your offline cache or running build:manifest to generate a new manifest checksum is the way to get around it.
+Example Commands:
+```
+$ cd SpellDB
+$ npm run build:js
+$ cd www
+$ python -m SimpleHTTPServer 8001
+```
+
+I recommend using "nocache.html" for local dev to save yourself having to clear cache - it's exactly the same as `index.html` but should update on refresh. If you end up getting a cached version then using chrome://appcache-internals to delete your offline cache or running build:manifest to generate a new manifest checksum is the way to get around it.
 
 The final android build happens via PhoneGap Build pulling from this repo.
 
