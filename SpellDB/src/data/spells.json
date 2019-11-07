@@ -1891,6 +1891,7 @@
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=497",
+    "manual": true,
     "name": "Celestial Brand",
     "traits": [ "uncommon", "curse", "necromancy", "sorcerer" ],
     "type": "Focus",
@@ -2053,6 +2054,7 @@
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=525",
+    "manual": true,
     "name": "Diviner's Sight",
     "traits": [ "uncommon", "concentrate", "divination", "fortune", "wizard" ],
     "type": "Focus",
@@ -3881,6 +3883,7 @@
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=170",
+    "manual": true,
     "name": "Levitate",
     "traits": [ "evocation" ],
     "type": "Spell",
@@ -4656,6 +4659,7 @@
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=57",
+    "manual": true,
     "name": "Crushing Despair",
     "traits": [ "emotion", "enchantment", "mental" ],
     "type": "Spell",
@@ -5158,6 +5162,7 @@
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=268",
+    "manual": true,
     "name": "Scrying",
     "traits": [ "uncommon", "divination", "scrying" ],
     "type": "Spell",
