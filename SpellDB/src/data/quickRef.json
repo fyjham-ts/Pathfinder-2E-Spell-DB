@@ -176,7 +176,7 @@
       },
       {
         "name": "Coven",
-        "description": "(divination, mental, occult)  \r\nThis monster can form a coven with two or more other creatures who also have the coven ability. This involves performing an 8-hour ceremony with all prospective coven members. After the coven is formed, each of its members gains elite adjustments (page 6), adjusting their levels accordingly. Coven members can sense other members' locations and conditions by spending a single action, which has the concentrate trait, and can sense what another coven member is sensing as a twoaction activity, which has the concentrate trait as well.  \r\nCovens also grant spells and rituals to their members, but these can be cast only in cooperation between three coven members who are all within 30 feet of one another. A coven member can contribute to a coven spell with a single-action spellcasting activity that has a single verbal component. If two coven members have contributed these actions within the last round, a third member can cast a coven spell on her turn by spending the normal spellcasting actions. A coven can cast its coven spells an unlimited number of times but can cast only one coven spell each round. All covens grant the 8th-level baleful polymorph spell and all the following spells, which the coven can cast at any level up to 5th: augury, charm, clairaudience, clairvoyance, dream message, illusory disguise, illusory scene, prying eye, and talking corpse. Individual creatures with the coven ability also grant additional spells to any coven they join. A coven can also cast the control weather ritual (Core Rulebook 411), with a DC of 23 instead of the standard DC.  \r\nIf a coven member leaving the coven or the death of a coven member brings the coven below three members, the remaining members keep their elite adjustments for 24 hours, but without enough members to contribute the necessary actions, they can't cast coven spells."
+        "description": "(divination, mental, occult)  \r\nThis monster can form a coven with two or more other creatures who also have the coven ability. This involves performing an 8-hour ceremony with all prospective coven members. After the coven is formed, each of its members gains elite adjustments (page 6), adjusting their levels accordingly. Coven members can sense other members' locations and conditions by spending a single action, which has the concentrate trait, and can sense what another coven member is sensing as a two-action activity, which has the concentrate trait as well.  \r\nCovens also grant spells and rituals to their members, but these can be cast only in cooperation between three coven members who are all within 30 feet of one another. A coven member can contribute to a coven spell with a single-action spellcasting activity that has a single verbal component. If two coven members have contributed these actions within the last round, a third member can cast a coven spell on her turn by spending the normal spellcasting actions. A coven can cast its coven spells an unlimited number of times but can cast only one coven spell each round. All covens grant the 8th-level baleful polymorph spell and all the following spells, which the coven can cast at any level up to 5th: augury, charm, clairaudience, clairvoyance, dream message, illusory disguise, illusory scene, prying eye, and talking corpse. Individual creatures with the coven ability also grant additional spells to any coven they join. A coven can also cast the control weather ritual (Core Rulebook 411), with a DC of 23 instead of the standard DC.  \r\nIf a coven member leaving the coven or the death of a coven member brings the coven below three members, the remaining members keep their elite adjustments for 24 hours, but without enough members to contribute the necessary actions, they can't cast coven spells."
       },
       {
         "name": "Engulf",
@@ -506,7 +506,7 @@
           }
         ],
         "rows": [
-          [ "Abberation", "Occutism" ],
+          [ "Aberration", "Occultism" ],
           [ "Animal", "Nature" ],
           [ "Astral", "Occultism" ],
           [ "Beast", "Arcana, Nature" ],
@@ -574,19 +574,19 @@
       },
       {
         "name": "Follow the Expert",
-        "description": "Choose an ally attempting a recurring skill check while exploring, such as climbing, or performing a different exploration tactic that requires a skill check (like Avoid Notice). The ally must be at least Expert in the skill and must be willing to provide assistance. While Following the Expert, you match their tactic or attempts similar skill checks. Thanks to your ally's assistance, you can add your level as a profiency bonus to the assocated skill check, even if you're untrained. Aditionally, you gain a circumstance bonus to your skill check nbased on your ally's proficiency (+2 for expert, +3 for master and +4 for legendary).'"
+        "description": "Choose an ally attempting a recurring skill check while exploring, such as climbing, or performing a different exploration tactic that requires a skill check (like Avoid Notice). The ally must be at least Expert in the skill and must be willing to provide assistance. While Following the Expert, you match their tactic or attempts similar skill checks. Thanks to your ally's assistance, you can add your level as a proficiency bonus to the associated skill check, even if you're untrained. Additionally, you gain a circumstance bonus to your skill check based on your ally's proficiency (+2 for expert, +3 for master and +4 for legendary).'"
       },
       {
         "name": "Hustle",
-        "description": "You strain yourself to move at double travel speed. You can Hustle only for a number of minutes equal to your Constitution modifier x 10 (Min 10 minutes). If you are in a group that is Hustling, use the lowest Constitution modifer among everyone to determine how fast the group can Hustle together."
+        "description": "You strain yourself to move at double travel speed. You can Hustle only for a number of minutes equal to your Constitution modifier x 10 (Min 10 minutes). If you are in a group that is Hustling, use the lowest Constitution modifier among everyone to determine how fast the group can Hustle together."
       },
       {
         "name": "Investigate",
-        "description": "You seek out information about your surroundings while traveling at half speed. You use recall knowledge as a secret cehck to discover clues among various things you can see and engage with on the journey. You can use any skill that has a Recall Knowledge action while investigating, but the GM determines whetehr the skill is relevant to the clues you could find."
+        "description": "You seek out information about your surroundings while traveling at half speed. You use recall knowledge as a secret check to discover clues among various things you can see and engage with on the journey. You can use any skill that has a Recall Knowledge action while investigating, but the GM determines whether the skill is relevant to the clues you could find."
       },
       {
         "name": "Repeat a spell",
-        "description": "You repeatedly cast the same spell while moving at half speed. Typically this spell is a cantrip you want to have in effect at the start of combat, and it must be one you can cast in 2 actions or fewer. In order to prevent fatigue due to repeated casting you'll likely use this ability only when something out of the ordinary occurs.  \r\nYou can instead use this activity to continue Sustainign a Spell or Activation with sustained duration. Most spells or item effects can be sustained for 10 minutes, though some specify they can be sustained for a different duration."
+        "description": "You repeatedly cast the same spell while moving at half speed. Typically this spell is a cantrip you want to have in effect at the start of combat, and it must be one you can cast in 2 actions or fewer. In order to prevent fatigue due to repeated casting you'll likely use this ability only when something out of the ordinary occurs.  \r\nYou can instead use this activity to continue Sustaining a Spell or Activation with sustained duration. Most spells or item effects can be sustained for 10 minutes, though some specify they can be sustained for a different duration."
       },
       {
         "name": "Scout",
@@ -607,7 +607,7 @@
       },
       {
         "name": "Cover Tracks (Survival)",
-        "description": "Obscure your pasing (pg 252)"
+        "description": "Obscure your passing (pg 252)"
       },
       {
         "name": "Decipher Writing (Multiple)",
@@ -615,7 +615,7 @@
       },
       {
         "name": "Gather Information (Diplomacy)",
-        "description": "Canvass area about an invidual or topic (pg 246)"
+        "description": "Canvass area about an individual or topic (pg 246)"
       },
       {
         "name": "Identify Alchemy (Craft + Tools)",
@@ -647,7 +647,7 @@
       },
       {
         "name": "Squeeze (Acrobatics)",
-        "description": "Squeese through very tight spaces (pg 241)"
+        "description": "Squeeze through very tight spaces (pg 241)"
       },
       {
         "name": "Track (Survival)",
