@@ -1899,7 +1899,7 @@
     "cast": "somatic",
     "action": "1",
     "range": "30 feet",
-    "targets": "1 evil creaeture",
+    "targets": "1 evil creature",
     "duration": "1 round",
     "description": "A blazing symbol appears on the target, marking it for divine justice. You and your allies receive a +1 status bonus to your attack rolls and skill checks against it. Anytime a good creature damages it, the good creature deals an additional 1d4 good damage. The target is then temporarily immune for 1 minute.  \r\n**Heightened (+2)**  The good damage increases by 1.",
     "components": [ "somatic" ]
@@ -2061,7 +2061,7 @@
     "cast": "verbal",
     "action": "1",
     "range": "30 feet",
-    "targets": "1 willing living craeture",
+    "targets": "1 willing living creature",
     "duration": "until the end of your next turn",
     "description": "You glimpse into the target's future. Roll a d20; when the target attempts a non-secret saving throw or skill check, it can use the number you rolled instead of rolling, and the spell ends. Alternatively, you can instead reveal the result of the die roll for one of the target's secret checks during the duration, and the spell ends. Casting it again ends any active diviner's sight you have cast, as well as any active diviner's sight on the target.",
     "components": [ "verbal" ]
@@ -3890,7 +3890,7 @@
     "cast": "somatic, verbal",
     "action": "2",
     "range": "touch",
-    "targets": "1 unatteded object or willing creature",
+    "targets": "1 unattended object or willing creature",
     "duration": "5 minutes",
     "description": "You defy gravity and levitate the target 5 feet off the ground. For the duration of the spell, you can move the target up or down 10 feet with a single action, which has the concentrate trait. A creature floating in the air from levitate takes a -2 circumstance penalty to attack rolls. A floating creature can spend an Interact action to stabilize itself and negate this penalty for the remainder of its turn. If the target is adjacent to a fixed object or terrain of suitable stability, it can move across the surface by climbing (if the surface is vertical, like a wall) or crawling (if the surface is horizontal, such as a ceiling). The GM determines which surfaces can be climbed or crawled across.",
     "components": [ "somatic", "verbal" ]
@@ -4656,7 +4656,7 @@
   },
   {
     "nethysUrl": "https://2e.aonprd.com/Spells.aspx?ID=57",
-    "name": "Crushing Dispair",
+    "name": "Crushing Despair",
     "traits": [ "emotion", "enchantment", "mental" ],
     "type": "Spell",
     "level": 5,
@@ -5169,7 +5169,7 @@
     "targets": "1 creature",
     "saving throw": "Will",
     "duration": "sustained up to 10 minutes",
-    "description": "You magically spy on a creature of your choice. Scrying works like clairvoyance, except that the image you receive is less precise, insuficient for teleport and similar spells. Instead of creating an eye in a set location within 500 feet, you instead create an eye that manifests just above the target. You can choose a target either by name or by touching one of its possessions or a piece of its body. If you haven't met the target in person, scrying's DC is 2 lower, and if you are unaware of the target's identity (perhaps because you found an unknown creature's fang at a crime scene), the DC is instead 10 lower. The effect of scrying depends on the target's Will save.  \r\n**Critical Success**  The spell fails and the target is temporarily immune for 1 week. The target also gains a glimpse of you and learns its rough distance and direction from you.  \r\n**Success**  The spell fails and the target is temporarily immune for 1 day.  \r\n**Failure**  The spell succeeds.  \r\n**Critical Failure**  The spell succeeds, and the eye follows the target if it moves, traveling up to 60 feet per round.",
+    "description": "You magically spy on a creature of your choice. Scrying works like clairvoyance, except that the image you receive is less precise, insufficient for teleport and similar spells. Instead of creating an eye in a set location within 500 feet, you instead create an eye that manifests just above the target. You can choose a target either by name or by touching one of its possessions or a piece of its body. If you haven't met the target in person, scrying's DC is 2 lower, and if you are unaware of the target's identity (perhaps because you found an unknown creature's fang at a crime scene), the DC is instead 10 lower. The effect of scrying depends on the target's Will save.  \r\n**Critical Success**  The spell fails and the target is temporarily immune for 1 week. The target also gains a glimpse of you and learns its rough distance and direction from you.  \r\n**Success**  The spell fails and the target is temporarily immune for 1 day.  \r\n**Failure**  The spell succeeds.  \r\n**Critical Failure**  The spell succeeds, and the eye follows the target if it moves, traveling up to 60 feet per round.",
     "components": [ "10minutes(material", "somatic", "verbal)" ]
   },
   {
