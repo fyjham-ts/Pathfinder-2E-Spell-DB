@@ -21,12 +21,22 @@ Also used a lot of tech libraries to make this work. I believe all remaining one
 
 I'm running in Visual Studio 2017 with the Apache Cordova plugins, but realistically I don't think that's critical. Get NPM running to load the packages, then you'll find the node commands for separate parts of the build in the package.json. A build is as defined in the "BeforeBuild" in -vs-binding. After this you'll just want to serve up the "www" folder via a webserver & you'll be able to test.
 
-Example Commands:
+Use your choice of web server. The following commands have been contributed for running this with other toolsets:
+
+**Python 2**
 ```
 $ cd SpellDB
 $ npm run build:js
 $ cd www
 $ python -m SimpleHTTPServer 8001
+```
+
+**Python 3**
+```
+$ cd SpellDB
+$ npm run build:js
+$ cd www
+$ python -m http.server 8001
 ```
 
 I recommend using "nocache.html" for local dev to save yourself having to clear cache - it's exactly the same as `index.html` but should update on refresh. If you end up getting a cached version then using chrome://appcache-internals to delete your offline cache or running build:manifest to generate a new manifest checksum is the way to get around it.
@@ -38,6 +48,8 @@ The final android build happens via PhoneGap Build pulling from this repo.
 I'm all for it! Make sure you have the appropriate OGL & Community use licensing in place because it's ultimately Paizo's data so you have to play by their rules (just like me) but I'm more than happy to have others build on top of the data I've collected. If you do use the data I'd love to hear about your project - as if it's good I'll proabably want to use it too!
 
 As a help searching the repository, the app's reference data is all stored in the [/SpellDb/src/data](https://github.com/fyjham-ts/Pathfinder-2E-Spell-DB/tree/master/SpellDB/src/data]/SpellDb/src/data) folder.
+
+The data is all in JSON format, which is a fairly widely used format & should be possible to load into many systems - including spreadsheet tools like Excel or Google Sheets. Some quick googling on loading JSON into your system of choice should hopefully serve you well.
 
 Also if you're looking for pathfinder data you may want to check our [pathfinder-2-sqlite](https://gitlab.com/jrmiller82/pathfinder-2-sqlite) - found out about it as it incorporated some of my spell data, but they're aiming for more of a collated data set that other apps can use & a more structured SQLite format. If you're after data similar to what this app has you may find more there!
 
