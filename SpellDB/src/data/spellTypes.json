@@ -252,8 +252,8 @@
     "matchBy": "lookup",
     "options": [
       {
-        "name": "Abberant",
-        "value": "Abberant"
+        "name": "Aberrant",
+        "value": "Aberrant"
       },
       {
         "name": "Angelic",
@@ -293,7 +293,7 @@
       }
     ],
     "lookup": {
-      "Abberant": [ "Tentacular Limbs", "Aberrant Whispers", "Unusual Anatomy" ],
+      "Aberrant": [ "Tentacular Limbs", "Aberrant Whispers", "Unusual Anatomy" ],
       "Angelic": [ "Angelic Halo", "Angelic Wings", "Celestial Brand" ],
       "Demonic": [ "Glutton's Jaw", "Swamp of Sloth", "Abyssal Wrath" ],
       "Diabolic": [ "Diabolic Edict", "Embrace the Pit", "Hellfire Plume" ],
