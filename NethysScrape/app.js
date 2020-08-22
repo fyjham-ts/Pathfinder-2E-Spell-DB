@@ -23,19 +23,16 @@ const testRun = false;
 var htmlTransform = (h) => cheerio.load(h);
 
 const spellListRoots = [
-    "https://2e.aonprd.com/Spells.aspx?Trait=19",
-    "https://2e.aonprd.com/Spells.aspx?Trait=24",
-    "https://2e.aonprd.com/Spells.aspx?Trait=19",
-    "https://2e.aonprd.com/Spells.aspx?Trait=26",
-    "https://2e.aonprd.com/Spells.aspx?Trait=52",
-    "https://2e.aonprd.com/Spells.aspx?Trait=112",
-    "https://2e.aonprd.com/Spells.aspx?Trait=148",
-    "https://2e.aonprd.com/Spells.aspx?Trait=166",
+    "https://2e.aonprd.com/Spells.aspx?Focus=true&Tradition=0",
     "https://2e.aonprd.com/Spells.aspx?Tradition=1",
     "https://2e.aonprd.com/Spells.aspx?Tradition=2",
     "https://2e.aonprd.com/Spells.aspx?Tradition=3",
     "https://2e.aonprd.com/Spells.aspx?Tradition=4"
 ];
+const skipBooks = [
+    "Core Rulebook",
+    "Lost Omens World guide"
+]
 const relativePath = "https://2e.aonprd.com/";
 var handledItems = [
     "name",
@@ -59,7 +56,7 @@ var handledItems = [
 ];
 
 function cleanup(s) {
-    return s.trim().replace(/^;+/, "").replace(/;+$/, "").replace(/[—–]/g, '-');
+    return s.trim().replace(/^;+/, "").replace(/;+$/, "").replace(/[ï¿½ï¿½]/g, '-');
 }
 
 async function loadSpell(url) {
@@ -179,7 +176,9 @@ async function loadAllSpells() {
                     if (idx < 10 || !testRun) {
                         var url = new URL(spellUrl, relativePath);
                         var spell = await loadSpell(url);
-                        spells.push(spell);
+                        if (spell.source && !skipBooks.find(v => spell.source.startsWith(v))) {
+                            spells.push(spell);
+                        }
                     }
                 }
             };

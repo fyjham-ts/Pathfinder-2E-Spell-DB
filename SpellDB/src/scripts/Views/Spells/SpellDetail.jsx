@@ -4,36 +4,25 @@ import { RemarkPlugins, RemarkRenderers } from '../Utils/RemarkExtensions.jsx';
 import ActionIcons from '../Utils/ActionIcons.jsx';
 import Trait from '../Utils/Trait.jsx';
 import VancianPrep from '../Bookmarks/VancianPrep.jsx';
+import SpellAltPrep from './SpellAltPrep.jsx'
 
 export default class SpellDetail extends React.PureComponent {
     constructor(props) {
         super(props);
         this.toggleBookmark = this.toggleBookmark.bind(this);
-        this.addVancianPrep = this.addVancianPrep.bind(this);
-        this.removeVancianPrep = this.removeVancianPrep.bind(this);
-        this.addVancianCast = this.addVancianCast.bind(this);
-        this.resetVancianCast = this.resetVancianCast.bind(this);
+        this.addAltPrep = this.addAltPrep.bind(this);
+    }
+    addAltPrep() {
+        this.props.bookmarkManager.addAltPrep(this.props.spell.name);
     }
     toggleBookmark() {
-        this.props.onBookmark(this.props.spell);
+        this.props.bookmarkManager.toggleSpell(this.props.spell.name);
     }
     getVancianIcon(mode) {
         switch (mode) {
             case 'prep': return 'fa-book';
             case 'cast': return 'fa-magic';
         }
-    }
-    addVancianCast() {
-        this.props.onVancianCast(this.props.spell, 1);
-    }
-    resetVancianCast() {
-        this.props.onVancianCast(this.props.spell, -(this.props.vancian.cast || 0));
-    }
-    addVancianPrep() {
-        this.props.onVancianPrep(this.props.spell, 1);
-    }
-    removeVancianPrep() {
-        this.props.onVancianPrep(this.props.spell, -1);
     }
     render() {
         var spell = this.props.spell;
@@ -58,26 +47,29 @@ export default class SpellDetail extends React.PureComponent {
         return (
             <div className="spellDetail clearfix">
                 <div className="title">
+                    <span className="spellName">
+                        {spell.name}
+                    </span>
                     <span className="spellClass">
                         
                         {this.props.vancian.enabled && <VancianPrep
+                            spellName={spell.name}
                             prep={this.props.vancian.prep}
                             cast={this.props.vancian.cast}
                             type={spell.type}
                             allowPrep={this.props.vancianMode == 'prep'}
                             allowCast={this.props.vancianMode == 'cast'}
                             allowReset={this.props.vancianMode == 'cast' || this.props.vancianMode == 'prep'}
-                            onAddVancianPrep={this.addVancianPrep}
-                            onRemoveVancianPrep={this.removeVancianPrep}
-                            onCastVancian={this.addVancianCast}
-                            onResetCastVancian={this.resetVancianCast}
+                            bookmarkManager={this.props.bookmarkManager}
                         />}
+                        {this.props.vancian && spell.type == "Spell" ? <span className="bookmark" onClick={this.addAltPrep}>
+                            <i className="fas fa-cog" />
+                        </span> : null}
                         <span className={this.props.bookmarked ? "bookmark active" : "bookmark inactive"} onClick={this.toggleBookmark}>
                             <i className={this.props.bookmarked ? "fas fa-bookmark" : "far fa-bookmark"} />
                         </span>
                         {spell.type} {spell.level}
                     </span>
-                    {spell.name}
                 </div>
                 <ul className="traits">
                     {spell.traits.map((t, index) => <Trait key={index} trait={t} />)}
@@ -95,6 +87,31 @@ export default class SpellDetail extends React.PureComponent {
                         return <div key={index} className={s.className}>{s.title}<ReactMarkdown source={s.text} plugins={RemarkPlugins} renderers={RemarkRenderers} /></div>
                     })}
                 </div>
+                {this.props.vancian.enabled && <div className="altPrep">
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>Lvl</th>
+                                <th>Tradition</th>
+                                <th>Prep</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.props.vancian.alt.map((a, idx) => 
+                                <SpellAltPrep 
+                                    key={idx}
+                                    spell={spell}
+                                    alt={a}
+                                    bookmarkManager={this.props.bookmarkManager}
+                                    allowPrep={this.props.vancianMode == 'prep'}
+                                    allowCast={this.props.vancianMode == 'cast'}
+                                    allowReset={this.props.vancianMode == 'cast' || this.props.vancianMode == 'prep'}
+                                    />
+                            )}
+                        </tbody>
+                    </table>
+                </div>}
             </div>
         )
     }

@@ -238,10 +238,15 @@ a { cursor: pointer; }
 
     .title {
         color: $title;
-        font-weight: bold;
-        text-transform: uppercase;
         border-bottom: 1px solid $title;
         padding-bottom: 2px;
+        display: flex;
+        align-items: flex-start;
+        .spellName {
+            font-weight: bold;
+            text-transform: uppercase;
+            flex-grow: 1;
+        }
 
         .dark & {
             color: $dark-text;
@@ -249,7 +254,7 @@ a { cursor: pointer; }
         }
 
         .spellClass {
-            display: inline-block;
+            display: block;
             float: right;
 
             .bookmark {
@@ -355,7 +360,8 @@ a { cursor: pointer; }
             margin-top: 3px;
             margin-bottom: 3px;
         }
-
+    }
+    .body, .altPrep {
         table {
             thead tr {
                 background: $pathfinderRed;
@@ -390,6 +396,14 @@ a { cursor: pointer; }
 
             td.split {
                 border-left: 4px solid $pathfinderRed;
+            }
+        }
+    }
+    .altPrep {
+        .altActions > i {
+            padding: 0 10px 0 0;
+            &:last-child {
+                padding: 0;
             }
         }
     }

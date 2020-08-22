@@ -2,7 +2,7 @@
 
 // Turns out Paizo says no to using their icons. Sadness.
 // If they ever become community use, flip this.
-const canUseIcons = false; 
+const canUseIcons = true; 
 const iconActions = ["1", "2", "3", "free", "reaction"];
 export default class ActionIcons extends React.PureComponent {
     renderIcon(action) {

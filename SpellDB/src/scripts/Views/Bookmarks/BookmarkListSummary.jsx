@@ -8,10 +8,6 @@ export default class BookmarkListSummary extends React.Component {
             'expanded': false
         };
         this.toggleExpand = this.toggleExpand.bind(this);
-        this.addVancianPrep = this.addVancianPrep.bind(this);
-        this.removeVancianPrep = this.removeVancianPrep.bind(this);
-        this.addVancianCast = this.addVancianCast.bind(this);
-        this.resetVancianCast = this.resetVancianCast.bind(this);
         this.changeModeOff = this.changeModeOff.bind(this);
         this.changeModeCast = this.changeModeCast.bind(this);
         this.changeModePrep = this.changeModePrep.bind(this);
@@ -32,18 +28,6 @@ export default class BookmarkListSummary extends React.Component {
         this.props.onChangeVancianMode("prep");
         ev.stopPropagation();
     }
-    addVancianCast(s) {
-        this.props.onVancianCast(s.spell, 1);
-    }
-    resetVancianCast(s) {
-        this.props.onVancianCast(s.spell, -(s.bookmark.vancianCast || 0));
-    }
-    addVancianPrep(s) {
-        this.props.onVancianPrep(s.spell, 1);
-    }
-    removeVancianPrep(s) {
-        this.props.onVancianPrep(s.spell, -1);
-    }
     toggleExpand() {
         this.setState({
             'expanded': !this.state.expanded
@@ -51,9 +35,8 @@ export default class BookmarkListSummary extends React.Component {
     }
     render() {
         var spellLevels = [];
-        for (var spellName in this.props.listSpells) {
-            var spell = this.props.spells.find(s => s.name == spellName);
-            var score = spell.level;
+        var addSpell = function(spell, listSpell, alt) {
+            var score = (alt || spell).level;
             if (spell.type.toLowerCase() == 'cantrip') score = 0;
             if (spell.type.toLowerCase() == 'focus') score = score + 11;
 
@@ -64,29 +47,42 @@ export default class BookmarkListSummary extends React.Component {
                 spellLevels.push({
                     'score': score,
                     'type': spell.type,
-                    'level': spell.level,
+                    'level': (alt || spell).level,
                     'spells': []
                 });
             } else if (spellLevels[listIdx].score > score) {
                 spellLevels.splice(listIdx, 0, {
                     'score': score,
                     'type': spell.type,
-                    'level': spell.level,
+                    'level': (alt || spell).level,
                     'spells': []
                 });
             }
             var laterNameIdx = spellLevels[listIdx].spells.findIndex(s => s.spell.name > spell.name);
+            var spellListObj = {
+                'title': spell.name,
+                'spell': spell,
+                'altId': alt ? alt.id : null,
+                'prep': alt ? alt.prep : listSpell.vancianPrep,
+                'cast': alt ? alt.cast : listSpell.vancianCast
+            };
+            if (alt && alt.level > spell.level) spellListObj.title += " (Heightened)";
             if (laterNameIdx == -1) {
-                spellLevels[listIdx].spells.push({
-                    'spell': spell,
-                    'bookmark': this.props.listSpells[spellName]
-                });
+                spellLevels[listIdx].spells.push(spellListObj);
             } 
             else {
-                spellLevels[listIdx].spells.splice(laterNameIdx, 0, {
-                    'spell': spell,
-                    'bookmark': this.props.listSpells[spellName]
-                });
+                spellLevels[listIdx].spells.splice(laterNameIdx, 0, spellListObj);
+            }
+        };
+        for (var spellName in this.props.listSpells) {
+            var spell = this.props.spells.find(s => s.name == spellName);
+            if (!spell) break;
+            var listSpell = this.props.listSpells[spellName];
+            addSpell(spell, listSpell);
+            if (listSpell.alt) {
+                for (var i=0; i < listSpell.alt.length; i++) {
+                    addSpell(spell, listSpell, listSpell.alt[i]);
+                }
             }
         }
 
@@ -106,24 +102,23 @@ export default class BookmarkListSummary extends React.Component {
                     <div>
                         <span className="spellLevel">{l.type} {l.level}</span>
                         ({l.spells.length} {this.props.listVancian ? "Known" : "Bookmarked"}
-                        {this.props.listVancian && <span>, {l.spells.reduce((agg, s) => agg + (s.bookmark.vancianPrep || 0), 0)} Prepared</span>}
+                        {this.props.listVancian && <span>, {l.spells.reduce((agg, s) => agg + (s.prep || 0), 0)} Prepared</span>}
                         )
                     </div>
                     <ul className="spells">
                         {l.spells.map(s =>
                             <li key={s.spell.name}>
-                                <a className="spellName" onClick={() => this.clickSpell(s.spell)}>{s.spell.name}</a>
+                                <a className="spellName" onClick={() => this.clickSpell(s.spell)}>{s.title}</a>
                                 {this.props.listVancian && <VancianPrep
-                                    prep={s.bookmark.vancianPrep || 0}
-                                    cast={s.bookmark.vancianCast || 0}
+                                    prep={s.prep || 0}
+                                    cast={s.cast || 0}
                                     type={s.spell.type}
+                                    altId={s.altId}
                                     allowPrep={this.props.vancianMode == 'prep'}
                                     allowCast={this.props.vancianMode == 'cast'}
                                     allowReset={this.props.vancianMode == 'cast' || this.props.vancianMode == 'prep'}
-                                    onAddVancianPrep={() => this.addVancianPrep(s)}
-                                    onRemoveVancianPrep={() => this.removeVancianPrep(s)}
-                                    onCastVancian={() => this.addVancianCast(s)}
-                                    onResetCastVancian={() => this.resetVancianCast(s)}
+                                    bookmarkManager={this.props.bookmarkManager}
+                                    spellName={s.spell.name}
                                 />}
                             </li>
                         )}

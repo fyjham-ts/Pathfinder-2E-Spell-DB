@@ -67,8 +67,16 @@
         "value": "Ambition"
       },
       {
+        "name": "Change",
+        "value": "Change"
+      },
+      {
         "name": "Cities",
         "value": "Cities"
+      },
+      {
+        "name": "Cold",
+        "value": "Cold"
       },
       {
         "name": "Confidence",
@@ -87,12 +95,28 @@
         "value": "Death"
       },
       {
+        "name": "Decay",
+        "value": "Decay"
+      },
+      {
+        "name": "Delerium",
+        "value": "Delerium"
+      },
+      {
         "name": "Destruction",
         "value": "Destruction"
       },
       {
         "name": "Dreams",
         "value": "Dreams"
+      },
+      {
+        "name": "Dust",
+        "value": "Dust"
+      },
+      {
+        "name": "Duty",
+        "value": "Duty"
       },
       {
         "name": "Earth",
@@ -115,6 +139,10 @@
         "value": "Freedom"
       },
       {
+        "name": "Glyph",
+        "value": "Glyph"
+      },
+      {
         "name": "Healing",
         "value": "Healing"
       },
@@ -125,6 +153,10 @@
       {
         "name": "Knowledge",
         "value": "Knowledge"
+      },
+      {
+        "name": "Lightning",
+        "value": "Lightning"
       },
       {
         "name": "Luck",
@@ -163,16 +195,44 @@
         "value": "Perfection"
       },
       {
+        "name": "Plague",
+        "value": "Plague"
+      },
+      {
         "name": "Protection",
         "value": "Protection"
+      },
+      {
+        "name": "Repose",
+        "value": "Repose"
       },
       {
         "name": "Secrecy",
         "value": "Secrecy"
       },
       {
+        "name": "Sorrow",
+        "value": "Sorrow"
+      },
+      {
+        "name": "Soul",
+        "value": "Soul"
+      },
+      {
+        "name": "Star",
+        "value": "Star"
+      },
+      {
         "name": "Sun",
         "value": "Sun"
+      },
+      {
+        "name": "Swarm",
+        "value": "Swarm"
+      },
+      {
+        "name": "Time",
+        "value": "Time"
       },
       {
         "name": "Travel",
@@ -195,12 +255,24 @@
         "value": "Undeath"
       },
       {
+        "name": "Vigil",
+        "value": "Vigil"
+      },
+      {
+        "name": "Void",
+        "value": "Void"
+      },
+      {
         "name": "Water",
         "value": "Water"
       },
       {
         "name": "Wealth",
         "value": "Wealth"
+      },
+      {
+        "name": "Wyrmkin",
+        "value": "Wyrmkin"
       },
       {
         "name": "Zeal",
@@ -210,20 +282,28 @@
     "lookup": {
       "Air": [ "Pushing Gust", "Disperse into Air" ],
       "Ambition": [ "Blind Ambition", "Competitive Edge" ],
+      "Change": ["Adapt Self", "Adaptive Ablation"],
+      "Cold": ["Winter Bolt", "Diamond Dust"],
       "Cities": [ "Face in the Crowd", "Pulse of the City" ],
       "Confidence": [ "Veil of Confidence", "Delusional Pride" ],
       "Creation": [ "Splash of Art", "Artistic Flourish" ],
       "Darkness": [ "Cloak of Shadow", "Darkened Eyes" ],
+      "Decay": ["Withering Grasp", "Fallow Field"],
+      "Delerium": ["Hyperfocus", "Ephemeral Hazards"],
       "Death": [ "Death's Call", "Eradicate Undeath" ],
       "Destruction": [ "Cry of Destruction", "Destructive Aura" ],
       "Dreams": [ "Sweet Dream", "Dreamer's Call" ],
+      "Dust": ["Parch", "Dust Storm"],
+      "Duty": ["Oathkeeper's Insignia", "Dutiful Challenge"],
       "Earth": [ "Hurtling Stone", "Localized Quake" ],
       "Family": [ "Soothing Words", "Unity" ],
       "Fate": [ "Read Fate", "Tempt Fate" ],
       "Fire": [ "Fire Ray", "Flame Barrier" ],
       "Freedom": [ "Unimpeded Stride", "Word of Freedom" ],
+      "Glyph": ["Redact", "Ghostly Transcription"],
       "Healing": [ "Healer's Blessing", "Rebuke Death" ],
       "Indulgence": [ "Overstuff", "Take its Course" ],
+      "Lightning": ["Charged Javelin", "Bottle the Storm"],
       "Knowledge": [ "Scholarly Recollection", "Know the Enemy" ],
       "Luck": [ "Bit of Luck", "Lucky Break" ],
       "Magic": [ "Magic's Vessel", "Mystic Beacon" ],
@@ -234,16 +314,26 @@
       "Pain": [ "Savor the Sting", "Retributive Pain" ],
       "Passion": [ "Charming Touch", "Captivating Adoration" ],
       "Perfection": [ "Perfected Mind", "Perfected Form" ],
+      "Plague": ["Divine Plagues", "Foul Miasma"],
       "Protection": [ "Protector's Sacrifice", "Protector's Sphere" ],
+      "Repose": ["Share Burden", "Font of Serenity"],
       "Secrecy": [ "Forced Quiet", "Safeguard Secret" ],
+      "Sorrow": ["Lament", "Overflowing Sorrow"],
+      "Soul": ["Eject Soul", "Ectoplasmic Interstice"],
+      "Star": ["Zenith Star", "Asterism"],
       "Sun": [ "Dazzling Flash", "Positive Luminance" ],
+      "Swarm": ["Swarmsense", "Swarm Form"],
+      "Time": ["Delay Consequence", "Stasis"],
       "Travel": [ "Agile Feet", "Traveler's Transit" ],
       "Trickery": [ "Sudden Shift", "Trickster's Twin" ],
       "Truth": [ "Word of Truth", "Glimpse the Truth" ],
       "Tyranny": [ "Touch of Obedience", "Commanding Lash" ],
       "Undeath": [ "Touch of Undeath (Cleric)", "Malignant Sustenance" ],
+      "Vigil": ["Object Memory", "Remember the Lost"],
+      "Void": ["Empty Inside", "Door to Beyond"],
       "Water": [ "Tidal Surge", "Downpour" ],
       "Wealth": [ "Appearance of Wealth", "Precious Metals" ],
+      "Wyrmkin": ["Draconic Barrage", "Roar of the Wyrm"],
       "Zeal": [ "Weapon Surge", "Zeal for Battle" ]
     }
   },
@@ -279,6 +369,7 @@
         "name": "Fey",
         "value": "Fey"
       },
+      {"name":"Genie","value":"Genie"},
       {
         "name": "Hag",
         "value": "Hag"
@@ -287,6 +378,9 @@
         "name": "Imperial",
         "value": "Imperial"
       },
+      {"name":"Nymph","value":"Nymph"},
+      {"name":"Psychopomp","value":"Psychopomp"},
+      {"name":"Shadow","value":"Shadow"},
       {
         "name": "Undead",
         "value": "Undead"
@@ -300,8 +394,12 @@
       "Draconic": [ "Dragon Claws", "Dragon Breath", "Dragon Wings" ],
       "Elemental": [ "Elemental Toss", "Elemental Motion", "Elemental Blast" ],
       "Fey": [ "Faerie Dust", "Fey Disappearance", "Fey Glamour" ],
+      "Genie": ["Genie's Veil", "Heart's Desire", "Wish-Twisted Form"],
       "Hag": [ "Jealous Hex", "Horrific Visage", "You're Mine" ],
       "Imperial": [ "Ancestral Memories", "Extend Spell", "Arcane Countermeasure" ],
+      "Nymph": ["Nymph's Token", "Blinding Beauty", "Establish Ward"],
+      "Psychopomp": ["Sepulchral Mask", "Spirit Veil", "Shepherd of Souls"],
+      "Shadow": ["Dim the Light", "Steal Shadow", "Consuming Darkness"],
       "Undead": [ "Touch of Undeath (Sorcerer)", "Drain Life", "Grasping Grave" ]
     }
   },
@@ -312,97 +410,112 @@
   },
   {
     "name": "Focus Powers - Druid",
-    "matchBy": "list",
+    "matchBy": "filter",
     "options": [],
-    "lookup": [
-      "Goodberry",
-      "Heal Animal",
-      "Tempest Surge",
-      "Wild Morph",
-      "Wild Shape",
-      "Stormwind Flight",
-      "Primal Summons",
-      "Impaling Briars",
-      "Storm Lord"
-    ]
+    "filter": {
+      "traits": "druid",
+      "type": "Focus"
+    }
   },
   {
     "name": "Focus Powers - Champion",
-    "matchBy": "list",
+    "matchBy": "filter",
     "options": [],
-    "lookup": [
-      "Lay on Hands",
-      "Litany against Wrath",
-      "Litany against Sloth",
-      "Champion's Sacrifice",
-      "Litany of Righteousness",
-      "Hero's Defiance"
-    ]
+    "filter": {
+      "traits": "champion",
+      "type": "Focus"
+    }
   },
   {
     "name": "Focus Powers - Monk",
-    "matchBy": "list",
+    "matchBy": "filter",
     "options": [],
-    "lookup": [
-      "Ki Rush",
-      "Ki Strike",
-      "Wholeness of Body",
-      "Ki Blast",
-      "Abundant Step",
-      "Wild Winds Stance",
-      "Wind Jump",
-      "Quivering Palm",
-      "Empty Body"
-    ]
+    "filter": {
+      "traits": "monk",
+      "type": "Focus"
+    }
+  },
+  {
+    "name": "Focus Powers - Oracle",
+    "matchBy": "lookup",
+    "options": [
+      {"name": "Shared", "value":"Shared"},
+      {"name": "Ancestors", "value":"Ancestors"},
+      {"name": "Battle", "value":"Battle"},
+      {"name": "Bones", "value":"Bones"},
+      {"name": "Cosmos", "value":"Cosmos"},
+      {"name": "Flames", "value":"Flames"},
+      {"name": "Life", "value":"Life"},
+      {"name": "Lore", "value":"Lore"},
+      {"name": "Tempest", "value":"Tempest"}
+    ],
+    "lookup": {
+        "Ancestors": ["Ancestral Touch", "Ancestral Defense", "Ancestral Form"],
+        "Battle": ["Call to Arms", "Battlefield Persistence", "Heroic Feat"],
+        "Bones": ["Soul Siphon", "Armor of Bones", "Claim Undead"],
+        "Cosmos": ["Spray of Stars", "Interstellar Void", "Moonlight Bridge"],
+        "Flames": ["Incendiary Aura", "Whirling Flames", "Flaming Fusillade"],
+        "Life": ["Life Link", "Delay Affliction", "Life-Giving Form"],
+        "Lore": ["Brain Drain", "Access Lore", "Dread Secret"],
+        "Tempest": ["Tempest Touch", "Thunderburst", "Tempest Form"],
+        "Shared": ["Vision of Weakness", "Debilitating Dichotomy" ]
+    }
+  },
+  {
+    "name": "Focus Powers - Witch",
+    "matchBy": "filter",
+    "options": [],
+    "filter": {
+      "traits": "witch",
+      "type": "Focus"
+    }
   },
   {
     "name": "Focus Powers - Bard",
-    "matchBy": "list",
+    "matchBy": "filter",
     "options": [],
-    "lookup": [
-      "Counter Performance",
-      "Inspire Competence",
-      "Inspire Courage",
-      "Lingering Composition",
-      "Loremaster's Etude",
-      "Inspire Defiance",
-      "Triple Time",
-      "Dirge of Doom",
-      "Inspire Heroics",
-      "House of Imaginary Walls",
-      "Allegro",
-      "Soothing Ballade",
-      "Fatal Aria"
-    ]
+    "filter": {
+      "traits": "bard",
+      "type": "Focus"
+    }
   },
   {
-    "name": "Focus Powers - Magic Warrior",
-    "matchBy": "list",
-    "options": [],
-    "lookup": [
-      "Magic Warrior Aspect",
-      "Magic Warrior Transformation"
-    ]
-  },
-  {
-    "name": "Focus Powers - Red Mantis",
-    "matchBy": "list",
-    "options": [],
-    "lookup": [
-      "Mantis Form"
-    ]
-  },
-  {
-    "name": "Focus Powers - Student of Perfection",
-    "matchBy": "list",
-    "options": [],
-    "lookup": [
-      "Perfect Strike",
-      "Unblinking Flame Revelation",
-      "Unbreaking Wave Advance",
-      "Unfolding Wind Rush",
-      "Untwisting Iron Buffer"
-    ]
+    "name": "Focus Powers - Archetypes",
+    "matchBy": "lookup",
+    "options": [
+      {"name":"Beastmaster", "value": "Beastmaster"},
+      {"name": "Blessed One", "value": "Blessed One"},
+      {"name":"Magic Warrior", "value": "Magic Warrior"},
+      {"name": "Red Mantis", "value": "Red Mantis" },
+      {"name": "Shadowdancer", "value": "Shadowdancer"},
+      {"name":"Student of Perfection","value":"Student of Perfection"}
+    ],
+    "lookup": {
+      "Beastmaster": [
+        "Heal Animal","Beastmaster Trance"
+      ],
+      "Blessed One": ["Lay on Hands", "Protector's Sacrifice"],
+      "Dragon Disciple": ["Dragon Breath", "Dragon Wings"],
+      "Magic Warrior": [
+        "Magic Warrior Aspect",
+        "Magic Warrior Transformation"
+      ],
+      "Red Mantis": [
+        "Mantis Form"
+      ],
+      "Shadowdancer": [
+        "Dance of Darkness",
+        "Shadow Jump",
+        "Shadow Illusion"
+      ],
+      "Student of Perfection": [
+        "Perfect Strike",
+        "Unblinking Flame Revelation",
+        "Unbreaking Wave Advance",
+        "Unfolding Wind Rush",
+        "Untwisting Iron Buffer"
+      ]
+    }
   },
   {
     "name": "Focus Powers - Wizard School",

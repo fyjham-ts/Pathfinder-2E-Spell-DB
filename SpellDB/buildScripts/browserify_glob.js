@@ -26,7 +26,8 @@ glob(glob_pattern, function (error, srcFiles) {
                 NODE_ENV: "production"
             })
             .transform(babelify.configure({
-                presets: ["@babel/preset-env", "@babel/preset-react"]
+                presets: ["@babel/preset-env", "@babel/preset-react"],
+                plugins: ["@babel/plugin-proposal-class-properties"]
             }))
             .transform('uglifyify', { global: true })
             .plugin('common-shakeify')
@@ -44,7 +45,8 @@ glob(glob_pattern, function (error, srcFiles) {
                 NODE_ENV: "development"
             })
             .transform(babelify.configure({
-                presets: ["@babel/preset-env", "@babel/preset-react"]
+                presets: ["@babel/preset-env", "@babel/preset-react"],
+                plugins: ["@babel/plugin-proposal-class-properties"]
             }))
             .bundle()
             .pipe(process.stdout);
