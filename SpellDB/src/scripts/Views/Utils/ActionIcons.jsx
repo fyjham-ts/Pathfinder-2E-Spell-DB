@@ -5,9 +5,9 @@
 const canUseIcons = true; 
 const iconActions = ["1", "2", "3", "free", "reaction"];
 export default class ActionIcons extends React.PureComponent {
-    renderIcon(action) {
+    renderIcon(action, theme) {
         if (canUseIcons && iconActions.indexOf(action) != -1) {
-            return <img key={action} className="actions" src={"images/action-" + action + ".png"} alt={action} />
+            return <img key={action} className="actions" src={"images/action-" + action + (theme.darkMode ? "-dark" : "") + ".png"} alt={action} />
         }
         else {
             return <span key={action} className={"actions actions-" + action}>
@@ -31,12 +31,16 @@ export default class ActionIcons extends React.PureComponent {
         }
     }
     render() {
-        if (Array.isArray(this.props.action)) {
-            var output = this.props.action.map(a => this.renderIcon(a));
-            // If we have 2 icons put " to " between
-            if (output.length == 2) output.splice(1, 0, ' to ');
-            return <span>{output}</span>;
-        }
-        else return this.renderIcon(this.props.action);
+        <ThemeContext.Consumer>
+            {theme => {
+                    if (Array.isArray(this.props.action)) {
+                        var output = this.props.action.map(a => this.renderIcon(a, theme));
+                        // If we have 2 icons put " to " between
+                        if (output.length == 2) output.splice(1, 0, ' to ');
+                        return <span>{output}</span>;
+                    }
+                    else return this.renderIcon(this.props.action);
+            }}
+        </ThemeContext.Consumer>
     }
 }
