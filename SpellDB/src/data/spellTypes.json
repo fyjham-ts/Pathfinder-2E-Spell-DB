@@ -59,6 +59,10 @@
     "matchBy": "lookup",
     "options": [
       {
+        "name": "Abomination",
+        "value":  "Abomination"
+      },
+      {
         "name": "Air",
         "value": "Air"
       },
@@ -179,6 +183,10 @@
         "value": "Nature"
       },
       {
+        "name": "Naga",
+        "value":  "Naga"
+      },
+      {
         "name": "Nightmares",
         "value": "Nightmares"
       },
@@ -235,6 +243,10 @@
         "value": "Time"
       },
       {
+        "name": "Toil",
+        "value": "Toil"
+      },
+      {
         "name": "Travel",
         "value": "Travel"
       },
@@ -280,60 +292,63 @@
       }
     ],
     "lookup": {
+      "Abomination": [ "Lift Nature's Caul", "Fearful Feast" ],
       "Air": [ "Pushing Gust", "Disperse into Air" ],
       "Ambition": [ "Blind Ambition", "Competitive Edge" ],
-      "Change": ["Adapt Self", "Adaptive Ablation"],
-      "Cold": ["Winter Bolt", "Diamond Dust"],
+      "Change": [ "Adapt Self", "Adaptive Ablation" ],
       "Cities": [ "Face in the Crowd", "Pulse of the City" ],
+      "Cold": [ "Winter Bolt", "Diamond Dust" ],
       "Confidence": [ "Veil of Confidence", "Delusional Pride" ],
       "Creation": [ "Splash of Art", "Artistic Flourish" ],
       "Darkness": [ "Cloak of Shadow", "Darkened Eyes" ],
-      "Decay": ["Withering Grasp", "Fallow Field"],
-      "Delerium": ["Hyperfocus", "Ephemeral Hazards"],
       "Death": [ "Death's Call", "Eradicate Undeath" ],
+      "Decay": [ "Withering Grasp", "Fallow Field" ],
+      "Delerium": [ "Hyperfocus", "Ephemeral Hazards" ],
       "Destruction": [ "Cry of Destruction", "Destructive Aura" ],
       "Dreams": [ "Sweet Dream", "Dreamer's Call" ],
-      "Dust": ["Parch", "Dust Storm"],
-      "Duty": ["Oathkeeper's Insignia", "Dutiful Challenge"],
+      "Dust": [ "Parch", "Dust Storm" ],
+      "Duty": [ "Oathkeeper's Insignia", "Dutiful Challenge" ],
       "Earth": [ "Hurtling Stone", "Localized Quake" ],
       "Family": [ "Soothing Words", "Unity" ],
       "Fate": [ "Read Fate", "Tempt Fate" ],
       "Fire": [ "Fire Ray", "Flame Barrier" ],
       "Freedom": [ "Unimpeded Stride", "Word of Freedom" ],
-      "Glyph": ["Redact", "Ghostly Transcription"],
+      "Glyph": [ "Redact", "Ghostly Transcription" ],
       "Healing": [ "Healer's Blessing", "Rebuke Death" ],
       "Indulgence": [ "Overstuff", "Take its Course" ],
-      "Lightning": ["Charged Javelin", "Bottle the Storm"],
       "Knowledge": [ "Scholarly Recollection", "Know the Enemy" ],
+      "Lightning": [ "Charged Javelin", "Bottle the Storm" ],
       "Luck": [ "Bit of Luck", "Lucky Break" ],
       "Magic": [ "Magic's Vessel", "Mystic Beacon" ],
       "Might": [ "Athletic Rush", "Enduring Might" ],
       "Moon": [ "Moonbeam", "Touch of the Moon" ],
+      "Naga":  ["Split the Tongue", "Ordained Purpose"],
       "Nature": [ "Vibrant Thorns", "Nature's Bounty" ],
       "Nightmares": [ "Walking Nightmare", "Shared Nightmare" ],
       "Pain": [ "Savor the Sting", "Retributive Pain" ],
       "Passion": [ "Charming Touch", "Captivating Adoration" ],
       "Perfection": [ "Perfected Mind", "Perfected Form" ],
-      "Plague": ["Divine Plagues", "Foul Miasma"],
+      "Plague": [ "Divine Plagues", "Foul Miasma" ],
       "Protection": [ "Protector's Sacrifice", "Protector's Sphere" ],
-      "Repose": ["Share Burden", "Font of Serenity"],
+      "Repose": [ "Share Burden", "Font of Serenity" ],
       "Secrecy": [ "Forced Quiet", "Safeguard Secret" ],
-      "Sorrow": ["Lament", "Overflowing Sorrow"],
-      "Soul": ["Eject Soul", "Ectoplasmic Interstice"],
-      "Star": ["Zenith Star", "Asterism"],
+      "Sorrow": [ "Lament", "Overflowing Sorrow" ],
+      "Soul": [ "Eject Soul", "Ectoplasmic Interstice" ],
+      "Star": [ "Zenith Star", "Asterism" ],
       "Sun": [ "Dazzling Flash", "Positive Luminance" ],
-      "Swarm": ["Swarmsense", "Swarm Form"],
-      "Time": ["Delay Consequence", "Stasis"],
+      "Swarm": [ "Swarmsense", "Swarm Form" ],
+      "Time": [ "Delay Consequence", "Stasis" ],
+      "Toil": [ "Practice Makes Perfect", "Tireless Worker" ],
       "Travel": [ "Agile Feet", "Traveler's Transit" ],
       "Trickery": [ "Sudden Shift", "Trickster's Twin" ],
       "Truth": [ "Word of Truth", "Glimpse the Truth" ],
       "Tyranny": [ "Touch of Obedience", "Commanding Lash" ],
       "Undeath": [ "Touch of Undeath (Cleric)", "Malignant Sustenance" ],
-      "Vigil": ["Object Memory", "Remember the Lost"],
-      "Void": ["Empty Inside", "Door to Beyond"],
+      "Vigil": [ "Object Memory", "Remember the Lost" ],
+      "Void": [ "Empty Inside", "Door to Beyond" ],
       "Water": [ "Tidal Surge", "Downpour" ],
       "Wealth": [ "Appearance of Wealth", "Precious Metals" ],
-      "Wyrmkin": ["Draconic Barrage", "Roar of the Wyrm"],
+      "Wyrmkin": [ "Draconic Barrage", "Roar of the Wyrm" ],
       "Zeal": [ "Weapon Surge", "Zeal for Battle" ]
     }
   },
@@ -369,21 +384,49 @@
         "name": "Fey",
         "value": "Fey"
       },
-      {"name":"Genie","value":"Genie"},
+      {
+
+        "name": "Genie",
+        "value": "Genie"
+      },
       {
         "name": "Hag",
         "value": "Hag"
       },
       {
+        "name": "Harrow",
+        "value": "Harrow"
+      },
+      {
         "name": "Imperial",
         "value": "Imperial"
       },
-      {"name":"Nymph","value":"Nymph"},
-      {"name":"Psychopomp","value":"Psychopomp"},
-      {"name":"Shadow","value":"Shadow"},
+      {
+
+        "name": "Nymph",
+        "value": "Nymph"
+      },
+      {
+        "name": "Phoenix",
+        "value": "Phoenix"
+      },
+      {
+
+        "name": "Psychopomp",
+        "value": "Psychopomp"
+      },
+      {
+
+        "name": "Shadow",
+        "value": "Shadow"
+      },
       {
         "name": "Undead",
         "value": "Undead"
+      },
+      {
+        "name": "Wyrmblessed",
+        "value": "Wyrmblessed"
       }
     ],
     "lookup": {
@@ -396,11 +439,14 @@
       "Fey": [ "Faerie Dust", "Fey Disappearance", "Fey Glamour" ],
       "Genie": ["Genie's Veil", "Heart's Desire", "Wish-Twisted Form"],
       "Hag": [ "Jealous Hex", "Horrific Visage", "You're Mine" ],
+      "Harrow":  ["Unraveling Blast", "Invoice the Harrow", "Rewrite Possibility"],
       "Imperial": [ "Ancestral Memories", "Extend Spell", "Arcane Countermeasure" ],
-      "Nymph": ["Nymph's Token", "Blinding Beauty", "Establish Ward"],
+      "Nymph": [ "Nymph's Token", "Blinding Beauty", "Establish Ward" ],
+      "Phoenix": [ "Rejuvenating Flames", "Shroud of Flame", "Cleansing Flames" ],
       "Psychopomp": ["Sepulchral Mask", "Spirit Veil", "Shepherd of Souls"],
       "Shadow": ["Dim the Light", "Steal Shadow", "Consuming Darkness"],
-      "Undead": [ "Touch of Undeath (Sorcerer)", "Drain Life", "Grasping Grave" ]
+      "Undead": [ "Touch of Undeath (Sorcerer)", "Drain Life", "Grasping Grave" ],
+      "Wyrmblessed":  ["Dragon Claws", "Dragon Breath", "Dragon Wings"]
     }
   },
   {
@@ -441,16 +487,19 @@
     "options": [
       {"name": "Shared", "value":"Shared"},
       {"name": "Ancestors", "value":"Ancestors"},
+      {"name": "Ash", "value": "Ash" },
       {"name": "Battle", "value":"Battle"},
       {"name": "Bones", "value":"Bones"},
       {"name": "Cosmos", "value":"Cosmos"},
       {"name": "Flames", "value":"Flames"},
       {"name": "Life", "value":"Life"},
       {"name": "Lore", "value":"Lore"},
-      {"name": "Tempest", "value":"Tempest"}
+      {"name": "Tempest", "value":"Tempest"},
+      {"name": "Time", "value": "Time"}
     ],
     "lookup": {
         "Ancestors": ["Ancestral Touch", "Ancestral Defense", "Ancestral Form"],
+        "Ash":  ["Ashen Wind", "Incendiary Ashes", "Ash Form"],
         "Battle": ["Call to Arms", "Battlefield Persistence", "Heroic Feat"],
         "Bones": ["Soul Siphon", "Armor of Bones", "Claim Undead"],
         "Cosmos": ["Spray of Stars", "Interstellar Void", "Moonlight Bridge"],
@@ -458,6 +507,7 @@
         "Life": ["Life Link", "Delay Affliction", "Life-Giving Form"],
         "Lore": ["Brain Drain", "Access Lore", "Dread Secret"],
         "Tempest": ["Tempest Touch", "Thunderburst", "Tempest Form"],
+        "Time":  ["Temporal Distortion", "Time Skip", "Manifold Lives"],
         "Shared": ["Vision of Weakness", "Debilitating Dichotomy" ]
     }
   },

@@ -19,19 +19,19 @@ const fs = require('fs');
 const rp = require('request-promise-native');
 const cheerio = require('cheerio');
 const testRun = false;
+const testLimit = 5;
+const testSpellId = 163;
 
 var htmlTransform = (h) => cheerio.load(h);
 
 const spellListRoots = [
-    "https://2e.aonprd.com/Spells.aspx?Focus=true&Tradition=0",
-    "https://2e.aonprd.com/Spells.aspx?Tradition=1",
-    "https://2e.aonprd.com/Spells.aspx?Tradition=2",
-    "https://2e.aonprd.com/Spells.aspx?Tradition=3",
-    "https://2e.aonprd.com/Spells.aspx?Tradition=4"
+    "https://2e.aonprd.com/SpellLists.aspx?Focus=true&Tradition=0",
+    "https://2e.aonprd.com/SpellLists.aspx?Tradition=1",
+    "https://2e.aonprd.com/SpellLists.aspx?Tradition=2",
+    "https://2e.aonprd.com/SpellLists.aspx?Tradition=3",
+    "https://2e.aonprd.com/SpellLists.aspx?Tradition=4"
 ];
 const skipBooks = [
-    "Core Rulebook",
-    "Lost Omens World guide"
 ]
 const relativePath = "https://2e.aonprd.com/";
 var handledItems = [
@@ -56,9 +56,76 @@ var handledItems = [
 ];
 
 function cleanup(s) {
-    return s.trim().replace(/^;+/, "").replace(/;+$/, "").replace(/[��]/g, '-');
+    return s.replace(/^[ \t]+/,"").replace(/^;+/, "").replace(/;+$/, "").replace(/[��]/g, '-');
 }
-
+function formatList(e) {
+    // If it has no items in it (Far more common than it should be) just ignore it. 
+    if (e.has("li").length == 0) return ""; 
+    return "\r\n * " + e.find("li").toArray()
+        .map(li => formatDescriptionElementChildren(cheerio(li))) // Make an array of the text in the LI's
+        .filter(s => !/^\s*$/.test(s)) // Drop any whitespace items
+        .join("\r\n * ") // Join them as new list items
+        + "\r\n\r\n\r\n"; // Break at the end so it ends the list
+}
+function formatTable(e) {
+    /*
+    Desired outcome:
+    | head | head | head | head |
+    | :---: | :---: | :---: | :---: |
+    | val | val | val | val |
+    */
+    var rows = e.find("tr").toArray().map(r => cheerio(r).find("td").toArray().map(td => formatDescriptionElementChildren(cheerio(td))).join(" | "));
+    rows.splice(1, 0, e.find("tr:nth-child(1)").toArray().map(r => cheerio(r).find("td").toArray().map(td => ":---:").join(" | ")));
+    rows = rows.map(r => "| " + r + " |");
+    return "\r\n\r\n" + rows.join("\r\n");
+}
+function formatDescriptionElement(e) {
+    if (e.is('span.trait')) { spellData.traits.push(e.text().toLowerCase()); }
+    else if ((e.is('b') || e.is('h3') || e.is('h2')) && e.text()) {
+        return "**" + e.text() + "**";
+    }
+    else if (e.is('img.actiondark')) {
+        switch (e.attr('src')) {
+            case "Images\\Actions\\OneAction.png":
+                return "|1|";
+            case 'Images\\Actions\\TwoActions.png':
+                return "|2|";
+            case 'Images\\Actions\\ThreeActions.png':
+                return "|3|";
+            case 'Images\\Actions\\Reaction.png':
+                return "|reaction|";
+            case 'Images\\Actions\\FreeAction.png':
+                return "|free|"
+        }
+    }
+    else if (e.is("span.action-1")) {
+        return "|1|";
+    }
+    else if (e.is("span.action-2")) {
+        return "|2|";
+    }
+    else if (e.is("span.action-3")) {
+        return "|3|";
+    }
+    else if (e.is("span.action-4")) {
+        return "|reaction|";
+    }
+    else if (e.is("span.action-5")) {
+        return "|free|";
+    }
+    else if (e.is('table')) {
+        return formatTable(e);
+    }
+    else if (e.is("ul")) {
+        return formatList(e);
+    }
+    else if (e.text()) {
+        return e.text();
+    }
+}
+function formatDescriptionElementChildren(e) {
+    return e.get(0).childNodes.map(elem => formatDescriptionElement(cheerio(elem))).join("");
+}
 async function loadSpell(url) {
     try {
         var $ = await rp({
@@ -68,7 +135,7 @@ async function loadSpell(url) {
         var spellData = {
             'nethysUrl': url.href
         };
-        spellData.name = $('h1.title').clone().find("> span, > img").remove().end().text().trim();
+        spellData.name = $('#ctl00_RadDrawer1_Content_MainContent_DetailedOutput h1.title').clone().find("> span, > img").remove().end().text().trim();
         spellData.traits = [];
         var typeString = $('h1.title span').text();
         var typeMatch = typeString.match("(.*) (\\+?[0-9]*)")
@@ -80,10 +147,10 @@ async function loadSpell(url) {
 
         var activeItem = null;
         var subItem = null;
-        $('#ctl00_MainContent_DetailedOutput').get(0).childNodes.forEach((elem, i) => {
+        $('#ctl00_RadDrawer1_Content_MainContent_DetailedOutput').get(0).childNodes.forEach((elem, i) => {
             var e = cheerio(elem);
             if (e.is('span.trait')) { spellData.traits.push(e.text().toLowerCase()); }
-            else if (e.is('b') || e.is('h3')) {
+            else if (e.is('b') || e.is('h3') || e.is('h2')) {
                 var newItem = e.text().toLowerCase();
                 if (handledItems.indexOf(newItem) == -1 && activeItem == "description") {
                     // Unhandled extras in desc - Just put them in bold
@@ -91,7 +158,7 @@ async function loadSpell(url) {
                 } else {
                     if (activeItem) {
                         if (subItem) { spellData[activeItem][subItem] = cleanup(spellData[activeItem][subItem]); }
-                        else { spellData[activeItem] = cleanup(spellData[activeItem].trim()); }
+                        else { spellData[activeItem] = cleanup(spellData[activeItem]); }
                     }
                     activeItem = e.text().toLowerCase();
                     subItem = null;
@@ -139,6 +206,14 @@ async function loadSpell(url) {
                     }
                 }
             }
+            else if (activeItem == "description" && e.is('table')) {
+                if (subItem) { spellData[activeItem][subItem] += formatTable(e); }
+                else { spellData[activeItem] += formatTable(e); }
+            }
+            else if (activeItem == "description" && e.is("ul")) {
+                if (subItem) { spellData[activeItem][subItem] += formatList(e); }
+                else { spellData[activeItem] += formatList(e); }
+            }
             else if (activeItem && e.text()) {
                 if (subItem) { spellData[activeItem][subItem] += e.text(); }
                 else { spellData[activeItem] += e.text(); }
@@ -147,7 +222,7 @@ async function loadSpell(url) {
         // We've scraped, time for cleanup
         if (spellData.traditions) spellData.traditions = spellData.traditions.replace(/ /g, '').split(',');
         if (spellData.cast) spellData.components = spellData.cast.replace(/ /g, '').split(',');
-       
+
         return spellData;
     }
     catch (err) {
@@ -166,14 +241,14 @@ async function loadAllSpells() {
                 'transform': htmlTransform
             });
             console.log("Querying " + spellListRoots[ridx]);
-            var spellLinks = $('#ctl00_MainContent_DetailedOutput > a');
+            var spellLinks = $('#ctl00_RadDrawer1_Content_MainContent_DetailedOutput > a');
             for (var idx = 0; idx < spellLinks.length; idx++) {
                 console.log("Reading spell " + idx + "/" + spellLinks.length);
                 var a = spellLinks[idx];
                 var spellUrl = cheerio(a).attr('href');
                 if (!loadedSpells[spellUrl]) {
                     loadedSpells[spellUrl] = true;
-                    if (idx < 10 || !testRun) {
+                    if (idx < testLimit || !testRun) {
                         var url = new URL(spellUrl, relativePath);
                         var spell = await loadSpell(url);
                         if (spell.source && !skipBooks.find(v => spell.source.startsWith(v))) {
@@ -184,11 +259,19 @@ async function loadAllSpells() {
             };
         }
         console.log(spells);
-        fs.writeFileSync("spells.json", JSON.stringify(spells));
+        if (!testRun) fs.writeFileSync("spells.json", JSON.stringify(spells));
     }
     catch (err) {
         console.error("Error loading root spell page");
         console.error(err);
     };
 };
-loadAllSpells();
+async function testSpell(id) {
+    var url = new URL("/spells.aspx?ID=" + id, relativePath);
+    var spell = await loadSpell(url);
+    console.log(spell);
+}
+if (testRun && testSpellId) {
+    testSpell(testSpellId);
+}
+else loadAllSpells();
