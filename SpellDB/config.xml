@@ -1,79 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="com.fyjham-ts.pathfinder-2e-spell-db" version="1.3.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US" android-versionCode="">
-  <name>Pathfinder 2E Spell DB</name>
-  <description>A Pathfinder 2nd Edition spell database</description>
-  <author href="https://github.com/fyjham-ts/Pathfinder-2E-Spell-DB" email="fyjham@gmail.com">Tim Schneider</author>
-  <vs:template-name>BlankJS</vs:template-name>
-  <vs:toolsetVersion>6.3.1</vs:toolsetVersion>
-  <engine name="android" spec="~5.2.1" />
-  <engine name="ios" spec="~4.2.0" />
-  <engine name="windows" spec="~4.4.2" />
-  <content src="index.html" />
-  <preference name="phonegap-version" value="cli-9.0.0" />
-  <preference name="SplashScreen" value="screen" />
-  <preference name="windows-target-version" value="10.0" />
-  <!-- Support for Cordova 5.0.0 plugin system -->
-  <allow-intent href="http://*/*" />
-  <allow-intent href="https://*/*" />
-  <allow-intent href="tel:*" />
-  <allow-intent href="sms:*" />
-  <allow-intent href="mailto:*" />
-  <allow-intent href="geo:*" />
-  <platform name="android">
-    <allow-intent href="market:*" />
-  </platform>
-  <platform name="ios">
-    <allow-intent href="itms:*" />
-    <allow-intent href="itms-apps:*" />
-  </platform>
-  <platform name="android">
-    <preference name="SplashMaintainAspectRatio" value="true" />
-    <preference name="SplashShowOnlyFirstTime" value="true" />
-    <icon density="ldpi" src="res/icons/android/ldpi.png" />
-    <icon density="mdpi" src="res/icons/android/mdpi.png" />
-    <icon density="hdpi" src="res/icons/android/hdpi.png" />
-    <icon density="xhdpi" src="res/icons/android/xhdpi.png" />
-    <icon density="xxhdpi" src="res/icons/android/xxhdpi.png" />
-    <icon density="xxxhdpi" src="res/icons/android/xxxhdpi.png" />
-    <!--  Portrait  -->
-    <splash density="port-ldpi" src="res/screens/android/splash-port-ldpi.png" />
-    <splash density="port-mdpi" src="res/screens/android/splash-port-mdpi.png" />
-    <splash density="port-hdpi" src="res/screens/android/splash-port-hdpi.png" />
-    <splash density="port-xhdpi" src="res/screens/android/splash-port-xhdpi.png" />
-    <splash density="port-xxhdpi" src="res/screens/android/splash-port-xxhdpi.png" />
-    <splash density="port-xxxhdpi" src="res/screens/android/splash-port-xxxhdpi.png" />
-  </platform>
-  <platform name="ios">
-    <icon src="res/icons/ios/icon-1024.png" width="1024" height="1024" />
-    <icon src="res/icons/ios/icon-small.png" width="29" height="29" />
-    <icon src="res/icons/ios/icon-small@2x.png" width="58" height="58" />
-    <icon src="res/icons/ios/icon-small@3x.png" width="87" height="87" />
-    <icon src="res/icons/ios/icon-small-40.png" width="40" height="40" />
-    <icon src="res/icons/ios/icon-small-40@2x.png" width="80" height="80" />
-    <icon src="res/icons/ios/icon-small-40@3x.png" width="120" height="120" />
-    <icon src="res/icons/ios/icon-small-50.png" width="50" height="50" />
-    <icon src="res/icons/ios/icon-small-50@2x.png" width="100" height="100" />
-    <icon src="res/icons/ios/icon.png" width="57" height="57" />
-    <icon src="res/icons/ios/icon@2x.png" width="114" height="114" />
-    <icon src="res/icons/ios/icon-60.png" width="60" height="60" />
-    <icon src="res/icons/ios/icon-60@2x.png" width="120" height="120" />
-    <icon src="res/icons/ios/icon-60@3x.png" width="180" height="180" />
-    <icon src="res/icons/ios/icon-72.png" width="72" height="72" />
-    <icon src="res/icons/ios/icon-72@2x.png" width="144" height="144" />
-    <icon src="res/icons/ios/icon-76.png" width="76" height="76" />
-    <icon src="res/icons/ios/icon-76@2x.png" width="152" height="152" />
-    <icon src="res/icons/ios/icon-167.png" width="167" height="167" />
-    <icon src="res/icons/ios/icon-83.5@2x.png" width="167" height="167" />
-    <!--  Storyboard portrait  -->
-    <splash src="res/screens/ios/Default@2x~iphone~anyany.png" />
-    <splash src="res/screens/ios/Default@2x~iphone~comany.png" />
-    <splash src="res/screens/ios/Default@3x~iphone~anyany.png" />
-    <splash src="res/screens/ios/Default@3x~iphone~comany.png" />
-    <splash src="res/screens/ios/Default@2x~ipad~anyany.png" />
-    <splash src="res/screens/ios/Default@2x~ipad~comany.png" />
-  </platform>
-  <preference name="Orientation" value="default" />
-  <preference name="Fullscreen" value="False" />
-  <plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
-  <preference name="KeepRunning" value="False" />
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="" defaultlocale="en-US" id="com.fyjham_ts.pathfinder_2e_spell_db" version="1.4.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps">
+    <name>Pathfinder 2E Spell DB</name>
+    <description>A Pathfinder 2nd Edition spell database</description>
+    <author email="fyjham@gmail.com" href="https://github.com/fyjham-ts/Pathfinder-2E-Spell-DB">Tim Schneider</author>
+    <vs:template-name>BlankJS</vs:template-name>
+    <vs:toolsetVersion>6.3.1</vs:toolsetVersion>
+    <content src="index.html" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="windows-target-version" value="10.0" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="android">
+        <preference name="SplashMaintainAspectRatio" value="true" />
+        <preference name="SplashShowOnlyFirstTime" value="true" />
+        <icon density="ldpi" src="res/icons/android/ldpi.png" />
+        <icon density="mdpi" src="res/icons/android/mdpi.png" />
+        <icon density="hdpi" src="res/icons/android/hdpi.png" />
+        <icon density="xhdpi" src="res/icons/android/xhdpi.png" />
+        <icon density="xxhdpi" src="res/icons/android/xxhdpi.png" />
+        <icon density="xxxhdpi" src="res/icons/android/xxxhdpi.png" />
+    </platform>
+    <preference name="Orientation" value="default" />
+    <preference name="Fullscreen" value="False" />
+    <preference name="KeepRunning" value="False" />
 </widget>
