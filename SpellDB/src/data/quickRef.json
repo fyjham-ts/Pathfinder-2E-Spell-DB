@@ -397,6 +397,77 @@
     ]
   },
   {
+    "name": "Crit Specialization",
+    "icon": "fas fa-crutch",
+    "render": "list",
+    "list": [
+      {
+        "name": "Axe",
+        "description": "Choose one creature adjacent to the initial target and within reach. If its AC is lower than your attack roll result for the critical hit, you deal damage to that creature equal to the result of the weapon damage die you rolled (including extra dice for its potency rune, if any). This amount isn't doubled, and no bonuses or other additional dice apply to this damage."
+      },
+      {
+        "name": "Bomb",
+        "description": "Increase the radius of the bomb's splash damage (if any) to 10 feet."
+      },
+      {
+        "name": "Bow",
+        "description": "If the target of the critical hit is adjacent to a surface, it gets stuck to that surface by the missile. The target is immobilized and must spend an Interact action to attempt a DC 10 Athletics check to pull the missile free; it can't move from its space until it succeeds. The creature doesn't become stuck if it is incorporeal, is liquid (like a water elemental or some oozes), or could otherwise escape without effort."
+      },
+      {
+        "name": "Brawling",
+        "description": "The target must succeed at a Fortitude save against your class DC or be slowed 1 until the end of your next turn."
+      },
+      {
+        "name": "Club",
+        "description": "You knock the target away from you up to 10 feet (you choose the distance). This is forced movement."
+      },
+      {
+        "name": "Dart",
+        "description": "The target takes 1d6 persistent bleed damage. You gain an item bonus to this bleed damage equal to the weapon's item bonus to attack rolls."
+      },
+      {
+        "name": "Firearm",
+        "description": "The target must succeed at a Fortitude save against your class DC or be stunned 1."
+      },
+      {
+        "name": "Flail",
+        "description": "The target is knocked prone."
+      },
+      {
+        "name": "Hammer",
+        "description": "The target is knocked prone."
+      },
+      {
+        "name": "Knife",
+        "description": "The target takes 1d6 persistent bleed damage. You gain an item bonus to this bleed damage equal to the weapon's item bonus to attack rolls."
+      },
+      {
+        "name": "Pick",
+        "description": "The weapon viciously pierces the target, who takes 2 additional damage per weapon damage die."
+      },
+      {
+        "name": "Polearm",
+        "description": "The target is moved 5 feet in a direction of your choice. This is forced movement."
+      },
+      {
+        "name": "Shield",
+        "description": "You knock the target back from you 5 feet. This is forced movement."
+      },
+      {
+        "name": "Sling",
+        "description": "The target must succeed at a Fortitude save against your class DC or be stunned 1."
+      },
+      {
+        "name": "Spear",
+        "description": "The weapon pierces the target, weakening its attacks. The target is clumsy 1 until the start of your next turn."
+      },
+      {
+        "name": "Sword",
+        "description": "The target is made off-balance by your attack, becoming flat-footed until the start of your next turn."
+      }
+    ]
+  },
+  {
     "name": "DC Table",
     "icon": "fas fa-table",
     "render": "tables",
@@ -684,27 +755,21 @@
         ]
       },
       {
-        "title": "Adjustments",
+        "title": "Tier",
         "columns": [
           {
-            "title": "Table Points",
+            "title": "Challenge Points",
             "colType": "text"
           },
           {
-            "title": "Subtier",
+            "title": "Tier",
             "colType": "text"
           }
         ],
         "rows": [
-          [ "8-9", "Low Subtier" ],
-          [ "10-11", "Low Subtier (5 player adjust)" ],
-          [ "12-13", "Low Subtier (6 player adjust)  \r\n**OR (GM Choice)**  \r\nLow Subtier with Level Bump" ],
-          [ "14-15", "Low Subtier (5 player adjust with Level Bump)" ],
-          [ "16-18", "High Subtier" ],
-          [ "19-22", "High Subtier (5 player adjust)" ],
-          [ "23-27", "High Subtier (6 player adjust)  \r\n**OR (GM Choice)**  \r\nHigh Subtier with Level Bump" ],
-          [ "28-32", "High Subtier (5 player adjust with Level Bump)" ],
-          [ "33-42", "High Subtier (6 player adjust with Level Bump)" ]
+          [ "8-15", "Low Tier" ],
+          [ "16-18", "4 Player: High\r\n5-6 Player: Low" ],
+          [ "19+", "High Tier"]
         ]
       },
       {
@@ -717,6 +782,30 @@
         ],
         "rows": [
           [ "**Applies**  \r\n* Any Character of minimum level playing high tier.  \r\n* When the table above says so (Applies to enemies)\r\n\r\n**Scenario Rules**  \r\n* +1 to all DC's, Attacks, Damage, Saves, Skills, Perception and AC.\r\n* +10 or 10% HP (Whichever is higher).\r\n\r\n**Player Rules**  \r\n+1 to AC, DCs, modifiers, and gain extra HP as though levelled." ]
+        ]
+      },
+      {
+        "title": "Early Scenario Adjustments",
+        "columns": [
+          {
+            "title": "Table Points",
+            "colType": "text"
+          },
+          {
+            "title": "Subtier",
+            "colType": "text"
+          }
+        ],
+        "rows": [
+          [ "8-15", "Low Subtier" ],
+          [ "10-11", "Low Subtier (5 player adjust)" ],
+          [ "12-13", "Low Subtier (6 player adjust)  \r\n**OR (GM Choice)**  \r\nLow Subtier with Level Bump" ],
+          [ "14-15", "Low Subtier (5 player adjust with Level Bump)" ],
+          [ "16-18", "High Subtier" ],
+          [ "19-22", "High Subtier (5 player adjust)" ],
+          [ "23-27", "High Subtier (6 player adjust)  \r\n**OR (GM Choice)**  \r\nHigh Subtier with Level Bump" ],
+          [ "28-32", "High Subtier (5 player adjust with Level Bump)" ],
+          [ "33-42", "High Subtier (6 player adjust with Level Bump)" ]
         ]
       }
     ]
@@ -732,6 +821,10 @@
         "columns": [
           {
             "title": "Task lvl",
+            "colType": "number"
+          },
+          {
+            "title": "DC",
             "colType": "number"
           },
           {
@@ -756,28 +849,28 @@
           }
         ],
         "rows": [
-          [ "0", "1c", "5c", "5c", "5c", "5c" ],
-          [ "1", "2c", "2s", "2s", "2s", "2s" ],
-          [ "2", "4c", "3s", "3s", "3s", "3s" ],
-          [ "3", "8c", "5s", "5s", "5s", "5s" ],
-          [ "4", "1s", "7s", "8s", "8s", "8s" ],
-          [ "5", "2s", "9s", "1g", "1g", "1g" ],
-          [ "6", "3s", "1.5g", "2g", "2g", "2g" ],
-          [ "7", "4s", "2g", "2.5g", "2.5g", "2.5g" ],
-          [ "8", "5s", "2.5g", "3g", "3g", "3g" ],
-          [ "9", "6s", "3g", "4g", "4g", "4g" ],
-          [ "10", "7s", "4g", "5g", "6g", "6g" ],
-          [ "11", "8s", "5g", "6g", "8g", "8g" ],
-          [ "12", "9s", "6g", "8g", "10g", "10g" ],
-          [ "13", "1g", "7g", "10g", "15g", "15g" ],
-          [ "14", "1.5g", "8g", "15g", "20g", "20g" ],
-          [ "15", "2g", "10g", "20g", "28g", "28g" ],
-          [ "16", "2.5g", "13g", "25g", "36g", "40g" ],
-          [ "17", "3g", "15g", "30g", "45g", "55g" ],
-          [ "18", "4g", "20g", "45g", "70g", "90g" ],
-          [ "19", "6g", "30g", "60g", "100g", "130g" ],
-          [ "20", "8g", "40g", "75g", "150g", "200g" ],
-          [ "21", "", "50g", "90g", "175g", "300g" ]
+          [ "0", "14", "1c", "5c", "5c", "5c", "5c" ],
+          [ "1", "15", "2c", "2s", "2s", "2s", "2s" ],
+          [ "2", "16", "4c", "3s", "3s", "3s", "3s" ],
+          [ "3", "18", "8c", "5s", "5s", "5s", "5s" ],
+          [ "4", "19", "1s", "7s", "8s", "8s", "8s" ],
+          [ "5", "20", "2s", "9s", "1g", "1g", "1g" ],
+          [ "6", "22", "3s", "1.5g", "2g", "2g", "2g" ],
+          [ "7", "23", "4s", "2g", "2.5g", "2.5g", "2.5g" ],
+          [ "8", "24", "5s", "2.5g", "3g", "3g", "3g" ],
+          [ "9", "26", "6s", "3g", "4g", "4g", "4g" ],
+          [ "10", "27", "7s", "4g", "5g", "6g", "6g" ],
+          [ "11", "28", "8s", "5g", "6g", "8g", "8g" ],
+          [ "12", "30", "9s", "6g", "8g", "10g", "10g" ],
+          [ "13", "31", "1g", "7g", "10g", "15g", "15g" ],
+          [ "14", "32", "1.5g", "8g", "15g", "20g", "20g" ],
+          [ "15", "34", "2g", "10g", "20g", "28g", "28g" ],
+          [ "16", "35", "2.5g", "13g", "25g", "36g", "40g" ],
+          [ "17", "36", "3g", "15g", "30g", "45g", "55g" ],
+          [ "18", "38", "4g", "20g", "45g", "70g", "90g" ],
+          [ "19", "39", "6g", "30g", "60g", "100g", "130g" ],
+          [ "20", "40", "8g", "40g", "75g", "150g", "200g" ],
+          [ "21", "42", "", "50g", "90g", "175g", "300g" ]
         ]
       },
       {

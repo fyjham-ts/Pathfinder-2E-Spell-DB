@@ -1,8 +1,9 @@
 CACHE MANIFEST
-# Cache Buster UTC Offset: 1688361415291
+# Cache Buster UTC Offset: 1688458252549
 # Cache Everything
 
 css/style.css
+css/style.css.map
 images/action-1-dark.png
 images/action-1.png
 images/action-2-dark.png
