@@ -8,10 +8,9 @@
 /**
  * Current manual cleanups:
  * 3 action spells - the to goes in the components currently. Need to make the actions an array with all the options.
- * Counter Performance - Really, you had to have 1 spell that allowed either cast action?
  * Casting time not measured in actions
- * Faerie Fire - I'm technically doing this wrong as it's an "or more"
  * Misses the uncommon trait (it has different CSS class - may also miss rare, alignment & size)
+ * Diseases
  */
 
 'use strict';
@@ -20,7 +19,8 @@ const rp = require('request-promise-native');
 const cheerio = require('cheerio');
 const testRun = false;
 const testLimit = 5;
-const testSpellId = 163;
+const testSpellId = 822;
+const oldSpellsPath = "../SpellDB/src/data/spells.json";
 
 var htmlTransform = (h) => cheerio.load(h);
 
@@ -77,10 +77,12 @@ function formatTable(e) {
     var rows = e.find("tr").toArray().map(r => cheerio(r).find("td").toArray().map(td => formatDescriptionElementChildren(cheerio(td))).join(" | "));
     rows.splice(1, 0, e.find("tr:nth-child(1)").toArray().map(r => cheerio(r).find("td").toArray().map(td => ":---:").join(" | ")));
     rows = rows.map(r => "| " + r + " |");
-    return "\r\n\r\n" + rows.join("\r\n");
+    return "\r\n\r\n" + rows.join("\r\n") + "\r\n";
 }
 function formatDescriptionElement(e) {
-    if (e.is('span.trait')) { spellData.traits.push(e.text().toLowerCase()); }
+    if (e.is('span.trait') || e.is("span.traituncommon") || e.is("span.traitrare") || e.is("span.traitunique") || e.is("span.traitalignment") || e.is("span.traitsize")) {
+        spellData.traits.push(e.text().toLowerCase());
+    }
     else if ((e.is('b') || e.is('h3') || e.is('h2')) && e.text()) {
         return "**" + e.text() + "**";
     }
@@ -149,10 +151,13 @@ async function loadSpell(url) {
         var subItem = null;
         $('#ctl00_RadDrawer1_Content_MainContent_DetailedOutput').get(0).childNodes.forEach((elem, i) => {
             var e = cheerio(elem);
-            if (e.is('span.trait')) { spellData.traits.push(e.text().toLowerCase()); }
+            if (e.is('span.trait') || e.is("span.traituncommon") || e.is("span.traitrare") || e.is("span.traitunique") || e.is("span.traitalignment") || e.is("span.traitsize")) {
+                spellData.traits.push(e.text().toLowerCase());
+            }
+            else if (e.is('h2.title') && /This Spell may contain spoilers/.test(e.text())) { /* Ignore it */ }
             else if (e.is('b') || e.is('h3') || e.is('h2')) {
                 var newItem = e.text().toLowerCase();
-                if (handledItems.indexOf(newItem) == -1 && activeItem == "description") {
+                if ((handledItems.indexOf(newItem) == -1 || spellData[newItem]) && activeItem == "description") {
                     // Unhandled extras in desc - Just put them in bold
                     spellData[activeItem] += "  \r\n**" + e.text() + "** ";
                 } else {
@@ -185,6 +190,22 @@ async function loadSpell(url) {
                 subItem = null;
                 if (!spellData[activeItem]) spellData[activeItem] = "";
             }
+            else if (activeItem == 'cast' && e.is("span.action-1")) {
+                spellData.action = '1';
+            }
+            else if (activeItem == 'cast' && e.is("span.action-2")) {
+                spellData.action = '2';
+            }
+            else if (activeItem == 'cast' && e.is("span.action-3")) {
+                spellData.action = '3';
+            }
+            else if (activeItem == 'cast' && e.is("span.action-4")) {
+                spellData.action = 'reaction';
+            }
+            else if (activeItem == 'cast' && e.is("span.action-5")) {
+                spellData.action = 'free';
+            }
+            /*
             else if (e.is('img.actiondark')) {
                 if (activeItem == 'cast') {
                     switch (e.attr('src')) {
@@ -206,6 +227,7 @@ async function loadSpell(url) {
                     }
                 }
             }
+            */
             else if (activeItem == "description" && e.is('table')) {
                 if (subItem) { spellData[activeItem][subItem] += formatTable(e); }
                 else { spellData[activeItem] += formatTable(e); }
@@ -233,6 +255,11 @@ async function loadSpell(url) {
 
 async function loadAllSpells() {
     try {
+        var oldSpellList = JSON.parse(fs.readFileSync(oldSpellsPath));
+        var oldSpells = {};
+        for (var i = 0; i < oldSpellList.length; i++) {
+            oldSpells[oldSpellList[i].nethysUrl] = oldSpellList[i];
+        }
         var spells = [];
         var loadedSpells = {};
         for (var ridx = 0; ridx < spellListRoots.length; ridx++) {
@@ -250,9 +277,13 @@ async function loadAllSpells() {
                     loadedSpells[spellUrl] = true;
                     if (idx < testLimit || !testRun) {
                         var url = new URL(spellUrl, relativePath);
-                        var spell = await loadSpell(url);
-                        if (spell.source && !skipBooks.find(v => spell.source.startsWith(v))) {
-                            spells.push(spell);
+                        if (oldSpells[url] && oldSpells[url].custom) {
+                            spells.push(oldSpells[url]);
+                        } else {
+                            var spell = await loadSpell(url);
+                            if (spell.source && !skipBooks.find(v => spell.source.startsWith(v))) {
+                                spells.push(spell);
+                            }
                         }
                     }
                 }

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="" defaultlocale="en-US" id="com.fyjham_ts.pathfinder_2e_spell_db" version="1.4.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps">
+<widget android-versionCode="" defaultlocale="en-US" id="com.fyjham_ts.pathfinder_2e_spell_db" version="1.4.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps">
     <name>Pathfinder 2E Spell DB</name>
     <description>A Pathfinder 2nd Edition spell database</description>
     <author email="fyjham@gmail.com" href="https://github.com/fyjham-ts/Pathfinder-2E-Spell-DB">Tim Schneider</author>
