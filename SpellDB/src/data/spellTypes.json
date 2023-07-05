@@ -49,10 +49,59 @@
     "options": null
   },
   {
+    "name": "Range",
+    "matchBy": "value",
+    "match": "range",
+    "sort": "range",
+    "options": [
+      {
+        "name": "Touch",
+        "value": "touch"
+      },
+      {
+        "name": "30 Feet",
+        "value": "30 feet"
+      },
+      {
+        "name": "60 Feet",
+        "value": "60 feet"
+      },
+      {
+        "name": "120 Feet",
+        "value": "120 feet"
+      }
+    ]
+  },
+  {
     "name": "Traits",
     "matchBy": "array",
     "match": "traits",
     "options": null
+  },
+  {
+    "name": "Area",
+    "matchBy": "contains",
+    "match": "area",
+    "sort": "area",
+    "allLabel": "Any",
+    "options": [
+      {
+        "name": "Burst",
+        "value": "Burst"
+      },
+      {
+        "name": "Cone",
+        "value": "Cone"
+      },
+      {
+        "name": "Emanation",
+        "value": "Emanation"
+      },
+      {
+        "name": "Line",
+        "value": "Line"
+      }
+    ]
   },
   {
     "name": "Focus Powers - Domains",
@@ -60,7 +109,7 @@
     "options": [
       {
         "name": "Abomination",
-        "value":  "Abomination"
+        "value": "Abomination"
       },
       {
         "name": "Air",
@@ -184,7 +233,7 @@
       },
       {
         "name": "Naga",
-        "value":  "Naga"
+        "value": "Naga"
       },
       {
         "name": "Nightmares",
@@ -322,7 +371,7 @@
       "Magic": [ "Magic's Vessel", "Mystic Beacon" ],
       "Might": [ "Athletic Rush", "Enduring Might" ],
       "Moon": [ "Moonbeam", "Touch of the Moon" ],
-      "Naga":  ["Split the Tongue", "Ordained Purpose"],
+      "Naga": [ "Split the Tongue", "Ordained Purpose" ],
       "Nature": [ "Vibrant Thorns", "Nature's Bounty" ],
       "Nightmares": [ "Waking Nightmare", "Shared Nightmare" ],
       "Pain": [ "Savor the Sting", "Retributive Pain" ],
@@ -437,16 +486,16 @@
       "Draconic": [ "Dragon Claws", "Dragon Breath", "Dragon Wings" ],
       "Elemental": [ "Elemental Toss", "Elemental Motion", "Elemental Blast" ],
       "Fey": [ "Faerie Dust", "Fey Disappearance", "Fey Glamour" ],
-      "Genie": ["Genie's Veil", "Heart's Desire", "Wish-Twisted Form"],
+      "Genie": [ "Genie's Veil", "Heart's Desire", "Wish-Twisted Form" ],
       "Hag": [ "Jealous Hex", "Horrific Visage", "You're Mine" ],
-      "Harrow":  ["Unraveling Blast", "Invoice the Harrow", "Rewrite Possibility"],
+      "Harrow": [ "Unraveling Blast", "Invoice the Harrow", "Rewrite Possibility" ],
       "Imperial": [ "Ancestral Memories", "Extend Spell", "Arcane Countermeasure" ],
       "Nymph": [ "Nymph's Token", "Blinding Beauty", "Establish Ward" ],
       "Phoenix": [ "Rejuvenating Flames", "Shroud of Flame", "Cleansing Flames" ],
-      "Psychopomp": ["Sepulchral Mask", "Spirit Veil", "Shepherd of Souls"],
-      "Shadow": ["Dim the Light", "Steal Shadow", "Consuming Darkness"],
+      "Psychopomp": [ "Sepulchral Mask", "Spirit Veil", "Shepherd of Souls" ],
+      "Shadow": [ "Dim the Light", "Steal Shadow", "Consuming Darkness" ],
       "Undead": [ "Touch of Undeath (Sorcerer)", "Drain Life", "Grasping Grave" ],
-      "Wyrmblessed":  ["Dragon Claws", "Dragon Breath", "Dragon Wings"]
+      "Wyrmblessed": [ "Dragon Claws", "Dragon Breath", "Dragon Wings" ]
     }
   },
   {
@@ -485,30 +534,63 @@
     "name": "Focus Powers - Oracle",
     "matchBy": "lookup",
     "options": [
-      {"name": "Shared", "value":"Shared"},
-      {"name": "Ancestors", "value":"Ancestors"},
-      {"name": "Ash", "value": "Ash" },
-      {"name": "Battle", "value":"Battle"},
-      {"name": "Bones", "value":"Bones"},
-      {"name": "Cosmos", "value":"Cosmos"},
-      {"name": "Flames", "value":"Flames"},
-      {"name": "Life", "value":"Life"},
-      {"name": "Lore", "value":"Lore"},
-      {"name": "Tempest", "value":"Tempest"},
-      {"name": "Time", "value": "Time"}
+      {
+        "name": "Shared",
+        "value": "Shared"
+      },
+      {
+        "name": "Ancestors",
+        "value": "Ancestors"
+      },
+      {
+        "name": "Ash",
+        "value": "Ash"
+      },
+      {
+        "name": "Battle",
+        "value": "Battle"
+      },
+      {
+        "name": "Bones",
+        "value": "Bones"
+      },
+      {
+        "name": "Cosmos",
+        "value": "Cosmos"
+      },
+      {
+        "name": "Flames",
+        "value": "Flames"
+      },
+      {
+        "name": "Life",
+        "value": "Life"
+      },
+      {
+        "name": "Lore",
+        "value": "Lore"
+      },
+      {
+        "name": "Tempest",
+        "value": "Tempest"
+      },
+      {
+        "name": "Time",
+        "value": "Time"
+      }
     ],
     "lookup": {
-        "Ancestors": ["Ancestral Touch", "Ancestral Defense", "Ancestral Form"],
-        "Ash":  ["Ashen Wind", "Incendiary Ashes", "Ash Form"],
-        "Battle": ["Call to Arms", "Battlefield Persistence", "Heroic Feat"],
-        "Bones": ["Soul Siphon", "Armor of Bones", "Claim Undead"],
-        "Cosmos": ["Spray of Stars", "Interstellar Void", "Moonlight Bridge"],
-        "Flames": ["Incendiary Aura", "Whirling Flames", "Flaming Fusillade"],
-        "Life": ["Life Link", "Delay Affliction", "Life-Giving Form"],
-        "Lore": ["Brain Drain", "Access Lore", "Dread Secret"],
-        "Tempest": ["Tempest Touch", "Thunderburst", "Tempest Form"],
-        "Time":  ["Temporal Distortion", "Time Skip", "Manifold Lives"],
-        "Shared": ["Vision of Weakness", "Debilitating Dichotomy" ]
+      "Ancestors": [ "Ancestral Touch", "Ancestral Defense", "Ancestral Form" ],
+      "Ash": [ "Ashen Wind", "Incendiary Ashes", "Ash Form" ],
+      "Battle": [ "Call to Arms", "Battlefield Persistence", "Heroic Feat" ],
+      "Bones": [ "Soul Siphon", "Armor of Bones", "Claim Undead" ],
+      "Cosmos": [ "Spray of Stars", "Interstellar Void", "Moonlight Bridge" ],
+      "Flames": [ "Incendiary Aura", "Whirling Flames", "Flaming Fusillade" ],
+      "Life": [ "Life Link", "Delay Affliction", "Life-Giving Form" ],
+      "Lore": [ "Brain Drain", "Access Lore", "Dread Secret" ],
+      "Tempest": [ "Tempest Touch", "Thunderburst", "Tempest Form" ],
+      "Time": [ "Temporal Distortion", "Time Skip", "Manifold Lives" ],
+      "Shared": [ "Vision of Weakness", "Debilitating Dichotomy" ]
     }
   },
   {
@@ -533,19 +615,38 @@
     "name": "Focus Powers - Archetypes",
     "matchBy": "lookup",
     "options": [
-      {"name":"Beastmaster", "value": "Beastmaster"},
-      {"name": "Blessed One", "value": "Blessed One"},
-      {"name":"Magic Warrior", "value": "Magic Warrior"},
-      {"name": "Red Mantis", "value": "Red Mantis" },
-      {"name": "Shadowdancer", "value": "Shadowdancer"},
-      {"name":"Student of Perfection","value":"Student of Perfection"}
+      {
+        "name": "Beastmaster",
+        "value": "Beastmaster"
+      },
+      {
+        "name": "Blessed One",
+        "value": "Blessed One"
+      },
+      {
+        "name": "Magic Warrior",
+        "value": "Magic Warrior"
+      },
+      {
+        "name": "Red Mantis",
+        "value": "Red Mantis"
+      },
+      {
+        "name": "Shadowdancer",
+        "value": "Shadowdancer"
+      },
+      {
+        "name": "Student of Perfection",
+        "value": "Student of Perfection"
+      }
     ],
     "lookup": {
       "Beastmaster": [
-        "Heal Animal","Beastmaster Trance"
+        "Heal Animal",
+        "Beastmaster Trance"
       ],
-      "Blessed One": ["Lay on Hands", "Protector's Sacrifice"],
-      "Dragon Disciple": ["Dragon Breath", "Dragon Wings"],
+      "Blessed One": [ "Lay on Hands", "Protector's Sacrifice" ],
+      "Dragon Disciple": [ "Dragon Breath", "Dragon Wings" ],
       "Magic Warrior": [
         "Magic Warrior Aspect",
         "Magic Warrior Transformation"

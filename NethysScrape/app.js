@@ -19,7 +19,8 @@ const rp = require('request-promise-native');
 const cheerio = require('cheerio');
 const testRun = false;
 const testLimit = 5;
-const testSpellId = 822;
+const testSpellId = 644;
+const concurrentHttp = 10;
 const oldSpellsPath = "../SpellDB/src/data/spells.json";
 
 var htmlTransform = (h) => cheerio.load(h);
@@ -31,8 +32,6 @@ const spellListRoots = [
     "https://2e.aonprd.com/SpellLists.aspx?Tradition=3",
     "https://2e.aonprd.com/SpellLists.aspx?Tradition=4"
 ];
-const skipBooks = [
-]
 const relativePath = "https://2e.aonprd.com/";
 var handledItems = [
     "name",
@@ -56,7 +55,7 @@ var handledItems = [
 ];
 
 function cleanup(s) {
-    return s.replace(/^[ \t]+/,"").replace(/^;+/, "").replace(/;+$/, "").replace(/[��]/g, '-');
+    return s.replace(/^[ \t\n]+/,"").replace(/[ \t;\n]+$/,"").replace(/^;+/, "").replace(/;+$/, "").replace(/[��]/g, '-');
 }
 function formatList(e) {
     // If it has no items in it (Far more common than it should be) just ignore it. 
@@ -191,19 +190,24 @@ async function loadSpell(url) {
                 if (!spellData[activeItem]) spellData[activeItem] = "";
             }
             else if (activeItem == 'cast' && e.is("span.action-1")) {
-                spellData.action = '1';
+                if (spellData.action) spellData.actionMax = '1';
+                else spellData.action = '1';
             }
             else if (activeItem == 'cast' && e.is("span.action-2")) {
-                spellData.action = '2';
+                if (spellData.action) spellData.actionMax = '2';
+                else spellData.action = '2';
             }
             else if (activeItem == 'cast' && e.is("span.action-3")) {
-                spellData.action = '3';
+                if (spellData.action) spellData.actionMax = '3';
+                else spellData.action = '3';
             }
             else if (activeItem == 'cast' && e.is("span.action-4")) {
-                spellData.action = 'reaction';
+                if (spellData.action) spellData.actionMax = 'reaction';
+                else spellData.action = 'reaction';
             }
             else if (activeItem == 'cast' && e.is("span.action-5")) {
-                spellData.action = 'free';
+                if (spellData.action) spellData.actionMax = 'free';
+                else spellData.action = 'free';
             }
             /*
             else if (e.is('img.actiondark')) {
@@ -243,7 +247,7 @@ async function loadSpell(url) {
         });
         // We've scraped, time for cleanup
         if (spellData.traditions) spellData.traditions = spellData.traditions.replace(/ /g, '').split(',');
-        if (spellData.cast) spellData.components = spellData.cast.replace(/ /g, '').split(',');
+        if (spellData.cast) spellData.components = spellData.cast.replace(/to /g, '').replace(/or /g, '').split(',').map(c => c.replace(/^[ ;]+/, '').replace(/[ ;]+$/g, ''));
 
         return spellData;
     }
@@ -269,25 +273,30 @@ async function loadAllSpells() {
             });
             console.log("Querying " + spellListRoots[ridx]);
             var spellLinks = $('#ctl00_RadDrawer1_Content_MainContent_DetailedOutput > a');
-            for (var idx = 0; idx < spellLinks.length; idx++) {
-                console.log("Reading spell " + idx + "/" + spellLinks.length);
+            var urlsToLoad = [];
+            for (var idx = 0; idx < spellLinks.length && (!testRun || spells.length < testLimit); idx++) {
                 var a = spellLinks[idx];
                 var spellUrl = cheerio(a).attr('href');
-                if (!loadedSpells[spellUrl]) {
+                if (!loadedSpells[spellUrl] && /Spells\.aspx/.test(spellUrl)) {
                     loadedSpells[spellUrl] = true;
-                    if (idx < testLimit || !testRun) {
-                        var url = new URL(spellUrl, relativePath);
-                        if (oldSpells[url] && oldSpells[url].custom) {
-                            spells.push(oldSpells[url]);
-                        } else {
-                            var spell = await loadSpell(url);
-                            if (spell.source && !skipBooks.find(v => spell.source.startsWith(v))) {
-                                spells.push(spell);
-                            }
-                        }
+                    var url = new URL(spellUrl, relativePath);
+                    if (oldSpells[url] && oldSpells[url].custom) {
+                        spells.push(oldSpells[url]);
+                    } else {
+                        urlsToLoad.push(url);
                     }
                 }
-            };
+            }
+            var originalLength = urlsToLoad.length;
+            while (urlsToLoad.length) {
+                var from = (originalLength - urlsToLoad.length + 1);
+                var to = (originalLength - urlsToLoad.length + concurrentHttp);
+                if (to > originalLength) to = originalLength;
+                var pct = Math.round((100 * (originalLength - urlsToLoad.length)) / originalLength);
+                console.log("Reading spells... List " + (ridx + 1) + "/" + spellListRoots.length + ": " + pct + "% (Reading " + from + " to " + to + "/"  + originalLength + ")");
+                var newSpells = await Promise.all(urlsToLoad.splice(0, concurrentHttp).map(url => loadSpell(url)));
+                spells.push(... newSpells);
+            }
         }
         console.log(spells);
         if (!testRun) fs.writeFileSync("spells.json", JSON.stringify(spells));

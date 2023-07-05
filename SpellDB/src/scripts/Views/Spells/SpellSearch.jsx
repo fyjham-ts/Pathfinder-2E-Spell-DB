@@ -77,7 +77,7 @@ export default class SpellSearch extends React.Component {
                             <label htmlFor="spellOption" className="col-form-label form-label">Subtype</label>
                             <div className="col">
                                 <select className="form-control" id="spellOption" name="spellOption" value={this.props.spellOption} onChange={this.handleCriteriaChange}>
-                                    <option value="">All</option>
+                                    <option value="">{this.props.spellTypes.find(t => t.name == this.props.spellType)?.allLabel || "All"}</option>
                                     {this.props.spellTypes.find(t => t.name == this.props.spellType).options.map((p) => { return <option key={p.value} value={p.value}>{p.name}</option> })}
                                 </select>
                             </div>

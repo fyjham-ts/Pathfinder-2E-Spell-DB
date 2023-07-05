@@ -82,6 +82,20 @@ export default class SpellList extends React.Component {
                                 }
                             });
                             break;
+                        case "range":
+                            var rangeSteps = ["touch", "feet", "foot", "mile"];
+                            st.options.sort((lhs, rhs) => {
+                                var lhsStep = 10, rhsStep = 10;
+                                for (var i = 0; i < rangeSteps.length; i++) {
+                                    if (i < lhsStep && lhs.name.indexOf(rangeSteps[i]) != -1) lhsStep = i;
+                                    if (i < rhsStep && rhs.name.indexOf(rangeSteps[i]) != -1) rhsStep = i;
+                                }
+                                if (lhsStep < rhsStep) return -1;
+                                if (rhsStep < lhsStep) return 1;
+                                // Same step, regular sort
+                                return lhs.name < rhs.name ? -1 : (lhs.name == rhs.name ? 0 : 1);
+                            });
+                            break;
                         default:
                             st.options.sort((lhs, rhs) => lhs.name < rhs.name ? -1 : (lhs.name == rhs.name ? 0 : 1));
                     }
@@ -220,6 +234,10 @@ export default class SpellList extends React.Component {
                         if (criteria.spellOption) {
                             if (!spell[spellType.match] || spell[spellType.match] != criteria.spellOption) return false;
                         }
+                        break;
+                    case "contains":
+                        if (!spell[spellType.match]) return false;
+                        if (criteria.spellOption && spell[spellType.match].toLowerCase().indexOf(criteria.spellOption.toLowerCase()) === -1) return false;
                         break;
                 }
             }

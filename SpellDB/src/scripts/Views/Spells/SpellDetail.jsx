@@ -76,7 +76,7 @@ export default class SpellDetail extends React.PureComponent {
                 </ul>
                 <div className="header">
                     {spell.traditions && <div><strong>Traditions</strong> {spell.traditions.join(", ")}</div>}
-                    <div><strong>Cast</strong> <ActionIcons action={spell.action} /> {spell.components && spell.components.join(spell.componentsSeparator || ", ")}</div>
+                    <div><strong>Cast</strong> <ActionIcons action={spell.action} /> {spell.actionMax && <span> to <ActionIcons action={spell.actionMax} /></span> } {spell.components && spell.components.join(spell.componentsSeparator || ", ")}</div>
                     {headerTokens.map((t) => {
                         return <span key={t.title} className="headerElement"><strong>{t.title}</strong> {t.value}</span>
                     })}
