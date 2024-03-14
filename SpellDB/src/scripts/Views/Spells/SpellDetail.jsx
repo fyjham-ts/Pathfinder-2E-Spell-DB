@@ -80,13 +80,15 @@ export default class SpellDetail extends React.PureComponent {
                     {headerTokens.map((t) => {
                         return <span key={t.title} className="headerElement"><strong>{t.title}</strong> {t.value}</span>
                     })}
-                    {spell['saving throw'] && <div><span className="headerElement"><strong>Saving Throw</strong> {spell['saving throw']}</span></div>}
+                    {/* Legacy */ spell['saving throw'] && <div><span className="headerElement"><strong>Saving Throw</strong> {spell['saving throw']}</span></div>}
+                    {spell['defense'] && <div><span className="headerElement"><strong>Defense</strong> {spell['defense']}</span></div>}
                 </div>
                 <div className="body">
                     {bodySections.map((s, index) => {
                         return <div key={index} className={s.className}>{s.title}<ReactMarkdown source={s.text} plugins={RemarkPlugins} renderers={RemarkRenderers} /></div>
                     })}
                 </div>
+                {spell['oldName'] && <div className="footerNote"><span className="headerElement"><strong>Pre-Remaster</strong> {spell['oldName']}</span></div>}
                 {this.props.vancian.enabled && <div className="altPrep">
                     <table className="table">
                         <thead>

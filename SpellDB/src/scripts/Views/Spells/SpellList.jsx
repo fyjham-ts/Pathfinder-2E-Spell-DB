@@ -185,7 +185,11 @@ export default class SpellList extends React.Component {
         if (!criteria) criteria = this.state.criteria;
         return (spell) => {
             if (criteria.spellName) {
-                if (spell.name.toLowerCase().indexOf(criteria.spellName.toLowerCase()) === -1) return false;
+                if (spell.name.toLowerCase().indexOf(criteria.spellName.toLowerCase()) === -1) {
+                    // Allow matching on pre-remaster names
+                    if (!spell.oldName || spell.oldName.toLowerCase().indexOf(criteria.spellName.toLowerCase()) === -1)
+                        return false;
+                }
             }
             if (criteria.spellType) {
                 var spellType = this.state.spellTypes.find(t => t.name == criteria.spellType);

@@ -204,6 +204,10 @@
         "value": "Indulgence"
       },
       {
+        "name": "Introspection",
+        "value": "Introspection"
+      },
+      {
         "name": "Knowledge",
         "value": "Knowledge"
       },
@@ -220,6 +224,10 @@
         "value": "Magic"
       },
       {
+        "name": "Metal",
+        "value": "Metal"
+      },
+      {
         "name": "Might",
         "value": "Might"
       },
@@ -228,12 +236,12 @@
         "value": "Moon"
       },
       {
-        "name": "Nature",
-        "value": "Nature"
-      },
-      {
         "name": "Naga",
         "value": "Naga"
+      },
+      {
+        "name": "Nature",
+        "value": "Nature"
       },
       {
         "name": "Nightmares",
@@ -332,6 +340,10 @@
         "value": "Wealth"
       },
       {
+        "name": "Wood",
+        "value": "Wood"
+      },
+      {
         "name": "Wyrmkin",
         "value": "Wyrmkin"
       },
@@ -343,18 +355,18 @@
     "lookup": {
       "Abomination": [ "Lift Nature's Caul", "Fearful Feast" ],
       "Air": [ "Pushing Gust", "Disperse into Air" ],
-      "Ambition": [ "Blind Ambition", "Competitive Edge" ],
+      "Ambition": [ "Ignite Ambition", "Competitive Edge" ],
       "Change": [ "Adapt Self", "Adaptive Ablation" ],
-      "Cities": [ "Face in the Crowd", "Pulse of the City" ],
+      "Cities": [ "Face in the Crowd", "Pulse of Civilization" ],
       "Cold": [ "Winter Bolt", "Diamond Dust" ],
       "Confidence": [ "Veil of Confidence", "Delusional Pride" ],
-      "Creation": [ "Splash of Art", "Artistic Flourish" ],
-      "Darkness": [ "Cloak of Shadow", "Darkened Eyes" ],
+      "Creation": [ "Creative Splash", "Artistic Flourish" ],
+      "Darkness": [ "Cloak of Shadow", "Darkened Sight" ],
       "Death": [ "Death's Call", "Eradicate Undeath" ],
       "Decay": [ "Withering Grasp", "Fallow Field" ],
       "Delerium": [ "Hyperfocus", "Ephemeral Hazards" ],
       "Destruction": [ "Cry of Destruction", "Destructive Aura" ],
-      "Dreams": [ "Sweet Dream", "Dreamer's Call" ],
+      "Dreams": [ "Sweet Dreams", "Dreamer's Call" ],
       "Dust": [ "Parch", "Dust Storm" ],
       "Duty": [ "Oathkeeper's Insignia", "Dutiful Challenge" ],
       "Earth": [ "Hurtling Stone", "Localized Quake" ],
@@ -365,10 +377,12 @@
       "Glyph": [ "Redact", "Ghostly Transcription" ],
       "Healing": [ "Healer's Blessing", "Rebuke Death" ],
       "Indulgence": [ "Overstuff", "Take its Course" ],
+      "Introspection": [ "Guided Introspection", "Confront Selves" ],
       "Knowledge": [ "Scholarly Recollection", "Know the Enemy" ],
       "Lightning": [ "Charged Javelin", "Bottle the Storm" ],
       "Luck": [ "Bit of Luck", "Lucky Break" ],
       "Magic": [ "Magic's Vessel", "Mystic Beacon" ],
+      "Metal": [ "Serrate", "Repel Metal" ],
       "Might": [ "Athletic Rush", "Enduring Might" ],
       "Moon": [ "Moonbeam", "Touch of the Moon" ],
       "Naga": [ "Split the Tongue", "Ordained Purpose" ],
@@ -376,15 +390,15 @@
       "Nightmares": [ "Waking Nightmare", "Shared Nightmare" ],
       "Pain": [ "Savor the Sting", "Retributive Pain" ],
       "Passion": [ "Charming Touch", "Captivating Adoration" ],
-      "Perfection": [ "Perfected Mind", "Perfected Form" ],
+      "Perfection": [ "Perfected Mind", "Perfected Body" ],
       "Plague": [ "Divine Plagues", "Foul Miasma" ],
       "Protection": [ "Protector's Sacrifice", "Protector's Sphere" ],
       "Repose": [ "Share Burden", "Font of Serenity" ],
-      "Secrecy": [ "Forced Quiet", "Safeguard Secret" ],
+      "Secrecy": [ "Whispering Quiet", "Safeguard Secret" ],
       "Sorrow": [ "Lament", "Overflowing Sorrow" ],
       "Soul": [ "Eject Soul", "Ectoplasmic Interstice" ],
       "Star": [ "Zenith Star", "Asterism" ],
-      "Sun": [ "Dazzling Flash", "Positive Luminance" ],
+      "Sun": [ "Dazzling Flash", "Vital Luminance" ],
       "Swarm": [ "Swarmsense", "Swarm Form" ],
       "Time": [ "Delay Consequence", "Stasis" ],
       "Toil": [ "Practice Makes Perfect", "Tireless Worker" ],
@@ -397,6 +411,7 @@
       "Void": [ "Empty Inside", "Door to Beyond" ],
       "Water": [ "Tidal Surge", "Downpour" ],
       "Wealth": [ "Appearance of Wealth", "Precious Metals" ],
+      "Wood": [ "Arms of Nature", "Wood Walk" ],
       "Wyrmkin": [ "Draconic Barrage", "Roar of the Wyrm" ],
       "Zeal": [ "Weapon Surge", "Zeal for Battle" ]
     }
@@ -673,52 +688,42 @@
     "matchBy": "lookup",
     "options": [
       {
-        "name": "Conjuration",
-        "value": "Conjuration"
+        "name": "Ars Grammatica",
+        "value": "Ars Grammatica"
       },
       {
-        "name": "Necromancy",
-        "value": "Necromancy"
+        "name": "Battle Magic",
+        "value": "Battle Magic"
       },
       {
-        "name": "Enchantment",
-        "value": "Enchantment"
+        "name": "Civic Wizadry",
+        "value": "Civic Wizadry"
       },
       {
-        "name": "Divination",
-        "value": "Divination"
+        "name": "Mentalism",
+        "value": "Mentalism"
       },
       {
-        "name": "Evocation",
-        "value": "Evocation"
+        "name": "Protean Form",
+        "value": "Protean Form"
       },
       {
-        "name": "Universalist",
-        "value": "Universalist"
+        "name": "The Boundry",
+        "value": "The Boundry"
       },
       {
-        "name": "Transmutation",
-        "value": "Transmutation"
-      },
-      {
-        "name": "Abjuration",
-        "value": "Abjuration"
-      },
-      {
-        "name": "Illusion",
-        "value": "Illusion"
+        "name": "Unified Magical Theory",
+        "value": "Unified Magical Theory"
       }
     ],
     "lookup": {
-      "Conjuration": [ "Augment Summoning", "Dimensional Steps" ],
-      "Necromancy": [ "Call of the Grave", "Life Siphon" ],
-      "Enchantment": [ "Charming Words", "Dread Aura" ],
-      "Divination": [ "Diviner's Sight", "Vigilant Eye" ],
-      "Evocation": [ "Force Bolt", "Elemental Tempest" ],
-      "Universalist": [ "Hand of the Apprentice" ],
-      "Transmutation": [ "Physical Boost", "Shifting Form" ],
-      "Abjuration": [ "Protective Ward", "Energy Absorption" ],
-      "Illusion": [ "Warped Terrain", "Invisibility Cloak" ]
+      "Civic Wizadry": [ "Earthworks", "Community Restoration" ],
+      "The Boundry": [ "Fortify Summoning", "Spiral of Horrors" ],
+      "Mentalism": [ "Charming Push", "Invisibility Cloak" ],
+      "Battle Magic": [ "Force Bolt", "Energy Absorption" ],
+      "Unified Magical Theory": [ "Hand of the Apprentice", "Interdisciplinary Incantation" ],
+      "Protean Form": [ "Scramble Body", "Shifting Form" ],
+      "Ars Grammatica": [ "Protective Wards", "Rune of Observation" ]
     }
   }
 ]

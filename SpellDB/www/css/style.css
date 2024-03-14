@@ -15834,6 +15834,9 @@ a {
   margin-top: 3px;
   margin-bottom: 3px;
 }
+.spellDetail .footerNote {
+  font-style: italic;
+}
 .spellDetail .body table thead tr, .spellDetail .altPrep table thead tr {
   background: #5e0000;
   color: #FFF;

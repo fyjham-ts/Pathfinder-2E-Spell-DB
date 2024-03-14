@@ -242,6 +242,7 @@ a { cursor: pointer; }
         padding-bottom: 2px;
         display: flex;
         align-items: flex-start;
+
         .spellName {
             font-weight: bold;
             text-transform: uppercase;
@@ -312,6 +313,7 @@ a { cursor: pointer; }
     }
 
     .header {
+
         .castingToken, .headerElement {
             &::after {
                 content: ", ";
@@ -361,6 +363,14 @@ a { cursor: pointer; }
             margin-bottom: 3px;
         }
     }
+    .mainText {
+        p {
+        }
+    }
+    .footerNote {
+        font-style: italic;
+    }
+
     .body, .altPrep {
         table {
             thead tr {
@@ -399,9 +409,11 @@ a { cursor: pointer; }
             }
         }
     }
+
     .altPrep {
         .altActions > i {
             padding: 0 10px 0 0;
+
             &:last-child {
                 padding: 0;
             }

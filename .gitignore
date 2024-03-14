@@ -13,7 +13,11 @@
 *.user
 *.userosscache
 *.sln.docstates
+.vs
 /SpellDB/build.json
 /SpellDB/node_modules
+/NethysScrape/node_modules
+/NethysScrape/Spells_files
+/NethysScrape/spells.html
 *.dtbcache
 /.vs/SpellDB/DesignTimeBuild
